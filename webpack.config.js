@@ -49,6 +49,7 @@ module.exports = (env, argv) => ({
     alias: {
       "@components": path.resolve(__dirname, "src/components/"),
       "@assets": path.resolve(__dirname, "src/assets/"),
+      "@icons": path.resolve(__dirname, "src/assets/icons/"),
       "@styles": path.resolve(__dirname, "src/styles/"),
       "@lib": path.resolve(__dirname, "src/lib/"),
       "@ctypes": path.resolve(__dirname, "src/types/"),
