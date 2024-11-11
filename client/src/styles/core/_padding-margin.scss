@@ -1,0 +1,73 @@
+@use './index.scss' as global;
+
+$properties: (
+    "padding",
+    "margin"
+);
+
+$directions: (
+    "top",
+    "bottom",
+    "left",
+    "right",
+    "v",
+    "h"
+);
+
+@each $prt in $properties {
+
+    .#{$prt} {
+        @each $name, $value in global.$units {
+
+            //set all directions
+            &-#{$name} {
+                #{$prt}: var(--#{global.$unitName}-#{$name});
+            }
+
+            &-none {
+                #{$prt}: 0;
+            }
+
+            //set specific directions
+            @each $direction in $directions {
+                &-#{$direction} {
+
+                    &-none {
+                        @if($direction =="v") {
+                            #{$prt}-top: 0;
+                            #{$prt}-bottom: 0;
+                        }
+
+                        @else if($direction =="h") {
+                            #{$prt}-left: 0;
+                            #{$prt}-right: 0;
+                        }
+
+                        @else {
+                            #{$prt}-#{$direction}: 0;
+                        }
+                    }
+
+
+                    &-#{$name} {
+
+                        @if($direction =="v") {
+                            #{$prt}-top: var(--#{global.$unitName}-#{$name});
+                            #{$prt}-bottom: var(--#{global.$unitName}-#{$name});
+                        }
+
+                        @else if($direction =="h") {
+                            #{$prt}-left: var(--#{global.$unitName}-#{$name});
+                            #{$prt}-right: var(--#{global.$unitName}-#{$name});
+                        }
+
+                        @else {
+                            #{$prt}-#{$direction}: var(--#{global.$unitName}-#{$name});
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

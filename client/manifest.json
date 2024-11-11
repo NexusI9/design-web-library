@@ -1,0 +1,19 @@
+{
+  "name": "Stylee",
+  "id": "1292924330904373989",
+  "api": "1.0.0",
+  "main": "./dist/index.js",
+  "capabilities": [],
+  "enableProposedApi": false,
+  "editorType": [
+    "figma"
+  ],
+  "ui": "./dist/index.html",
+  "networkAccess": {
+    "allowedDomains": [
+      "https://static.figma.com", 
+      "https://fonts.gstatic.com", 
+      "https://fonts.googleapis.com"
+    ]
+  }
+}

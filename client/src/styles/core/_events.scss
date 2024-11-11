@@ -1,0 +1,13 @@
+$eventsList: (
+    auto,
+    none
+);
+
+
+.events {
+    @each $event in $eventsList {
+        &-#{$event} {
+            pointer-events: $event;
+        }
+    }
+}

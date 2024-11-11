@@ -1,0 +1,14 @@
+@use './index.scss' as global;
+
+@mixin tablet {
+    @media (max-width: global.$tabletBreakpoint) {
+        @content;
+    }
+}
+
+
+@mixin mobile {
+    @media (max-width: global.$mobileBreakpoint) {
+        @content;
+    }
+}

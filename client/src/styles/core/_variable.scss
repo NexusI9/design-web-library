@@ -1,0 +1,15 @@
+@use './index.scss' as global;
+
+:root {
+
+	//Automatically generates unit (--unit-x:4px)
+	@each $name, $value in global.$units {
+		--#{global.$unitName}-#{$name}: #{$value};
+	}
+
+	--container-width: #{global.$containerWidth};
+	--container-padding: #{global.$containerPadding};
+
+	--tb-breakpoint: #{global.$tabletBreakpoint};
+	--mb-breakpoint: #{global.$mobileBreakpoint};
+}
