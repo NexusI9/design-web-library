@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { TanStackRouterWebpack } = require('@tanstack/router-plugin/webpack');
 const path = require('path');
 
 module.exports = (env, argv) => ({
@@ -68,7 +69,8 @@ module.exports = (env, argv) => ({
       template: 'src/index.html',
       filename: 'index.html',
       cache: false //refresh html on watch
-    })
+    }),
+    TanStackRouterWebpack()
   ],
 
   devServer: {
