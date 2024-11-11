@@ -1,7 +1,7 @@
 .container.main{
     display: grid;
-    grid-template-columns: 300px max-content;
-    gap: var(--unit-7xl);
+    grid-template-columns: 300px 1fr;
+    gap: var(--unit-6xl);
     padding: var(--unit-4xl);
     min-height: 100vh;
 }

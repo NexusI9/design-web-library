@@ -60,7 +60,8 @@ module.exports = (env, argv) => ({
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'), // Compile into a folder called "dist"
-    clean: true
+    clean: true,
+    publicPath:"auto"
   },
 
   // Tells Webpack to generate "index.html" and to inline "index.ts" into it
