@@ -13,8 +13,9 @@ export interface ICard{
 export default ({title, description, type, tag, link, href, picture}:ICard) => {
 
     return (
-        <div className="card">
-
+        <div className="card round">
+            <img src={picture} />
+            <p>{title}</p>
         </div>
     );
 }
