@@ -28,15 +28,14 @@ const routeMap: ISidepanelItem[] = [
 
 
 const rootRoute = createRootRoute({
-    component: () => (<Container>
+    component: () => (
         <>
             <Sidepanel items={routeMap} />
-            <Content>
+            <Container>
                 <Outlet />
-            </Content>
+            </Container>
 
-        </>
-    </Container>)
+        </>)
 });
 
 const routeTree = rootRoute.addChildren(

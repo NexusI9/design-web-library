@@ -1,18 +1,17 @@
-@import "./core/reset",
-        "./core/variable",
-        "./core/media-query", 
-        "./core/border", 
-        "./core/color",
-        "./core/container", 
-        "./core/cursor",
-        "./core/events", 
-        "./core/flex",
-        "./core/font-face", 
-        "./core/padding-margin",
-        "./core/size";
-        
-        
-@import "./variables/color", 
-        "./variables/font", 
-        "./global",
-        "./font";
+@import "./core/reset";
+@import "./core/variable";
+@import "./core/media-query"; 
+@import "./core/border";
+@import "./core/color";
+@import "./core/container";
+@import "./core/cursor";
+@import "./core/events"; 
+@import "./core/flex";
+@import "./core/font-face"; 
+@import "./core/padding-margin";
+@import "./core/size";
+
+@import  "./variables/color";
+@import "./variables/font";
+@import "./global";
+@import "./font";

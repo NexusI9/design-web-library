@@ -86,6 +86,8 @@ module.exports = (env, argv) => ({
     },
     compress: true,
     port: 9000,
-    devMiddleware: { writeToDisk: true }
+    devMiddleware: { writeToDisk:(filePath) => {
+      return !/hot-update/i.test(filePath); // you can change it to whatever you need
+    } }
   },
 });
