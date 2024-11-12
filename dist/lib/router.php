@@ -20,8 +20,9 @@ class Router{
     function dispatch($reqUri, $reqMethod){
 
         foreach($this->routes[$reqMethod] as $path => $callback){
-            if($match = strstr($reqUri, $path)){
-                return call_user_func_array($callback, [$match]);
+            if(preg_match("#$path$#", $reqUri, $matches)){
+                array_shift($matches);
+                return call_user_func_array($callback, $matches);
             }
 
         }

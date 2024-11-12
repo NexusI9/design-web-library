@@ -3,14 +3,12 @@ import "./Home.scss"
 
 export default () => {
 
-    return(<>
-        <header className="home-header full-width flex f-col gap-s f-center round">
-            <h1 className="h4">Browse Latest Web Design Tool </h1>
-            <h2 className="h5">Improve and ease your workflow with extensive design tools</h2>
+    return(<div className="flex f-col gap-4xl">
+        <header className="home-header full-width flex f-col f-center round">
+            <h1 className="heading-4">Browse Latest Web Design Tool </h1>
+            <h2 className="heading-5">Improve and ease your workflow with extensive design tools</h2>
         </header>
 
-        <CardContainer type="TOOL">
-
-        </CardContainer>
-    </>);
+        <CardContainer type="TOOL" />
+    </div>);
 }
