@@ -13,7 +13,7 @@ export interface ICard {
 export default ({ title, description, type, tag, link, href, picture }: ICard) => {
 
     return (
-        <div className="card round">
+        <a className="card round" href={href} {...link == 'EXTERNAL' && {target:"_blank"}}>
             <div className="card-picture">
                 <img src={picture} />
             </div>
@@ -24,6 +24,6 @@ export default ({ title, description, type, tag, link, href, picture }: ICard) =
                 </div>
                 <p className="card-desc body-2-regular">{description}</p>
             </div>
-        </div>
+        </a>
     );
 }

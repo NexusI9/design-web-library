@@ -5,6 +5,7 @@
     position: fixed;
     height: calc( 100vh - 2 * var(--unit-2xl) );
     margin: var(--unit-2xl);
+    width: 300px;
 
     header {
         svg {

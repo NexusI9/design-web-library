@@ -1,5 +1,6 @@
 .container.main{
     padding: var(--unit-2xl);
-    padding-left: 360px;
-    height: 100vh;
+    padding-right: var(--unit-5xl);
+    padding-left: calc(300px + var(--unit-2xl) + var(--unit-5xl));
+    min-height: 100vh;
 }
