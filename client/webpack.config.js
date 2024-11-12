@@ -19,11 +19,20 @@ module.exports = (env, argv) => ({
       // Converts TypeScript code to JavaScript
       { test: /\.(t|j)sx?$/, use: ['ts-loader'] },
 
-      // Enables including CSS by doing "import './file.css'" in your TypeScript code
-      { test: /\.s?css$/, use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'] },
-
       // Allows you to use "<%= require('./file.svg') %>" in your HTML code to get a data URI
-      { test: /\.(png|jpg|gif|webp)$/, loader: 'url-loader' },
+      { 
+        test: /\.(png|jpg|gif|webp)$/, 
+        loader: 'url-loader'
+      },
+
+      // Enables including CSS by doing "import './file.css'" in your TypeScript code
+      { test: /\.s?css$/, use: [
+        MiniCssExtractPlugin.loader, 
+        {
+          loader: 'css-loader',
+          options: { url: false }
+        }, 
+        'sass-loader'] },
 
       {
         test: /\.svg$/,
@@ -89,8 +98,10 @@ module.exports = (env, argv) => ({
     },
     compress: true,
     port: 9000,
-    devMiddleware: { writeToDisk:(filePath) => {
-      return !/hot-update/i.test(filePath); // you can change it to whatever you need
-    } }
+    devMiddleware: {
+      writeToDisk: (filePath) => {
+        return !/hot-update/i.test(filePath); // you can change it to whatever you need
+      }
+    }
   },
 });
