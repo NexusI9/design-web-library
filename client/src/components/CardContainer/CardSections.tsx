@@ -6,7 +6,7 @@ export interface ICardSection {
 }
 
 export default ({ headline, items }: ICardSection) => {
-
+    
     return (
         <div className="card-section flex f-col gap-2xl">
             <h3 className="heading-5">{headline}</h3>

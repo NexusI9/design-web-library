@@ -13,7 +13,7 @@ $controller = new ResourceController($data);
 
 
 $router->get('/resources/category/all',[$controller, 'getAllCategories']);
-$router->get('/resources/category/([a-zA-Z0-9]+)',[$controller, 'getCategory']);
+$router->get('/resources/category/([\w\W]+)',[$controller, 'getCategory']);
 
 
 $router->dispatch($_SERVER['REQUEST_URI'], $_SERVER['REQUEST_METHOD']);

@@ -15,9 +15,10 @@ export interface IButtonToggleBar {
     onChange?: Function;
 }
 
-interface IToggleCallback {
+export interface IToggleCallback<T> {
     event: BaseSyntheticEvent,
     index: number;
+    source: T
 }
 
 
@@ -25,8 +26,8 @@ export default ({ items, onChange }: IButtonToggleBar) => {
 
     const [active, setActive] = useState<number>(0);
 
-    const onButtonClick = ({ event, index }: IToggleCallback) => {
-        if (onChange) onChange(event);
+    const onButtonClick = ({ event, index, source }: IToggleCallback<IButtonToggle>) => {
+        if (onChange) onChange({ event, source });
         setActive(index);
     }
 
@@ -37,7 +38,8 @@ export default ({ items, onChange }: IButtonToggleBar) => {
                     key={`toggle${index}${item.text}`}
                     className="button-toggle"
                     data-active={index === active}
-                    onClick={event => onButtonClick({ event, index })}
+                    onClick={event => onButtonClick({ event, index, source: item })}
+                    data-size={2}
                 >
                     <Label {...item} />
                 </div>)

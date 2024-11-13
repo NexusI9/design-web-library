@@ -1,3 +1,29 @@
-.button-toggle{
+.button-toggle {
     cursor: default;
+
+    border: solid 1px var(--color-base-700);
+    background: transparent;
+    border-radius: var(--border-radius-toggle);
+
+    transition: color, background, border, 150ms linear;
+
+    &:hover{
+        color: var(--color-base-100);
+        background-color: var(--color-base-700);
+    }
+
+    &[data-active="true"]{
+        background-color: var(--color-brand-primary-500);
+        border-color: var(--color-brand-primary-500);
+    }
+
+    &[data-size="1"] {
+        min-height: var(--size-input-height-medium);
+        padding: var(--unit-l) var(--unit-2xl);
+    }
+
+    &[data-size="2"] {
+        min-height: var(--size-input-height-small);
+        padding: var(--unit-m) var(--unit-l);
+    }
 }
