@@ -5,14 +5,13 @@ export interface ISidepanelItem{
     icon: string;
     label: string;
     path:string;
-    component: (props:any) => JSX.Element;
 };
 
 export default ({ icon, label, path }: ISidepanelItem) => {
 
     return (
-        <li className="sidepanel-item flex f-row f-center-h padding-l gap-m cursor-default bd-radius-m">
-            {createElement(icon)}<Link to={path}>{label}</Link>
+        <li className="sidepanel-item cursor-default bd-radius-m">
+            <Link to={path} className="flex f-row f-center-h gap-m  padding-l">{createElement(icon)}{label}</Link>
         </li>
     );
 

@@ -5,7 +5,7 @@ export interface ICard {
     description: string;
     type: "TOOL" | "TEMPLATE" | "MODULE" | "DOCUMENT" | "PLUGIN";
     tag: number;
-    link: "EXTERNAL" | "DOWNLOAD",
+    link: "EXTERNAL" | "DOWNLOAD" | "INTERNAL",
     href: string;
     picture: string;
 }

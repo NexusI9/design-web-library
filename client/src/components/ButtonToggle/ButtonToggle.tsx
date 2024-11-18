@@ -31,12 +31,12 @@ export default ({ items, onChange }: IButtonToggleBar) => {
         setActive(index);
     }
 
-    return (<div className="button-toggle-bar flex f-row gap-m">
+    return (<div className="button-toggle-bar flex f-row gap-l">
         {
             items.map((item, index) =>
                 <div
                     key={`toggle${index}${item.text}`}
-                    className="button-toggle"
+                    className="button-toggle flex f-center"
                     data-active={index === active}
                     onClick={event => onButtonClick({ event, index, source: item })}
                     data-size={2}

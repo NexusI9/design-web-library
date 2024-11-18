@@ -7,6 +7,11 @@
 
     transition: color, background, border, 150ms linear;
 
+    svg{ 
+        fill: none;
+        stroke: currentColor;
+    }
+
     &:hover{
         color: var(--color-base-100);
         background-color: var(--color-base-700);
@@ -18,12 +23,14 @@
     }
 
     &[data-size="1"] {
-        min-height: var(--size-input-height-medium);
+        min-height: var(--size-height-input-medium);
+        min-width: calc(2 * var(--size-height-input-medium));
         padding: var(--unit-l) var(--unit-2xl);
     }
 
     &[data-size="2"] {
-        min-height: var(--size-input-height-small);
+        min-height: var(--size-height-input-small);
+        min-width: calc(2 * var(--size-height-input-small));
         padding: var(--unit-m) var(--unit-l);
     }
 }

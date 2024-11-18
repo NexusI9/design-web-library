@@ -1,3 +1,4 @@
+import { createElement } from 'react';
 import './Label.scss';
 
 export interface ILabel {
@@ -8,9 +9,9 @@ export interface ILabel {
 }
 
 export default (props: ILabel) => (
-    <p className={`label label-${props.size} flex f-row f-center-h`} data-size={props.size}>
-        {props.leftIcon}
+    <p className={`label label-${props.size} flex f-row f-center-h gap-m`} data-size={props.size}>
+        {props.leftIcon && createElement(props.leftIcon)}
         {props.text}
-        {props.rightIcon}
+        {props.rightIcon && createElement(props.rightIcon)}
     </p>
 );

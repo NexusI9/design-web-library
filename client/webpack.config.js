@@ -96,6 +96,7 @@ module.exports = (env, argv) => ({
     static: {
       directory: path.resolve(__dirname, '../public'),
     },
+    historyApiFallback: true, // Redirect all unknown routes to index.html
     compress: true,
     port: 9000,
     devMiddleware: {
