@@ -1,17 +1,10 @@
 <?php
 class Router{
 
-    private $data;
     private $routes = [];
     private $controllers = [];
 
-    function __construct($datapath){
-        $this->data = json_decode(file_get_contents($datapath), true);
-    }
-
-    function data(){
-        return $this->data;
-    }
+    function __construct(){}
 
     function get($path, $callback){
         $this->routes['GET'][$path] = $callback;

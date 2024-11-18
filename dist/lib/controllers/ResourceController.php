@@ -1,21 +1,19 @@
 <?php
 class ResourceController
 {
-
-    private $data;
     private $tags;
 
-    function __construct($data)
+    function __construct()
     {
-        $this->data = $data;
         $this->tags = json_decode(file_get_contents('./data/tag.json'), true);
     }
 
-    function getAllCategories()
+    function getAllCategories($file)
     {
 
+        $data = $this->resourceData($file);
         $categories = [];
-        foreach ($this->data as &$value) {
+        foreach ($data as &$value) {
             $tag = $this->getTagName($value['tag']);
             if (!isset($categories[$tag]))
                 $categories[$tag] = [$value];
@@ -26,15 +24,16 @@ class ResourceController
         echo json_encode($categories);
     }
 
-    function getCategory($category)
+    function getCategory($file, $category)
     {
+        $data = $this->resourceData($file);
 
         $category = urldecode($category);
         $resources = [];
         $resources[$category] = [];
-        
+
         $tag = $this->getTagID($category);
-        foreach ($this->data as &$value) {
+        foreach ($data as &$value) {
             if ($value['tag'] == $tag)
                 array_push($resources[$category], $value);
         }
@@ -42,8 +41,14 @@ class ResourceController
         if (count($resources[$category]) > 0) {
             echo json_encode($resources);
         } else {
-            $this->getAllCategories();
+            $this->getAllCategories($file);
         }
+    }
+
+    private function resourceData($name)
+    {
+        $name = strtolower($name);
+        return json_decode(file_get_contents("./data/$name.json"), true);
     }
 
     private function getTagName($id)
