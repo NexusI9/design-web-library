@@ -3,7 +3,7 @@
         "title":"Slideshow",
         "description": "Customizable slideshow with unique transitions.",
         "type": "MODULE",
-        "tag": 11,
+        "tag": 13,
         "link":"EXTERNAL",
         "href":"https://chatgpt.com/",
         "picture": "assets/thumbnails/module/glslide.webp"
@@ -12,7 +12,7 @@
         "title":"Carousel",
         "description": "Customizable carousels with 2D or 3D rotations.",
         "type": "MODULE",
-        "tag": 11,
+        "tag": 13,
         "link":"EXTERNAL",
         "href":"https://www.adobe.com/tw/products/firefly.html",
         "picture": "assets/thumbnails/module/glcarousel.webp"

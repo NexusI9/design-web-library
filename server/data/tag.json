@@ -9,5 +9,7 @@
   { "id": 8, "name": "Figma" },
   { "id": 9, "name": "Adobe XD" },
   { "id": 10, "name": "Powerpoint" },
-  { "id": 11, "name": "GL Modules" }
+  { "id": 11, "name": "Management" },
+  { "id": 12, "name": "Documentation" },
+  { "id": 13, "name": "GL Modules" }
 ]
