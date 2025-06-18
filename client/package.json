@@ -4,7 +4,7 @@
   "description": "Your project",
   "main": "index.js",
   "scripts": {
-    "php": "php -q -S localhost:8000 -t ../dist",
+    "php": "php -q -S localhost:8000 -t ../server/public",
     "dev": "npm run php & npx webpack serve",
     "build": "webpack --mode=production",
     "build:watch": "webpack --mode=development --watch --progress"
@@ -15,8 +15,10 @@
     "@svgr/webpack": "^8.1.0",
     "@tanstack/router-devtools": "^1.78.0",
     "@tanstack/router-plugin": "^1.78.0",
+    "@types/node": "^24.0.3",
     "@types/react": "^18.2.25",
     "@types/react-dom": "^18.2.11",
+    "@types/three": "^0.177.0",
     "copy-webpack-plugin": "^12.0.2",
     "css-loader": "^6.8.1",
     "html-webpack-plugin": "^5.5.3",
@@ -29,13 +31,16 @@
     "url-loader": "^4.1.1",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.1.0"
+    "webpack-dev-server": "^5.1.0",
+    "webpack-glsl-loader": "^1.0.1"
   },
   "dependencies": {
+    "@tweenjs/tween.js": "^25.0.0",
     "motion": "^11.11.17",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^9.0.4",
-    "sass": "^1.69.5"
+    "sass": "^1.69.5",
+    "three": "^0.177.0"
   }
 }

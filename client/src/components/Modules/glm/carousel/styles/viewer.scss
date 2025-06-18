@@ -1,0 +1,68 @@
+.glm-carousel-viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #00000099;
+    backdrop-filter: blur(3px);
+    z-index: 2;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 40px;
+    opacity: 0;
+    pointer-events: none;
+
+    &[data-display="false"]{
+        transition: opacity 0.25s linear;
+        pointer-events: none;
+    }
+
+    &[data-display="true"]{
+        transition: opacity 0.25s linear;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    
+    &-picture{
+        max-width: 100%;
+        max-height: 92%;
+        object-fit: contain;
+        flex-grow: 1;
+    }
+
+    &-close {
+        align-self: flex-end;
+        flex-shrink: 0;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        border-radius: 10em;
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 1.5px;
+            height: 40px;
+            background-color: #FFFFFF;
+        }
+
+        &::before {
+            transform: rotate3d(0, 0, 1, -45deg);
+        }
+
+        &::after {
+            transform: rotate3d(0, 0, 1, 45deg);
+        }
+    }
+}
