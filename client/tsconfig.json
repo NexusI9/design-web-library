@@ -8,19 +8,17 @@
     "jsx": "react-jsx",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "typeRoots": [
-      "./node_modules/@types",
-    ],
+    "typeRoots": ["./node_modules/@types"],
     "baseUrl": "./",
     "paths": {
-        "@components/*": ["src/components/*"],
-        "@icons/*": ["src/assets/icons/*"],
-        "@assets/*": ["src/assets/*"],
-        "@styles/*": ["src/styles/*"],
-        "@ctypes/*": ["src/types/*"],
-        "@lib/*": ["src/lib/*"],
-        "@templates/*":["src/templates/*"]
+      "@components/*": ["src/components/*"],
+      "@icons/*": ["src/assets/icons/*"],
+      "@assets/*": ["src/assets/*"],
+      "@styles/*": ["src/styles/*"],
+      "@ctypes/*": ["src/types/*"],
+      "@lib/*": ["src/lib/*"],
+      "@templates/*": ["src/templates/*"]
     }
   },
-    "include": ["src","src/custom.d.ts"]
+  "include": ["**/*.tsx", "src", "src/custom.d.ts"]
 }
