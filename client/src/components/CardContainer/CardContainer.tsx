@@ -44,7 +44,6 @@ export default ({ type, filter }: ICardContainer) => {
         UX: UXIcon,
       };
 
-      console.log({ type });
       fetch(`${API_URL}/resources/${type}/category/all`)
         .then((e) => e.json())
         .then((data) => {
