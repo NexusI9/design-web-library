@@ -43,7 +43,7 @@ module.exports = (env, argv) => ({
         ],
       },
 
-	// Handle SVG loading
+      // Handle SVG loading
       {
         test: /\.svg$/,
         use: [
@@ -67,9 +67,9 @@ module.exports = (env, argv) => ({
         ],
       },
 
-	// Include GLSL
+      // Include GLSL
       {
-          test: /\.(glsl|vert|frag)$/,
+        test: /\.(glsl|vert|frag)$/,
         loader: "webpack-glsl-loader",
       },
     ],
@@ -85,6 +85,8 @@ module.exports = (env, argv) => ({
       "@styles": path.resolve(__dirname, "src/styles/"),
       "@lib": path.resolve(__dirname, "src/lib/"),
       "@ctypes": path.resolve(__dirname, "src/types/"),
+      "@templates": path.resolve(__dirname, "src/templates/"),
+      "@pages": path.resolve(__dirname, "src/pages/"),
     },
   },
 

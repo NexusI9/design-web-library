@@ -1,0 +1,12 @@
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/Modules/glm/slideshow/styles/index.scss ***!
+  \*****************************************************************************************************************************************************************************/
+.glm-slideshow {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: auto;
+  aspect-ratio: 16/7;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3RhdGljLW1vZHVsZXMvZ2xtL3NsaWRlc2hvdy9zY3JpcHRzL2luZGV4LmNzcyIsIm1hcHBpbmdzIjoiOzs7QUFBQTtFQUNJO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7QUNDSixDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vcHJvamVjdG5hbWUvLi9zcmMvY29tcG9uZW50cy9Nb2R1bGVzL2dsbS9zbGlkZXNob3cvc3R5bGVzL3NsaWRlc2hvdy5zY3NzIiwid2VicGFjazovL3Byb2plY3RuYW1lLy4vc3JjL2NvbXBvbmVudHMvTW9kdWxlcy9nbG0vc2xpZGVzaG93L3N0eWxlcy9pbmRleC5zY3NzIl0sInNvdXJjZXNDb250ZW50IjpbIi5nbG0tc2xpZGVzaG93e1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgIGhlaWdodDogYXV0bztcbiAgICBhc3BlY3QtcmF0aW86IDE2Lzc7XG59IiwiLmdsbS1zbGlkZXNob3cge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIHdpZHRoOiAxMDAlO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBoZWlnaHQ6IGF1dG87XG4gIGFzcGVjdC1yYXRpbzogMTYvNztcbn0iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=*/

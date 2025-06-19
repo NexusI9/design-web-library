@@ -17,7 +17,8 @@
       "@styles/*": ["src/styles/*"],
       "@ctypes/*": ["src/types/*"],
       "@lib/*": ["src/lib/*"],
-      "@templates/*": ["src/templates/*"]
+      "@templates/*": ["src/templates/*"],
+      "@pages/*": ["src/pages/*"]
     }
   },
   "include": ["**/*.tsx", "src", "src/custom.d.ts"]

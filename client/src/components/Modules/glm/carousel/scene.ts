@@ -1,9 +1,9 @@
 import * as THREE from 'three';
 import './styles/index.scss';
-import Picture from './picture.js';
+import Picture from './picture';
 import Viewer from './viewer';
 import { setCirclePosRot, getPictureFromUUID, repeatArray, radiusFromLength, normalizeDimension } from './utils';
-import ThreeScene from '../../../../../../../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!components!Modules!glm!lib!three-scene.ts~';
+import ThreeScene from '../lib/three-scene';
 import { configFromDataSet } from '../lib/utils';
 import { ISceneConfig } from '../types/Scene';
 
