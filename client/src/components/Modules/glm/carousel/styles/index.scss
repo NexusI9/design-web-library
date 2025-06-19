@@ -1,2 +1,6 @@
-@use 'slider';
-@use 'viewer';
+@use "slider";
+@use "viewer";
+
+body {
+  margin: 0;
+}

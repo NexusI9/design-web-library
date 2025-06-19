@@ -17,7 +17,7 @@ const GLMRouteMap: IRouteComponent[] = [
               label: "Transition duration",
               min: 500,
               max: 10000,
-              default: 1500,
+              defaultValue: 1500,
               targetAttribute: "data-transition-duration",
             },
             {
@@ -25,7 +25,7 @@ const GLMRouteMap: IRouteComponent[] = [
               label: "Slide duration",
               min: 500,
               max: 10000,
-              default: 1500,
+              defaultValue: 1500,
               targetAttribute: "data-slide-duration",
             },
             {
@@ -37,6 +37,7 @@ const GLMRouteMap: IRouteComponent[] = [
                 { label: "Wave", value: "wave" },
                 { label: "Store", value: "store" },
               ],
+              defaultIndex: 0,
               targetAttribute: "data-transition-type",
             },
             {
@@ -47,6 +48,7 @@ const GLMRouteMap: IRouteComponent[] = [
                 { label: "Automatic", value: "automatic" },
                 { label: "Manual", value: "manual" },
               ],
+              defaultIndex: 0,
               targetAttribute: "data-mode",
             },
           ],
@@ -72,6 +74,7 @@ const GLMRouteMap: IRouteComponent[] = [
                 { label: "Inward", value: "inward" },
                 { label: "Fan", value: "fan" },
               ],
+              defaultIndex: 0,
               targetAttribute: "data-curve",
             },
             {
@@ -81,6 +84,7 @@ const GLMRouteMap: IRouteComponent[] = [
                 { label: "Right", value: "right" },
                 { label: "Left", value: "left" },
               ],
+              defaultIndex: 0,
               targetAttribute: "data-direction",
             },
             {
@@ -88,7 +92,7 @@ const GLMRouteMap: IRouteComponent[] = [
               label: "Picture width",
               min: 100,
               max: 1920,
-              default: 340,
+              defaultValue: 340,
               targetAttribute: "data-picture-width",
             },
             {
@@ -96,7 +100,7 @@ const GLMRouteMap: IRouteComponent[] = [
               label: "Picture height",
               min: 100,
               max: 1920,
-              default: 544,
+              defaultValue: 544,
               targetAttribute: "data-picture-height",
             },
             {
@@ -106,6 +110,7 @@ const GLMRouteMap: IRouteComponent[] = [
                 { label: "True", value: "true" },
                 { label: "False", value: "false" },
               ],
+              defaultIndex: 0,
               targetAttribute: "data-invert-drag",
             },
           ],

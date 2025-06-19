@@ -1,53 +1,34 @@
-import { useRef } from "react";
+import { Fragment, useRef } from "react";
 import "./index.scss";
 import PageHeader, { IPageHeader } from "@components/PageHeader/PageHeader";
+import { ModuleSectionInputs } from "@components/ModuleInput/ModuleInputSection";
+import { ModuleInput } from "@components/ModuleInput";
 
-interface IModuleFrameIFrame {
+interface IEmbedModuleIframe {
   url: string;
-  inputs: (IModuleFrameInputNumber | IModuleFrameInputSelect)[];
+  inputs: ModuleSectionInputs;
 }
 
-export interface IModuleFrame extends IPageHeader {
-  frames: IModuleFrameIFrame[];
+export interface IEmbedModule extends IPageHeader {
+  frames: IEmbedModuleIframe[];
 }
 
-interface IModuleFrameAPI {
-  attribute: string;
-  value: string | number;
-}
-
-interface IModuleFrameInputBase {
-  targetAttribute: string;
-  label: string;
-}
-
-interface IModuleFrameInputNumber extends IModuleFrameInputBase {
-  type: "INPUT_NUMBER";
-  min: number;
-  max: number;
-  default: number;
-}
-
-interface IModuleFrameInputSelect extends IModuleFrameInputBase {
-  type: "INPUT_SELECT";
-  values: { label: string; value: string }[];
-  default: number;
-}
-
-export default ({ frames, title, subtitle }: IModuleFrame) => {
+export default ({ frames, title, subtitle }: IEmbedModule) => {
   const iframe = useRef<any>();
 
   return (
-    <>
+    <div className="flex f-col gap-3xl">
       <PageHeader title={title} subtitle={subtitle} />
       {frames.map((frame, i) => (
-        <iframe
-          key={`${frame.url}${i}`}
-          className="module-frame-iframe"
-          ref={iframe}
-          src={frame.url}
-        />
+        <div className="embed-module-frame flex f-col gap-2xl" key={`${frame.url}${i}`}>
+          <ModuleInput.Section inputs={frame.inputs} />
+          <iframe
+            className="module-frame-iframe"
+            ref={iframe}
+            src={frame.url}
+          />
+        </div>
       ))}
-    </>
+    </div>
   );
 };
