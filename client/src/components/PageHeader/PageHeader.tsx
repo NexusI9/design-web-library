@@ -8,7 +8,7 @@ export interface IPageHeader {
 
 export default ({ title, subtitle, picture }: IPageHeader) => (
   <header
-    className="page-header full-width flex f-col round"
+    className="page-header full-width flex f-col round gap-xl"
     data-picture={!!picture}
   >
     {picture && (

@@ -1,36 +1,53 @@
 import { useRef } from "react";
 import "./index.scss";
+import PageHeader, { IPageHeader } from "@components/PageHeader/PageHeader";
 
-export interface IModuleFrame {
-  frameUrl: string;
+interface IModuleFrameIFrame {
+  url: string;
   inputs: (IModuleFrameInputNumber | IModuleFrameInputSelect)[];
 }
 
+export interface IModuleFrame extends IPageHeader {
+  frames: IModuleFrameIFrame[];
+}
+
 interface IModuleFrameAPI {
-  property: string;
+  attribute: string;
   value: string | number;
 }
 
-interface IModuleFrameInputNumber {
+interface IModuleFrameInputBase {
+  targetAttribute: string;
+  label: string;
+}
+
+interface IModuleFrameInputNumber extends IModuleFrameInputBase {
   type: "INPUT_NUMBER";
   min: number;
   max: number;
   default: number;
-  api: IModuleFrameAPI;
 }
 
-interface IModuleFrameInputSelect {
+interface IModuleFrameInputSelect extends IModuleFrameInputBase {
   type: "INPUT_SELECT";
-  values: string[];
+  values: { label: string; value: string }[];
   default: number;
 }
 
-export default ({ frameUrl }: IModuleFrame) => {
+export default ({ frames, title, subtitle }: IModuleFrame) => {
   const iframe = useRef<any>();
 
   return (
     <>
-      <iframe className="module-frame-iframe" ref={iframe} src={frameUrl} />
+      <PageHeader title={title} subtitle={subtitle} />
+      {frames.map((frame, i) => (
+        <iframe
+          key={`${frame.url}${i}`}
+          className="module-frame-iframe"
+          ref={iframe}
+          src={frame.url}
+        />
+      ))}
     </>
   );
 };
