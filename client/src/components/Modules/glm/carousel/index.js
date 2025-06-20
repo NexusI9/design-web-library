@@ -1,4 +1,9 @@
-import Scene from './scene';
+import Scene from "./scene";
 
-window.onload = () => document.querySelectorAll('.glm-carousel-wrapper').forEach(container => new Scene(container).init());
+export function moduleInit() {
+  document
+    .querySelectorAll(".glm-carousel-wrapper")
+    .forEach((container) => new Scene(container).init());
+}
 
+window.onload = moduleInit;

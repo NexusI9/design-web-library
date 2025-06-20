@@ -1,3 +1,10 @@
-import Scene from './scene.ts';
+import Scene from "./scene.ts";
 
-window.onload = () => document.querySelectorAll('.glm-slideshow').forEach(container => new Scene(container).init() );
+export function moduleInit() {
+  document.querySelectorAll(".glm-slideshow").forEach((container) =>
+    // instantiante new ones
+    new Scene(container).init()
+  );
+}
+
+window.onload = moduleInit;

@@ -110,6 +110,22 @@ const GLMRouteMap: IRouteComponent[] = [
               targetAttribute: "data-picture-height",
             },
             {
+              type: "INPUT_NUMBER",
+              label: "Border radius",
+              min: 0,
+              max: 100,
+              defaultValue: 12,
+              targetAttribute: "data-border-radius",
+            },
+            {
+              type: "INPUT_NUMBER",
+              label: "Border smooth",
+              min: 0,
+              max: 6,
+              defaultValue: 4,
+              targetAttribute: "data-border-smooth",
+            },
+            {
               type: "INPUT_SELECT",
               label: "Invert drag",
               values: [

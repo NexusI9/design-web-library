@@ -1,7 +1,11 @@
-.glm-slideshow{
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    height: auto;
-    aspect-ratio: 16/7;
+.glm-slideshow {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: auto;
+  aspect-ratio: 16/7;
+
+  &-img {
+    display: none;
+  }
 }

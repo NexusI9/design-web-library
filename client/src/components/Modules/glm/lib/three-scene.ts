@@ -39,6 +39,9 @@ export default class {
       return console.warn("No container has been found");
     }
 
+    // clean up, remove existing canvas
+    this.container.querySelectorAll("canvas").forEach((item) => item.remove());
+
     //generate picture meshes from img list
     this.setupRenderer();
     this.perspectiveCamera();

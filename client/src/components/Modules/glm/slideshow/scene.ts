@@ -62,7 +62,6 @@ export default class extends ThreePlanarScene {
             const src = String(img.getAttribute("src"));
             this.sources[i] = src;
             this.textures[i] = this.loadTexture(src);
-            img.remove();
         });
 
         //set initial thumbnail

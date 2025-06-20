@@ -12,7 +12,7 @@ export default ({ min, max, defaultValue, onChange }: IInputNumber) => {
       min={min}
       max={max}
       defaultValue={defaultValue}
-      onChange={(e) => onChange && onChange(e.target.value)}
+      onBlur={(e) => onChange && onChange(e.target.value)}
     />
   );
 };

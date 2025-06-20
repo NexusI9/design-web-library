@@ -29,9 +29,6 @@ export interface IModuleInputSection {
 }
 
 export default ({ frame, inputs, channel }: IModuleInputSection) => {
-  useEffect(() => {
-    console.log({ frame });
-  }, [frame]);
 
   const onInputChange = (value: string, attribute: string) => {
     frame &&

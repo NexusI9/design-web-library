@@ -22,7 +22,7 @@ export default class {
     }
 
     events() {
-        this.elt.close.addEventListener('click', this.close.bind(this));
+        this.elt.close?.addEventListener('click', this.close.bind(this));
     }
 
     close() {

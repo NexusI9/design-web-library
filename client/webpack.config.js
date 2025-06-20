@@ -1,5 +1,4 @@
 const { html_modules_entries } = require("./config/html-modules.config");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 
@@ -74,7 +73,6 @@ module.exports = (env, argv) => ({
       },
     ],
   },
-
   resolve: {
     // Webpack tries these extensions for you if you omit the extension like "import './file'"
     extensions: [".tsx", ".ts", ".jsx", ".js", ".svg"],
