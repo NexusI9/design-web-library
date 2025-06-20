@@ -10,16 +10,18 @@ interface IViewScope {
   onExit: () => void;
 }
 
-
 export default class {
-
   container: HTMLElement;
-  state:boolean;
+  state: boolean;
   onEnter: () => void;
   onExit: () => void;
   box: DOMRect;
 
-  constructor({ container, onEnter = () => { }, onExit = () => { } }: IViewScope) {
+  constructor({
+    container,
+    onEnter = () => {},
+    onExit = () => {},
+  }: IViewScope) {
     this.container = container;
     this.onEnter = onEnter;
     this.onExit = onExit;
@@ -34,34 +36,30 @@ export default class {
 
   init() {
     if (!this.container) {
-      return console.warn('[ViewScope] no container defined');
+      return console.warn("[ViewScope] no container defined");
     }
     this.check();
 
-    window.addEventListener('scroll', this.check.bind(this));
+    window.addEventListener("scroll", this.check.bind(this));
 
-    window.addEventListener('resize', () => this.box = this.containerBox)
+    window.addEventListener("resize", () => (this.box = this.containerBox));
   }
 
   check() {
-
     const scrollPos = window.pageYOffset;
     this.box = this.containerBox;
     //console.log(this.box);
-    if (this.box.top <= window.innerHeight &&
-      this.box.bottom >= 0
-    ) {
+    if (this.box.top <= window.innerHeight && this.box.bottom >= 0) {
+      if (!this.state) {
+        this.onEnter();
+      }
 
-      if (!this.state) { this.onEnter(); }
-
-      return this.state = true;
+      return (this.state = true);
     } else {
       if (this.state) {
         this.onExit();
       }
-      return this.state = false;
+      return (this.state = false);
     }
   }
-
-
 }

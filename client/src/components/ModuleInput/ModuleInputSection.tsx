@@ -2,6 +2,7 @@ import { createElement } from "react";
 import { IModuleFrameInputBase } from "./ModuleInput";
 import ModuleInputNumber from "./ModuleInputNumber";
 import ModuleInputSelect, { IInputSelectValue } from "./ModuleInputSelect";
+import { messageProcessor } from "@components/Modules/glm/lib/message-processor";
 
 export interface IModuleInputSectionSelect extends IModuleFrameInputBase {
   type: "INPUT_SELECT";
@@ -23,9 +24,10 @@ export type ModuleSectionInputs = (
 
 export interface IModuleInputSection {
   inputs: ModuleSectionInputs;
+  channel: string;
 }
 
-export default ({ inputs }: IModuleInputSection) => {
+export default ({ inputs, channel }: IModuleInputSection) => {
   return (
     <div className="module-input-section flex f-row gap-3xl">
       {inputs.map((input) => {
@@ -38,7 +40,13 @@ export default ({ inputs }: IModuleInputSection) => {
                 min={input.min}
                 max={input.max}
                 defaultValue={input.defaultValue}
-                onChange={(val) => 0}
+                onChange={(value) =>
+                  messageProcessor.send({
+                    channel,
+                    attribute: input.targetAttribute,
+                    value,
+                  })
+                }
               />
             );
 
@@ -49,7 +57,13 @@ export default ({ inputs }: IModuleInputSection) => {
               <ModuleInputSelect
                 values={input.values}
                 defaultIndex={input.defaultIndex}
-                onChange={(val) => 0}
+                onChange={(value) =>
+                  messageProcessor.send({
+                    channel,
+                    attribute: input.targetAttribute,
+                    value,
+                  })
+                }
               />
             );
             break;
@@ -57,7 +71,7 @@ export default ({ inputs }: IModuleInputSection) => {
         }
 
         return (
-          <label className="flex f-col gap-s">
+          <label key={input.name + input.label} className="flex f-col gap-s">
             <p>
               <small>{input.label}</small>
             </p>

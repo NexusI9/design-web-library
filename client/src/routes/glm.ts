@@ -1,5 +1,9 @@
+import {
+  MODULE_GLM_CHANNEL_CAROUSEL,
+  MODULE_GLM_CHANNEL_SLIDESHOW,
+} from "@components/Modules/glm/lib/constant";
 import { IRouteComponent } from "@ctypes/route";
-import ModuleFrame from "@pages/ModuleFrame";
+import ModuleFrame from "@pages/EmbedModules";
 
 const GLMRouteMap: IRouteComponent[] = [
   {
@@ -11,6 +15,7 @@ const GLMRouteMap: IRouteComponent[] = [
       frames: [
         {
           url: "/static-modules/glm/slideshow/index.html",
+          channel: MODULE_GLM_CHANNEL_SLIDESHOW,
           inputs: [
             {
               type: "INPUT_NUMBER",
@@ -30,7 +35,7 @@ const GLMRouteMap: IRouteComponent[] = [
             },
             {
               type: "INPUT_SELECT",
-              label: "Slide duration",
+              label: "Transition type",
               values: [
                 { label: "Default", value: "default" },
                 { label: "Slice", value: "slice" },
@@ -65,6 +70,7 @@ const GLMRouteMap: IRouteComponent[] = [
       frames: [
         {
           url: "/static-modules/glm/carousel/index.html",
+          channel: MODULE_GLM_CHANNEL_CAROUSEL,
           inputs: [
             {
               type: "INPUT_SELECT",

@@ -6,7 +6,7 @@ export interface IInputSelectValue {
 interface IInputSelect {
   values: IInputSelectValue[];
   defaultIndex: number;
-  onChange: (values: IInputSelectValue) => void;
+  onChange: (values: string) => void;
 }
 
 export default ({ values, defaultIndex, onChange }: IInputSelect) => {
@@ -14,7 +14,7 @@ export default ({ values, defaultIndex, onChange }: IInputSelect) => {
   spliced_values.splice(defaultIndex, 1);
 
   return (
-    <select>
+    <select onChange={(e) => onChange && onChange(e.target.value)}>
       <option value={String(values[defaultIndex].value)}>
         {String(values[defaultIndex].label)}
       </option>
