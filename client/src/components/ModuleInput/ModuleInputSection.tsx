@@ -1,4 +1,4 @@
-import { createElement } from "react";
+import { createElement, useEffect } from "react";
 import { IModuleFrameInputBase } from "./ModuleInput";
 import ModuleInputNumber from "./ModuleInputNumber";
 import ModuleInputSelect, { IInputSelectValue } from "./ModuleInputSelect";
@@ -23,11 +23,25 @@ export type ModuleSectionInputs = (
 )[];
 
 export interface IModuleInputSection {
+  frame: HTMLIFrameElement;
   inputs: ModuleSectionInputs;
   channel: string;
 }
 
-export default ({ inputs, channel }: IModuleInputSection) => {
+export default ({ frame, inputs, channel }: IModuleInputSection) => {
+  useEffect(() => {
+    console.log({ frame });
+  }, [frame]);
+
+  const onInputChange = (value: string, attribute: string) => {
+    frame &&
+      messageProcessor.send(frame, {
+        channel,
+        attribute: attribute,
+        value,
+      });
+  };
+
   return (
     <div className="module-input-section flex f-row gap-3xl">
       {inputs.map((input) => {
@@ -41,11 +55,7 @@ export default ({ inputs, channel }: IModuleInputSection) => {
                 max={input.max}
                 defaultValue={input.defaultValue}
                 onChange={(value) =>
-                  messageProcessor.send({
-                    channel,
-                    attribute: input.targetAttribute,
-                    value,
-                  })
+                  onInputChange(value, input.targetAttribute)
                 }
               />
             );
@@ -58,11 +68,7 @@ export default ({ inputs, channel }: IModuleInputSection) => {
                 values={input.values}
                 defaultIndex={input.defaultIndex}
                 onChange={(value) =>
-                  messageProcessor.send({
-                    channel,
-                    attribute: input.targetAttribute,
-                    value,
-                  })
+                  onInputChange(value, input.targetAttribute)
                 }
               />
             );

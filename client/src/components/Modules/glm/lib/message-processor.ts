@@ -5,12 +5,18 @@ export interface IMessageProcessorRequest {
 }
 
 export const messageProcessor = {
-  send: (request: IMessageProcessorRequest) =>
-    window.postMessage(request, window.location.origin),
+  send: (frame: HTMLIFrameElement, request: IMessageProcessorRequest) =>
+    frame.contentWindow?.postMessage(request, "*"),
 
   listen: (channel: string, selector: string) => {
     window.addEventListener("message", (e) => {
-      console.log(e);
+      const { data } = e;
+      if (channel == data.channel) {
+        // update data attributes of each items
+        document.querySelectorAll(selector).forEach((item) => {
+          item.setAttribute(data.attribute, data.value);
+        });
+      }
     });
   },
 };

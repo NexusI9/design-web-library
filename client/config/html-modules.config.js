@@ -15,5 +15,5 @@ module.exports.html_modules_entries = {
       message entries (temporaries)
   */
   [outdir("carousel", "delete.me")]: indir("carousel", "message-handler.ts"),
-  [outdir("slideshow", "delete.me")]: indir("carousel", "message-handler.ts"),
+  [outdir("slideshow", "delete.me")]: indir("slideshow", "message-handler.ts"),
 };
