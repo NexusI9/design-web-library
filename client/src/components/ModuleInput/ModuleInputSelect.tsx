@@ -1,3 +1,5 @@
+import "./index.scss";
+
 export interface IInputSelectValue {
   label: string;
   value: string;
@@ -14,7 +16,10 @@ export default ({ values, defaultIndex, onChange }: IInputSelect) => {
   spliced_values.splice(defaultIndex, 1);
 
   return (
-    <select onChange={(e) => onChange && onChange(e.target.value)}>
+    <select
+      className="module-input"
+      onChange={(e) => onChange && onChange(e.target.value)}
+    >
       <option value={String(values[defaultIndex].value)}>
         {String(values[defaultIndex].label)}
       </option>

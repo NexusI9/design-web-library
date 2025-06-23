@@ -121,7 +121,7 @@ const GLMRouteMap: IRouteComponent[] = [
               type: "INPUT_NUMBER",
               label: "Border smooth",
               min: 1,
-              max: 6,
+              max: 8,
               defaultValue: 4,
               targetAttribute: "data-border-smooth",
             },

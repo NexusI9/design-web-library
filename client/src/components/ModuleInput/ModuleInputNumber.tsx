@@ -1,3 +1,5 @@
+import "./index.scss";
+
 export interface IInputNumber {
   min: number;
   max: number;
@@ -8,6 +10,7 @@ export interface IInputNumber {
 export default ({ min, max, defaultValue, onChange }: IInputNumber) => {
   return (
     <input
+      className="module-input"
       type="number"
       min={min}
       max={max}
