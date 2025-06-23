@@ -170,8 +170,8 @@ export default class extends ThreeScene {
     }
     // Check if any object was clicked
     if (raycast.length > 0) {
-      if (this.dragger?.getState === "slow")
-        this.container.setAttribute("data-cursor", "pointer");
+      if (this.dragger?.getState !== "moving")
+        this.renderer.domElement.setAttribute("data-cursor", "pointer");
 
       const hoverPlane = raycast.find(
         (intersect) => intersect.object instanceof THREE.Mesh,
@@ -183,7 +183,7 @@ export default class extends ThreeScene {
         );
       }
     } else {
-      this.container.setAttribute("data-cursor", "defaut");
+      this.renderer.domElement.setAttribute("data-cursor", "defaut");
       this.lastHoverPicture = undefined;
     }
   }
