@@ -15,25 +15,38 @@ export default class Dragger {
   objectYRot: number = 0;
   mouseMouveTimeout: NodeJS.Timeout = setTimeout(() => false, 0);
   lastMouseMovement: number = 0;
+  damping: number = 0.02;
+  inverted: boolean = false;
+  axis: "x" | "y" | "z" = "x";
+  mesh: THREE.Mesh | THREE.Group | undefined;
 
-  constructor({ container }: Pick<Dragger, "container">) {
+  boundRotate = this.rotate.bind(this);
+
+  constructor({
+    container,
+    damping,
+    inverted,
+    axis,
+    mesh,
+  }: Pick<Dragger, "container" | "damping" | "inverted" | "axis" | "mesh">) {
     this.container = container;
+    this.damping = damping;
+    this.inverted = inverted;
+    this.axis = axis;
+    this.mesh = mesh;
   }
 
   get getState() {
     return this.state;
   }
 
-  rotate(
-    event: MouseEvent | TouchEvent,
-    mesh: THREE.Mesh | THREE.Group,
-    { damping = 0.02, inverted = false, axis = "y" }: IRotateObject,
-  ) {
+  rotate(event: MouseEvent | TouchEvent) {
+    if (!this.mesh) return;
     this.container?.setAttribute("data-cursor", "grab");
 
     clearTimeout(this.mouseMouveTimeout);
     const movementX =
-      (inverted ? 1 : -1) *
+      (this.inverted ? 1 : -1) *
       ((event as MouseEvent).movementX ||
         (touchMovement(event as TouchEvent, 20) as ICustomTouch).movementX ||
         0);
@@ -41,16 +54,16 @@ export default class Dragger {
     this.lastMouseMovement = movementX;
 
     // Calculate rotation angles based on mouse movement
-    const rotationY = movementX * damping;
+    const rotationY = movementX * this.damping;
     this.objectYRot = clamp(-3, 3)(rotationY);
 
     console.log(movementX);
 
     animate({
-      from: mesh.rotation[axis],
-      to: mesh.rotation[axis] + this.objectYRot,
+      from: this.mesh?.rotation[this.axis],
+      to: this.mesh.rotation[this.axis] + this.objectYRot,
       onUpdate: (v) => {
-        mesh.rotation[axis] = v;
+        if (this.mesh) this.mesh.rotation[this.axis] = v;
       },
       type: "spring",
       duration: 600,
@@ -64,5 +77,23 @@ export default class Dragger {
         this.lastMouseMovement = 0;
       }
     }, 1000);
+  }
+
+  init() {
+    // drag event
+    this.container?.addEventListener("mousedown", () => {
+      document.addEventListener("mousemove", this.boundRotate);
+      this.state = "dragged";
+    });
+
+    // release event
+    this.container?.addEventListener("mouseup", () => {
+      document.removeEventListener("mousemove", this.boundRotate);
+      this.container?.setAttribute("data-cursor", "default");
+      this.state = "released";
+    });
+
+    //touch events for mobiles
+    //this.renderer.domElement.addEventListener("touchmove", bindedMouseMove);
   }
 }

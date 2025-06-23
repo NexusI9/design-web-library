@@ -135,29 +135,17 @@ export default class extends ThreeScene {
   }
 
   events() {
-    this.dragger = new Dragger({ container: this.container });
-
-    //carousel rotation effect on mouse move
-    const bindedMouseMove = (e: MouseEvent | TouchEvent) =>
-      this.dragger?.rotate(e, this.pivot, {
-        damping: 0.02,
-        inverted:
-          this.config.invertDrag == 1 ||
-          (this.config.curve == "inward" && this.config.invertDrag == 0),
-        axis: this.rotationAxis,
-      });
-
-    this.renderer.domElement.addEventListener("mousedown", () => {
-      document.addEventListener("mousemove", bindedMouseMove);
+    this.dragger = new Dragger({
+      container: this.renderer.domElement,
+      mesh: this.pivot,
+      damping: 0.02,
+      inverted:
+        this.config.invertDrag == 1 ||
+        (this.config.curve == "inward" && this.config.invertDrag == 0),
+      axis: this.rotationAxis,
     });
 
-    this.renderer.domElement.addEventListener("mouseup", () => {
-      document.removeEventListener("mousemove", bindedMouseMove);
-      this.container.setAttribute("data-cursor", "default");
-    });
-
-    //touch events for mobiles
-    this.renderer.domElement.addEventListener("touchmove", bindedMouseMove);
+    this.dragger.init();
 
     //raycast system on panel click to display the viewer
     this.renderer.domElement.addEventListener(
@@ -255,7 +243,7 @@ export default class extends ThreeScene {
   render() {
     super.render();
 
-    /*if (this.dragger.getState() === "released") {
+    if (this.dragger?.getState === "released") {
       this.pivot.rotation[this.rotationAxis] +=
         (((this.config.curve === "outward" &&
           this.config.direction == "right") ||
@@ -264,6 +252,6 @@ export default class extends ThreeScene {
           : 1) *
           this.cameraRotateSpeed) /
         60;
-	}*/
+    }
   }
 }
