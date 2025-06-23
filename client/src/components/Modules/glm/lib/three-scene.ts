@@ -7,8 +7,7 @@
 import * as THREE from "three";
 import { clamp, touchMovement } from "./utils";
 
-//@ts-ignore
-import * as TWEEN from "@tweenjs/tween.js";
+import { animate } from "popmotion";
 import ViewScope from "./viewscope";
 import { ICustomTouch } from "../types/Events";
 
@@ -112,9 +111,8 @@ export default class {
   }
 
   onPerspectiveWindowResize() {
-    if (!this.camera) {
-      return;
-    }
+    if (!this.camera) return;
+
     this.camera = this.camera as THREE.PerspectiveCamera;
     this.camera.aspect = this.viewport.aspectRatio; // readjust the aspect ratio.
     this.camera.updateProjectionMatrix(); // Used to recalulate projectin dimensions.
@@ -122,9 +120,8 @@ export default class {
   }
 
   onOrthographicWindowResize() {
-    if (!this.camera) {
-      return;
-    }
+    if (!this.camera) return;
+
     const { width, height } = this.viewport;
     this.camera = this.camera as THREE.OrthographicCamera;
 
@@ -149,6 +146,7 @@ export default class {
       ((event as MouseEvent).movementX ||
         (touchMovement(event as TouchEvent, 20) as ICustomTouch).movementX ||
         0);
+
     this.lastMouseMovement = movementX;
 
     // Calculate rotation angles based on mouse movement
@@ -158,14 +156,18 @@ export default class {
     /*
         NOTE: 
             Need to use Tween within a small setTimeout, else it becomes laggy on chrome
-        */
-    setTimeout(() => {
-      console.log(mesh.rotation);
-      new TWEEN.Tween(mesh.rotation)
-        .to({ [axis]: mesh.rotation.y + this.objectYRot }, 2000)
-        .easing(TWEEN.Easing.Cubic.Out)
-        .start();
-    }, 10);
+    */
+
+    animate({
+      from: mesh.rotation.y,
+      to: mesh.rotation.y + this.objectYRot,
+      onUpdate: (y) => {
+        mesh.rotation.y = y;
+      },
+      type: "spring",
+      duration: 600,
+      damping: 30,
+    });
 
     //reset to default speed if no more movement
     this.mouseMouveTimeout = setTimeout(() => {
@@ -177,9 +179,8 @@ export default class {
   }
 
   raycast(event: MouseEvent) {
-    if (!this.camera) {
-      return;
-    }
+    if (!this.camera) return;
+
     // Calculate mouse position in normalized device coordinates (-1 to +1)
     const mouse = new THREE.Vector2();
     mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
@@ -221,12 +222,10 @@ export default class {
   }
 
   render() {
-    if (!this.play) {
-      return;
-    }
+    if (!this.play) return;
 
-    //TWEEN.update();
     if (this.camera) this.renderer.render(this.scene, this.camera);
+
     requestAnimationFrame(this.render.bind(this));
   }
 }

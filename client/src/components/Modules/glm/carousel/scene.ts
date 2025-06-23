@@ -251,6 +251,7 @@ export default class extends ThreeScene {
   render() {
     super.render();
 
+    /*
     if (this.lastMouseMovement === 0) {
       this.pivot.rotation[this.rotationAxis] +=
         (((this.config.curve === "outward" &&
@@ -260,6 +261,6 @@ export default class extends ThreeScene {
           : 1) *
           this.cameraRotateSpeed) /
         60;
-    }
+    }*/
   }
 }
