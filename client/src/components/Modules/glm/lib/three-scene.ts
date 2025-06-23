@@ -136,7 +136,11 @@ export default class {
   rotateObject(
     event: MouseEvent | TouchEvent,
     mesh: THREE.Mesh | THREE.Group,
-    { damping = 0.02, inverted = false, axis = "y" },
+    {
+      damping = 0.02,
+      inverted = false,
+      axis = "y",
+    }: { damping: number; inverted: boolean; axis: "x" | "y" | "z" },
   ) {
     this.container.setAttribute("data-cursor", "grab");
 
@@ -153,16 +157,11 @@ export default class {
     const rotationY = movementX * damping;
     this.objectYRot = clamp(-3, 3)(rotationY);
 
-    /*
-        NOTE: 
-            Need to use Tween within a small setTimeout, else it becomes laggy on chrome
-    */
-
     animate({
-      from: mesh.rotation.y,
-      to: mesh.rotation.y + this.objectYRot,
-      onUpdate: (y) => {
-        mesh.rotation.y = y;
+      from: mesh.rotation[axis],
+      to: mesh.rotation[axis] + this.objectYRot,
+      onUpdate: (v) => {
+        mesh.rotation[axis] = v;
       },
       type: "spring",
       duration: 600,
