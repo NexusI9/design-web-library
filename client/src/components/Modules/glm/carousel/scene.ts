@@ -135,6 +135,7 @@ export default class extends ThreeScene {
   }
 
   events() {
+    //set dragging effect
     this.dragger = new Dragger({
       container: this.renderer.domElement,
       mesh: this.pivot,
@@ -167,9 +168,8 @@ export default class extends ThreeScene {
     }
     // Check if any object was clicked
     if (raycast.length > 0) {
-      if (this.dragger?.getState === "released") {
+      if (this.dragger?.getState === "slow")
         this.container.setAttribute("data-cursor", "pointer");
-      }
 
       const hoverPlane = raycast.find(
         (intersect) => intersect.object instanceof THREE.Mesh,
@@ -229,9 +229,7 @@ export default class extends ThreeScene {
 
   onCanvasClick() {
     //cancel if user is actually scrolling and not clicking
-    if (this.dragger?.getState === "dragged") {
-      return;
-    }
+    if (this.dragger?.getState === "moving") return;
 
     if (this.lastHoverPicture) {
       //if found picture with same uuid and the one targeted by raycast => load picture in viewer and show
@@ -243,7 +241,7 @@ export default class extends ThreeScene {
   render() {
     super.render();
 
-    if (this.dragger?.getState === "released") {
+    if (this.dragger?.getState === "complete") {
       this.pivot.rotation[this.rotationAxis] +=
         (((this.config.curve === "outward" &&
           this.config.direction == "right") ||
