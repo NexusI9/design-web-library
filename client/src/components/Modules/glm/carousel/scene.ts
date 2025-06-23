@@ -143,8 +143,8 @@ export default class extends ThreeScene {
       spring: 0.02,
       maxspeed: 7,
       inverted:
-        this.config.invertDrag == 1 ||
-        (this.config.curve == "inward" && this.config.invertDrag == 0),
+        this.config.invertDrag == "true" ||
+        (this.config.curve == "inward" && this.config.invertDrag == "false"),
       axis: this.rotationAxis,
     });
 

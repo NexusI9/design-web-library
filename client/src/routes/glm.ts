@@ -120,7 +120,7 @@ const GLMRouteMap: IRouteComponent[] = [
             {
               type: "INPUT_NUMBER",
               label: "Border smooth",
-              min: 0,
+              min: 1,
               max: 6,
               defaultValue: 4,
               targetAttribute: "data-border-smooth",
@@ -132,7 +132,7 @@ const GLMRouteMap: IRouteComponent[] = [
                 { label: "True", value: "true" },
                 { label: "False", value: "false" },
               ],
-              defaultIndex: 0,
+              defaultIndex: 1,
               targetAttribute: "data-invert-drag",
             },
           ],
