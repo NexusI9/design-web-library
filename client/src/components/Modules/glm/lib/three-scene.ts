@@ -160,6 +160,7 @@ export default class {
             Need to use Tween within a small setTimeout, else it becomes laggy on chrome
         */
     setTimeout(() => {
+      console.log(mesh.rotation);
       new TWEEN.Tween(mesh.rotation)
         .to({ [axis]: mesh.rotation.y + this.objectYRot }, 2000)
         .easing(TWEEN.Easing.Cubic.Out)

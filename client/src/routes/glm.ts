@@ -38,8 +38,8 @@ const GLMRouteMap: IRouteComponent[] = [
               label: "Transition type",
               values: [
                 { label: "Default", value: "default" },
-                { label: "Slice", value: "slice" },
-                { label: "Wave", value: "wave" },
+                { label: "Lens", value: "lens" },
+                { label: "Swipe", value: "swipe" },
                 { label: "Store", value: "store" },
               ],
               defaultIndex: 0,

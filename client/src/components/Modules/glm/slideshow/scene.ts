@@ -23,7 +23,7 @@ const shaderMap = {
 };
 
 export interface ISlideshowConfig {
-    transitionType: 'slice' | 'hexagon' | 'wave' | 'store',
+    transitionType: 'lens' | 'hexagon' | 'swipe' | 'store',
     transitionDuration: number,
     mode: "default" | "automatic" | "manual",
     slideDuration: number
