@@ -139,8 +139,9 @@ export default class extends ThreeScene {
     this.dragger = new Dragger({
       container: this.renderer.domElement,
       mesh: this.pivot,
-      damping: 0.2,
-      spring: 0.1,
+      damping: 0.7,
+      spring: 0.02,
+      maxspeed: 7,
       inverted:
         this.config.invertDrag == 1 ||
         (this.config.curve == "inward" && this.config.invertDrag == 0),
