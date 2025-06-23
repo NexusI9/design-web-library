@@ -5,21 +5,20 @@
  */
 
 import * as THREE from "three";
-import { clamp, touchMovement } from "./utils";
-
-import { animate } from "popmotion";
 import ViewScope from "./viewscope";
-import { ICustomTouch } from "../types/Events";
+
+export interface IRotateObject {
+  damping: number;
+  inverted: boolean;
+  axis: "x" | "y" | "z";
+}
 
 export default class {
   //runtime
   play: boolean = true;
 
   //camera movement related variables
-  objectYRot: number = 0;
-  lastMouseMovement: number = 0;
   cameraRotateSpeed: number = 0.05;
-  mouseMouveTimeout: NodeJS.Timeout = setTimeout(() => false, 0);
 
   perspective = window.innerWidth / window.innerHeight;
 
@@ -131,50 +130,6 @@ export default class {
     this.camera.bottom = -height / 2;
     this.camera.updateProjectionMatrix();
     this.renderer.setSize(width, height);
-  }
-
-  rotateObject(
-    event: MouseEvent | TouchEvent,
-    mesh: THREE.Mesh | THREE.Group,
-    {
-      damping = 0.02,
-      inverted = false,
-      axis = "y",
-    }: { damping: number; inverted: boolean; axis: "x" | "y" | "z" },
-  ) {
-    this.container.setAttribute("data-cursor", "grab");
-
-    clearTimeout(this.mouseMouveTimeout);
-    const movementX =
-      (inverted ? 1 : -1) *
-      ((event as MouseEvent).movementX ||
-        (touchMovement(event as TouchEvent, 20) as ICustomTouch).movementX ||
-        0);
-
-    this.lastMouseMovement = movementX;
-
-    // Calculate rotation angles based on mouse movement
-    const rotationY = movementX * damping;
-    this.objectYRot = clamp(-3, 3)(rotationY);
-
-    animate({
-      from: mesh.rotation[axis],
-      to: mesh.rotation[axis] + this.objectYRot,
-      onUpdate: (v) => {
-        mesh.rotation[axis] = v;
-      },
-      type: "spring",
-      duration: 600,
-      damping: 30,
-    });
-
-    //reset to default speed if no more movement
-    this.mouseMouveTimeout = setTimeout(() => {
-      if (this.lastMouseMovement === movementX) {
-        this.objectYRot = 0;
-        this.lastMouseMovement = 0;
-      }
-    }, 1000);
   }
 
   raycast(event: MouseEvent) {

@@ -12,6 +12,7 @@ import {
 import ThreeScene from "../lib/three-scene";
 import { configFromDataSet } from "../lib/utils";
 import { ISceneConfig } from "../types/Scene";
+import Dragger from "../lib/dragger";
 
 export interface ICarouselConfig {
   curve: "outward" | "inward" | "fan";
@@ -40,6 +41,7 @@ export default class extends ThreeScene {
     inward: "y",
     fan: "z",
   };
+  dragger: Dragger | undefined;
 
   //full view
   lastHoverPicture: Picture | undefined;
@@ -133,9 +135,11 @@ export default class extends ThreeScene {
   }
 
   events() {
+    this.dragger = new Dragger({ container: this.container });
+
     //carousel rotation effect on mouse move
     const bindedMouseMove = (e: MouseEvent | TouchEvent) =>
-      this.rotateObject(e, this.pivot, {
+      this.dragger?.rotate(e, this.pivot, {
         damping: 0.02,
         inverted:
           this.config.invertDrag == 1 ||
@@ -175,7 +179,7 @@ export default class extends ThreeScene {
     }
     // Check if any object was clicked
     if (raycast.length > 0) {
-      if (this.lastMouseMovement === 0) {
+      if (this.dragger?.getState === "released") {
         this.container.setAttribute("data-cursor", "pointer");
       }
 
@@ -237,7 +241,7 @@ export default class extends ThreeScene {
 
   onCanvasClick() {
     //cancel if user is actually scrolling and not clicking
-    if (this.lastMouseMovement !== 0) {
+    if (this.dragger?.getState === "dragged") {
       return;
     }
 
@@ -251,7 +255,7 @@ export default class extends ThreeScene {
   render() {
     super.render();
 
-    /*if (this.lastMouseMovement === 0) {
+    /*if (this.dragger.getState() === "released") {
       this.pivot.rotation[this.rotationAxis] +=
         (((this.config.curve === "outward" &&
           this.config.direction == "right") ||
@@ -261,6 +265,5 @@ export default class extends ThreeScene {
           this.cameraRotateSpeed) /
         60;
 	}*/
-
   }
 }
