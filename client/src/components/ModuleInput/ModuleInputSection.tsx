@@ -38,7 +38,7 @@ const ModuleInputSection = ({
   const searchParams = useSearch({ from: location.pathname });
   const navigate = useNavigate({ from: location.pathname });
 
-  const onInputChange = (value: string, attribute: string) => {
+  const onTextChange = (value: string, attribute: string) => {
     //update iframe
     frame &&
       messageProcessor.send(frame, {
@@ -53,13 +53,28 @@ const ModuleInputSection = ({
     });
   };
 
+  const onSelectChange = (index: number, value: string, attribute: string) => {
+    //update iframe with string value
+    frame &&
+      messageProcessor.send(frame, {
+        channel,
+        attribute: attribute,
+        value,
+      });
+
+    // update url parameters with index
+    navigate({
+      search: ((prev: any) => ({ ...prev, [attribute]: String(index) })) as any,
+    });
+  };
+
   const urlValue = (param: string) => {
     return searchParams[param] || undefined;
   };
 
   return (
     <div className="module-input-section flex f-row gap-3xl">
-      {inputs.map((input, i) => {
+      {inputs.map((input) => {
         let Input;
 
         switch (input.type) {
@@ -71,9 +86,7 @@ const ModuleInputSection = ({
                 defaultValue={
                   urlValue(input.targetAttribute) || input.defaultValue
                 }
-                onChange={(value) =>
-                  onInputChange(value, input.targetAttribute)
-                }
+                onChange={(value) => onTextChange(value, input.targetAttribute)}
               />
             );
 
@@ -83,9 +96,9 @@ const ModuleInputSection = ({
             Input = (
               <ModuleInputSelect
                 values={input.values}
-                defaultIndex={input.defaultIndex}
-                onChange={(value) =>
-                  onInputChange(value, input.targetAttribute)
+                defaultIndex={urlValue(input.targetAttribute) || input.defaultIndex}
+                onChange={(index, value) =>
+                  onSelectChange(index, value, input.targetAttribute)
                 }
               />
             );

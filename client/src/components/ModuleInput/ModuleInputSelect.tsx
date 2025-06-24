@@ -8,23 +8,20 @@ export interface IInputSelectValue {
 interface IInputSelect {
   values: IInputSelectValue[];
   defaultIndex: number;
-    onChange: (values: string) => void;
+  onChange: (index: number, value: string) => void;
 }
 
 export default ({ values, defaultIndex, onChange }: IInputSelect) => {
-  const spliced_values = [...values];
-  spliced_values.splice(defaultIndex, 1);
-
+    
   return (
     <select
       className="module-input"
-      onChange={(e) => onChange && onChange(e.target.value)}
+      onChange={(e) =>
+        onChange && onChange(e.target.selectedIndex, e.target.value)
+      }
     >
-      <option value={String(values[defaultIndex].value)}>
-        {String(values[defaultIndex].label)}
-      </option>
-      {spliced_values.map((val, i) => (
-        <option key={val.label + i} value={String(val.value)}>
+      {values.map((val, i) => (
+          <option key={val.label + i} value={String(val.value)} selected={defaultIndex == i}>
           {String(val.label)}
         </option>
       ))}
