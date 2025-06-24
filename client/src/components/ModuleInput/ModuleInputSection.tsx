@@ -1,8 +1,10 @@
-import { createElement, useEffect } from "react";
+import { modulesSearchSchema } from "src/routes/glm";
 import { IModuleFrameInputBase } from "./ModuleInput";
 import ModuleInputNumber from "./ModuleInputNumber";
 import ModuleInputSelect, { IInputSelectValue } from "./ModuleInputSelect";
 import { messageProcessor } from "@components/Modules/glm/lib/message-processor";
+import { useNavigate, useSearch } from "@tanstack/react-router";
+import { z } from "zod";
 
 export interface IModuleInputSectionSelect extends IModuleFrameInputBase {
   type: "INPUT_SELECT";
@@ -28,15 +30,31 @@ export interface IModuleInputSection {
   channel: string;
 }
 
-export default ({ frame, inputs, channel }: IModuleInputSection) => {
+const ModuleInputSection = ({
+  frame,
+  inputs,
+  channel,
+}: IModuleInputSection) => {
+  const searchParams = useSearch({ from: location.pathname });
+  const navigate = useNavigate({ from: location.pathname });
 
   const onInputChange = (value: string, attribute: string) => {
+    //update iframe
     frame &&
       messageProcessor.send(frame, {
         channel,
         attribute: attribute,
         value,
       });
+
+    // update url parameters
+    navigate({
+      search: ((prev: any) => ({ ...prev, [attribute]: String(value) })) as any,
+    });
+  };
+
+  const urlValue = (param: string) => {
+    return searchParams[param] || undefined;
   };
 
   return (
@@ -50,7 +68,9 @@ export default ({ frame, inputs, channel }: IModuleInputSection) => {
               <ModuleInputNumber
                 min={input.min}
                 max={input.max}
-                defaultValue={input.defaultValue}
+                defaultValue={
+                  urlValue(input.targetAttribute) || input.defaultValue
+                }
                 onChange={(value) =>
                   onInputChange(value, input.targetAttribute)
                 }
@@ -85,3 +105,5 @@ export default ({ frame, inputs, channel }: IModuleInputSection) => {
     </div>
   );
 };
+
+export default ModuleInputSection;

@@ -32,6 +32,7 @@ const mapChildRoute = (routeList: IRouteComponent[]) =>
       getParentRoute: () => rootRoute,
       path: route.path,
       component: () => createElement(route.component, route.props),
+      validateSearch: route.validateSearch,
     }),
   );
 

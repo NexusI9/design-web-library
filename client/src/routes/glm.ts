@@ -5,10 +5,27 @@ import {
 import { IRouteComponent } from "@ctypes/route";
 import ModuleFrame from "@pages/EmbedModules";
 
+import { z } from "zod";
+
+export const modulesSearchSchema = z.object({
+  "data-transition-duration": z.string().optional(),
+  "data-slide-duration": z.string().optional(),
+  "data-transition-type": z.string().optional(),
+  "data-mode": z.string().optional(),
+  "data-curve": z.string().optional(),
+  "data-direction": z.string().optional(),
+  "data-picture-width": z.string().optional(),
+  "data-picture-height": z.string().optional(),
+  "data-border-radius": z.string().optional(),
+  "data-border-smooth": z.string().optional(),
+  "data-invert-drag": z.string().optional(),
+});
+
 const GLMRouteMap: IRouteComponent[] = [
   {
     path: "modules/glm/slideshow",
     component: ModuleFrame,
+    validateSearch: modulesSearchSchema,
     props: {
       title: "Slideshow",
       subtitle: "Customizable slideshow with unique transitions.",
