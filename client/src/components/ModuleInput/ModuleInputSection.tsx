@@ -59,7 +59,7 @@ const ModuleInputSection = ({
 
   return (
     <div className="module-input-section flex f-row gap-3xl">
-      {inputs.map((input) => {
+      {inputs.map((input, i) => {
         let Input;
 
         switch (input.type) {

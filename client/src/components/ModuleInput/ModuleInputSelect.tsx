@@ -8,7 +8,7 @@ export interface IInputSelectValue {
 interface IInputSelect {
   values: IInputSelectValue[];
   defaultIndex: number;
-  onChange: (values: string) => void;
+    onChange: (values: string) => void;
 }
 
 export default ({ values, defaultIndex, onChange }: IInputSelect) => {
