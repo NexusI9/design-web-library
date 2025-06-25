@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "lib": ["DOM", "es2021"],
+    "strict": true,
+    "outDir": "dist",
+    "allowJs": true,
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": ["./node_modules/@types"],
+    "baseUrl": "./",
+    "paths": {
+      "@components/*": ["client/src/components/*"],
+      "@icons/*": ["client/src/assets/icons/*"],
+      "@assets/*": ["client/src/assets/*"],
+      "@styles/*": ["client/src/styles/*"],
+      "@ctypes/*": ["client/src/types/*"],
+      "@lib/*": ["client/src/lib/*"],
+      "@templates/*": ["client/src/templates/*"],
+      "@pages/*": ["client/src/pages/*"]
+    }
+  },
+  "include": ["**/*.tsx", "client/src", "**/*.ts", "src/custom.d.ts"]
+}
