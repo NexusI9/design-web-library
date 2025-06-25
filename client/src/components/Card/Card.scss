@@ -1,32 +1,33 @@
 .card {
+  overflow: hidden;
+  border: solid 1px var(--color-base-600);
+  background: transparent;
+  cursor: default;
 
+  transition:
+    backgroud,
+    border,
+    250ms linear;
+
+  &-picture {
     overflow: hidden;
-    border: solid 1px var(--color-base-600);
-    background: transparent;
-    cursor: default;
-
-    &-picture{
-        overflow: hidden;
-        img{
-            transition: transform 450ms ease-out;
-            transform: scale3d(1,1,1);
-        }
+    img {
+      transition: transform 450ms ease-out;
+      transform: scale3d(1, 1, 1);
     }
+  }
 
-    transition: backgroud, border, 250ms linear;
-
-    &:hover {
-        border-color: var(--color-brand-primary-500);
-        background: var(--color-base-800);
-        .card-picture{
-            img{
-                transform: scale3d(1.1,1.1,1.1);
-            }
-        }
+  &:hover {
+    border-color: var(--color-brand-primary-500);
+    background: var(--color-base-800);
+    .card-picture {
+      img {
+        transform: scale3d(1.1, 1.1, 1.1);
+      }
     }
+  }
 
-    &-desc {
-        color: var(--color-base-400);
-    }
-
+  &-desc {
+    color: var(--color-base-400);
+  }
 }

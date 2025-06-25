@@ -1,8 +1,10 @@
+@use "media-query";
+
 .container{
     margin: auto;
     width: 100%;
 
-    @include mobile{
+    @include media-query.mobile{
         padding: 0 var(--unit-2xl);
     }
 }

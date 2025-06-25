@@ -20,7 +20,7 @@ module.exports = {
           loader: "css-loader",
           options: { url: false },
         },
-        "sass-loader",
+        { loader: "sass-loader", options: { api: "modern" } },
       ],
     },
 
