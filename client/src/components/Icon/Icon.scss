@@ -1,0 +1,15 @@
+.icon {
+  stroke: currentcolor;
+  fill: transparent;
+  height: auto;
+  aspect-ratio: 1/1;
+  &[data-size="SMALL"] {
+    width: var(--size-icon-small);
+  }
+  &[data-size="MEDIUM"] {
+    width: var(--size-icon-medium);
+  }
+  &[data-size="LARGE"] {
+    width: var(--size-icon-large);
+  }
+}

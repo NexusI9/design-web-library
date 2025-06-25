@@ -23,5 +23,4 @@ class Router{
         echo json_encode(["message" => "Endpoint not found"]);
     }
 
-
 }

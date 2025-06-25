@@ -29,9 +29,9 @@
     </ul>
   </section>
   <div class="glm-carousel-viewer">
-    <div class="glm-carousel-viewer-close"></div>
-    <img src="./assets/sample.jpg"
-  class="glm-carousel-viewer-picture" alt="viewer picture"></div>
+  <div class="glm-carousel-viewer-close"></div><img src=
+  "./assets/sample.jpg" class="glm-carousel-viewer-picture" alt=
+  "viewer picture"></div>
   <script type="module" src="./dist/index.js"></script> 
   <!--MODULE END-->
 </body>

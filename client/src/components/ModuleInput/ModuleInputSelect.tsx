@@ -21,7 +21,7 @@ export default ({ values, defaultIndex, onChange }: IInputSelect) => {
       }
     >
       {values.map((val, i) => (
-          <option key={val.label + i} value={String(val.value)} selected={defaultIndex == i}>
+          <option key={val.label + i} defaultValue={String(val.value)} selected={defaultIndex == i}>
           {String(val.label)}
         </option>
       ))}

@@ -4,6 +4,11 @@ import PageHeader, { IPageHeader } from "@components/PageHeader/PageHeader";
 import { ModuleSectionInputs } from "@components/ModuleInput/ModuleInputSection";
 import { ModuleInput } from "@components/ModuleInput";
 import { useSearch } from "@tanstack/react-router";
+import { Button } from "@components/Button";
+
+import LinkIcon from "@icons/link.svg"
+import DownloadIcon from "@icons/download.svg"
+import { Icon } from "@components/Icon";
 
 interface IEmbedModuleIframe {
   frame?: HTMLIFrameElement | null;
@@ -44,11 +49,17 @@ export default ({ frames, title, subtitle }: IEmbedModule) => {
           key={`${frame.url}${i}`}
         >
           {frame.frame && (
-            <ModuleInput.Section
-              frame={frame.frame}
-              inputs={frame.inputs}
-              channel={frame.channel}
-            />
+            <div className="flex f-row f-between">
+              <ModuleInput.Section
+                frame={frame.frame}
+                inputs={frame.inputs}
+                channel={frame.channel}
+              />
+              <div className="flex f-row gap-xl">
+                <Button style="OUTLINE"><Icon icon={LinkIcon} size="SMALL"/>Copy link</Button>
+                <Button style="SOLID"><Icon icon={DownloadIcon} size="SMALL"/>Download module</Button>
+              </div>
+            </div>
           )}
           <iframe
             onLoad={(e) => updateFrame(e.currentTarget, i)}

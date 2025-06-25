@@ -1,0 +1,31 @@
+.button {
+  border: none;
+  border-radius: var(--border-radius-button);
+
+  height: var(--size-height-input-medium);
+  padding: 0 var(--space-extra-large-2);
+
+  transition:
+    background,
+    color,
+    150ms linear;
+
+  &[data-style="SOLID"] {
+    color: var(--color-brand-primary-50);
+    background: var(--color-brand-primary-500);
+    &:hover {
+      background: var(--color-brand-primary-400);
+      color: var(--color-brand-primary-50);
+    }
+  }
+
+  &[data-style="OUTLINE"] {
+    border: solid 1px var(--color-brand-primary-500);
+    color: var(--color-base-50);
+    background: transparent;
+    &:hover {
+      background: var(--color-brand-primary-400);
+      color: var(--color-brand-primary-50);
+    }
+  }
+}
