@@ -1,4 +1,6 @@
 node_modules
 client/design
-.DS_Store
+**/.DS_Store*
 **/dist/
+**/.env*
+.tanstack

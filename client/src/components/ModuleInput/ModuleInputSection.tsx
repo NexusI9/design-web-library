@@ -37,7 +37,7 @@ const ModuleInputSection = ({
   const searchParams = useSearch({ from: location.pathname });
   const navigate = useNavigate({ from: location.pathname });
 
-  const onTextChange = (value: string, attribute: string) => {
+  const onInputChange = (value: string, attribute: string) => {
     //update iframe
     frame &&
       messageProcessor.send(frame, {
@@ -49,21 +49,6 @@ const ModuleInputSection = ({
     // update url parameters
     navigate({
       search: ((prev: any) => ({ ...prev, [attribute]: String(value) })) as any,
-    });
-  };
-
-  const onSelectChange = (index: number, value: string, attribute: string) => {
-    //update iframe with string value
-    frame &&
-      messageProcessor.send(frame, {
-        channel,
-        attribute: attribute,
-        value,
-      });
-
-    // update url parameters with index
-    navigate({
-      search: ((prev: any) => ({ ...prev, [attribute]: String(index) })) as any,
     });
   };
 
@@ -85,7 +70,9 @@ const ModuleInputSection = ({
                 defaultValue={
                   urlValue(input.targetAttribute) || input.defaultValue
                 }
-                onChange={(value) => onTextChange(value, input.targetAttribute)}
+                onChange={(value) =>
+                  onInputChange(value, input.targetAttribute)
+                }
               />
             );
 
@@ -95,9 +82,11 @@ const ModuleInputSection = ({
             Input = (
               <ModuleInputSelect
                 values={input.values}
-                defaultIndex={urlValue(input.targetAttribute) || input.defaultIndex}
-                onChange={(index, value) =>
-                  onSelectChange(index, value, input.targetAttribute)
+                defaultIndex={
+                  urlValue(input.targetAttribute) || input.defaultIndex
+                }
+                onChange={(_, value) =>
+                  onInputChange(value, input.targetAttribute)
                 }
               />
             );

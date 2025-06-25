@@ -3,6 +3,7 @@ import "./index.scss";
 import PageHeader, { IPageHeader } from "@components/PageHeader/PageHeader";
 import { ModuleSectionInputs } from "@components/ModuleInput/ModuleInputSection";
 import { ModuleInput } from "@components/ModuleInput";
+import { useSearch } from "@tanstack/react-router";
 
 interface IEmbedModuleIframe {
   frame?: HTMLIFrameElement | null;
@@ -17,6 +18,12 @@ export interface IEmbedModule extends IPageHeader {
 
 export default ({ frames, title, subtitle }: IEmbedModule) => {
   const [framesSection, setFramesSection] = useState(frames);
+
+  const searchParams = useSearch({ from: location.pathname });
+
+  // update iframe params on search param changes
+  const frameUrlParam = (url: string, param: Record<string, string>) =>
+    `${url}?${new URLSearchParams(param).toString()}`;
 
   const updateFrame = useCallback(
     (frame: HTMLIFrameElement | null, index: number) => {
@@ -46,7 +53,7 @@ export default ({ frames, title, subtitle }: IEmbedModule) => {
           <iframe
             onLoad={(e) => updateFrame(e.currentTarget, i)}
             className="embed-module-iframe"
-            src={frame.url}
+            src={frameUrlParam(frame.url, searchParams)}
           />
         </div>
       ))}
