@@ -1,3 +1,2 @@
-module.exports.devtool = (mode) => ({
-  devtool: mode === "production" ? false : "inline-source-map",
-});
+module.exports = (mode) =>
+  mode === "production" ? false : "inline-source-map";

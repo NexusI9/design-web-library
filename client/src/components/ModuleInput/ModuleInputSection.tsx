@@ -1,4 +1,3 @@
-import { modulesSearchSchema } from "src/routes/glm";
 import { IModuleFrameInputBase } from "./ModuleInput";
 import ModuleInputNumber from "./ModuleInputNumber";
 import ModuleInputSelect, { IInputSelectValue } from "./ModuleInputSelect";

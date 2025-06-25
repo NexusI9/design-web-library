@@ -23,7 +23,8 @@
     "css-loader": "^6.8.1",
     "mini-css-extract-plugin": "^2.9.2",
     "react-dev-utils": "^12.0.1",
-    "sass-loader": "^13.3.2",
+    "sass": "^1.89.2",
+    "sass-loader": "^13.3.3",
     "style-loader": "^3.3.3",
     "ts-loader": "^9.5.0",
     "typescript": "*",
@@ -38,7 +39,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^9.0.4",
-    "sass": "^1.69.5",
     "three": "^0.177.0",
     "zod": "^3.25.67"
   }
