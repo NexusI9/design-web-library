@@ -5,7 +5,7 @@
   <meta name="viewport" content=
   "width=device-width, initial-scale=1.0">
   <title>Carousel slider</title>
-  <link rel="stylesheet" href="./scripts/index.css">
+  <link rel="stylesheet" href="./dist/index.css">
 </head>
 <body>
   <!--MODULE BEGIN-->
@@ -15,10 +15,7 @@
   "galaxy picture" src="./assets/picture-1.jpg"> <img class=
   "glm-slideshow-img" alt="galaxy picture" src=
   "./assets/picture-2.jpg"></div>
-  <script type="module" src="./scripts/index.js"></script> 
+  <script type="module" src="./dist/index.js"></script> 
   <!--MODULE END-->
-   <!--DELETE ME BEGIN--> 
-  <script type="module" src="./scripts/delete.me.js"></script> 
-  <!--DELETE ME END-->
 </body>
 </html>

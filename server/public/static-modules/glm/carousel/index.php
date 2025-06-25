@@ -5,7 +5,7 @@
   <meta name="viewport" content=
   "width=device-width, initial-scale=1.0">
   <title>Carousel slider</title>
-  <link rel="stylesheet" href="./scripts/index.css">
+  <link rel="stylesheet" href="./dist/index.css">
 </head>
 <body>
   <!--MODULE BEGIN-->
@@ -32,10 +32,7 @@
     <div class="glm-carousel-viewer-close"></div>
     <img src="./assets/sample.jpg"
   class="glm-carousel-viewer-picture" alt="viewer picture"></div>
-  <script type="module" src="./scripts/index.js"></script> 
+  <script type="module" src="./dist/index.js"></script> 
   <!--MODULE END-->
-   <!--DELETE ME BEGIN--> 
-  <script type="module" src="./scripts/delete.me.js"></script> 
-  <!--DELETE ME END-->
 </body>
 </html>

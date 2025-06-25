@@ -31,7 +31,7 @@ const GLMRouteMap: IRouteComponent[] = [
       subtitle: "Customizable slideshow with unique transitions.",
       frames: [
         {
-          url: "/static-modules/glm/slideshow/index.html",
+            url: "http://localhost:8000/static-modules/glm/slideshow/index.php",
           channel: MODULE_GLM_CHANNEL_SLIDESHOW,
           inputs: [
             {
@@ -86,7 +86,7 @@ const GLMRouteMap: IRouteComponent[] = [
       subtitle: "Customizable carousels with 2D or 3D rotations.",
       frames: [
         {
-          url: "/static-modules/glm/carousel/index.html",
+            url: "http://localhost:8000/static-modules/glm/carousel/index.php",
           channel: MODULE_GLM_CHANNEL_CAROUSEL,
           inputs: [
             {
