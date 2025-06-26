@@ -1,29 +1,25 @@
 import {
-  ButtonHTMLAttributes,
-  LegacyRef,
   useCallback,
-  useRef,
   useState,
 } from "react";
 import "./index.scss";
 import PageHeader, { IPageHeader } from "@components/PageHeader/PageHeader";
-import { ModuleSectionInputs } from "@components/ModuleInput/ModuleInputSection";
 import { ModuleInput } from "@components/ModuleInput";
 import { useSearch } from "@tanstack/react-router";
 import { Button } from "@components/Button";
-
 import LinkIcon from "@icons/link.svg";
 import DownloadIcon from "@icons/download.svg";
 import { Icon } from "@components/Icon";
 import { IButton } from "@components/Button/Button";
 import { IIcon } from "@components/Icon/Icon";
 import { downloadZIP } from "@lib/utils";
+import { TModuleSectionInputs } from "@components/ModuleInput/types";
 
 interface IEmbedModuleIframe {
   module: string;
   frame?: HTMLIFrameElement | null;
   url: string;
-  inputs: ModuleSectionInputs;
+  inputs: TModuleSectionInputs;
   channel: string;
 }
 

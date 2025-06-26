@@ -4,7 +4,7 @@ import "./Button.scss";
 export interface IButton
   extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, "style"> {
   children: ReactNode;
-  style: "SOLID" | "OUTLINE";
+  style: "SOLID" | "OUTLINE" | "GHOST";
 }
 
 export default ({ children, style, onClick }: IButton) => {

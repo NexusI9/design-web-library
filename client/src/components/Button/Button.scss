@@ -28,4 +28,12 @@
       color: var(--color-brand-primary-50);
     }
   }
+
+  &[data-style="GHOST"] {
+    color: var(--color-brand-primary-50);
+    background: transparent;
+    &:hover {
+      color: var(--color-brand-primary-500);
+    }
+  }
 }

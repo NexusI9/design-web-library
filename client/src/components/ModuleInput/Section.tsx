@@ -1,31 +1,12 @@
-import { IModuleFrameInputBase } from "./ModuleInput";
-import ModuleInputNumber from "./ModuleInputNumber";
-import ModuleInputSelect, { IInputSelectValue } from "./ModuleInputSelect";
+import { TModuleSectionInputs } from "./types";
+import ModuleInputNumber from "./Number";
+import ModuleInputSelect from "./Select";
 import { messageProcessor } from "@components/Modules/glm/lib/message-processor";
 import { useNavigate, useSearch } from "@tanstack/react-router";
-import { z } from "zod";
-
-export interface IModuleInputSectionSelect extends IModuleFrameInputBase {
-  type: "INPUT_SELECT";
-  values: IInputSelectValue[];
-  defaultIndex: number;
-}
-
-export interface IModuleInputSectionNumber extends IModuleFrameInputBase {
-  type: "INPUT_NUMBER";
-  min: number;
-  max: number;
-  defaultValue: number;
-}
-
-export type ModuleSectionInputs = (
-  | IModuleInputSectionSelect
-  | IModuleInputSectionNumber
-)[];
 
 export interface IModuleInputSection {
   frame: HTMLIFrameElement;
-  inputs: ModuleSectionInputs;
+  inputs: TModuleSectionInputs;
   channel: string;
 }
 
@@ -57,7 +38,7 @@ const ModuleInputSection = ({
   };
 
   
-
+ 
   return (
     <div className="module-input-section flex f-row gap-xl">
       {inputs.map((input) => {
