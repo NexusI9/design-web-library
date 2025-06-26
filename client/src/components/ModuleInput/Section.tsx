@@ -41,7 +41,7 @@ const ModuleInputSection = ({
 
   return (
     <div
-      className={`module-input-section flex f-row gap-2xl ${className || ""}`}
+      className={`module-input-section ${className || ""}`}
     >
       {inputs.map((input) => {
         let Input;

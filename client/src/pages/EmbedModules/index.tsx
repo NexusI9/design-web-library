@@ -50,7 +50,7 @@ export default ({ frames, title, subtitle }: IEmbedModule) => {
     {
       icon: DownloadIcon,
       size: "SMALL",
-      children: <>Download module</>,
+      children: <>Download code</>,
       style: "SOLID",
       onClick: () => downloadZIP(module, searchParams),
     },
@@ -79,13 +79,25 @@ export default ({ frames, title, subtitle }: IEmbedModule) => {
           key={`${frame.url}${i}`}
         >
           <Expandable.Wrapper>
-            <div className="embed-module-header gap-4xl flex f-row f-between">
-              <Expandable.Trigger>
-                <Button style="GHOST">
-                  <Icon icon={EditIcon} size="SMALL" />
-                  Settings
-                </Button>
-              </Expandable.Trigger>
+            <div className="embed-module-header gap-4xl flex f-row f-between f-center">
+              <div className="embed-module-settings flex f-col gap-xs">
+                <Expandable.Trigger>
+                  <Button style="GHOST">
+                    <Icon icon={EditIcon} size="SMALL" />
+                    Settings
+                  </Button>
+                </Expandable.Trigger>
+                <Expandable.Section type="OPACITY">
+                  {frame.frame && (
+                    <ModuleInput.Section
+                      className="panel shadow-medium"
+                      frame={frame.frame}
+                      inputs={frame.inputs}
+                      channel={frame.channel}
+                    />
+                  )}
+                </Expandable.Section>
+              </div>
               <div className="embed-module-header-buttons flex f-row gap-xl">
                 {buttonsArray(frame.module).map((button, i) => (
                   <Button
@@ -101,18 +113,6 @@ export default ({ frames, title, subtitle }: IEmbedModule) => {
             </div>
 
             <div className="embed-module-frame">
-              <div className="embed-module-settings flex f-col gap-xs">
-                <Expandable.Section type="OPACITY">
-                  {frame.frame && (
-                    <ModuleInput.Section
-                      className="panel"
-                      frame={frame.frame}
-                      inputs={frame.inputs}
-                      channel={frame.channel}
-                    />
-                  )}
-                </Expandable.Section>
-              </div>
               <iframe
                 onLoad={(e) => updateFrame(e.currentTarget, i)}
                 className="embed-module-iframe"

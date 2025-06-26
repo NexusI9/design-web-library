@@ -8,19 +8,28 @@
     flex-shrink: 1;
   }
 
+  &-header {
+    z-index: 1;
+  }
+
   &-frame {
     position: relative;
   }
 
   &-settings {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: var(--space-large);
+    position: relative;
     .module-input-section {
+      max-width: 300px;
+      position: absolute;
+      width: max-content;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-extra-large);
+      margin-top: var(--space-medium);
       border-radius: var(--unit-s);
-      padding: var(--space-small) var(--space-extra-large-2) var(--space-large)
-        var(--space-extra-large-2);
+      padding: var(--space-medium) var(--space-extra-large) var(--space-extra-large-2)
+               var(--space-extra-large);
+
     }
   }
 }
