@@ -97,7 +97,7 @@ const ModuleInputSection = ({
         }
 
         return (
-          <label key={input.name + input.label} className="flex f-col gap-s">
+          <label key={input.name + input.label} className="flex f-col flex-no-shrink gap-s">
             <p>
               <small>{input.label}</small>
             </p>

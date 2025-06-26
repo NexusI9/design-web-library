@@ -11,7 +11,7 @@ export default ({ children, style, onClick }: IButton) => {
   return (
     <button
       onClick={onClick}
-      className="button flex f-row f-center gap-l"
+      className="button flex flex-no-shrink f-row f-center gap-l"
       data-style={style}
     >
       {children}

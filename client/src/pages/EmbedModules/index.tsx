@@ -76,17 +76,17 @@ export default ({ frames, title, subtitle }: IEmbedModule) => {
       <PageHeader title={title} subtitle={subtitle} />
       {framesSection.map((frame, i) => (
         <div
-          className="embed-module-frame flex f-col gap-2xl"
+          className="embed-module-wrapper flex f-col gap-2xl"
           key={`${frame.url}${i}`}
         >
           {frame.frame && (
-            <div className="flex f-row f-between">
+            <div className="embed-module-header gap-4xl flex f-row f-end f-between">
               <ModuleInput.Section
                 frame={frame.frame}
                 inputs={frame.inputs}
                 channel={frame.channel}
               />
-              <div className="flex f-row gap-xl">
+              <div className="embed-module-header-buttons flex f-row gap-xl">
                 {buttonsArray(frame.module).map((button,i) => (
                   <Button key={`${frame.module}button${i}`} style={button.style} onClick={button.onClick}>
                     <Icon icon={button.icon} size={button.size} />

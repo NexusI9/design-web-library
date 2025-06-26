@@ -8,6 +8,7 @@ if(isset($_GET["module"])){
     
     // Create HTML from PHP Template and parameters
     $module_template = $dirPath . "/index.php";
+
     if(!file_exists($module_template)){
         http_response_code(404);
         echo ("Module PHP template not found.");
@@ -46,12 +47,12 @@ if(isset($_GET["module"])){
         include $module_template; // include module PHP Template in buffer (with parameters applied)
         $htmlContent = ob_get_clean();
         $zip->addFromString('index.html',$htmlContent); // add rendered HTML file
-
+        
         $zip->close();
 
         // compose response
         header("Content-Type: application/zip");
-        header("Content-Disposition: attachment; filename='".$zipName."'");
+        header("Content-Disposition: attachment; filename=".$zipName);
         header("Content-Length: " . filesize($zipPath));
         readfile($zipPath);
 

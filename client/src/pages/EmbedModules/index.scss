@@ -1,7 +1,15 @@
-.embed-module-iframe {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  border: none;
-  overflow: hidden;
+.embed-module {
+  &-header {
+    .module-input-section {
+      overflow: auto;
+    }
+  }
+
+  &-iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: none;
+    overflow: hidden;
+  }
 }
