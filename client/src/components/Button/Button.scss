@@ -24,13 +24,14 @@
     color: var(--color-base-50);
     background: transparent;
     &:hover {
+      border-color: transparent;
       background: var(--color-brand-primary-400);
       color: var(--color-brand-primary-50);
     }
   }
 
   &[data-style="GHOST"] {
-      height: fit-content;
+    height: fit-content;
     padding: 0;
     color: var(--color-brand-primary-50);
     background: transparent;

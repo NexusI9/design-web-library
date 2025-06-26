@@ -15,8 +15,6 @@ import { Expandable } from "@components/Expandable";
 import LinkIcon from "@icons/link.svg";
 import DownloadIcon from "@icons/download.svg";
 import EditIcon from "@icons/settings.svg";
-import ChevronDownIcon from "@icons/chevron-down.svg";
-import { ExpandableContext } from "@components/Expandable/Wrapper";
 
 interface IEmbedModuleIframe {
   module: string;

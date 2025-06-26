@@ -51,6 +51,9 @@ if(isset($_GET["module"])){
         $zip->close();
 
         // compose response
+        header("Access-Control-Allow-Origin: *");
+        header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+        header("Access-Control-Allow-Headers: Content-Type");
         header("Content-Type: application/zip");
         header("Content-Disposition: attachment; filename=".$zipName);
         header("Content-Length: " . filesize($zipPath));

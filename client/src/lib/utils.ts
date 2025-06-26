@@ -1,9 +1,8 @@
 export const downloadZIP = async (module: string, params: URLSearchParams) => {
   // request download with module name and stringified params
-  const response = await fetch(
-    `${process.env.API_DOWNLOAD_URL}?module=${module}&${params.toString()}`,
-  );
-
+  const url = `${process.env.API_DOWNLOAD_URL}?module=${module}&${new URLSearchParams(params).toString()}`;
+  console.log(url);
+  const response = await fetch(url);
   if (response.ok) {
     const blob = await response.blob();
     console.log(blob);
