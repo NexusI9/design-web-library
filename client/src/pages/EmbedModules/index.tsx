@@ -1,19 +1,21 @@
-import {
-  useCallback,
-  useState,
-} from "react";
+import { useCallback, useState } from "react";
 import "./index.scss";
 import PageHeader, { IPageHeader } from "@components/PageHeader/PageHeader";
 import { ModuleInput } from "@components/ModuleInput";
 import { useSearch } from "@tanstack/react-router";
 import { Button } from "@components/Button";
-import LinkIcon from "@icons/link.svg";
-import DownloadIcon from "@icons/download.svg";
+
 import { Icon } from "@components/Icon";
 import { IButton } from "@components/Button/Button";
 import { IIcon } from "@components/Icon/Icon";
 import { downloadZIP } from "@lib/utils";
 import { TModuleSectionInputs } from "@components/ModuleInput/types";
+import { Expandable } from "@components/Expandable";
+
+import LinkIcon from "@icons/link.svg";
+import DownloadIcon from "@icons/download.svg";
+import EditIcon from "@icons/edit-2.svg";
+import ChevronDownIcon from "@icons/chevron-down.svg";
 
 interface IEmbedModuleIframe {
   module: string;
@@ -76,21 +78,36 @@ export default ({ frames, title, subtitle }: IEmbedModule) => {
           key={`${frame.url}${i}`}
         >
           {frame.frame && (
-            <div className="embed-module-header gap-4xl flex f-row f-end f-between">
-              <ModuleInput.Section
-                frame={frame.frame}
-                inputs={frame.inputs}
-                channel={frame.channel}
-              />
-              <div className="embed-module-header-buttons flex f-row gap-xl">
-                {buttonsArray(frame.module).map((button,i) => (
-                  <Button key={`${frame.module}button${i}`} style={button.style} onClick={button.onClick}>
-                    <Icon icon={button.icon} size={button.size} />
-                    {button.children}
+            <Expandable.Wrapper>
+              <div className="embed-module-header gap-4xl flex f-row f-end f-between">
+                <Expandable.Trigger>
+                  <Button style="GHOST">
+                    <Icon icon={EditIcon} size="SMALL" />
+                    Settings
+                    <Icon icon={ChevronDownIcon} size="SMALL" />
                   </Button>
-                ))}
+                </Expandable.Trigger>
+                <div className="embed-module-header-buttons flex f-row gap-xl">
+                  {buttonsArray(frame.module).map((button, i) => (
+                    <Button
+                      key={`${frame.module}button${i}`}
+                      style={button.style}
+                      onClick={button.onClick}
+                    >
+                      <Icon icon={button.icon} size={button.size} />
+                      {button.children}
+                    </Button>
+                  ))}
+                </div>
               </div>
-            </div>
+              <Expandable.Section>
+                <ModuleInput.Section
+                  frame={frame.frame}
+                  inputs={frame.inputs}
+                  channel={frame.channel}
+                />
+              </Expandable.Section>
+            </Expandable.Wrapper>
           )}
           <iframe
             onLoad={(e) => updateFrame(e.currentTarget, i)}

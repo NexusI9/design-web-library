@@ -1,0 +1,11 @@
+.expandable {
+  &-section {
+    overflow: hidden;
+    height: 0;
+    transition: height 0.5s ease-out;
+
+    &[data-open="true"] {
+      height: auto;
+    }
+  }
+}
