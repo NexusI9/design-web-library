@@ -11,7 +11,7 @@ export interface ISidepanel {
 export default ({ items }: ISidepanel) => {
 
     return(
-        <nav className='sidepanel bd-radius-m flex f-col gap-xl padding-h-s padding-v-2xl'>
+        <nav className='sidepanel panel bd-radius-m flex f-col gap-xl padding-h-s padding-v-2xl'>
             <header className="flex f-row f-end-h gap-l padding-h-xl padding-v-xl">
                 <Logo/>
                 <p>Web Library</p>

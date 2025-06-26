@@ -1,10 +1,14 @@
-body{
-    background: var(--color-background);
-    color: var(--color-text-primary);
-    font-family: var(--font-body-family);
+body {
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-body-family);
 }
 
+.round {
+  border-radius: var(--unit-m);
+}
 
-.round{
-    border-radius: var(--unit-m);
+.panel {
+  background-color: var(--color-base-800);
+  border: solid 1px var(--color-base-700);
 }

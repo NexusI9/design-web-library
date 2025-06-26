@@ -1,11 +1,30 @@
 .expandable {
   &-section {
-    overflow: hidden;
-    height: 0;
-    transition: height 0.5s ease-out;
+    &[data-type="HEIGHT"] {
+      overflow: hidden;
+      height: 0;
+      transition: height 0.5s ease-out;
 
-    &[data-open="true"] {
-      height: auto;
+      &[data-open="true"] {
+        height: auto;
+      }
+    }
+
+    &[data-type="OPACITY"] {
+      overflow: hidden;
+      opacity: 0;
+      pointer-events: none;
+      transform: translate3d(0, -20px, 0);
+      transition:
+        opacity,
+        transfrom,
+        0.2s ease-out;
+
+      &[data-open="true"] {
+        pointer-events: auto;
+        opacity: 1;
+        transform: translate3d(0, 0px, 0);
+      }
     }
   }
 }

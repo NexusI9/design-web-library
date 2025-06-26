@@ -14,8 +14,9 @@ import { Expandable } from "@components/Expandable";
 
 import LinkIcon from "@icons/link.svg";
 import DownloadIcon from "@icons/download.svg";
-import EditIcon from "@icons/edit-2.svg";
+import EditIcon from "@icons/settings.svg";
 import ChevronDownIcon from "@icons/chevron-down.svg";
+import { ExpandableContext } from "@components/Expandable/Wrapper";
 
 interface IEmbedModuleIframe {
   module: string;
@@ -74,46 +75,51 @@ export default ({ frames, title, subtitle }: IEmbedModule) => {
       <PageHeader title={title} subtitle={subtitle} />
       {framesSection.map((frame, i) => (
         <div
-          className="embed-module-wrapper flex f-col gap-2xl"
+          className="embed-module-wrapper flex f-col gap-xl"
           key={`${frame.url}${i}`}
         >
-          {frame.frame && (
-            <Expandable.Wrapper>
-              <div className="embed-module-header gap-4xl flex f-row f-end f-between">
-                <Expandable.Trigger>
-                  <Button style="GHOST">
-                    <Icon icon={EditIcon} size="SMALL" />
-                    Settings
-                    <Icon icon={ChevronDownIcon} size="SMALL" />
+          <Expandable.Wrapper>
+            <div className="embed-module-header gap-4xl flex f-row f-between">
+              <Expandable.Trigger>
+                <Button style="GHOST">
+                  <Icon icon={EditIcon} size="SMALL" />
+                  Settings
+                </Button>
+              </Expandable.Trigger>
+              <div className="embed-module-header-buttons flex f-row gap-xl">
+                {buttonsArray(frame.module).map((button, i) => (
+                  <Button
+                    key={`${frame.module}button${i}`}
+                    style={button.style}
+                    onClick={button.onClick}
+                  >
+                    <Icon icon={button.icon} size={button.size} />
+                    {button.children}
                   </Button>
-                </Expandable.Trigger>
-                <div className="embed-module-header-buttons flex f-row gap-xl">
-                  {buttonsArray(frame.module).map((button, i) => (
-                    <Button
-                      key={`${frame.module}button${i}`}
-                      style={button.style}
-                      onClick={button.onClick}
-                    >
-                      <Icon icon={button.icon} size={button.size} />
-                      {button.children}
-                    </Button>
-                  ))}
-                </div>
+                ))}
               </div>
-              <Expandable.Section>
-                <ModuleInput.Section
-                  frame={frame.frame}
-                  inputs={frame.inputs}
-                  channel={frame.channel}
-                />
-              </Expandable.Section>
-            </Expandable.Wrapper>
-          )}
-          <iframe
-            onLoad={(e) => updateFrame(e.currentTarget, i)}
-            className="embed-module-iframe"
-            src={frameUrlParam(frame.url, searchParams)}
-          />
+            </div>
+
+            <div className="embed-module-frame">
+              <div className="embed-module-settings flex f-col gap-xs">
+                <Expandable.Section type="OPACITY">
+                  {frame.frame && (
+                    <ModuleInput.Section
+                      className="panel"
+                      frame={frame.frame}
+                      inputs={frame.inputs}
+                      channel={frame.channel}
+                    />
+                  )}
+                </Expandable.Section>
+              </div>
+              <iframe
+                onLoad={(e) => updateFrame(e.currentTarget, i)}
+                className="embed-module-iframe"
+                src={frameUrlParam(frame.url, searchParams)}
+              />
+            </div>
+          </Expandable.Wrapper>
         </div>
       ))}
     </div>

@@ -5,6 +5,7 @@ import { messageProcessor } from "@components/Modules/glm/lib/message-processor"
 import { useNavigate, useSearch } from "@tanstack/react-router";
 
 export interface IModuleInputSection {
+  className?: string;
   frame: HTMLIFrameElement;
   inputs: TModuleSectionInputs;
   channel: string;
@@ -14,6 +15,7 @@ const ModuleInputSection = ({
   frame,
   inputs,
   channel,
+  className,
 }: IModuleInputSection) => {
   const searchParams = useSearch({ from: location.pathname });
   const navigate = useNavigate({ from: location.pathname });
@@ -37,10 +39,10 @@ const ModuleInputSection = ({
     return searchParams[param] || undefined;
   };
 
-  
- 
   return (
-    <div className="module-input-section flex f-row gap-xl">
+    <div
+      className={`module-input-section flex f-row gap-2xl ${className || ""}`}
+    >
       {inputs.map((input) => {
         let Input;
 
@@ -78,7 +80,10 @@ const ModuleInputSection = ({
         }
 
         return (
-          <label key={input.name + input.label} className="flex f-col flex-no-shrink gap-s">
+          <label
+            key={input.name + input.label}
+            className="flex f-col flex-no-shrink gap-s"
+          >
             <p>
               <small>{input.label}</small>
             </p>

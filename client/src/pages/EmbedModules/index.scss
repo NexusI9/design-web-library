@@ -5,5 +5,22 @@
     aspect-ratio: 16 / 9;
     border: none;
     overflow: hidden;
+    flex-shrink: 1;
+  }
+
+  &-frame {
+    position: relative;
+  }
+
+  &-settings {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: var(--space-large);
+    .module-input-section {
+      border-radius: var(--unit-s);
+      padding: var(--space-small) var(--space-extra-large-2) var(--space-large)
+        var(--space-extra-large-2);
+    }
   }
 }
