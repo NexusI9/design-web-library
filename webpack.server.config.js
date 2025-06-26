@@ -10,7 +10,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 
 const outdir = (moduleName, fileName) =>
-  `static-modules/glm/${moduleName}/dist/${fileName}`;
+  `modules/glm/${moduleName}/dist/${fileName}`;
 const indir = (moduleName, fileName) =>
   `./client/src/components/Modules/glm/${moduleName}/${fileName}`;
 

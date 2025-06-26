@@ -2,8 +2,10 @@
 
 # Default target
 start:
+	$(MAKE) webpack-server
 	$(MAKE) php-server & \
 	$(MAKE) webpack-client
+
 
 # Run the PHP server
 php-server:

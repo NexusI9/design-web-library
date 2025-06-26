@@ -12,18 +12,17 @@ interface IInputSelect {
 }
 
 export default ({ values, defaultIndex, onChange }: IInputSelect) => {
-    
   return (
     <select
       className="module-input"
+      defaultValue={String(values[defaultIndex])}
       onChange={(e) =>
-        onChange && onChange(e.target.selectedIndex, e.target.value.toLowerCase())
+        onChange &&
+        onChange(e.target.selectedIndex, e.target.value.toLowerCase())
       }
     >
       {values.map((val, i) => (
-          <option key={val.label + i} defaultValue={String(val.value)} selected={defaultIndex == i}>
-          {String(val.label)}
-        </option>
+        <option key={val.label + i}>{String(val.label)}</option>
       ))}
     </select>
   );
