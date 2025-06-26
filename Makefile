@@ -7,7 +7,7 @@ start:
 
 # Run the PHP server
 php-server:
-	php -q -S localhost:8000 -t ./server/public
+	php -q -S localhost:8000 -t ./server
 
 # Run the Webpack dev server
 webpack-client:

@@ -17,7 +17,7 @@ export default ({ values, defaultIndex, onChange }: IInputSelect) => {
     <select
       className="module-input"
       onChange={(e) =>
-        onChange && onChange(e.target.selectedIndex, e.target.value)
+        onChange && onChange(e.target.selectedIndex, e.target.value.toLowerCase())
       }
     >
       {values.map((val, i) => (

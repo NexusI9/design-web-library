@@ -9,8 +9,8 @@ export interface IIcon {
 export default ({ icon, size }: IIcon) => (
   <>
     {createElement(icon, {
-      class: "icon",
+      className: "icon",
       "data-size": size,
-    })}n
+    })}
   </>
 );

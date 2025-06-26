@@ -8,6 +8,7 @@ const devServer = require("./config/devServer.config");
 // plugins
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+const Dotenv = require("dotenv-webpack");
 
 const path = require("path");
 
@@ -31,6 +32,7 @@ module.exports = (env, argv) => ({
 
   // Tells Webpack to generate "index.html" and to inline "index.ts" into it
   plugins: [
+    new Dotenv(),
     new MiniCssExtractPlugin(),
     new CopyPlugin({
       patterns: [

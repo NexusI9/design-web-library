@@ -1,4 +1,10 @@
-import { LegacyRef, useCallback, useRef, useState } from "react";
+import {
+  ButtonHTMLAttributes,
+  LegacyRef,
+  useCallback,
+  useRef,
+  useState,
+} from "react";
 import "./index.scss";
 import PageHeader, { IPageHeader } from "@components/PageHeader/PageHeader";
 import { ModuleSectionInputs } from "@components/ModuleInput/ModuleInputSection";
@@ -6,11 +12,15 @@ import { ModuleInput } from "@components/ModuleInput";
 import { useSearch } from "@tanstack/react-router";
 import { Button } from "@components/Button";
 
-import LinkIcon from "@icons/link.svg"
-import DownloadIcon from "@icons/download.svg"
+import LinkIcon from "@icons/link.svg";
+import DownloadIcon from "@icons/download.svg";
 import { Icon } from "@components/Icon";
+import { IButton } from "@components/Button/Button";
+import { IIcon } from "@components/Icon/Icon";
+import { downloadZIP } from "@lib/utils";
 
 interface IEmbedModuleIframe {
+  module: string;
   frame?: HTMLIFrameElement | null;
   url: string;
   inputs: ModuleSectionInputs;
@@ -21,10 +31,31 @@ export interface IEmbedModule extends IPageHeader {
   frames: IEmbedModuleIframe[];
 }
 
+type TEmbedModuleActions = IButton & IIcon;
+
 export default ({ frames, title, subtitle }: IEmbedModule) => {
   const [framesSection, setFramesSection] = useState(frames);
 
   const searchParams = useSearch({ from: location.pathname });
+
+  const buttonsArray: (module: string) => TEmbedModuleActions[] = (
+    module: string,
+  ) => [
+    {
+      icon: LinkIcon,
+      size: "SMALL",
+      children: <>Copy link</>,
+      style: "OUTLINE",
+      onClick: () => navigator.clipboard.writeText(window.location.href),
+    },
+    {
+      icon: DownloadIcon,
+      size: "SMALL",
+      children: <>Download module</>,
+      style: "SOLID",
+      onClick: () => downloadZIP(module, searchParams),
+    },
+  ];
 
   // update iframe params on search param changes
   const frameUrlParam = (url: string, param: Record<string, string>) =>
@@ -56,8 +87,12 @@ export default ({ frames, title, subtitle }: IEmbedModule) => {
                 channel={frame.channel}
               />
               <div className="flex f-row gap-xl">
-                <Button style="OUTLINE"><Icon icon={LinkIcon} size="SMALL"/>Copy link</Button>
-                <Button style="SOLID"><Icon icon={DownloadIcon} size="SMALL"/>Download module</Button>
+                {buttonsArray(frame.module).map((button,i) => (
+                  <Button key={`${frame.module}button${i}`} style={button.style} onClick={button.onClick}>
+                    <Icon icon={button.icon} size={button.size} />
+                    {button.children}
+                  </Button>
+                ))}
               </div>
             </div>
           )}

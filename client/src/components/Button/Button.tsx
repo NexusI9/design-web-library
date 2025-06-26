@@ -1,14 +1,19 @@
-import { ReactNode } from "react";
+import { ButtonHTMLAttributes, ReactNode } from "react";
 import "./Button.scss";
 
-export interface IButton {
+export interface IButton
+  extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, "style"> {
   children: ReactNode;
   style: "SOLID" | "OUTLINE";
 }
 
-export default ({ children, style }: IButton) => {
+export default ({ children, style, onClick }: IButton) => {
   return (
-    <button className="button flex f-row f-center gap-l" data-style={style}>
+    <button
+      onClick={onClick}
+      className="button flex f-row f-center gap-l"
+      data-style={style}
+    >
       {children}
     </button>
   );

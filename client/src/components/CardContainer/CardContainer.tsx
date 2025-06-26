@@ -1,7 +1,6 @@
 import { BaseSyntheticEvent, useEffect, useState } from "react";
 import "./CardContainer.scss";
 import Card, { ICard } from "@components/Card/Card";
-import { API_URL } from "@lib/constant";
 import CardSections, { ICardSection } from "./CardSections";
 import { ButtonToggle } from "@components/ButtonToggle";
 import {
@@ -44,7 +43,7 @@ export default ({ type, filter }: ICardContainer) => {
         UX: UXIcon,
       };
 
-      fetch(`${API_URL}/resources/${type}/category/all`)
+      fetch(`${process.env.API_URL}/resources/${type}/category/all`)
         .then((e) => e.json())
         .then((data) => {
           data = { All: [], ...data };
@@ -62,7 +61,7 @@ export default ({ type, filter }: ICardContainer) => {
     }
 
     const tag = activeTag.length ? activeTag : "all";
-    fetch(`${API_URL}/resources/${type}/category/${tag}`)
+    fetch(`${process.env.API_URL}/resources/${type}/category/${tag}`)
       .then((e) => e.json())
       .then((data) => {
         setSections(data);
