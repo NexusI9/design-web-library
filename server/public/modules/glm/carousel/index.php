@@ -10,13 +10,13 @@
 <body>
   <!--MODULE BEGIN-->
   <section class="glm-carousel-wrapper" draggable="false"
-  data-curve=<?= $_GET["data-curve"] ?? "outward" ?>
-  data-direction=<?= $_GET["data-direction"] ?? "right" ?>
-  data-picture-width= <?= $_GET["data-picture-width"] ?? "340" ?>
-  data-picture-height=<?= $_GET["data-picture-height"] ?? "544" ?>
-  data-border-radius=<?= $_GET["data-border-radius"] ?? "12" ?>
-  data-border-smooth=<?= $_GET["data-border-smooth"] ?? "4" ?>
-  data-invert-drag=<?= $_GET["data-invert-drag"] ?? "false" ?>>
+  data-curve=<?= $_GET["data-curve"] ?? "\"outward\"" ?>
+  data-direction=<?= $_GET["data-direction"] ?? "\"right\"" ?>
+  data-picture-width=<?= $_GET["data-picture-width"] ?? "\"340\"" ?>
+  data-picture-height=<?= $_GET["data-picture-height"] ?? "\"544\"" ?>
+  data-border-radius=<?= $_GET["data-border-radius"] ?? "\"12\"" ?>
+  data-border-smooth=<?= $_GET["data-border-smooth"] ?? "\"4\"" ?>
+     data-invert-drag=<?= $_GET["data-invert-drag"] ?? "\"false\"" ?>>
     <ul class="glm-carousel-list">
       <li><img class="glm-carousel-picture" src=
       "./assets/thumbnails/sample.jpg" data-full-picture=
