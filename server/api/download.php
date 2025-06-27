@@ -3,6 +3,7 @@
 // Download modules
 if(isset($_GET["module"])){
 
+    $zip_exclude_files = ["index.php", ".DS_Store"];
     $module = $_GET["module"];
     $dirPath= __DIR__ . "/../public/modules/glm/$module";
     
@@ -26,17 +27,16 @@ if(isset($_GET["module"])){
         $files = new RecursiveIteratorIterator(
             new RecursiveDirectoryIterator($dirPath), RecursiveIteratorIterator::LEAVES_ONLY
         );
-        
+
         // add each dir in the archive
         foreach($files as $file){
             if(!$file->isDir()){
                 $filePath = $file->getRealPath();
-                $relativePath = substr($filePath, strlen($dirPath)+1);
+                $relativePath = substr($filePath, strlen(realpath($dirPath)));
 
                 //skip index.php template
-                if (str_ends_with($relativePath, 'index.php')) {
+                if (in_array(basename($filePath), $zip_exclude_files)) 
                     continue;
-                }
 
                 $zip->addFile($filePath,$relativePath);
             }
@@ -52,7 +52,7 @@ if(isset($_GET["module"])){
 
         // compose response
         header("Access-Control-Allow-Origin: *");
-        header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+        header("Access-Control-Allow-Methods: GET");
         header("Access-Control-Allow-Headers: Content-Type");
         header("Content-Type: application/zip");
         header("Content-Disposition: attachment; filename=".$zipName);
