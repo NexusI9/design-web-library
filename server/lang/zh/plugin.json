@@ -1,0 +1,56 @@
+[
+  {
+    "title": "樣式工作室",
+    "description": "Style Studio 提供多種實用工具，協助你建立或優化色彩與字型設計系統。",
+    "type": "PLUGIN",
+    "tag": 8,
+    "link": "EXTERNAL",
+    "href": "https://www.figma.com/community/plugin/1292924330904373989/style-studio",
+    "picture": "assets/thumbnails/plugin/figstyle.webp"
+  },
+  {
+    "title": "網站地圖產生器",
+    "description": "快速將網站畫面匯出為完整且可點擊的網站地圖，自動連結至各畫面。",
+    "type": "PLUGIN",
+    "tag": 8,
+    "link": "EXTERNAL",
+    "href": "https://www.figma.com/community/plugin/1410886529149123027/site-mapper",
+    "picture": "assets/thumbnails/plugin/figmp.webp"
+  },
+  {
+    "title": "虛擬內容產生器",
+    "description": "一鍵產出虛擬內容填充設計，包括文字、圖片與資料。",
+    "type": "PLUGIN",
+    "tag": 8,
+    "link": "EXTERNAL",
+    "href": "https://www.figma.com/community/plugin/736000994034548392/lorem-ipsum-by-divriots",
+    "picture": "assets/thumbnails/plugin/figlorem.webp"
+  },
+  {
+    "title": "圖示整合工具",
+    "description": "匯入各大圖示庫如 Material Design、FontAwesome、Emoji 等超過 20 萬圖示，並以向量圖形匯入 Figma。",
+    "type": "PLUGIN",
+    "tag": 8,
+    "link": "EXTERNAL",
+    "href": "https://www.figma.com/community/plugin/735098390272716381/iconify",
+    "picture": "assets/thumbnails/plugin/figiconify.webp"
+  },
+  {
+    "title": "陰影產生器",
+    "description": "依照方向、顏色與透明度產出細膩陰影效果。",
+    "type": "PLUGIN",
+    "tag": 8,
+    "link": "EXTERNAL",
+    "href": "https://www.figma.com/community/plugin/889676455045507628/shadow-maker",
+    "picture": "assets/thumbnails/plugin/figshadow.webp"
+  },
+  {
+    "title": "畫面快照工具",
+    "description": "將任意圖層即時轉為圖像，可旋轉、翻轉並自動透視校正。",
+    "type": "PLUGIN",
+    "tag": 8,
+    "link": "EXTERNAL",
+    "href": "https://www.figma.com/community/plugin/937590329004798392",
+    "picture": "assets/thumbnails/plugin/figsnap.webp"
+  }
+]

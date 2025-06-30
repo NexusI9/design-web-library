@@ -5,7 +5,7 @@ class ResourceController
 
     function __construct()
     {
-        $this->tags = json_decode(file_get_contents(__DIR__.'/../../data/tag.json'), true);
+        $this->tags = json_decode(file_get_contents(__DIR__.'/../../lang/en/tag.json'), true);
     }
 
     function getAllCategories($file)
@@ -48,7 +48,7 @@ class ResourceController
     private function resourceData($name)
     {
         $name = strtolower($name);
-        return json_decode(file_get_contents(__DIR__."/../../data/$name.json"), true);
+        return json_decode(file_get_contents(__DIR__."/../../lang/en/$name.json"), true);
     }
 
     private function getTagName($id)

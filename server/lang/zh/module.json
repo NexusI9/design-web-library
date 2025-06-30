@@ -1,0 +1,20 @@
+[
+  {
+    "title": "投影片展示",
+    "description": "具獨特轉場效果的可自訂投影片展示模組。",
+    "type": "MODULE",
+    "tag": 13,
+    "link": "INTERNAL",
+    "href": "/modules/glm/slideshow",
+    "picture": "assets/thumbnails/module/glslide.webp"
+  },
+  {
+    "title": "輪播模組",
+    "description": "可自訂的 2D 或 3D 輪播模組。",
+    "type": "MODULE",
+    "tag": 13,
+    "link": "INTERNAL",
+    "href": "/modules/glm/carousel",
+    "picture": "assets/thumbnails/module/glcarousel.webp"
+  }
+]
