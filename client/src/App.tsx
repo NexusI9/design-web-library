@@ -14,15 +14,16 @@ import {
 import { createElement } from "react";
 import { IRouteComponent } from "@ctypes/route";
 import { GLModuleRoute, MainRoute } from "./routes";
+import { ComboBox } from "@components/ComboBox";
 
 const rootRoute = createRootRoute({
   component: () => (
-    <>
+    <ComboBox.Wrapper>
       <Sidepanel items={MainRoute} />
       <Container>
         <Outlet />
       </Container>
-    </>
+    </ComboBox.Wrapper>
   ),
 });
 
