@@ -1,16 +1,13 @@
-.combobox{
+.combobox {
 
-
-    &-content{
-	display: inline-block;
-	position: absolute;
-	top:0;
-	left: 0;
-	margin-top: var(--space-medium);
-	z-index: 99;
-	padding: var(--space-medium);
-	min-width: 100px;
-    }
-
-    
+  &-content {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: var(--space-medium);
+    z-index: 99;
+    padding: var(--space-medium);
+    min-width: 100px;
+  }
 }
