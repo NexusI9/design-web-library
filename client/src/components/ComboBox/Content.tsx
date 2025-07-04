@@ -16,11 +16,11 @@ export interface IComboBoxContent {
 
 export default ({ children, id, className }: IComboBoxContent) => {
   const { comboBoxContent, setComboBoxContent } = useContext(ComboBoxContext);
-  const panel = useRef<any>();
+  const panel = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleMouseDown: EventListener = (e) => {
-      if (panel.current && !panel.current.contains(e.target)) {
+      if (panel.current) {
         // close combobox on backdrop click
         setComboBoxContent((current) => ({
           ...current,

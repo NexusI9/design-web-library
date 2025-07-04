@@ -12,21 +12,25 @@ export interface ISidepanel {
 
 export default ({ items }: ISidepanel) => {
   return (
-    <nav className="sidepanel panel bd-radius-m flex f-col gap-xl padding-h-s padding-v-2xl">
-      <ComboBox.Trigger id="sidepanel_lang">
-        <Button style="GHOST">
-          EN
-          <Icon size="SMALL" icon={ChevronDownIcon} />
-        </Button>
-      </ComboBox.Trigger>
-      <ComboBox.Content id="sidepanel_lang" className="flex f-col gap-m">
-        <Button style="GHOST">EN</Button>
-        <Button style="GHOST">ZH</Button>
-      </ComboBox.Content>
+    <nav className="sidepanel panel bd-radius-m flex f-col gap-xl padding-h-s padding-top-m">
+      <header className="padding-h-xl padding-v-xl">
+        <div className="padding-h-xl flex f-row f-end">
+          <ComboBox.Trigger id="sidepanel_lang">
+            <Button style="GHOST">
+              EN
+              <Icon size="SMALL" icon={ChevronDownIcon} />
+            </Button>
+          </ComboBox.Trigger>
+          <ComboBox.Content id="sidepanel_lang" className="flex f-col gap-m">
+            <Button style="GHOST">EN</Button>
+            <Button style="GHOST">ZH</Button>
+          </ComboBox.Content>
+        </div>
 
-      <header className="flex f-row f-end-h gap-l padding-h-xl padding-v-xl">
-        <Logo />
-        <p>Web Library</p>
+        <div className="flex f-row f-end-h gap-l">
+          <Logo />
+          <p>Web Library</p>
+        </div>
       </header>
       <ul className="flex f-col gap-s padding-h-xl">
         {items.map((item) => (
