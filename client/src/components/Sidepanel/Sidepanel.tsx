@@ -5,12 +5,28 @@ import { ComboBox } from "@components/ComboBox";
 import ChevronDownIcon from "@icons/chevron-down.svg";
 import { Icon } from "@components/Icon";
 import { Button } from "@components/Button";
+import { locationUpdateLang } from "@lib/utils";
+import { TValidLang } from "@components/Language/Language";
+import { useNavigate } from "@tanstack/react-router";
 
 export interface ISidepanel {
   items: ISidepanelItem[];
 }
 
+const langButtons: { lang: TValidLang; label: string }[] = [
+  {
+    label: "EN",
+    lang: "en",
+  },
+  {
+    label: "ZH",
+    lang: "zh-tw",
+  },
+];
+
 export default ({ items }: ISidepanel) => {
+  const navigate = useNavigate();
+
   return (
     <nav className="sidepanel panel bd-radius-m flex f-col gap-xl padding-h-s padding-top-m">
       <header className="padding-h-xl padding-v-xl">
@@ -22,8 +38,17 @@ export default ({ items }: ISidepanel) => {
             </Button>
           </ComboBox.Trigger>
           <ComboBox.Content id="sidepanel_lang" className="flex f-col gap-m">
-            <Button style="GHOST">EN</Button>
-            <Button style="GHOST">ZH</Button>
+            {langButtons.map(({ label, lang }) => (
+              <Button
+                key={`switchlang${lang}`}
+                style="GHOST"
+                onClick={() =>
+                  navigate({ to: locationUpdateLang(lang), replace: true })
+                }
+              >
+                {label}
+              </Button>
+            ))}
           </ComboBox.Content>
         </div>
 

@@ -21,7 +21,6 @@ export default ({ children, id, className }: IComboBoxContent) => {
   useEffect(() => {
     const handleMouseDown: EventListener = (e) => {
       if (panel.current) {
-        // close combobox on backdrop click
         setComboBoxContent((current) => ({
           ...current,
           id: undefined,
@@ -30,7 +29,7 @@ export default ({ children, id, className }: IComboBoxContent) => {
       }
     };
 
-    document.addEventListener("mouseup", handleMouseDown);
+    //document.addEventListener("mouseup", handleMouseDown);
 
     return () => document.removeEventListener("mouseup", handleMouseDown);
   }, []);
