@@ -12,7 +12,7 @@ type RouteMapItem = ISidepanelItem & IRouteComponent;
 const primaryRouteMap: RouteMapItem[] = [
   {
     icon: HomeIcon,
-    path: "/",
+    path: "/$lang",
     label: "Home",
     component: Resources,
     props: {
@@ -26,7 +26,7 @@ const primaryRouteMap: RouteMapItem[] = [
   },
   {
     icon: LayoutIcon,
-    path: "/templates",
+    path: "$lang/templates",
     label: "Templates",
     component: Resources,
     props: {
@@ -40,7 +40,7 @@ const primaryRouteMap: RouteMapItem[] = [
   },
   {
     icon: GridIcon,
-    path: "/modules",
+    path: "$lang/modules",
     label: "Modules",
     component: Resources,
     props: {
@@ -55,7 +55,7 @@ const primaryRouteMap: RouteMapItem[] = [
   },
   {
     icon: FileIcon,
-    path: "/documents",
+    path: "$lang/documents",
     label: "Documents",
     component: Resources,
     props: {
@@ -68,7 +68,7 @@ const primaryRouteMap: RouteMapItem[] = [
   },
   {
     icon: PuzzleIcon,
-    path: "/plugins",
+    path: "$lang/plugins",
     label: "Plugins",
     component: Resources,
     props: {

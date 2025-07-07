@@ -9,42 +9,44 @@ import {
   createRoute,
   createRouter,
   Outlet,
+  RootRoute,
+  Route,
   RouterProvider,
 } from "@tanstack/react-router";
 import { createElement } from "react";
 import { IRouteComponent } from "@ctypes/route";
 import { GLModuleRoute, MainRoute } from "./routes";
-import { ComboBox } from "@components/ComboBox";
+import { Main } from "@components/Main";
 
 const rootRoute = createRootRoute({
   component: () => (
-    <ComboBox.Wrapper>
+    <Main>
       <Sidepanel items={MainRoute} />
       <Container>
         <Outlet />
       </Container>
-    </ComboBox.Wrapper>
+    </Main>
   ),
 });
 
-const mapChildRoute = (routeList: IRouteComponent[]) =>
-  routeList.map((route) =>
+const mapChildRoute = (routeList: IRouteComponent[], parentRoute: any) =>
+  routeList.map(({ path, component, props, validateSearch }) =>
     createRoute({
-      getParentRoute: () => rootRoute,
-      path: route.path,
-      component: () => createElement(route.component, route.props),
-      validateSearch: route.validateSearch,
+      getParentRoute: () => parentRoute,
+      path,
+      validateSearch,
+      ...(component && { component: () => createElement(component, props) }),
     }),
   );
 
-const routeTree = rootRoute.addChildren([
+rootRoute.addChildren([
   // primary route
-  ...mapChildRoute(MainRoute),
+  ...mapChildRoute(MainRoute, rootRoute),
   //glm modules route
-  ...mapChildRoute(GLModuleRoute),
+  ...mapChildRoute(GLModuleRoute, rootRoute),
 ]);
 
-const router = createRouter({ routeTree });
+const router = createRouter({ routeTree: rootRoute });
 
 export default () => {
   return <RouterProvider router={router} />;
