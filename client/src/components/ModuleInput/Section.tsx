@@ -6,29 +6,17 @@ import { useNavigate, useSearch } from "@tanstack/react-router";
 
 export interface IModuleInputSection {
   className?: string;
-  frame: HTMLIFrameElement;
   inputs: TModuleSectionInputs;
-  channel: string;
 }
 
 const ModuleInputSection = ({
-  frame,
   inputs,
-  channel,
   className,
 }: IModuleInputSection) => {
-  const searchParams = useSearch({ from: location.pathname });
+  const searchParams = useSearch({ strict: false });
   const navigate = useNavigate({ from: location.pathname });
 
   const onInputChange = (value: string, attribute: string) => {
-    //update iframe
-    frame &&
-      messageProcessor.send(frame, {
-        channel,
-        attribute: attribute,
-        value,
-      });
-
     // update url parameters
     navigate({
       search: ((prev: any) => ({ ...prev, [attribute]: String(value) })) as any,
@@ -40,9 +28,7 @@ const ModuleInputSection = ({
   };
 
   return (
-    <div
-      className={`module-input-section ${className || ""}`}
-    >
+    <div className={`module-input-section ${className || ""}`}>
       {inputs.map((input) => {
         let Input;
 

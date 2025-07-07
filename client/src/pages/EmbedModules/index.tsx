@@ -31,9 +31,7 @@ export interface IEmbedModule extends IPageHeader {
 type TEmbedModuleActions = IButton & IIcon;
 
 export default ({ frames, title, subtitle }: IEmbedModule) => {
-  const [framesSection, setFramesSection] = useState(frames);
-
-  const searchParams = useSearch({ from: location.pathname });
+  const searchParams = useSearch({ strict: false });
 
   const buttonsArray: (module: string) => TEmbedModuleActions[] = (
     module: string,
@@ -58,20 +56,10 @@ export default ({ frames, title, subtitle }: IEmbedModule) => {
   const frameUrlParam = (url: string, param: Record<string, string>) =>
     `${url}?${new URLSearchParams(param).toString()}`;
 
-  const updateFrame = useCallback(
-    (frame: HTMLIFrameElement | null, index: number) => {
-      setFramesSection((oldList) => {
-        oldList[index].frame = frame;
-        return [...oldList];
-      });
-    },
-    [],
-  );
-
   return (
     <div className="flex f-col gap-3xl">
       <PageHeader title={title} subtitle={subtitle} />
-      {framesSection.map((frame, i) => (
+      {frames.map((frame, i) => (
         <div
           className="embed-module-wrapper flex f-col gap-xl"
           key={`${frame.url}${i}`}
@@ -86,14 +74,10 @@ export default ({ frames, title, subtitle }: IEmbedModule) => {
                   </Button>
                 </Expandable.Trigger>
                 <Expandable.Section type="OPACITY">
-                  {frame.frame && (
-                    <ModuleInput.Section
-                      className="panel shadow-medium"
-                      frame={frame.frame}
-                      inputs={frame.inputs}
-                      channel={frame.channel}
-                    />
-                  )}
+                  <ModuleInput.Section
+                    className="panel shadow-medium"
+                    inputs={frame.inputs}
+                  />
                 </Expandable.Section>
               </div>
               <div className="embed-module-header-buttons flex f-row gap-xl">
@@ -112,7 +96,6 @@ export default ({ frames, title, subtitle }: IEmbedModule) => {
 
             <div className="embed-module-frame">
               <iframe
-                onLoad={(e) => updateFrame(e.currentTarget, i)}
                 className="embed-module-iframe"
                 src={frameUrlParam(frame.url, searchParams)}
               />

@@ -9,14 +9,12 @@ import {
   createRoute,
   createRouter,
   Outlet,
-  redirect,
   RouterProvider,
 } from "@tanstack/react-router";
 import { createElement } from "react";
 import { IRouteComponent } from "@ctypes/route";
 import { GLModuleRoute, MainRoute } from "./routes";
 import { Main } from "@components/Main";
-import { TValidLang, validLang } from "@components/Language/Language";
 import { langRedirect } from "@lib/utils";
 
 const rootRoute = createRootRoute({
