@@ -6,7 +6,7 @@
     "tag": 7,
     "link": "EXTERNAL",
     "href": "https://chatgpt.com/",
-    "picture": "assets/thumbnails/tool/chatgpt.webp"
+    "picture": "/assets/thumbnails/tool/chatgpt.webp"
   },
   {
     "title": "Adobe Firefly",
@@ -15,7 +15,7 @@
     "tag": 7,
     "link": "EXTERNAL",
     "href": "https://www.adobe.com/tw/products/firefly.html",
-    "picture": "assets/thumbnails/tool/firefly.webp"
+    "picture": "/assets/thumbnails/tool/firefly.webp"
   },
   {
     "title": "Farbvelo",
@@ -24,7 +24,7 @@
     "tag": 2,
     "link": "EXTERNAL",
     "href": "https://farbvelo.elastiq.ch/",
-    "picture": "assets/thumbnails/tool/farbvelo.webp"
+    "picture": "/assets/thumbnails/tool/farbvelo.webp"
   },
   {
     "title": "Huemint",
@@ -33,7 +33,7 @@
     "tag": 2,
     "link": "EXTERNAL",
     "href": "https://huemint.com/brand-intersection/",
-    "picture": "assets/thumbnails/tool/huemint.webp"
+    "picture": "/assets/thumbnails/tool/huemint.webp"
   },
   {
     "title": "iColorPalette",
@@ -42,7 +42,7 @@
     "tag": 2,
     "link": "EXTERNAL",
     "href": "https://icolorpalette.com/",
-    "picture": "assets/thumbnails/tool/icolorpalette.webp"
+    "picture": "/assets/thumbnails/tool/icolorpalette.webp"
   },
   {
     "title": "Randoma11y",
@@ -51,7 +51,7 @@
     "tag": 2,
     "link": "EXTERNAL",
     "href": "https://randoma11y.com/",
-    "picture": "assets/thumbnails/tool/randoma11y.webp"
+    "picture": "/assets/thumbnails/tool/randoma11y.webp"
   },
   {
     "title": "Coolors",
@@ -60,7 +60,7 @@
     "tag": 2,
     "link": "EXTERNAL",
     "href": "https://coolors.co/",
-    "picture": "assets/thumbnails/tool/coolors.webp"
+    "picture": "/assets/thumbnails/tool/coolors.webp"
   },
   {
     "title": "Color Designer",
@@ -69,7 +69,7 @@
     "tag": 2,
     "link": "EXTERNAL",
     "href": "https://colordesigner.io/",
-    "picture": "assets/thumbnails/tool/colordesigner.webp"
+    "picture": "/assets/thumbnails/tool/colordesigner.webp"
   },
   {
     "title": "設計系統資料庫",
@@ -78,7 +78,7 @@
     "tag": 1,
     "link": "EXTERNAL",
     "href": "https://designsystemsrepo.com/",
-    "picture": "assets/thumbnails/tool/ddsrepo.webp"
+    "picture": "/assets/thumbnails/tool/ddsrepo.webp"
   },
   {
     "title": "元件圖庫",
@@ -87,7 +87,7 @@
     "tag": 1,
     "link": "EXTERNAL",
     "href": "https://component.gallery/",
-    "picture": "assets/thumbnails/tool/compgallery.webp"
+    "picture": "/assets/thumbnails/tool/compgallery.webp"
   },
   {
     "title": "字級比例工具",
@@ -96,7 +96,7 @@
     "tag": 1,
     "link": "EXTERNAL",
     "href": "https://typescale.com/",
-    "picture": "assets/thumbnails/tool/typescale.webp"
+    "picture": "/assets/thumbnails/tool/typescale.webp"
   },
   {
     "title": "工具集 Toolfolio",
@@ -105,7 +105,7 @@
     "tag": 1,
     "link": "EXTERNAL",
     "href": "https://toolfolio.io/",
-    "picture": "assets/thumbnails/tool/toolfolio.webp"
+    "picture": "/assets/thumbnails/tool/toolfolio.webp"
   },
   {
     "title": "Pousse ta fonte",
@@ -114,7 +114,7 @@
     "tag": 3,
     "link": "EXTERNAL",
     "href": "https://www.poussetafonte.com/",
-    "picture": "assets/thumbnails/tool/pousse.webp"
+    "picture": "/assets/thumbnails/tool/pousse.webp"
   },
   {
     "title": "Google Fonts",
@@ -123,7 +123,7 @@
     "tag": 3,
     "link": "EXTERNAL",
     "href": "https://fonts.google.com/",
-    "picture": "assets/thumbnails/tool/googlefont.webp"
+    "picture": "/assets/thumbnails/tool/googlefont.webp"
   },
   {
     "title": "Fontshare",
@@ -132,7 +132,7 @@
     "tag": 3,
     "link": "EXTERNAL",
     "href": "https://www.fontshare.com/",
-    "picture": "assets/thumbnails/tool/fontshare.webp"
+    "picture": "/assets/thumbnails/tool/fontshare.webp"
   },
   {
     "title": "Velvetyne",
@@ -141,7 +141,7 @@
     "tag": 3,
     "link": "EXTERNAL",
     "href": "https://velvetyne.fr/",
-    "picture": "assets/thumbnails/tool/velvetyne.webp"
+    "picture": "/assets/thumbnails/tool/velvetyne.webp"
   },
   {
     "title": "Use Modify",
@@ -150,7 +150,7 @@
     "tag": 3,
     "link": "EXTERNAL",
     "href": "https://usemodify.com/",
-    "picture": "assets/thumbnails/tool/usemodify.webp"
+    "picture": "/assets/thumbnails/tool/usemodify.webp"
   },
   {
     "title": "sgvl",
@@ -159,7 +159,7 @@
     "tag": 4,
     "link": "EXTERNAL",
     "href": "https://svgl.app/",
-    "picture": "assets/thumbnails/tool/svgl.webp"
+    "picture": "/assets/thumbnails/tool/svgl.webp"
   },
   {
     "title": "Simple icons",
@@ -168,7 +168,7 @@
     "tag": 4,
     "link": "EXTERNAL",
     "href": "https://simpleicons.org/",
-    "picture": "assets/thumbnails/tool/simpleicons.webp"
+    "picture": "/assets/thumbnails/tool/simpleicons.webp"
   },
   {
     "title": "Untitled UI Icons",
@@ -177,7 +177,7 @@
     "tag": 4,
     "link": "EXTERNAL",
     "href": "https://www.untitledui.com/icons",
-    "picture": "assets/thumbnails/tool/untitledicons.webp"
+    "picture": "/assets/thumbnails/tool/untitledicons.webp"
   },
   {
     "title": "Phosphor Icons",
@@ -186,7 +186,7 @@
     "tag": 4,
     "link": "EXTERNAL",
     "href": "https://phosphoricons.com/",
-    "picture": "assets/thumbnails/tool/phosphor.webp"
+    "picture": "/assets/thumbnails/tool/phosphor.webp"
   },
   {
     "title": "Sargam Icons",
@@ -195,7 +195,7 @@
     "tag": 4,
     "link": "EXTERNAL",
     "href": "https://sargamicons.com/",
-    "picture": "assets/thumbnails/tool/sargam.webp"
+    "picture": "/assets/thumbnails/tool/sargam.webp"
   },
   {
     "title": "Feather Icons",
@@ -204,7 +204,7 @@
     "tag": 4,
     "link": "EXTERNAL",
     "href": "https://feathericons.com/",
-    "picture": "assets/thumbnails/tool/feather.webp"
+    "picture": "/assets/thumbnails/tool/feather.webp"
   },
   {
     "title": "Tabler Icons",
@@ -213,7 +213,7 @@
     "tag": 4,
     "link": "EXTERNAL",
     "href": "https://tabler.io/icons",
-    "picture": "assets/thumbnails/tool/tabler.webp"
+    "picture": "/assets/thumbnails/tool/tabler.webp"
   },
   {
     "title": "Hero Icons",
@@ -222,7 +222,7 @@
     "tag": 4,
     "link": "EXTERNAL",
     "href": "https://heroicons.com/",
-    "picture": "assets/thumbnails/tool/hero.webp"
+    "picture": "/assets/thumbnails/tool/hero.webp"
   },
   {
     "title": "Iconoir",
@@ -231,7 +231,7 @@
     "tag": 4,
     "link": "EXTERNAL",
     "href": "https://iconoir.com/",
-    "picture": "assets/thumbnails/tool/iconoir.webp"
+    "picture": "/assets/thumbnails/tool/iconoir.webp"
   },
   {
     "title": "Iconic",
@@ -240,7 +240,7 @@
     "tag": 4,
     "link": "EXTERNAL",
     "href": "https://iconic.app/",
-    "picture": "assets/thumbnails/tool/iconic.webp"
+    "picture": "/assets/thumbnails/tool/iconic.webp"
   },
   {
     "title": "Glyphs",
@@ -249,7 +249,7 @@
     "tag": 4,
     "link": "EXTERNAL",
     "href": "https://glyphs.fyi/",
-    "picture": "assets/thumbnails/tool/glyphs.webp"
+    "picture": "/assets/thumbnails/tool/glyphs.webp"
   },
   {
     "title": "Atlas Icons",
@@ -258,7 +258,7 @@
     "tag": 4,
     "link": "EXTERNAL",
     "href": "https://atlasicons.vectopus.com/",
-    "picture": "assets/thumbnails/tool/atlasicons.webp"
+    "picture": "/assets/thumbnails/tool/atlasicons.webp"
   },
   {
     "title": "Getty Images",
@@ -267,7 +267,7 @@
     "tag": 5,
     "link": "EXTERNAL",
     "href": "https://www.gettyimages.hk/",
-    "picture": "assets/thumbnails/tool/getty.webp"
+    "picture": "/assets/thumbnails/tool/getty.webp"
   },
   {
     "title": "Unsplash",
@@ -276,7 +276,7 @@
     "tag": 5,
     "link": "EXTERNAL",
     "href": "https://unsplash.com/",
-    "picture": "assets/thumbnails/tool/unsplash.webp"
+    "picture": "/assets/thumbnails/tool/unsplash.webp"
   },
   {
     "title": "Pixabay",
@@ -285,7 +285,7 @@
     "tag": 5,
     "link": "EXTERNAL",
     "href": "https://pixabay.com/",
-    "picture": "assets/thumbnails/tool/pixabay.webp"
+    "picture": "/assets/thumbnails/tool/pixabay.webp"
   },
   {
     "title": "Pexels",
@@ -294,7 +294,7 @@
     "tag": 5,
     "link": "EXTERNAL",
     "href": "https://www.pexels.com/",
-    "picture": "assets/thumbnails/tool/pexels.webp"
+    "picture": "/assets/thumbnails/tool/pexels.webp"
   },
   {
     "title": "用戶研究指南（UXR）",
@@ -303,7 +303,7 @@
     "tag": 6,
     "link": "EXTERNAL",
     "href": "http://guidetouxr.com/",
-    "picture": "assets/thumbnails/tool/guideux.webp"
+    "picture": "/assets/thumbnails/tool/guideux.webp"
   },
   {
     "title": "UX 法則",
@@ -312,6 +312,6 @@
     "tag": 6,
     "link": "EXTERNAL",
     "href": "https://lawsofux.com/",
-    "picture": "assets/thumbnails/tool/lawsux.webp"
+    "picture": "/assets/thumbnails/tool/lawsux.webp"
   }
 ]

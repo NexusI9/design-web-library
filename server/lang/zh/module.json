@@ -6,7 +6,7 @@
     "tag": 13,
     "link": "INTERNAL",
     "href": "/modules/glm/slideshow",
-    "picture": "assets/thumbnails/module/glslide.webp"
+    "picture": "/assets/thumbnails/module/glslide.webp"
   },
   {
     "title": "輪播模組",
@@ -15,6 +15,6 @@
     "tag": 13,
     "link": "INTERNAL",
     "href": "/modules/glm/carousel",
-    "picture": "assets/thumbnails/module/glcarousel.webp"
+    "picture": "/assets/thumbnails/module/glcarousel.webp"
   }
 ]

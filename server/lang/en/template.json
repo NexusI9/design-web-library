@@ -6,7 +6,7 @@
         "tag": 8,
         "link":"DOWNLOAD",
         "href":"https://chatgpt.com/",
-        "picture": "assets/thumbnails/template/figstarter.webp"
+        "picture": "/assets/thumbnails/template/figstarter.webp"
     },
     {
         "title":"Wireframe",
@@ -15,7 +15,7 @@
         "tag": 8,
         "link":"DOWNLOAD",
         "href":"https://chatgpt.com/",
-        "picture": "assets/thumbnails/template/figwire.webp"
+        "picture": "/assets/thumbnails/template/figwire.webp"
     },
     {
         "title":"Storybook",
@@ -24,7 +24,7 @@
         "tag": 8,
         "link":"DOWNLOAD",
         "href":"https://chatgpt.com/",
-        "picture": "assets/thumbnails/template/figstorybook.webp"
+        "picture": "/assets/thumbnails/template/figstorybook.webp"
     },
     {
         "title":"Starter Web Project",
@@ -33,7 +33,7 @@
         "tag": 9,
         "link":"DOWNLOAD",
         "href":"https://chatgpt.com/",
-        "picture": "assets/thumbnails/template/xdstarter.webp"
+        "picture": "/assets/thumbnails/template/xdstarter.webp"
     },
     {
         "title":"HTML Editor Kit",
@@ -42,7 +42,7 @@
         "tag": 9,
         "link":"DOWNLOAD",
         "href":"https://chatgpt.com/",
-        "picture": "assets/thumbnails/template/xdhtml.webp"
+        "picture": "/assets/thumbnails/template/xdhtml.webp"
     },
     {
         "title":"GDPR Kit",
@@ -51,7 +51,7 @@
         "tag": 9,
         "link":"DOWNLOAD",
         "href":"https://chatgpt.com/",
-        "picture": "assets/thumbnails/template/xdgdpr.webp"
+        "picture": "/assets/thumbnails/template/xdgdpr.webp"
     },
     {
         "title":"Design Proposal",
@@ -60,7 +60,7 @@
         "tag": 10,
         "link":"DOWNLOAD",
         "href":"https://chatgpt.com/",
-        "picture": "assets/thumbnails/template/pptpresent.webp"
+        "picture": "/assets/thumbnails/template/pptpresent.webp"
     },
     {
         "title":"Bug List",
@@ -69,6 +69,6 @@
         "tag": 10,
         "link":"DOWNLOAD",
         "href":"https://chatgpt.com/",
-        "picture": "assets/thumbnails/template/pptbug.webp"
+        "picture": "/assets/thumbnails/template/pptbug.webp"
     }
 ]

@@ -35,12 +35,12 @@ const AnchorElement = ({ href, link, children }: ICardLinkElement) => (
 );
 
 const RouterElement = ({ href, children }: ICardLinkElement) => (
-  <Link className="card round" to={href}>
+  <Link className="card round" to={`/$lang/${href}`}>
     {children}
   </Link>
 );
 
-const CardContent = ({ picture, title, description }:ICardContent) => (
+const CardContent = ({ picture, title, description }: ICardContent) => (
   <>
     <div className="card-picture">
       <img src={picture} />

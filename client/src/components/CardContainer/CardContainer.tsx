@@ -2,11 +2,11 @@ import { BaseSyntheticEvent, useEffect, useState } from "react";
 import "./CardContainer.scss";
 import Card, { ICard } from "@components/Card/Card";
 import CardSections, { ICardSection } from "./CardSections";
-import { ButtonToggle } from "@components/ButtonToggle";
+import { Button } from "@components/Button";
 import {
   IButtonToggle,
   IToggleCallback,
-} from "@components/ButtonToggle/ButtonToggle";
+} from "@components/Button/Toggle";
 
 import AIIcon from "@icons/ai.svg";
 import DesignSystemIcon from "@icons/module.svg";
@@ -71,7 +71,7 @@ export default ({ type, filter }: ICardContainer) => {
   return (
     <div className="card-wrapper flex f-col gap-l">
       {filter !== false && categories.length > 0 && (
-        <ButtonToggle items={categories} onChange={onTagClick} />
+        <Button.Toggle items={categories} onChange={onTagClick} />
       )}
       <div className="card-container flex f-col gap-5xl">
         {Object.keys(sections)?.map((key, i) => (

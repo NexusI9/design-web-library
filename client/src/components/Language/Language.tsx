@@ -3,6 +3,8 @@ import { Outlet, useParams } from "@tanstack/react-router";
 
 export type TValidLang = "en" | "zh-tw";
 
+export const validLang: TValidLang[] = ["en", "zh-tw"];
+
 const LangContext = createContext<TValidLang>("en");
 
 interface ILanguage {

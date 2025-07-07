@@ -1,6 +1,6 @@
 import Label, { ILabel } from "@components/Label/Label";
 import { BaseSyntheticEvent, useState } from "react";
-import './ButtonToggle.scss';
+import './Toggle.scss';
 
 interface IButton extends ILabel {
     onClick?: Function;
