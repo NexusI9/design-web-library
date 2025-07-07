@@ -20,7 +20,7 @@ export default ({ children, id, className }: IComboBoxContent) => {
 
   useEffect(() => {
     const handleMouseDown: EventListener = (e) => {
-      if (panel.current) {
+      if (panel.current && !panel.current.contains(e.target as Node)) {
         setComboBoxContent((current) => ({
           ...current,
           id: undefined,
@@ -29,7 +29,7 @@ export default ({ children, id, className }: IComboBoxContent) => {
       }
     };
 
-    //document.addEventListener("mouseup", handleMouseDown);
+    document.addEventListener("mouseup", handleMouseDown);
 
     return () => document.removeEventListener("mouseup", handleMouseDown);
   }, []);
