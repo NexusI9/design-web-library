@@ -27,7 +27,8 @@ $tag_controller =  new Tag_Controller();
 
 // First push new "pattern" => [callback, args] to the router
 $router->get('/([a-zA-Z-]+)/resources/([a-zA-Z0-9_-]+)/category/([a-zA-Z0-9_-]+)', [$resources_controller, 'get_by_tag']);
-$router->get('/([a-zA-Z-]+)/tags/([a-zA-Z0-9_-]+)', [$tag_controller, 'get_by_name']);
+$router->get('/([a-zA-Z-]+)/tags/resource/([a-zA-Z0-9_-]+)', [$tag_controller, 'get_by_resource']);
+$router->get('/([a-zA-Z-]+)/tags/name/([a-zA-Z0-9_-]+)', [$tag_controller, 'get_by_name']);
 
 // Then dispatch the method by mapping the URI to the previously entered pattens 
 $router->dispatch($_SERVER['REQUEST_URI'], $_SERVER['REQUEST_METHOD']);

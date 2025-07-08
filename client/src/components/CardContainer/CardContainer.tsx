@@ -1,4 +1,4 @@
-import { BaseSyntheticEvent, useContext, useEffect, useState } from "react";
+import { BaseSyntheticEvent, createElement, useContext, useEffect, useState } from "react";
 import "./CardContainer.scss";
 import Card, { ICard } from "@components/Card/Card";
 import CardSections, { ICardSection } from "./CardSections";
@@ -19,6 +19,12 @@ interface ICardContainer {
   filter?: boolean;
 }
 
+interface ITag {
+  id: string;
+  name: string;
+  icon: string;
+}
+
 type Section = { [key: string]: ICard[] };
 
 export default ({ type, filter }: ICardContainer) => {
@@ -27,34 +33,21 @@ export default ({ type, filter }: ICardContainer) => {
   const [activeTag, setActiveTag] = useState<string>("");
   const lang = useContext(LangContext);
 
-  const onTagClick = ({ event, source }: IToggleCallback<IButtonToggle>) =>
+  const onTagClick = ({ source }: IToggleCallback<IButtonToggle>) =>
     setActiveTag(source.text);
 
   useEffect(() => {
     if (filter !== false) {
-      const iconTagMap = {
-        "1": DesignSystemIcon,
-        "2": ColorIcon,
-        "3": FoundryIcon,
-        "4": IconoIcon,
-        "5": StockIcon,
-        "6": UXIcon,
-        "7": AIIcon,
-      };
-
       // fetch and set top categories filter
-      fetch(`${process.env.API_URL}/${lang}/tags/all`)
+      fetch(`${process.env.API_URL}/${lang}/tags/resource/${type}`)
         .then((e) => e.json())
-        .then((data) => {
-          data = { All: [], ...data };
-
-	  // go through each object entry, each key corresspond to a tag
+        .then((data: ITag[]) => {
+	  console.log(data);
+          // go through each object entry, each key corresspond to a tag
           setCategories(
-            Object.keys(data).map<IButtonToggle>((key) => ({
-              ...(iconTagMap[key as keyof typeof iconTagMap] && {
-                leftIcon: iconTagMap[key as keyof typeof iconTagMap],
-              }),
-              text: key,
+            data.map<IButtonToggle>(({ name, icon }) => ({
+              icon: createElement(icon),
+              text: name,
               size: 2,
             })),
           );
