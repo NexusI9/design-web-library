@@ -1,5 +1,4 @@
 import { CardContainer } from "@components/CardContainer";
-import { ICard } from "@components/Card/Card";
 import { PageHeader } from "@components/PageHeader";
 
 export interface IResources {
@@ -7,23 +6,23 @@ export interface IResources {
   header?: {
     title?: string;
     subtitle?: string;
-    picture?: string;
+    banner?: string;
   };
-  type: ICard["type"];
+  resource_id: number;
 }
 
-export default ({ header, type, filter }: IResources) => {
+export default ({ header, resource_id, filter }: IResources) => {
   return (
     <div className="flex f-col gap-4xl">
       {header && (
         <PageHeader
           title={header?.title}
           subtitle={header?.subtitle}
-          picture={header?.picture}
+          picture={header?.banner}
         />
       )}
 
-      <CardContainer type={type} filter={filter} />
+      <CardContainer resource_id={resource_id} filter={filter} />
     </div>
   );
 };

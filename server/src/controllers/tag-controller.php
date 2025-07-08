@@ -1,4 +1,7 @@
 <?php
+
+include_once __DIR__."/../lib/utils.php";
+    
 class Tag_Controller
 {
 
@@ -50,9 +53,9 @@ class Tag_Controller
     /**
       Retrieve the unique tags on each resource type (document, tags...)
      */
-    function get_by_resource($lang, $resource_name){
+    function get_by_resource($lang, $resource_id){
 
-        $resource_name = strtolower($resource_name);
+        $resource_name = resource_filename_from_id($resource_id);
         
         // load in cache if doesn't exists
         if(!isset($this->resource_cache[$resource_name])){
@@ -123,6 +126,7 @@ class Tag_Controller
       Actually don't do anything if called and content is already loaded. Prevent multiple hit.
      */
     private function load_content($lang){
+
         if(!isset($this->content_cache)){
             // cache the content if not loaded
             $this->content_cache = json_decode(file_get_contents(__DIR__."/../../locale/$lang/tag/tag.json"), true);

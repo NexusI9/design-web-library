@@ -2,6 +2,7 @@
 include_once "../src/router.php";
 include_once "../src/controllers/resource-controller.php";
 include_once "../src/controllers/tag-controller.php";
+include_once "../src/controllers/route-controller.php";
 
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET");
@@ -10,6 +11,7 @@ header("Content-Type: application/json");
 $router = new Router();
 $resources_controller = new Resource_Controller();
 $tag_controller =  new Tag_Controller();
+$route_controller = new Route_Controller();
 
 
 /**
@@ -26,6 +28,7 @@ $tag_controller =  new Tag_Controller();
  */
 
 // First push new "pattern" => [callback, args] to the router
+$router->get('/([a-zA-Z-]+)/routes/page/([a-zA-Z0-9_-]+)', [$route_controller, 'get_page_by_name']);
 $router->get('/([a-zA-Z-]+)/resources/([a-zA-Z0-9_-]+)/category/([a-zA-Z0-9_-]+)', [$resources_controller, 'get_by_tag_id']);
 $router->get('/([a-zA-Z-]+)/tags/resource/([a-zA-Z0-9_-]+)', [$tag_controller, 'get_by_resource']);
 $router->get('/([a-zA-Z-]+)/tags/name/([a-zA-Z0-9_-]+)', [$tag_controller, 'get_by_name']);

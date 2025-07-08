@@ -23,6 +23,12 @@ export const locationUpdateLang = (lang: TValidLang) => {
   return newPath;
 };
 
+export const locationLang = () => {
+  const segments = location.pathname.split("/").filter(Boolean);
+  const maybeLang = segments[0]?.toLowerCase();
+  return maybeLang;
+};
+
 export const langRedirect = (location: string) => {
   const segments = location.split("/").filter(Boolean);
   const maybeLang = segments[0]?.toLowerCase();

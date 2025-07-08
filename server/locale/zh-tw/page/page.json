@@ -1,0 +1,49 @@
+[
+  {
+    "name": "首頁",
+    "path": "/",
+    "icon": "home",
+    "resource_id": 5,
+    "banner": "",
+    "title": "瀏覽最新網頁設計工具",
+    "subtitle": "透過各種設計工具提升並簡化你的工作流程"
+  },
+  {
+    "name": "範本",
+    "path": "/templates",
+    "icon": "layout",
+    "resource_id": 4,
+    "banner": "",
+    "title": "範本",
+    "subtitle": "最新文件幫助你啟動全新設計專案或下一場簡報"
+  },
+  {
+    "name": "模組",
+    "path": "/modules",
+    "icon": "grid",
+    "resource_id": 2,
+    "banner": "",
+    "title": "模組",
+    "subtitle": "互動式元件庫，集合各種吸引人的視覺效果",
+    "filter": false
+  },
+  {
+    "name": "文件",
+    "path": "/documents",
+    "icon": "file-text",
+    "resource_id": 1,
+    "banner": "",
+    "title": "文件",
+    "subtitle": "專案開發過程中實用的所有文件"
+  },
+  {
+    "name": "外掛",
+    "path": "/plugins",
+    "icon": "puzzle",
+    "resource_id": 3,
+    "banner": "",
+    "title": "外掛",
+    "subtitle": "實用的外掛程式助你激發創意",
+    "filter": false
+  }
+]

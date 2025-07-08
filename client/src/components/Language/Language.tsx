@@ -1,18 +1,35 @@
-import { createContext, ReactNode } from "react";
-import { Outlet, useParams } from "@tanstack/react-router";
+import { locationLang } from "@lib/utils";
+import { createContext, ReactNode, useEffect, useState } from "react";
 
 export type TValidLang = "en" | "zh-tw";
 
 export const validLang: TValidLang[] = ["en", "zh-tw"];
 
-export const LangContext = createContext<TValidLang>("en");
+export interface ILangContext {
+  lang: TValidLang;
+  setLang: Function;
+}
+
+export const LangContext = createContext<ILangContext>({
+  lang: "en",
+  setLang: () => 0,
+});
 
 interface ILanguage {
   children: ReactNode;
 }
 
 export default ({ children }: ILanguage) => {
-  const { lang } = useParams({ strict: false });
+  const [lang, setLang] = useState("en" as TValidLang);
 
-  return <LangContext.Provider value={lang}>{children}</LangContext.Provider>;
+  useEffect(() => {
+    // define correct lang on page load
+    setLang(locationLang() as TValidLang);
+  }, []);
+
+  return (
+    <LangContext.Provider value={{ lang, setLang }}>
+      {children}
+    </LangContext.Provider>
+  );
 };

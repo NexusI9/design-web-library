@@ -1,4 +1,7 @@
 <?php
+
+include_once __DIR__."/../lib/utils.php";
+
 class Resource_Controller
 {
     private $tags;
@@ -6,32 +9,32 @@ class Resource_Controller
 
     function __construct()
     {
-        
+
     }
 
     /**
       Return a specific resource with a given category id (filtered).
      */
-    function get_by_tag_id($lang, $filename, $tag)
+    function get_by_tag_id($lang, $resource_id, $tag_id)
     {
+
         // update tags language
         $this->get_tags_lang($lang);
 
         // retrieve resource data (tool, documents...)
-        $data = $this->load_resource_data($lang, $filename);
-
+        $data = $this->load_resource_data($lang, $resource_id);
+        
         // get category
-        $tag = urldecode($tag);
+        $tag_id = urldecode($tag_id);
 
         $result = [];
 
         // go through each resources entry and check if entry tag correspond to category tag
         foreach ($data as &$value) {
-            
             // if category is 0 (all), then add by default
             // else if resource has same tag as category, push in respective array entry if it matches the tag
-            if ($tag == 0 || $value['tag_id'] == $tag){
-
+            if ($tag_id == 0 || $value['tag_id'] == $tag_id){
+                
                 // get tag name from its id
                 $tag_name = $this->get_tag_name($value['tag_id']);
             
@@ -59,19 +62,24 @@ class Resource_Controller
       Return the resource data based on the language and resource type. (tool, module...)
       Cache the data if not already cached.
      */
-    private function load_resource_data($lang, $filename)
+    private function load_resource_data($lang, $resource_id)
     {
-        // sanitize filename
-        $filename = strtolower($filename);
+        // Get the filename from the resource id
+        // TODO: dirty/ temporary method before final backend implementation
+        $filename = resource_filename_from_id($resource_id);
 
         // cache resources
-        if(!isset($this->resource_cache[$filename])){
-            $this->resource_cache[$filename] = json_decode(file_get_contents(__DIR__."/../../locale/$lang/resource/$filename.json"), true);
+        // check if lang entry exists
+        if(!isset($this->resource_cache[$lang]))
+            $this->resource_cache[$lang] = array();
+
+        // check if filename is loaded
+        if(!isset($this->resource_cache[$lang][$filename])){
+            $this->resource_cache[$lang][$filename] = json_decode(file_get_contents(__DIR__."/../../locale/$lang/resource/$filename.json"), true);
         }
         
-        
         // return cached value
-        return $this->resource_cache[$filename];
+        return $this->resource_cache[$lang][$filename];
     }
 
     /**

@@ -27,7 +27,7 @@ const langButtons: { lang: TValidLang; label: string }[] = [
 
 export default ({ items }: ISidepanel) => {
   const navigate = useNavigate();
-  const lang = useContext(LangContext);
+  const { lang, setLang } = useContext(LangContext);
 
   return (
     <nav className="sidepanel panel bd-radius-m flex f-col gap-xl padding-h-s padding-top-m">
@@ -45,9 +45,12 @@ export default ({ items }: ISidepanel) => {
               <Button
                 key={`switchlang${lang}`}
                 style="GHOST"
-                onClick={() =>
-                  navigate({ to: locationUpdateLang(lang), replace: true })
-                }
+                onClick={() => {
+                  // update URL
+                  navigate({ to: locationUpdateLang(lang), replace: true });
+                  // update app State
+                  setLang(lang);
+                }}
               >
                 {label}
               </Button>

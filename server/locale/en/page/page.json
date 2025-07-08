@@ -24,7 +24,8 @@
     "resource_id": 2,
     "banner": "",
     "title": "Modules",
-    "subtitle": "The interactive library gathering all kinds of engaging visual effects"
+    "subtitle": "The interactive library gathering all kinds of engaging visual effects",
+    "filter": false
   },
   {
     "name": "Documents",
@@ -42,6 +43,7 @@
     "resource_id": 3,
     "banner": "",
     "title": "Plugins",
-    "subtitle": "The usefull plugins to boost your creativity"
+    "subtitle": "The usefull plugins to boost your creativity",
+    "filter": false
   }
 ]

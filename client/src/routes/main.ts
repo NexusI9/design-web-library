@@ -5,9 +5,38 @@ import FileIcon from "@icons/file-text.svg";
 import PuzzleIcon from "@icons/puzzle.svg";
 import { Resources } from "../pages";
 import { ISidepanelItem } from "@components/Sidepanel/SidepanelItem";
-import { IRouteComponent } from "@ctypes/route";
+import { IBackendRoute, IRouteComponent } from "@ctypes/route";
+import { TValidLang } from "@components/Language/Language";
 
 type RouteMapItem = ISidepanelItem & IRouteComponent;
+
+/**
+   Dynamicall fetch the main routes from the server API
+   and convert them to a tanstack/ react compatible route.
+ */
+export const fetchMainRoute = async (lang: TValidLang) => {
+  const resp = await fetch(`${process.env.API_URL}/${lang}/routes/page/all`);
+  const routes = await resp.json();
+
+  // convert backend route to tanstack-react route
+  const mainRoutes = routes.map((route: IBackendRoute) => ({
+    path: `$lang${route.path}`,
+    label: route.name,
+    component: Resources,
+    icon:HomeIcon,
+    props: {
+      resource_id: route.resource_id,
+      header: {
+        title: route.title,
+        subtitle: route.subtitle,
+        banner: route.banner,
+      },
+      filter: route.filter != undefined ? route.filter : true,
+    },
+  }));
+
+  return mainRoutes;
+};
 
 const primaryRouteMap: RouteMapItem[] = [
   {
@@ -16,12 +45,12 @@ const primaryRouteMap: RouteMapItem[] = [
     label: "Home",
     component: Resources,
     props: {
+      resource_id: 5,
       header: {
         title: "Browse Latest Web Design Tool",
         subtitle: "Improve and ease your workflow with extensive design tools",
-        picture: "./assets/hero_visual.webp",
+        banner: "./assets/hero_visual.webp",
       },
-      type: "TOOL",
     },
   },
   {
@@ -30,7 +59,7 @@ const primaryRouteMap: RouteMapItem[] = [
     label: "Templates",
     component: Resources,
     props: {
-      type: "TEMPLATE",
+      resource_id: 4,
       header: {
         title: "Templates",
         subtitle:
@@ -44,7 +73,7 @@ const primaryRouteMap: RouteMapItem[] = [
     label: "Modules",
     component: Resources,
     props: {
-      type: "MODULE",
+      resource_id: 2,
       header: {
         title: "Modules",
         subtitle:
@@ -59,7 +88,7 @@ const primaryRouteMap: RouteMapItem[] = [
     label: "Documents",
     component: Resources,
     props: {
-      type: "DOCUMENT",
+      resource_id: 1,
       header: {
         title: "Documents",
         subtitle: "All the documents useful for your project development.",
@@ -72,7 +101,7 @@ const primaryRouteMap: RouteMapItem[] = [
     label: "Plugins",
     component: Resources,
     props: {
-      type: "PLUGIN",
+      resource_id: 3,
       header: {
         title: "Plugins",
         subtitle: "The usefull plugins to boost your creativity.",
