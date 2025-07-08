@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Starter Web Project",
+    "description": "The basic file for every web projects including a basic design system ready to be used.",
+    "type": "TEMPLATE",
+    "resource_id": 4,
+    "tag_id": 8,
+    "link": "DOWNLOAD",
+    "href": "https://chatgpt.com/",
+    "picture": "/assets/thumbnails/template/figstarter.webp"
+  },
+  {
+    "title": "Wireframe",
+    "description": "A useful wireframe document for all kind of website.",
+    "type": "TEMPLATE",
+    "resource_id": 4,
+    "tag_id": 8,
+    "link": "DOWNLOAD",
+    "href": "https://chatgpt.com/",
+    "picture": "/assets/thumbnails/template/figwire.webp"
+  },
+  {
+    "title": "Storybook",
+    "description": "A template including the fundamentals items for a fast and clear storybook.",
+    "type": "TEMPLATE",
+    "resource_id": 4,
+    "tag_id": 8,
+    "link": "DOWNLOAD",
+    "href": "https://chatgpt.com/",
+    "picture": "/assets/thumbnails/template/figstorybook.webp"
+  },
+  {
+    "title": "Starter Web Project",
+    "description": "The basic file for every web projects including a basic design system ready to be used.",
+    "type": "TEMPLATE",
+    "resource_id": 4,
+    "tag_id": 9,
+    "link": "DOWNLOAD",
+    "href": "https://chatgpt.com/",
+    "picture": "/assets/thumbnails/template/xdstarter.webp"
+  },
+  {
+    "title": "HTML Editor Kit",
+    "description": "A comprehensive document that inclue all the HTML editor available components.",
+    "type": "TEMPLATE",
+    "resource_id": 4,
+    "tag_id": 9,
+    "link": "DOWNLOAD",
+    "href": "https://chatgpt.com/",
+    "picture": "/assets/thumbnails/template/xdhtml.webp"
+  },
+  {
+    "title": "GDPR Kit",
+    "description": "The GDPR module components with their different levels of functionality.",
+    "type": "TEMPLATE",
+    "resource_id": 4,
+    "tag_id": 9,
+    "link": "DOWNLOAD",
+    "href": "https://chatgpt.com/",
+    "picture": "/assets/thumbnails/template/xdgdpr.webp"
+  },
+  {
+    "title": "Design Proposal",
+    "description": "Your starter document for design proposals, including convenient layouts and pre animated slides.",
+    "type": "TEMPLATE",
+    "resource_id": 4,
+    "tag_id": 10,
+    "link": "DOWNLOAD",
+    "href": "https://chatgpt.com/",
+    "picture": "/assets/thumbnails/template/pptpresent.webp"
+  },
+  {
+    "title": "Bug List",
+    "description": "The document for any bug listing.",
+    "type": "TEMPLATE",
+    "resource_id": 4,
+    "tag_id": 10,
+    "link": "DOWNLOAD",
+    "href": "https://chatgpt.com/",
+    "picture": "/assets/thumbnails/template/pptbug.webp"
+  }
+]

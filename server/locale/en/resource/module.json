@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Slideshow",
+    "description": "Customizable slideshow with unique transitions.",
+    "type": "MODULE",
+    "resource_id": 2,
+    "tag_id": 13,
+    "link": "INTERNAL",
+    "href": "/modules/glm/slideshow",
+    "picture": "/assets/thumbnails/module/glslide.webp"
+  },
+  {
+    "title": "Carousel",
+    "description": "Customizable carousels with 2D or 3D rotations.",
+    "type": "MODULE",
+    "resource_id": 2,
+    "tag_id": 13,
+    "link": "INTERNAL",
+    "href": "/modules/glm/carousel",
+    "picture": "/assets/thumbnails/module/glcarousel.webp"
+  }
+]

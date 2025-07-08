@@ -6,8 +6,9 @@ import ChevronDownIcon from "@icons/chevron-down.svg";
 import { Icon } from "@components/Icon";
 import { Button } from "@components/Button";
 import { locationUpdateLang } from "@lib/utils";
-import { TValidLang } from "@components/Language/Language";
+import { LangContext, TValidLang } from "@components/Language/Language";
 import { useNavigate } from "@tanstack/react-router";
+import { useContext } from "react";
 
 export interface ISidepanel {
   items: ISidepanelItem[];
@@ -15,17 +16,18 @@ export interface ISidepanel {
 
 const langButtons: { lang: TValidLang; label: string }[] = [
   {
-    label: "EN",
+    label: "En",
     lang: "en",
   },
   {
-    label: "ZH",
+    label: "中文",
     lang: "zh-tw",
   },
 ];
 
 export default ({ items }: ISidepanel) => {
   const navigate = useNavigate();
+  const lang = useContext(LangContext);
 
   return (
     <nav className="sidepanel panel bd-radius-m flex f-col gap-xl padding-h-s padding-top-m">
@@ -33,7 +35,8 @@ export default ({ items }: ISidepanel) => {
         <div className="padding-h-xl flex f-row f-end">
           <ComboBox.Trigger id="sidepanel_lang">
             <Button style="GHOST">
-              EN
+              {langButtons.find((item) => item.lang == lang)?.label ||
+                "english"}
               <Icon size="SMALL" icon={ChevronDownIcon} />
             </Button>
           </ComboBox.Trigger>

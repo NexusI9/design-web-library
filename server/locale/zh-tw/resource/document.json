@@ -3,7 +3,7 @@
     "title": "專案需求文件 (PRD)",
     "description": "此文件用於彙整專案概況，包括技術範疇、設計資源與使用者角色設定。",
     "type": "TEMPLATE",
-    "tag": 11,
+    "tag_id": 11,
     "link": "DOWNLOAD",
     "href": "https://chatgpt.com/",
     "picture": "/assets/thumbnails/document/prd.webp"
@@ -12,7 +12,7 @@
     "title": "Getty 資產清單",
     "description": "彙整專案中使用的 Getty 資產清單，以供最終採購確認。",
     "type": "TEMPLATE",
-    "tag": 11,
+    "tag_id": 11,
     "link": "DOWNLOAD",
     "href": "https://chatgpt.com/",
     "picture": "/assets/thumbnails/document/gettylist.webp"
@@ -21,7 +21,7 @@
     "title": "GDPR 指南",
     "description": "包含快速清晰建立 Storybook 所需的基本項目的模板。",
     "type": "TEMPLATE",
-    "tag": 12,
+    "tag_id": 12,
     "link": "DOWNLOAD",
     "href": "https://chatgpt.com/",
     "picture": "/assets/thumbnails/document/gdprguide.webp"
@@ -30,7 +30,7 @@
     "title": "Figma 文件 (英文)",
     "description": "適用於所有網頁專案的基本檔案，包含可直接使用的設計系統。",
     "type": "TEMPLATE",
-    "tag": 12,
+    "tag_id": 12,
     "link": "DOWNLOAD",
     "href": "https://chatgpt.com/",
     "picture": "/assets/thumbnails/document/figdocen.webp"
@@ -39,7 +39,7 @@
     "title": "Figma 文件 (中文)",
     "description": "適用於所有網頁專案的基本檔案，包含可直接使用的設計系統。",
     "type": "TEMPLATE",
-    "tag": 12,
+    "tag_id": 12,
     "link": "DOWNLOAD",
     "href": "https://chatgpt.com/",
     "picture": "/assets/thumbnails/document/figdoczh.webp"
@@ -48,7 +48,7 @@
     "title": "可用性測試儀表板",
     "description": "包含所有 HTML 編輯器可用元件的完整文件。",
     "type": "TEMPLATE",
-    "tag": 6,
+    "tag_id": 6,
     "link": "DOWNLOAD",
     "href": "https://chatgpt.com/",
     "picture": "/assets/thumbnails/document/usatest.webp"
@@ -57,7 +57,7 @@
     "title": "可用性測試報告",
     "description": "包含所有 HTML 編輯器可用元件的完整文件。",
     "type": "TEMPLATE",
-    "tag": 6,
+    "tag_id": 6,
     "link": "DOWNLOAD",
     "href": "https://chatgpt.com/",
     "picture": "/assets/thumbnails/document/usadoc.webp"

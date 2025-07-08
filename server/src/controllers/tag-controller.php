@@ -63,13 +63,13 @@ class Tag_Controller
             );
             
             // load relative resource content
-            $resource_content = json_decode(file_get_contents(__DIR__."/../../locale/$lang/$resource_name.json"), true);
+            $resource_content = json_decode(file_get_contents(__DIR__."/../../locale/$lang/resource/$resource_name.json"), true);
             
             // retrieve tag from resource id
             foreach($resource_content as $resource){
           
-                if(isset($resource['tag'])){
-                    $resource_tag = $this->tag_from_id($resource['tag'], $lang);
+                if(isset($resource['tag_id'])){
+                    $resource_tag = $this->tag_from_id($resource['tag_id'], $lang);
 
                     // check if tag is already listed in the resource cache
                     $exists = false;
@@ -125,7 +125,7 @@ class Tag_Controller
     private function load_content($lang){
         if(!isset($this->content_cache)){
             // cache the content if not loaded
-            $this->content_cache = json_decode(file_get_contents(__DIR__."/../../locale/$lang/tag.json"), true);
+            $this->content_cache = json_decode(file_get_contents(__DIR__."/../../locale/$lang/tag/tag.json"), true);
         }
     }
 

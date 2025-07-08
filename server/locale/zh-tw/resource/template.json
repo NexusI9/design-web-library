@@ -3,7 +3,7 @@
     "title": "網頁專案起始範本",
     "description": "適用於所有網頁專案的基本檔案，包含可直接使用的設計系統。",
     "type": "TEMPLATE",
-    "tag": 8,
+    "tag_id": 8,
     "link": "DOWNLOAD",
     "href": "https://chatgpt.com/",
     "picture": "/assets/thumbnails/template/figstarter.webp"
@@ -12,7 +12,7 @@
     "title": "線框稿文件",
     "description": "適用於各類網站的實用線框文件。",
     "type": "TEMPLATE",
-    "tag": 8,
+    "tag_id": 8,
     "link": "DOWNLOAD",
     "href": "https://chatgpt.com/",
     "picture": "/assets/thumbnails/template/figwire.webp"
@@ -21,7 +21,7 @@
     "title": "Storybook 模板",
     "description": "包含快速清晰建立 Storybook 所需的基本項目的模板。",
     "type": "TEMPLATE",
-    "tag": 8,
+    "tag_id": 8,
     "link": "DOWNLOAD",
     "href": "https://chatgpt.com/",
     "picture": "/assets/thumbnails/template/figstorybook.webp"
@@ -30,7 +30,7 @@
     "title": "網頁專案起始範本",
     "description": "適用於所有網頁專案的基本檔案，包含可直接使用的設計系統。",
     "type": "TEMPLATE",
-    "tag": 9,
+    "tag_id": 9,
     "link": "DOWNLOAD",
     "href": "https://chatgpt.com/",
     "picture": "/assets/thumbnails/template/xdstarter.webp"
@@ -39,7 +39,7 @@
     "title": "HTML 編輯器套件",
     "description": "包含所有 HTML 編輯器可用元件的完整文件。",
     "type": "TEMPLATE",
-    "tag": 9,
+    "tag_id": 9,
     "link": "DOWNLOAD",
     "href": "https://chatgpt.com/",
     "picture": "/assets/thumbnails/template/xdhtml.webp"
@@ -48,7 +48,7 @@
     "title": "GDPR 套件",
     "description": "GDPR 模組組件，具備多種功能層級。",
     "type": "TEMPLATE",
-    "tag": 9,
+    "tag_id": 9,
     "link": "DOWNLOAD",
     "href": "https://chatgpt.com/",
     "picture": "/assets/thumbnails/template/xdgdpr.webp"
@@ -57,7 +57,7 @@
     "title": "設計提案範本",
     "description": "設計提案專用的起始文件，內含便利版面與預設動畫投影片。",
     "type": "TEMPLATE",
-    "tag": 10,
+    "tag_id": 10,
     "link": "DOWNLOAD",
     "href": "https://chatgpt.com/",
     "picture": "/assets/thumbnails/template/pptpresent.webp"
@@ -66,7 +66,7 @@
     "title": "錯誤清單",
     "description": "用於彙整錯誤紀錄的文件。",
     "type": "TEMPLATE",
-    "tag": 10,
+    "tag_id": 10,
     "link": "DOWNLOAD",
     "href": "https://chatgpt.com/",
     "picture": "/assets/thumbnails/template/pptbug.webp"

@@ -1,0 +1,22 @@
+[
+  { "name": "Home", "path": "/", "icon": "home", "resource_id": 5 },
+  {
+    "name": "Templates",
+    "path": "/templates",
+    "icon": "layout",
+    "resource_id": 4
+  },
+  { "name": "Modules", "path": "/modules", "icon": "grid", "resource_id": 2 },
+  {
+    "name": "Documents",
+    "path": "/documents",
+    "icon": "file-text",
+    "resource_id": 1
+  },
+  {
+    "name": "Plugins",
+    "path": "/plugins",
+    "icon": "puzzle",
+    "resource_id": 3
+  }
+]

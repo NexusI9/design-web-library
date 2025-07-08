@@ -30,10 +30,10 @@ class Resource_Controller
             
             // if category is 0 (all), then add by default
             // else if resource has same tag as category, push in respective array entry if it matches the tag
-            if ($tag == 0 || $value['tag'] == $tag){
+            if ($tag == 0 || $value['tag_id'] == $tag){
 
                 // get tag name from its id
-                $tag_name = $this->get_tag_name($value['tag']);
+                $tag_name = $this->get_tag_name($value['tag_id']);
             
                 // create new entry if doesn't exists, else just push in existing entry
                 if(!isset($result[$tag_name])){
@@ -52,7 +52,7 @@ class Resource_Controller
       Update controller tags based on the input language
      */
     private function get_tags_lang($lang){
-        $this->tags = json_decode(file_get_contents(__DIR__."/../../locale/$lang/tag.json"), true);
+        $this->tags = json_decode(file_get_contents(__DIR__."/../../locale/$lang/tag/tag.json"), true);
     }
 
     /**
@@ -66,7 +66,7 @@ class Resource_Controller
 
         // cache resources
         if(!isset($this->resource_cache[$filename])){
-            $this->resource_cache[$filename] = json_decode(file_get_contents(__DIR__."/../../locale/$lang/$filename.json"), true);
+            $this->resource_cache[$filename] = json_decode(file_get_contents(__DIR__."/../../locale/$lang/resource/$filename.json"), true);
         }
         
         
