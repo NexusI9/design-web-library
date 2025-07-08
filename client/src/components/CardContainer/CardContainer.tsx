@@ -31,12 +31,11 @@ interface ITag {
   icon: string;
 }
 
-console.log(IconoIcon);
-type Section = { [key: string]: ICard[] };
+type Section = { headline: string; body: ICard[] };
 
 export default ({ type, filter }: ICardContainer) => {
-  const [sections, setSections] = useState<Section>({});
-  const [tags, setTags] = useState<IToggleItem[]>([]);
+  const [sections, setSections] = useState<Section[]>([]);
+  const [tags, setTags] = useState<ITag[]>([]);
   const [activeTag, setActiveTag] = useState<number | undefined>(0);
   const lang = useContext(LangContext);
 
@@ -47,22 +46,26 @@ export default ({ type, filter }: ICardContainer) => {
         .then((e) => e.json())
         .then((data: ITag[]) => {
           // go through each object entry, each key corresspond to a tag
-          setTags(
-            data.map<IToggleItem>(({ name, icon, id }) => ({
-              index: Number(id),
-              children: <>{name}</>,
-              size: 2,
-            })),
-          );
+          setTags(data);
         });
     }
 
     // fetch resrouces sections
-    const tag = activeTag || "all";
+    const tag = activeTag || 0;
     fetch(`${process.env.API_URL}/${lang}/resources/${type}/category/${tag}`)
       .then((e) => e.json())
       .then((data) => {
-        setSections(data);
+        const sections: Section[] = [];
+
+        // map data key to tags by id and build sections
+        Object.keys(data).map((key) =>
+          sections.push({
+            headline: key,
+            body: data[key],
+          }),
+        );
+
+        setSections(sections);
       });
   }, [activeTag]);
 
@@ -72,23 +75,23 @@ export default ({ type, filter }: ICardContainer) => {
         <Toggle.Root className="flex f-row gap-s">
           {tags.map((tag) => (
             <Toggle.Item
-	      className="flex f-row f-center"
-              key={tag.index}
-              size={tag.size}
-              index={tag.index}
-              onClick={() => setActiveTag(tag.index)}
+              className="flex f-row f-center"
+              key={tag.id}
+              size={2}
+              index={Number(tag.id)}
+              onClick={() => setActiveTag(Number(tag.id))}
             >
-              {tag.children}
+              {tag.name}
             </Toggle.Item>
           ))}
         </Toggle.Root>
       )}
       <div className="card-container flex f-col gap-5xl">
-        {Object.keys(sections)?.map((key, i) => (
+        {sections.map(({ headline, body }, i) => (
           <CardSections
-            key={`${key}${i}`}
-            headline={key}
-            items={sections[key as keyof typeof sections]}
+            key={`${headline}${i}`}
+            headline={headline}
+            items={body}
           />
         ))}
       </div>

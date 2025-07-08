@@ -12,7 +12,7 @@ class Resource_Controller
     /**
       Return a specific resource with a given category id (filtered).
      */
-    function get_by_tag_id($lang, $filename, $category)
+    function get_by_tag_id($lang, $filename, $tag)
     {
         // update tags language
         $this->get_tags_lang($lang);
@@ -21,7 +21,7 @@ class Resource_Controller
         $data = $this->load_resource_data($lang, $filename);
 
         // get category
-        $category = urldecode($category);
+        $tag = urldecode($tag);
 
         $result = [];
 
@@ -30,13 +30,16 @@ class Resource_Controller
             
             // if category is 0 (all), then add by default
             // else if resource has same tag as category, push in respective array entry if it matches the tag
-            if ($category == 0 || $value['tag'] == $category){
-              
+            if ($tag == 0 || $value['tag'] == $tag){
+
+                // get tag name from its id
+                $tag_name = $this->get_tag_name($value['tag']);
+            
                 // create new entry if doesn't exists, else just push in existing entry
-                if(!isset($result[$category])){
-                    $result[$category] = [$value];
+                if(!isset($result[$tag_name])){
+                    $result[$tag_name] = [$value];
                 }else{
-                    array_push($result[$category], $value);
+                    array_push($result[$tag_name], $value);
                 }
             }
         }
