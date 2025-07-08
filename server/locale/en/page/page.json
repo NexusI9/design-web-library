@@ -1,22 +1,47 @@
 [
-  { "name": "Home", "path": "/", "icon": "home", "resource_id": 5 },
+  {
+    "name": "Home",
+    "path": "/",
+    "icon": "home",
+    "resource_id": 5,
+    "banner": "",
+    "title": "Browse Latest Web Design Tool",
+    "subtitle": "Improve and ease your workflow with extensive design tools"
+  },
   {
     "name": "Templates",
     "path": "/templates",
     "icon": "layout",
-    "resource_id": 4
+    "resource_id": 4,
+    "banner": "",
+    "title": "Templates",
+    "subtitle": "The latest documents to start your new design projects or next presentation"
   },
-  { "name": "Modules", "path": "/modules", "icon": "grid", "resource_id": 2 },
+  {
+    "name": "Modules",
+    "path": "/modules",
+    "icon": "grid",
+    "resource_id": 2,
+    "banner": "",
+    "title": "Modules",
+    "subtitle": "The interactive library gathering all kinds of engaging visual effects"
+  },
   {
     "name": "Documents",
     "path": "/documents",
     "icon": "file-text",
-    "resource_id": 1
+    "resource_id": 1,
+    "banner": "",
+    "title": "Documents",
+    "subtitle": "All the documents useful for your project development"
   },
   {
     "name": "Plugins",
     "path": "/plugins",
     "icon": "puzzle",
-    "resource_id": 3
+    "resource_id": 3,
+    "banner": "",
+    "title": "Plugins",
+    "subtitle": "The usefull plugins to boost your creativity"
   }
 ]
