@@ -2,7 +2,6 @@
 class Router{
 
     private $routes = [];
-    private $controllers = [];
 
     function __construct(){}
 

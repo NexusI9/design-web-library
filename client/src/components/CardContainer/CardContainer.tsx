@@ -1,12 +1,9 @@
-import { BaseSyntheticEvent, useEffect, useState } from "react";
+import { BaseSyntheticEvent, useContext, useEffect, useState } from "react";
 import "./CardContainer.scss";
 import Card, { ICard } from "@components/Card/Card";
 import CardSections, { ICardSection } from "./CardSections";
 import { Button } from "@components/Button";
-import {
-  IButtonToggle,
-  IToggleCallback,
-} from "@components/Button/Toggle";
+import { IButtonToggle, IToggleCallback } from "@components/Button/Toggle";
 
 import AIIcon from "@icons/ai.svg";
 import DesignSystemIcon from "@icons/module.svg";
@@ -15,6 +12,7 @@ import FoundryIcon from "@icons/type.svg";
 import IconoIcon from "@icons/image.svg";
 import StockIcon from "@icons/camera.svg";
 import UXIcon from "@icons/click.svg";
+import { LangContext } from "@components/Language/Language";
 
 interface ICardContainer {
   type: ICard["type"];
@@ -27,6 +25,7 @@ export default ({ type, filter }: ICardContainer) => {
   const [sections, setSections] = useState<Section>({});
   const [categories, setCategories] = useState<IButtonToggle[]>([]);
   const [activeTag, setActiveTag] = useState<string>("");
+  const lang = useContext(LangContext);
 
   const onTagClick = ({ event, source }: IToggleCallback<IButtonToggle>) =>
     setActiveTag(source.text);
@@ -34,20 +33,22 @@ export default ({ type, filter }: ICardContainer) => {
   useEffect(() => {
     if (filter !== false) {
       const iconTagMap = {
-        AI: AIIcon,
-        "Design System": DesignSystemIcon,
-        Color: ColorIcon,
-        Foundry: FoundryIcon,
-        Iconography: IconoIcon,
-        Stock: StockIcon,
-        UX: UXIcon,
+        "1": DesignSystemIcon,
+        "2": ColorIcon,
+        "3": FoundryIcon,
+        "4": IconoIcon,
+        "5": StockIcon,
+        "6": UXIcon,
+        "7": AIIcon,
       };
 
-      fetch(`${process.env.API_URL}/resources/${type}/category/all`)
+      // fetch and set top categories filter
+      fetch(`${process.env.API_URL}/${lang}/tags/all`)
         .then((e) => e.json())
         .then((data) => {
           data = { All: [], ...data };
 
+	  // go through each object entry, each key corresspond to a tag
           setCategories(
             Object.keys(data).map<IButtonToggle>((key) => ({
               ...(iconTagMap[key as keyof typeof iconTagMap] && {
@@ -60,8 +61,9 @@ export default ({ type, filter }: ICardContainer) => {
         });
     }
 
+    // fetch resrouces sections
     const tag = activeTag.length ? activeTag : "all";
-    fetch(`${process.env.API_URL}/resources/${type}/category/${tag}`)
+    fetch(`${process.env.API_URL}/${lang}/resources/${type}/category/${tag}`)
       .then((e) => e.json())
       .then((data) => {
         setSections(data);

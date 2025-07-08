@@ -5,7 +5,7 @@ export type TValidLang = "en" | "zh-tw";
 
 export const validLang: TValidLang[] = ["en", "zh-tw"];
 
-const LangContext = createContext<TValidLang>("en");
+export const LangContext = createContext<TValidLang>("en");
 
 interface ILanguage {
   children: ReactNode;
@@ -13,6 +13,6 @@ interface ILanguage {
 
 export default ({ children }: ILanguage) => {
   const { lang } = useParams({ strict: false });
-  console.log({ lang });
+
   return <LangContext.Provider value={lang}>{children}</LangContext.Provider>;
 };
