@@ -10,9 +10,9 @@ class Resource_Controller
     }
 
     /**
-      Return a specific resource with a given category (filtered).
+      Return a specific resource with a given category id (filtered).
      */
-    function get_by_tag($lang, $filename, $category)
+    function get_by_tag_id($lang, $filename, $category)
     {
         // update tags language
         $this->get_tags_lang($lang);
@@ -23,32 +23,26 @@ class Resource_Controller
         // get category
         $category = urldecode($category);
 
-        $resources = [];
-
-        // convert tage name to id
-        $cateogry_tag = $this->get_tag_ID($category);
+        $result = [];
 
         // go through each resources entry and check if entry tag correspond to category tag
         foreach ($data as &$value) {
-
-            // Get entry tag from id
-            $entry_tag = $this->get_tag_name($value['tag']);
-
-            // if category is all, then add by default
+            
+            // if category is 0 (all), then add by default
             // else if resource has same tag as category, push in respective array entry if it matches the tag
-            if ($category == "all" || $value['tag'] == $cateogry_tag){
-                
+            if ($category == 0 || $value['tag'] == $category){
+              
                 // create new entry if doesn't exists, else just push in existing entry
-                if(!isset($resources[$entry_tag])){
-                    $resources[$entry_tag] = [$value];
+                if(!isset($result[$category])){
+                    $result[$category] = [$value];
                 }else{
-                    array_push($resources[$entry_tag], $value);
+                    array_push($result[$category], $value);
                 }
             }
         }
 
 
-       echo json_encode($resources);
+       echo json_encode($result);
     }
 
     /**

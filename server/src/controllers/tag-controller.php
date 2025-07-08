@@ -57,7 +57,10 @@ class Tag_Controller
         // load in cache if doesn't exists
         if(!isset($this->resource_cache[$resource_name])){
 
-            $this->resource_cache[$resource_name] = array();
+            // create a new array and put the tag "All" as first entry
+            $this->resource_cache[$resource_name] = array(
+                $this->tag_from_id(0, $lang)
+            );
             
             // load relative resource content
             $resource_content = json_decode(file_get_contents(__DIR__."/../../locale/$lang/$resource_name.json"), true);

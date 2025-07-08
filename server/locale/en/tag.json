@@ -1,4 +1,5 @@
 [
+  { "id": 0, "name": "All" },
   { "id": 1, "name": "Design System", "icon": "module" },
   { "id": 2, "name": "Color", "icon": "paint" },
   { "id": 3, "name": "Foundry", "icon": "type" },

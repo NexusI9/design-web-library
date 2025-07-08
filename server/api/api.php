@@ -16,17 +16,17 @@ $tag_controller =  new Tag_Controller();
   Rest API structure:
 
 
-                                                                        .-------------------------.
-    .----------.       .---------.      .-----------.            .-----|  Controller A  |  Func ß |
-    |  client  | ---> |  api.php | ---> |   Router  | - [GET] --|      |----------------|---------|
-    '----------'      '---------'       '-----------'           '------|  Controller B  |  Func ∂ |
-                                                                       '--------------------------'
+                                                                     .-------------------------.
+  .----------.       .---------.      .-----------.            .-----|  Controller A  |  Func ß |
+  |  client  | ---> |  api.php | ---> |   Router  | - [GET] --|      |----------------|---------|
+  '----------'      '---------'       '-----------'           '------|  Controller B  |  Func ∂ |
+                                                                     '--------------------------'
 
                                                                        
  */
 
 // First push new "pattern" => [callback, args] to the router
-$router->get('/([a-zA-Z-]+)/resources/([a-zA-Z0-9_-]+)/category/([a-zA-Z0-9_-]+)', [$resources_controller, 'get_by_tag']);
+$router->get('/([a-zA-Z-]+)/resources/([a-zA-Z0-9_-]+)/category/([a-zA-Z0-9_-]+)', [$resources_controller, 'get_by_tag_id']);
 $router->get('/([a-zA-Z-]+)/tags/resource/([a-zA-Z0-9_-]+)', [$tag_controller, 'get_by_resource']);
 $router->get('/([a-zA-Z-]+)/tags/name/([a-zA-Z0-9_-]+)', [$tag_controller, 'get_by_name']);
 
