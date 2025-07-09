@@ -20,6 +20,7 @@ import { langRedirect } from "@lib/utils";
 import { LangContext } from "@components/Language/Language";
 import { fetchMainRoute } from "./routes/main";
 import { ISidepanelItem } from "@components/Sidepanel/SidepanelItem";
+import { Footer } from "@components/Footer";
 
 /**
   Core website structure
@@ -30,7 +31,10 @@ const setRootRoute = (pages: ISidepanelItem[]) =>
       <Main>
         <Sidepanel items={pages} />
         <Container>
-          <Outlet />
+          <>
+            <Outlet />
+            <Footer />
+          </>
         </Container>
       </Main>
     ),
