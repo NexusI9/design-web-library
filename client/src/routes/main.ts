@@ -23,7 +23,7 @@ export const fetchMainRoute = async (lang: TValidLang) => {
     path: `$lang${route.path}`,
     label: route.name,
     component: Resources,
-    icon:HomeIcon,
+    icon:route.icon,
     props: {
       resource_id: route.resource_id,
       header: {

@@ -14,7 +14,7 @@ export interface ISidepanel {
   items: ISidepanelItem[];
 }
 
-const langButtons: { lang: TValidLang; label: string }[] = [
+const langMap: { lang: TValidLang; label: string }[] = [
   {
     label: "En",
     lang: "en",
@@ -28,20 +28,20 @@ const langButtons: { lang: TValidLang; label: string }[] = [
 export default ({ items }: ISidepanel) => {
   const navigate = useNavigate();
   const { lang, setLang } = useContext(LangContext);
-
+  
   return (
     <nav className="sidepanel panel bd-radius-m flex f-col gap-xl padding-h-s padding-top-m">
       <header className="padding-h-xl padding-v-xl">
         <div className="padding-h-xl flex f-row f-end">
           <ComboBox.Trigger id="sidepanel_lang">
             <Button style="GHOST">
-              {langButtons.find((item) => item.lang == lang)?.label ||
+              {langMap.find((item) => item.lang == lang)?.label ||
                 "english"}
               <Icon size="SMALL" icon={ChevronDownIcon} />
             </Button>
-          </ComboBox.Trigger>
+          </ComboBox.Trigger> 
           <ComboBox.Content id="sidepanel_lang" className="flex f-col gap-m">
-            {langButtons.map(({ label, lang }) => (
+            {langMap.map(({ label, lang }) => (
               <Button
                 key={`switchlang${lang}`}
                 style="GHOST"
@@ -60,7 +60,7 @@ export default ({ items }: ISidepanel) => {
 
         <div className="flex f-row f-end-h gap-l">
           <Logo />
-          <p>Web Library</p>
+          <p>{lang == "en" ? "Web Library" : "網站資源庫"}</p>
         </div>
       </header>
       <ul className="flex f-col gap-s padding-h-xl">

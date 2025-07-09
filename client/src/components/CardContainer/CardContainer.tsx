@@ -4,6 +4,7 @@ import { ICard } from "@components/Card/Card";
 import CardSections from "./CardSections";
 import { LangContext } from "@components/Language/Language";
 import { Toggle } from "@components/Toggle";
+import { Icon } from "@components/Icon";
 
 interface ICardContainer {
   resource_id: number;
@@ -59,15 +60,16 @@ export default ({ resource_id, filter }: ICardContainer) => {
   return (
     <div className="card-wrapper flex f-col gap-l">
       {filter !== false && tags.length > 0 && (
-        <Toggle.Root className="flex f-row gap-s">
+        <Toggle.Root className="flex f-row gap-l">
           {tags.map((tag) => (
             <Toggle.Item
-              className="flex f-row f-center"
+              className="flex f-row f-center gap-m"
               key={tag.id}
               size={2}
               index={Number(tag.id)}
               onClick={() => setActiveTag(Number(tag.id))}
             >
+              <Icon size="SMALL" rawSVG={tag.icon} />
               {tag.name}
             </Toggle.Item>
           ))}

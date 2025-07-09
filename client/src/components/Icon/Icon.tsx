@@ -1,16 +1,27 @@
 import "./Icon.scss";
-import { createElement } from "react";
+import { createElement, useEffect, useRef, useState } from "react";
 
 export interface IIcon {
-  icon: string;
+  rawSVG?: string;
+  icon?: string;
   size: "SMALL" | "MEDIUM" | "LARGE";
 }
 
-export default ({ icon, size }: IIcon) => (
-  <>
-    {createElement(icon, {
-      className: "icon",
-      "data-size": size,
-    })}
-  </>
-);
+export default ({ rawSVG, icon, size }: IIcon) => {
+  const ref = useRef<HTMLSpanElement | null>(null);
+
+  useEffect(() => {
+    if (ref.current && rawSVG) ref.current.innerHTML = rawSVG;
+  }, [rawSVG]);
+
+  return (
+    <>
+      {rawSVG && <span ref={ref} />}
+      {icon &&
+        createElement(icon, {
+          className: "icon",
+          "data-size": size,
+        })}
+    </>
+  );
+};
