@@ -20,3 +20,10 @@ function resource_filename_from_id($id){
     return $resource_files[$id - 1];
     
 }
+
+function base_url(){
+    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https" : "http";
+    $host = $_SERVER['HTTP_HOST'];
+    $base_url = $protocol . "://" . $host;
+    return $base_url;
+}

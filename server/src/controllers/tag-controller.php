@@ -1,7 +1,9 @@
 <?php
 
 include_once __DIR__."/../lib/utils.php";
-    
+include_once __DIR__."/../lib/resolver.php";
+
+
 class Tag_Controller
 {
 
@@ -100,8 +102,7 @@ class Tag_Controller
 
                 // load the svg icon as a string and replace the entry
                 if(isset($tag['icon'])){
-                    $icon_name = $tag['icon'];
-                    $tag['icon'] =  file_get_contents(__DIR__."/../assets/icons/$icon_name.svg");
+                    $tag['icon'] = resolve_icon($tag['icon']);
                 }
                 
             }

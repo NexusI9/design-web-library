@@ -7,7 +7,7 @@
     "tag_id": 11,
     "link": "DOWNLOAD",
     "href": "https://chatgpt.com/",
-    "picture": "/assets/thumbnails/document/prd.webp"
+    "picture": "prd"
   },
   {
     "title": "Getty Assets List",
@@ -17,7 +17,7 @@
     "tag_id": 11,
     "link": "DOWNLOAD",
     "href": "https://chatgpt.com/",
-    "picture": "/assets/thumbnails/document/gettylist.webp"
+    "picture": "gettylist"
   },
   {
     "title": "GDPR Guide",
@@ -27,7 +27,7 @@
     "tag_id": 12,
     "link": "DOWNLOAD",
     "href": "https://chatgpt.com/",
-    "picture": "/assets/thumbnails/document/gdprguide.webp"
+    "picture": "gdprguide"
   },
   {
     "title": "Figma Documentation (EN)",
@@ -37,7 +37,7 @@
     "tag_id": 12,
     "link": "DOWNLOAD",
     "href": "https://chatgpt.com/",
-    "picture": "/assets/thumbnails/document/figdocen.webp"
+    "picture": "figdocen"
   },
   {
     "title": "Figma Documentation (中文)",
@@ -47,7 +47,7 @@
     "tag_id": 12,
     "link": "DOWNLOAD",
     "href": "https://chatgpt.com/",
-    "picture": "/assets/thumbnails/document/figdoczh.webp"
+    "picture": "figdoczh"
   },
   {
     "title": "Usability Test Dashboard",
@@ -57,7 +57,7 @@
     "tag_id": 6,
     "link": "DOWNLOAD",
     "href": "https://chatgpt.com/",
-    "picture": "/assets/thumbnails/document/usatest.webp"
+    "picture": "usatest"
   },
   {
     "title": "Usability Test Report",
@@ -67,6 +67,6 @@
     "tag_id": 6,
     "link": "DOWNLOAD",
     "href": "https://chatgpt.com/",
-    "picture": "/assets/thumbnails/document/usadoc.webp"
+    "picture": "usadoc"
   }
 ]

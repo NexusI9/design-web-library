@@ -1,6 +1,7 @@
 <?php
 
 include_once __DIR__."/../lib/utils.php";
+include_once __DIR__."/../lib/resolver.php";
 
 class Resource_Controller
 {
@@ -76,6 +77,9 @@ class Resource_Controller
         // check if filename is loaded
         if(!isset($this->resource_cache[$lang][$filename])){
             $this->resource_cache[$lang][$filename] = json_decode(file_get_contents(__DIR__."/../../locale/$lang/resource/$filename.json"), true);
+
+            // resolve enries
+            resolve_array($this->resource_cache[$lang][$filename]);
         }
         
         // return cached value

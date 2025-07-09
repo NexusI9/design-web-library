@@ -7,7 +7,7 @@
     "tag_id": 8,
     "link": "EXTERNAL",
     "href": "https://www.figma.com/community/plugin/1292924330904373989/style-studio",
-    "picture": "/assets/thumbnails/plugin/figstyle.webp"
+    "picture": "figstyle"
   },
   {
     "title": "網站地圖產生器",
@@ -17,7 +17,7 @@
     "tag_id": 8,
     "link": "EXTERNAL",
     "href": "https://www.figma.com/community/plugin/1410886529149123027/site-mapper",
-    "picture": "/assets/thumbnails/plugin/figmp.webp"
+    "picture": "figmp"
   },
   {
     "title": "虛擬內容產生器",
@@ -27,7 +27,7 @@
     "tag_id": 8,
     "link": "EXTERNAL",
     "href": "https://www.figma.com/community/plugin/736000994034548392/lorem-ipsum-by-divriots",
-    "picture": "/assets/thumbnails/plugin/figlorem.webp"
+    "picture": "figlorem"
   },
   {
     "title": "圖示整合工具",
@@ -37,7 +37,7 @@
     "tag_id": 8,
     "link": "EXTERNAL",
     "href": "https://www.figma.com/community/plugin/735098390272716381/iconify",
-    "picture": "/assets/thumbnails/plugin/figiconify.webp"
+    "picture": "figiconify"
   },
   {
     "title": "陰影產生器",
@@ -47,7 +47,7 @@
     "tag_id": 8,
     "link": "EXTERNAL",
     "href": "https://www.figma.com/community/plugin/889676455045507628/shadow-maker",
-    "picture": "/assets/thumbnails/plugin/figshadow.webp"
+    "picture": "figshadow"
   },
   {
     "title": "畫面快照工具",
@@ -57,6 +57,6 @@
     "tag_id": 8,
     "link": "EXTERNAL",
     "href": "https://www.figma.com/community/plugin/937590329004798392",
-    "picture": "/assets/thumbnails/plugin/figsnap.webp"
+    "picture": "figsnap"
   }
 ]

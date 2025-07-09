@@ -7,7 +7,7 @@
     "tag_id": 8,
     "link": "DOWNLOAD",
     "href": "https://chatgpt.com/",
-    "picture": "/assets/thumbnails/template/figstarter.webp"
+    "picture": "figstarter"
   },
   {
     "title": "線框稿文件",
@@ -17,7 +17,7 @@
     "tag_id": 8,
     "link": "DOWNLOAD",
     "href": "https://chatgpt.com/",
-    "picture": "/assets/thumbnails/template/figwire.webp"
+    "picture": "figwire"
   },
   {
     "title": "Storybook 模板",
@@ -27,7 +27,7 @@
     "tag_id": 8,
     "link": "DOWNLOAD",
     "href": "https://chatgpt.com/",
-    "picture": "/assets/thumbnails/template/figstorybook.webp"
+    "picture": "figstorybook"
   },
   {
     "title": "網頁專案起始範本",
@@ -37,7 +37,7 @@
     "tag_id": 9,
     "link": "DOWNLOAD",
     "href": "https://chatgpt.com/",
-    "picture": "/assets/thumbnails/template/xdstarter.webp"
+    "picture": "xdstarter"
   },
   {
     "title": "HTML 編輯器套件",
@@ -47,7 +47,7 @@
     "tag_id": 9,
     "link": "DOWNLOAD",
     "href": "https://chatgpt.com/",
-    "picture": "/assets/thumbnails/template/xdhtml.webp"
+    "picture": "xdhtml"
   },
   {
     "title": "GDPR 套件",
@@ -57,7 +57,7 @@
     "tag_id": 9,
     "link": "DOWNLOAD",
     "href": "https://chatgpt.com/",
-    "picture": "/assets/thumbnails/template/xdgdpr.webp"
+    "picture": "xdgdpr"
   },
   {
     "title": "設計提案範本",
@@ -67,7 +67,7 @@
     "tag_id": 10,
     "link": "DOWNLOAD",
     "href": "https://chatgpt.com/",
-    "picture": "/assets/thumbnails/template/pptpresent.webp"
+    "picture": "pptpresent"
   },
   {
     "title": "錯誤清單",
@@ -77,6 +77,6 @@
     "tag_id": 10,
     "link": "DOWNLOAD",
     "href": "https://chatgpt.com/",
-    "picture": "/assets/thumbnails/template/pptbug.webp"
+    "picture": "pptbug"
   }
 ]

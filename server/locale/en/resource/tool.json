@@ -7,7 +7,7 @@
     "tag_id": 7,
     "link": "EXTERNAL",
     "href": "https://chatgpt.com/",
-    "picture": "/assets/thumbnails/tool/chatgpt.webp"
+    "picture": "chatgpt"
   },
   {
     "title": "Adobe Firefly",
@@ -17,7 +17,7 @@
     "tag_id": 7,
     "link": "EXTERNAL",
     "href": "https://www.adobe.com/tw/products/firefly.html",
-    "picture": "/assets/thumbnails/tool/firefly.webp"
+    "picture": "firefly"
   },
 
   {
@@ -28,7 +28,7 @@
     "tag_id": 2,
     "link": "EXTERNAL",
     "href": "https://farbvelo.elastiq.ch/",
-    "picture": "/assets/thumbnails/tool/farbvelo.webp"
+    "picture": "farbvelo"
   },
   {
     "title": "Huemint",
@@ -38,7 +38,7 @@
     "tag_id": 2,
     "link": "EXTERNAL",
     "href": "https://huemint.com/brand-intersection/",
-    "picture": "/assets/thumbnails/tool/huemint.webp"
+    "picture": "huemint"
   },
   {
     "title": "iColorPalette",
@@ -48,7 +48,7 @@
     "tag_id": 2,
     "link": "EXTERNAL",
     "href": "https://icolorpalette.com/",
-    "picture": "/assets/thumbnails/tool/icolorpalette.webp"
+    "picture": "icolorpalette"
   },
   {
     "title": "Randoma11y",
@@ -58,7 +58,7 @@
     "tag_id": 2,
     "link": "EXTERNAL",
     "href": "https://randoma11y.com/",
-    "picture": "/assets/thumbnails/tool/randoma11y.webp"
+    "picture": "randoma11y"
   },
   {
     "title": "Coolors",
@@ -68,7 +68,7 @@
     "tag_id": 2,
     "link": "EXTERNAL",
     "href": "https://coolors.co/",
-    "picture": "/assets/thumbnails/tool/coolors.webp"
+    "picture": "coolors"
   },
   {
     "title": "Color Designer",
@@ -78,7 +78,7 @@
     "tag_id": 2,
     "link": "EXTERNAL",
     "href": "https://colordesigner.io/",
-    "picture": "/assets/thumbnails/tool/colordesigner.webp"
+    "picture": "colordesigner"
   },
 
   {
@@ -89,7 +89,7 @@
     "tag_id": 1,
     "link": "EXTERNAL",
     "href": "https://designsystemsrepo.com/",
-    "picture": "/assets/thumbnails/tool/ddsrepo.webp"
+    "picture": "ddsrepo"
   },
   {
     "title": "The Component Gallery",
@@ -99,7 +99,7 @@
     "tag_id": 1,
     "link": "EXTERNAL",
     "href": "https://component.gallery/",
-    "picture": "/assets/thumbnails/tool/compgallery.webp"
+    "picture": "compgallery"
   },
   {
     "title": "Typescale",
@@ -109,7 +109,7 @@
     "tag_id": 1,
     "link": "EXTERNAL",
     "href": "https://typescale.com/",
-    "picture": "/assets/thumbnails/tool/typescale.webp"
+    "picture": "typescale"
   },
   {
     "title": "Toolfolio",
@@ -119,7 +119,7 @@
     "tag_id": 1,
     "link": "EXTERNAL",
     "href": "https://toolfolio.io/",
-    "picture": "/assets/thumbnails/tool/toolfolio.webp"
+    "picture": "toolfolio"
   },
 
   {
@@ -130,7 +130,7 @@
     "tag_id": 3,
     "link": "EXTERNAL",
     "href": "https://www.poussetafonte.com/",
-    "picture": "/assets/thumbnails/tool/pousse.webp"
+    "picture": "pousse"
   },
   {
     "title": "Google Fonts",
@@ -140,7 +140,7 @@
     "tag_id": 3,
     "link": "EXTERNAL",
     "href": "https://fonts.google.com/",
-    "picture": "/assets/thumbnails/tool/googlefont.webp"
+    "picture": "googlefont"
   },
   {
     "title": "Fontshare",
@@ -150,7 +150,7 @@
     "tag_id": 3,
     "link": "EXTERNAL",
     "href": "https://www.fontshare.com/",
-    "picture": "/assets/thumbnails/tool/fontshare.webp"
+    "picture": "fontshare"
   },
   {
     "title": "Velvetyne",
@@ -160,7 +160,7 @@
     "tag_id": 3,
     "link": "EXTERNAL",
     "href": "https://velvetyne.fr/",
-    "picture": "/assets/thumbnails/tool/velvetyne.webp"
+    "picture": "velvetyne"
   },
   {
     "title": "Use Modify",
@@ -170,7 +170,7 @@
     "tag_id": 3,
     "link": "EXTERNAL",
     "href": "https://usemodify.com/",
-    "picture": "/assets/thumbnails/tool/usemodify.webp"
+    "picture": "usemodify"
   },
 
   {
@@ -181,7 +181,7 @@
     "tag_id": 4,
     "link": "EXTERNAL",
     "href": "https://svgl.app/",
-    "picture": "/assets/thumbnails/tool/svgl.webp"
+    "picture": "svgl"
   },
   {
     "title": "Simple icons",
@@ -191,7 +191,7 @@
     "tag_id": 4,
     "link": "EXTERNAL",
     "href": "https://simpleicons.org/",
-    "picture": "/assets/thumbnails/tool/simpleicons.webp"
+    "picture": "simpleicons"
   },
   {
     "title": "Untitled UI Icons",
@@ -201,7 +201,7 @@
     "tag_id": 4,
     "link": "EXTERNAL",
     "href": "https://www.untitledui.com/icons",
-    "picture": "/assets/thumbnails/tool/untitledicons.webp"
+    "picture": "untitledicons"
   },
   {
     "title": "Phosphor Icons",
@@ -211,7 +211,7 @@
     "tag_id": 4,
     "link": "EXTERNAL",
     "href": "https://phosphoricons.com/",
-    "picture": "/assets/thumbnails/tool/phosphor.webp"
+    "picture": "phosphor"
   },
   {
     "title": "Sargam Icons",
@@ -221,7 +221,7 @@
     "tag_id": 4,
     "link": "EXTERNAL",
     "href": "https://sargamicons.com/",
-    "picture": "/assets/thumbnails/tool/sargam.webp"
+    "picture": "sargam"
   },
   {
     "title": "Feather Icons",
@@ -231,7 +231,7 @@
     "tag_id": 4,
     "link": "EXTERNAL",
     "href": "https://feathericons.com/",
-    "picture": "/assets/thumbnails/tool/feather.webp"
+    "picture": "feather"
   },
   {
     "title": "Tabler Icons",
@@ -241,7 +241,7 @@
     "tag_id": 4,
     "link": "EXTERNAL",
     "href": "https://tabler.io/icons",
-    "picture": "/assets/thumbnails/tool/tabler.webp"
+    "picture": "tabler"
   },
   {
     "title": "Hero Icons",
@@ -251,7 +251,7 @@
     "tag_id": 4,
     "link": "EXTERNAL",
     "href": "https://heroicons.com/",
-    "picture": "/assets/thumbnails/tool/hero.webp"
+    "picture": "hero"
   },
   {
     "title": "Iconoir",
@@ -261,7 +261,7 @@
     "tag_id": 4,
     "link": "EXTERNAL",
     "href": "https://iconoir.com/",
-    "picture": "/assets/thumbnails/tool/iconoir.webp"
+    "picture": "iconoir"
   },
   {
     "title": "Iconic",
@@ -271,7 +271,7 @@
     "tag_id": 4,
     "link": "EXTERNAL",
     "href": "https://iconic.app/",
-    "picture": "/assets/thumbnails/tool/iconic.webp"
+    "picture": "iconic"
   },
   {
     "title": "Glyphs",
@@ -281,7 +281,7 @@
     "tag_id": 4,
     "link": "EXTERNAL",
     "href": "https://glyphs.fyi/",
-    "picture": "/assets/thumbnails/tool/glyphs.webp"
+    "picture": "glyphs"
   },
   {
     "title": "Atlas Icons",
@@ -291,7 +291,7 @@
     "tag_id": 4,
     "link": "EXTERNAL",
     "href": "https://atlasicons.vectopus.com/",
-    "picture": "/assets/thumbnails/tool/atlasicons.webp"
+    "picture": "atlasicons"
   },
 
   {
@@ -302,7 +302,7 @@
     "tag_id": 5,
     "link": "EXTERNAL",
     "href": "https://www.gettyimages.hk/",
-    "picture": "/assets/thumbnails/tool/getty.webp"
+    "picture": "getty"
   },
   {
     "title": "Unsplash",
@@ -312,7 +312,7 @@
     "tag_id": 5,
     "link": "EXTERNAL",
     "href": "https://unsplash.com/",
-    "picture": "/assets/thumbnails/tool/unsplash.webp"
+    "picture": "unsplash"
   },
   {
     "title": "Pixabay",
@@ -322,7 +322,7 @@
     "tag_id": 5,
     "link": "EXTERNAL",
     "href": "https://pixabay.com/",
-    "picture": "/assets/thumbnails/tool/pixabay.webp"
+    "picture": "pixabay"
   },
   {
     "title": "Pexels",
@@ -332,7 +332,7 @@
     "tag_id": 5,
     "link": "EXTERNAL",
     "href": "https://www.pexels.com/",
-    "picture": "/assets/thumbnails/tool/pexels.webp"
+    "picture": "pexels"
   },
 
   {
@@ -343,7 +343,7 @@
     "tag_id": 6,
     "link": "EXTERNAL",
     "href": "http://guidetouxr.com/",
-    "picture": "/assets/thumbnails/tool/guideux.webp"
+    "picture": "guideux"
   },
   {
     "title": "Laws of UX",
@@ -353,6 +353,6 @@
     "tag_id": 6,
     "link": "EXTERNAL",
     "href": "https://lawsofux.com/",
-    "picture": "/assets/thumbnails/tool/lawsux.webp"
+    "picture": "lawsux"
   }
 ]

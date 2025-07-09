@@ -1,4 +1,7 @@
 <?php
+
+include_once __DIR__."/../lib/resolver.php";
+
 class Route_Controller
 {
 
@@ -25,10 +28,9 @@ class Route_Controller
 
             // replace cached icons by svg file content
             foreach($this->page_cache[$lang] as &$page){
-                if(isset($page['icon'])){
-                    $icon_name = $page['icon'];
-                    $page['icon'] = file_get_contents(__DIR__."/../assets/icons/$icon_name.svg");
-                }
+                if(isset($page['icon']))
+                    $page['icon'] = resolve_icon($page['icon']);
+                
             }
         }
         
