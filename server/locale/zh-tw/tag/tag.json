@@ -2,31 +2,38 @@
   { "id": 0, "name": "所有" },
   {
     "id": 1,
-    "name": "設計系統"
+    "name": "設計系統",
+    "icon": "module"
   },
   {
     "id": 2,
-    "name": "顏色"
+    "name": "顏色",
+    "icon": "paint"
   },
   {
     "id": 3,
-    "name": "字體廠商"
+    "name": "字體廠商",
+    "icon": "type"
   },
   {
     "id": 4,
-    "name": "圖示設計"
+    "name": "圖示設計",
+    "icon": "image"
   },
   {
     "id": 5,
-    "name": "圖庫"
+    "name": "圖庫",
+    "icon": "camera"
   },
   {
     "id": 6,
-    "name": "使用者體驗"
+    "name": "使用者體驗",
+    "icon": "click"
   },
   {
     "id": 7,
-    "name": "人工智慧"
+    "name": "人工智慧",
+    "icon": "ai"
   },
   {
     "id": 8,
