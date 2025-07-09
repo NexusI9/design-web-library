@@ -5,9 +5,6 @@ include_once __DIR__."/../lib/utils.php";
 class Tag_Controller
 {
 
-    // cached svg strings
-    private $svg_cache;
-
     // cached tags content
     private $content_cache;
 
@@ -16,7 +13,6 @@ class Tag_Controller
 
     function __construct()
     {
-        $this->svg_cache = array();
     }
 
     /**
@@ -27,20 +23,11 @@ class Tag_Controller
         $tag = [];
         
         // retrieve tags file based on the language
-        $this->load_content($lang);
+        $data = $this->load_content($lang);
 
         // get the tag by name
-        foreach($this->content_cache as $t){
+        foreach($data as $t){
             if($name == 'all' || (isset($t['name']) && $t["name"] === $name)){
-
-                // load the svg icon as a string and replace the entry
-                if(isset($t['icon'])){
-                    $t['icon'] = $this->load_svg($t['icon']);
-                }else{
-                    $t['icon'] = "<!-- No icon -->";
-                }
-      
-
                 // push to result array
                 array_push($tag, $t);
             }
@@ -83,12 +70,6 @@ class Tag_Controller
                     }
                     // if doesn't exists, push tag to the resource entry
                     if($exists == false){
-                        // replace the icon with file string
-                        if(isset($resource_tag['icon'])){
-                            $resource_tag['icon'] = $this->load_svg($resource_tag['icon']);
-                        }else{
-                            $resource_tag['icon'] = "<!-- No icon -->";
-                        }
                         // finally push to cache
                         array_push($this->resource_cache[$resource_name], $resource_tag);
                     }
@@ -100,26 +81,9 @@ class Tag_Controller
             
         }
 
-
         echo json_encode($this->resource_cache[$resource_name]);
-        
     }
 
-    /**
-      Cache the svg strings in private variable.
-      Return the svg string either from the cache on file_get_content and not cached.
-      If not cached, the string gets added.
-     */
-    private function load_svg($name){
-
-        // check if key name doesn't exists, load content in the cache
-        if(!isset($this->svg_cache[$name])){
-            $this->svg_cache[$name] = file_get_contents(__DIR__."/../assets/icons/$name.svg");
-        }
-
-        // return cache value
-        return $this->svg_cache[$name];
-    }
 
     /**
       Cache the json content in private variable.
@@ -127,10 +91,23 @@ class Tag_Controller
      */
     private function load_content($lang){
 
-        if(!isset($this->content_cache)){
+        if(!isset($this->content_cache[$lang])){
             // cache the content if not loaded
-            $this->content_cache = json_decode(file_get_contents(__DIR__."/../../locale/$lang/tag/tag.json"), true);
+            $this->content_cache[$lang] = json_decode(file_get_contents(__DIR__."/../../locale/$lang/tag/tag.json"), true);
+
+            // converts content icons to svg content
+            foreach($this->content_cache[$lang] as &$tag){
+
+                // load the svg icon as a string and replace the entry
+                if(isset($tag['icon'])){
+                    $icon_name = $tag['icon'];
+                    $tag['icon'] =  file_get_contents(__DIR__."/../assets/icons/$icon_name.svg");
+                }
+                
+            }
         }
+
+        return $this->content_cache[$lang];
     }
 
     /**
@@ -139,11 +116,11 @@ class Tag_Controller
     private function tag_from_id($id, $lang){
 
         // make sure cache is loaded first
-        if(!isset($this->content_cache)){
+        if(!isset($this->content_cache[$lang])){
             $this->load_content($lang);
         }
 
-        foreach($this->content_cache as $tag){
+        foreach($this->content_cache[$lang] as $tag){
             if($tag['id'] == $id){
                 return $tag;
             }

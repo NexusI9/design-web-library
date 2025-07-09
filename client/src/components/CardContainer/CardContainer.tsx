@@ -14,7 +14,7 @@ interface ICardContainer {
 interface ITag {
   id: string;
   name: string;
-  icon: string;
+  icon?: string;
 }
 
 type Section = { headline: string; body: ICard[] };
@@ -69,7 +69,7 @@ export default ({ resource_id, filter }: ICardContainer) => {
               index={Number(tag.id)}
               onClick={() => setActiveTag(Number(tag.id))}
             >
-              <Icon size="SMALL" rawSVG={tag.icon} />
+              <Icon size="SMALL" rawSVG={tag.icon || ""} />
               {tag.name}
             </Toggle.Item>
           ))}
