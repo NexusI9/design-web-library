@@ -47,7 +47,7 @@ function resolve_resource_thumbnail($filename){
   Returns the path directory for the page banners
  */
 function resolve_page_banner($filename){
-    return base_url()."/../public/uploads/pictures/pages/$filename.webp";
+    return base_url()."/public/uploads/pictures/pages/$filename.webp";
 }
 
 

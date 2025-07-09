@@ -27,11 +27,7 @@ class Route_Controller
             $this->page_cache[$lang] = json_decode(file_get_contents(__DIR__."/../../locale/$lang/page/page.json"), true);
 
             // replace cached icons by svg file content
-            foreach($this->page_cache[$lang] as &$page){
-                if(isset($page['icon']))
-                    $page['icon'] = resolve_icon($page['icon']);
-                
-            }
+            resolve_array($this->page_cache[$lang]);
         }
         
 
