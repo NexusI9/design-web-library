@@ -13,7 +13,7 @@ export default ({ title, subtitle, picture }: IPageHeader) => (
   >
     {picture && (
       <div className="page-header-visual">
-        <img src={picture} />
+        <img className="bd-radius-l" src={picture} />
       </div>
     )}
     {title && <h1 className="heading-4">{title}</h1>}
