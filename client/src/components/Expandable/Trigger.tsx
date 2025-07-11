@@ -14,7 +14,6 @@ export default ({ children, onTrigger }: IExpandableTrigger) => {
       className="expandable-trigger"
       onClick={() => {
         setOpen((current) => {
-	  console.log(current);
           const newState = !current;
           if (onTrigger) onTrigger(newState); // external callback (optional)
           return newState; // update context callback
