@@ -43,7 +43,7 @@ const RouterElement = ({ href, children }: ICardLinkElement) => (
 const CardContent = ({ picture, title, description }: ICardContent) => (
   <>
     <div className="card-picture">
-      <img src={picture} draggable="false"/>
+      <img src={picture} className="full-width" draggable="false"/>
     </div>
 
     <div className="padding-l flex f-col gap-l">

@@ -1,6 +1,13 @@
+@use "../../styles/core/media-query.scss";
+
 .container.main{
     padding: var(--unit-2xl);
     padding-right: var(--unit-5xl);
     padding-left: calc(300px + var(--unit-2xl) + var(--unit-5xl));
     min-height: 100vh;
+
+    @include media-query.tablet{
+	padding: var(--unit-2xl);
+	padding-top: var(--unit-7xl);
+    }
 }

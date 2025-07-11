@@ -10,6 +10,8 @@ export interface ILangContext {
   setLang: Function;
 }
 
+export const LANG_FALLBACK = 'en';
+
 export const LangContext = createContext<ILangContext>({
   lang: "en",
   setLang: () => 0,
@@ -20,12 +22,7 @@ interface ILanguage {
 }
 
 export default ({ children }: ILanguage) => {
-  const [lang, setLang] = useState("en" as TValidLang);
-
-  useEffect(() => {
-    // define correct lang on page load
-    setLang(locationLang() as TValidLang);
-  }, []);
+  const [lang, setLang] = useState((locationLang() as TValidLang) || LANG_FALLBACK);
 
   return (
     <LangContext.Provider value={{ lang, setLang }}>

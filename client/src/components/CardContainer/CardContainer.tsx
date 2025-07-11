@@ -60,7 +60,7 @@ export default ({ resource_id, filter }: ICardContainer) => {
   return (
     <div className="card-wrapper flex f-col gap-l">
       {filter !== false && tags.length > 0 && (
-        <Toggle.Root className="flex f-row gap-l">
+        <Toggle.Root className="flex f-wrap f-row gap-l">
           {tags.map((tag) => (
             <Toggle.Item
               className="flex f-row f-center gap-m"

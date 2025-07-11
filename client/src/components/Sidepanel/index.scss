@@ -1,0 +1,117 @@
+@use "../../styles/core/media-query.scss";
+
+.sidepanel {
+  position: fixed;
+
+  &-desktop {
+    height: calc(100vh - 2 * var(--unit-2xl));
+    margin: var(--unit-2xl);
+    width: 300px;
+
+    header {
+      svg {
+        width: 120px;
+      }
+    }
+  }
+
+  &-minified {
+    z-index: 2;
+    padding: 0;
+    display: none;
+    margin: 0;
+    pointer-events: none;
+
+    header {
+      pointer-events: auto;
+      background: var(--color-base-800);
+      svg {
+        width: 100px;
+        height: auto;
+      }
+    }
+
+    &[data-open="true"] {
+      .sidepanel-minified-content {
+        transform: translate3d(0px, 0px, 0px);
+        pointer-events: auto;
+      }
+
+      .sidepanel-minified-button {
+        span {
+          &:nth-child(1),
+          &:nth-child(2) {
+            transform: translate3d(0, 0px, 0);
+          }
+        }
+      }
+    }
+
+    &-content {
+      padding: var(--unit-3xl);
+      transition: transform 0.5s ease-out;
+      transform: translate3d(100vw, 0px, 0px);
+      height: 100vh;
+      pointer-events: none;
+    }
+
+    &-button {
+      width: 32px;
+      height: 32px;
+      position: relative;
+
+      span {
+        $height: 2px;
+        $margin: 15px;
+
+        display: block;
+        background-color: var(--color-base-300);
+        width: 100%;
+        height: $height;
+        transition: transform 0.15s linear;
+
+        &:nth-child(1) {
+          transform: translate3d(0, $margin, 0);
+        }
+
+        &:nth-child(2) {
+          transform: translate3d(0, calc(-1 * $margin + 2 * $height), 0);
+        }
+      }
+    }
+  }
+
+  // Sidepanel Items
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  &-item {
+    background-color: transparent;
+    transition: background 150ms linear;
+
+    &:hover {
+      background-color: var(--color-base-700);
+    }
+
+    &:active {
+      background-color: var(--color-base-500);
+    }
+
+    svg {
+      fill: transparent;
+      stroke: currentColor;
+    }
+  }
+
+  @include media-query.tablet {
+    &-desktop {
+      display: none;
+    }
+
+    &-minified {
+      display: initial;
+    }
+  }
+}

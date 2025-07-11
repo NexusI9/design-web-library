@@ -64,7 +64,7 @@ export default ({ frames, title, subtitle }: IEmbedModule) => {
           key={`${frame.url}${i}`}
         >
           <Expandable.Wrapper>
-            <div className="embed-module-header gap-4xl flex f-row f-between f-center">
+            <div className="embed-module-header gap-xl flex f-wrap f-row f-between f-center">
               <div className="embed-module-settings flex f-col gap-xs">
                 <Expandable.Trigger>
                   <Button style="GHOST">

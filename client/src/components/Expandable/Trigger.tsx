@@ -7,15 +7,18 @@ export interface IExpandableTrigger {
 }
 
 export default ({ children, onTrigger }: IExpandableTrigger) => {
-  const { open, setOpen } = useContext(ExpandableContext);
+  const { setOpen } = useContext(ExpandableContext);
 
   return (
     <div
       className="expandable-trigger"
       onClick={() => {
-        const newState = !open;
-        setOpen(newState); // update context callback
-        if (onTrigger) onTrigger(newState); // external callback (optional)
+        setOpen((current) => {
+	  console.log(current);
+          const newState = !current;
+          if (onTrigger) onTrigger(newState); // external callback (optional)
+          return newState; // update context callback
+        });
       }}
     >
       {children}

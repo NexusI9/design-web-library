@@ -1,14 +1,6 @@
-import HomeIcon from "@icons/home.svg";
-import LayoutIcon from "@icons/layout.svg";
-import GridIcon from "@icons/grid.svg";
-import FileIcon from "@icons/file-text.svg";
-import PuzzleIcon from "@icons/puzzle.svg";
 import { Resources } from "../pages";
-import { ISidepanelItem } from "@components/Sidepanel/SidepanelItem";
-import { IBackendRoute, IRouteComponent } from "@ctypes/route";
+import { IBackendRoute } from "@ctypes/route";
 import { TValidLang } from "@components/Language/Language";
-
-type RouteMapItem = ISidepanelItem & IRouteComponent;
 
 /**
    Dynamicall fetch the main routes from the server API
@@ -37,78 +29,3 @@ export const fetchMainRoute = async (lang: TValidLang) => {
 
   return mainRoutes;
 };
-
-const primaryRouteMap: RouteMapItem[] = [
-  {
-    icon: HomeIcon,
-    path: "/$lang",
-    label: "Home",
-    component: Resources,
-    props: {
-      resource_id: 5,
-      header: {
-        title: "Browse Latest Web Design Tool",
-        subtitle: "Improve and ease your workflow with extensive design tools",
-        banner: "./assets/hero_visual.webp",
-      },
-    },
-  },
-  {
-    icon: LayoutIcon,
-    path: "$lang/templates",
-    label: "Templates",
-    component: Resources,
-    props: {
-      resource_id: 4,
-      header: {
-        title: "Templates",
-        subtitle:
-          "The latest documents to start your new design projects or next presentation",
-      },
-    },
-  },
-  {
-    icon: GridIcon,
-    path: "$lang/modules",
-    label: "Modules",
-    component: Resources,
-    props: {
-      resource_id: 2,
-      header: {
-        title: "Modules",
-        subtitle:
-          "The interactive library gathering all kinds of engaging visual effects",
-      },
-      filter: false,
-    },
-  },
-  {
-    icon: FileIcon,
-    path: "$lang/documents",
-    label: "Documents",
-    component: Resources,
-    props: {
-      resource_id: 1,
-      header: {
-        title: "Documents",
-        subtitle: "All the documents useful for your project development.",
-      },
-    },
-  },
-  {
-    icon: PuzzleIcon,
-    path: "$lang/plugins",
-    label: "Plugins",
-    component: Resources,
-    props: {
-      resource_id: 3,
-      header: {
-        title: "Plugins",
-        subtitle: "The usefull plugins to boost your creativity.",
-      },
-      filter: false,
-    },
-  },
-];
-
-export default primaryRouteMap;

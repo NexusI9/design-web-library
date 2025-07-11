@@ -1,11 +1,11 @@
-import { createContext, ReactNode, useState } from "react";
+import { createContext, Dispatch, ReactNode, SetStateAction, useState } from "react";
 
 interface IExpandableContext{
   open: boolean;
-  setOpen: Function;
+  setOpen: Dispatch<SetStateAction<boolean>>;
 }
 
-export const ExpandableContext = createContext<IExpandableContext>({open: false, setOpen:() => 0});
+export const ExpandableContext = createContext<IExpandableContext>({open: false, setOpen:() => {}});
 
 export interface IExpandableWrapper {
   children: ReactNode;

@@ -2,25 +2,23 @@
 import "@styles/index.scss";
 
 import { Container } from "@components/Container";
-import { Sidepanel, SidepanelItem } from "@components/Sidepanel";
+import { Sidepanel } from "@components/Sidepanel";
 
 import {
   createRootRoute,
   createRoute,
   createRouter,
   Outlet,
-  Route,
   RouterProvider,
 } from "@tanstack/react-router";
 import { createElement, useContext, useEffect, useState } from "react";
 import { IRouteComponent } from "@ctypes/route";
-import { GLModuleRoute, MainRoute } from "./routes";
+import { GLModuleRoute } from "./routes";
 import { Main } from "@components/Main";
-import { langRedirect } from "@lib/utils";
 import { LangContext } from "@components/Language/Language";
 import { fetchMainRoute } from "./routes/main";
-import { ISidepanelItem } from "@components/Sidepanel/SidepanelItem";
 import { Footer } from "@components/Footer";
+import { ISidepanelItem } from "@components/Sidepanel/Item";
 
 /**
   Core website structure
@@ -58,14 +56,26 @@ export default () => {
               component: () => createElement(component, props),
             }),
             // lang fallback, manually replace to the correct lang
-            beforeLoad: ({ location }) => langRedirect(location.pathname),
+            //beforeLoad: ({ location }) => langRedirect(location.pathname),
           }),
         );
 
       // create route tree
       const rootRoute = setRootRoute(routes);
 
+      // automatically redirect to '/en' if arrive on '/'
+      const indexRoute = createRoute({
+        path: "/",
+        getParentRoute: () => rootRoute,
+        component: () => {
+          //locationUpdateLang('en');
+          return null;
+        },
+      });
+
       rootRoute.addChildren([
+        // index route (redirect)
+        indexRoute,
         // primary route
         ...mapChildRoute(routes, rootRoute),
         //glm modules route

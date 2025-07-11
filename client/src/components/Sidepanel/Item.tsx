@@ -7,7 +7,7 @@ export interface ISidepanelItem {
   path: string;
 }
 
-export default ({ icon, label, path }: ISidepanelItem) => {
+export const Item = ({ icon, label, path }: ISidepanelItem) => {
   return (
     <li className="sidepanel-item cursor-default bd-radius-m">
       <Link to={path} className="flex f-row f-center-h gap-m  padding-l">
