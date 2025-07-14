@@ -5,8 +5,8 @@
     "type": "TEMPLATE",
     "resource_id": 4,
     "tag_id": 8,
-    "link": "DOWNLOAD",
-    "href": "https://chatgpt.com/",
+    "link": "EXTERNAL",
+    "href": "https://www.figma.com/design/Sw2qQx58Y4g9aq1fAaKoHP/Starter-Web-Project?m=auto&t=sQrGlZKUdVVDul14-6",
     "picture": "figstarter"
   },
   {
@@ -15,18 +15,18 @@
     "type": "TEMPLATE",
     "resource_id": 4,
     "tag_id": 8,
-    "link": "DOWNLOAD",
-    "href": "https://chatgpt.com/",
+    "link": "EXTERNAL",
+    "href": "https://www.figma.com/design/VWUwkZwlJz46AZjrodDRY8/Template---Wireframe-Pack?m=auto&t=sQrGlZKUdVVDul14-6",
     "picture": "figwire"
   },
   {
-    "title": "Storybook",
-    "description": "A template including the fundamentals items for a fast and clear storybook.",
+    "title": "Proposal references",
+    "description": "A collection of various website mockups for design proposals.",
     "type": "TEMPLATE",
     "resource_id": 4,
     "tag_id": 8,
-    "link": "DOWNLOAD",
-    "href": "https://chatgpt.com/",
+    "link": "EXTERNAL",
+    "href": "https://www.figma.com/design/AfpDFM8h88eya7hAJLp1OA/Proposal-References?m=auto&t=sQrGlZKUdVVDul14-6",
     "picture": "figstorybook"
   },
   {
@@ -36,7 +36,7 @@
     "resource_id": 4,
     "tag_id": 9,
     "link": "DOWNLOAD",
-    "href": "https://chatgpt.com/",
+    "href": "Starter_Project.xd",
     "picture": "xdstarter"
   },
   {
@@ -46,7 +46,7 @@
     "resource_id": 4,
     "tag_id": 9,
     "link": "DOWNLOAD",
-    "href": "https://chatgpt.com/",
+    "href": "HTML_Template.xd",
     "picture": "xdhtml"
   },
   {
@@ -56,7 +56,7 @@
     "resource_id": 4,
     "tag_id": 9,
     "link": "DOWNLOAD",
-    "href": "https://chatgpt.com/",
+    "href": "GDPR_Template.xd",
     "picture": "xdgdpr"
   },
   {
@@ -66,7 +66,7 @@
     "resource_id": 4,
     "tag_id": 10,
     "link": "DOWNLOAD",
-    "href": "https://chatgpt.com/",
+    "href": "Design_Proposal.pptx",
     "picture": "pptpresent"
   },
   {
@@ -76,7 +76,7 @@
     "resource_id": 4,
     "tag_id": 10,
     "link": "DOWNLOAD",
-    "href": "https://chatgpt.com/",
+    "href": "BugList_Client_Date.pptx",
     "picture": "pptbug"
   }
 ]

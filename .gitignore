@@ -4,3 +4,4 @@ client/design
 **/dist/
 **/.env*
 .tanstack
+server/public/

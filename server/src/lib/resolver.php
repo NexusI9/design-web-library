@@ -19,17 +19,28 @@ function resolve_array(&$entries){
         "icon" => 'resolve_icon',
         "banner" => 'resolve_page_banner',
         "picture" => 'resolve_resource_thumbnail',
+        "href" => 'resolve_upload'
     );
     
     // traverse array
     foreach($entries as &$entry){
         // traverse map array
         foreach($resolve_map as $key => $callback){
+
             // if input array has a key from the map
-            if(isset($entry[$key])){
+            // edge case for DOWNLOAD link, need to check if link type if Download first before resolving
+            if(
+                ($key == "href"
+                 && isset($entry["link"])
+                 && $entry["link"] == "DOWNLOAD")
+                    || ($key != "href"
+                        && isset($entry[$key])) ){
+                
                 // execute callback with emtry relative value
                 $entry[$key] = $callback($entry[$key]);
             }
+            
+
         }
     }
 
@@ -53,4 +64,12 @@ function resolve_page_banner($filename){
 
 function resolve_icon($filename){
     return file_get_contents(__DIR__."/../assets/icons/$filename.svg");
+}
+
+
+/**
+  Returns the path directory for downloadable resources
+ */
+function resolve_upload($filename){
+    return base_url()."/public/uploads/documents/$filename";
 }
