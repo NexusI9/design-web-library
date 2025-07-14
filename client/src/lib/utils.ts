@@ -32,7 +32,7 @@ export const locationLang = () => {
 export const langRedirect = (location: string) => {
   const segments = location.split("/").filter(Boolean);
   const maybeLang = segments[0]?.toLowerCase();
-  
+
   if (!validLang.includes(maybeLang as TValidLang)) {
     const newPath = ["/en", ...segments.slice(1)].join("/");
     throw redirect({

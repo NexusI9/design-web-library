@@ -15,10 +15,11 @@ import { createElement, useContext, useEffect, useState } from "react";
 import { IRouteComponent } from "@ctypes/route";
 import { GLModuleRoute } from "./routes";
 import { Main } from "@components/Main";
-import { LangContext } from "@components/Language/Language";
+import { LangContext, validLang } from "@components/Language/Language";
 import { fetchMainRoute } from "./routes/main";
 import { Footer } from "@components/Footer";
 import { ISidepanelItem } from "@components/Sidepanel/Item";
+import { langRedirect, locationUpdateLang } from "@lib/utils";
 
 /**
   Core website structure
@@ -40,9 +41,13 @@ const setRootRoute = (pages: ISidepanelItem[]) =>
 
 export default () => {
   const [router, setRouter] = useState<any | null>(null);
-  const { lang } = useContext(LangContext);
+  const { lang, setLang } = useContext(LangContext);
 
   useEffect(() => {
+
+    // fallback language if not valid
+    if(!validLang.includes(lang)) setLang("en");
+    
     // Dynamically fetch routing since page structure is defined in backend
     fetchMainRoute(lang).then((routes) => {
       // create children route
@@ -56,7 +61,7 @@ export default () => {
               component: () => createElement(component, props),
             }),
             // lang fallback, manually replace to the correct lang
-            //beforeLoad: ({ location }) => langRedirect(location.pathname),
+            beforeLoad: ({ location }) => langRedirect(location.pathname),
           }),
         );
 
@@ -67,10 +72,7 @@ export default () => {
       const indexRoute = createRoute({
         path: "/",
         getParentRoute: () => rootRoute,
-        component: () => {
-          //locationUpdateLang('en');
-          return null;
-        },
+        beforeLoad: ({ location }) => langRedirect(location.pathname),
       });
 
       rootRoute.addChildren([
