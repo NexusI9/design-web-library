@@ -7,6 +7,13 @@ include_once "utils.php";
   it as a "usable" version for the system:
 
   ƒ("home") = "./assets/uploads/home.webp"
+
+
+  Overall flow:
+  .---------------.    .-----------------.     .---------.    .------.
+  | Fetch content | => | Resolve entries | =>  |  Cache  | => | Send |
+  '---------------'    '-----------------'     '---------'    '------'
+  
  */
 
 
@@ -51,14 +58,14 @@ function resolve_array(&$entries){
   Returns the path directory for the thumbnails
  */
 function resolve_resource_thumbnail($filename){
-    return base_url()."/public/uploads/pictures/resources/$filename.webp";
+    return base_url()."/uploads/pictures/resources/$filename.webp";
 }
 
 /**
   Returns the path directory for the page banners
  */
 function resolve_page_banner($filename){
-    return base_url()."/public/uploads/pictures/pages/$filename.webp";
+    return base_url()."/uploads/pictures/pages/$filename.webp";
 }
 
 
@@ -71,5 +78,5 @@ function resolve_icon($filename){
   Returns the path directory for downloadable resources
  */
 function resolve_upload($filename){
-    return base_url()."/public/uploads/documents/$filename";
+    return base_url()."/uploads/documents/$filename";
 }

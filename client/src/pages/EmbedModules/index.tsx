@@ -40,7 +40,7 @@ export default ({ frames, title, subtitle }: IEmbedModule) => {
       size: "SMALL",
       children: <>Copy link</>,
       style: "OUTLINE",
-      onClick: () => navigator.clipboard.writeText(window.location.href),
+      onClick: () => navigator.clipboard?.writeText(window.location.href),
     },
     {
       icon: DownloadIcon,
@@ -52,8 +52,9 @@ export default ({ frames, title, subtitle }: IEmbedModule) => {
   ];
 
   // update iframe params on search param changes
-  const frameUrlParam = (url: string, param: Record<string, string>) =>
-    `${url}?${new URLSearchParams(param).toString()}`;
+  const frameUrlParam = (url: string, param: Record<string, string>) => {
+   return `${url}?${new URLSearchParams(param).toString()}`;
+  };
 
   return (
     <div className="flex f-col gap-3xl">

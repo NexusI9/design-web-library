@@ -9,14 +9,21 @@ const devServer = require("./config/devServer.config");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
-
 const path = require("path");
 
-module.exports = (env, argv) => ({
+// dev only
+const dev = (mode) =>
+  mode == "production"
+    ? {
+        devtool: devtool(mode),
+        devServer,
+      }
+    : {};
+
+module.exports = (_, argv) => ({
   mode: mode(argv.mode),
-  devtool: devtool(argv.mode),
   resolve,
-  devServer,
+  ...dev(argv.mode),
   module: loader,
 
   entry: {
@@ -25,8 +32,8 @@ module.exports = (env, argv) => ({
 
   output: {
     filename: "[name].js",
-    path: path.resolve(__dirname, "./client/dist"), // Compile into a folder called "dist"
-    clean: true,
+    path: path.resolve(__dirname, "./server/public"), // Compile into a folder called "dist"
+    clean: false,
     publicPath: "auto",
   },
 
@@ -38,7 +45,7 @@ module.exports = (env, argv) => ({
       patterns: [
         {
           from: path.resolve(__dirname, "./client/public"),
-          to: path.resolve(__dirname, "./client/dist"),
+          to: path.resolve(__dirname, "./server/public"),
         },
       ],
     }),

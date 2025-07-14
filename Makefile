@@ -1,21 +1,30 @@
 # Makefile
 
-# Default target
+
+
+# Build the client into the server/public dir
+build:
+	npx webpack --config webpack.client.config.js --mode production
+
+
+# start the PHP and Webpack server after compiling the modules
 start:
-	$(MAKE) webpack-server
-	$(MAKE) php-server & \
-	$(MAKE) webpack-client
+	$(MAKE) build-modules
+	$(MAKE) serve-server & \
+	$(MAKE) serve-client
 
 
 # Run the PHP server
-php-server:
-	php -q -S localhost:8000 -t ./server
+serve-server:
+	brew services start php
 
 # Run the Webpack dev server
-webpack-client:
-	npx webpack serve --config webpack.client.config.js
+serve-client:
+	npx webpack serve --config webpack.client.config.js --mode development
 
+apache-server:
+	brew services php start && sudo apachectl start
 
 # Compile the GL modules to the server
-webpack-server:
+build-modules:
 	npx webpack --config webpack.server.config.js

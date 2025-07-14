@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
   static: {
-    directory: path.resolve(__dirname, "../client/public"),
+    directory: path.resolve(__dirname, "../server/public"),
   },
   historyApiFallback: true, // Redirect all unknown routes to index.html
   compress: true,

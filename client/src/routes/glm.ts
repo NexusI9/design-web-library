@@ -32,7 +32,7 @@ const GLMRouteMap: IRouteComponent[] = [
       frames: [
         {
           module: "slideshow",
-          url: `${process.env.SERVER_URL}/public/modules/glm/slideshow/index.php`,
+          url: "/modules/glm/slideshow/index.php",
           channel: MODULE_GLM_CHANNEL_SLIDESHOW,
           inputs: [
             {
@@ -88,7 +88,7 @@ const GLMRouteMap: IRouteComponent[] = [
       frames: [
         {
           module: "carousel",
-          url: `${process.env.SERVER_URL}/public/modules/glm/carousel/index.php`,
+          url: "/modules/glm/carousel/index.php",
           channel: MODULE_GLM_CHANNEL_CAROUSEL,
           inputs: [
             {
