@@ -12,7 +12,7 @@ export const fetchMainRoute = async (lang: TValidLang) => {
 
   // convert backend route to tanstack-react route
   const mainRoutes = routes.map((route: IBackendRoute) => ({
-    path: `$lang${route.path}`,
+    path: `${route.path}`,
     label: route.name,
     component: Resources,
     icon:route.icon,

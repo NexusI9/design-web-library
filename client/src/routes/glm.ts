@@ -24,7 +24,7 @@ export const modulesSearchSchema = z.object({
 
 const GLMRouteMap: IRouteComponent[] = [
   {
-    path: "$lang/modules/glm/slideshow",
+    path: "/modules/glm/slideshow",
     component: ModuleFrame,
     validateSearch: modulesSearchSchema,
     props: {
@@ -81,7 +81,7 @@ const GLMRouteMap: IRouteComponent[] = [
     },
   },
   {
-    path: "$lang/modules/glm/carousel",
+    path: "/modules/glm/carousel",
     component: ModuleFrame,
     props: {
       title: "Carousel",

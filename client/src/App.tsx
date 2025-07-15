@@ -9,6 +9,7 @@ import {
   createRoute,
   createRouter,
   Outlet,
+  RootRoute,
   RouterProvider,
 } from "@tanstack/react-router";
 import { createElement, useContext, useEffect, useState } from "react";
@@ -19,13 +20,14 @@ import { LangContext, validLang } from "@components/Language/Language";
 import { fetchMainRoute } from "./routes/main";
 import { Footer } from "@components/Footer";
 import { ISidepanelItem } from "@components/Sidepanel/Item";
-import { langRedirect, locationUpdateLang } from "@lib/utils";
+import { langRedirect } from "@lib/utils";
 
 /**
   Core website structure
  */
 const setRootRoute = (pages: ISidepanelItem[]) =>
   createRootRoute({
+    beforeLoad: ({ location }) => langRedirect(location.pathname),
     component: () => (
       <Main>
         <Sidepanel items={pages} />
@@ -44,10 +46,10 @@ export default () => {
   const { lang, setLang } = useContext(LangContext);
 
   useEffect(() => {
-
-    // fallback language if not valid
-    if(!validLang.includes(lang)) setLang("en");
     
+    // fallback language if not valid
+    if (!validLang.includes(lang)) setLang("en");
+
     // Dynamically fetch routing since page structure is defined in backend
     fetchMainRoute(lang).then((routes) => {
       // create children route
@@ -65,27 +67,27 @@ export default () => {
           }),
         );
 
-      // create route tree
+      // Create route tree
       const rootRoute = setRootRoute(routes);
 
-      // automatically redirect to '/en' if arrive on '/'
-      const indexRoute = createRoute({
-        path: "/",
+      // create lang route
+      const langRoute = createRoute({
+        path: "$lang",
         getParentRoute: () => rootRoute,
-        beforeLoad: ({ location }) => langRedirect(location.pathname),
       });
 
-      rootRoute.addChildren([
-        // index route (redirect)
-        indexRoute,
+      langRoute.addChildren([
         // primary route
-        ...mapChildRoute(routes, rootRoute),
+        ...mapChildRoute(routes, langRoute),
         //glm modules route
-        ...mapChildRoute(GLModuleRoute, rootRoute),
+        ...mapChildRoute(GLModuleRoute, langRoute),
       ]);
+
+      rootRoute.addChildren([langRoute]);
 
       // create router
       const router = createRouter({ routeTree: rootRoute });
+
       setRouter(router);
     });
   }, [lang]);
