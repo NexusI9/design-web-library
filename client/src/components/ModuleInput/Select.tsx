@@ -12,10 +12,11 @@ export interface IInputSelect {
 }
 
 export default ({ values, defaultIndex, onChange }: IInputSelect) => {
+
   return (
     <select
       className="module-input"
-      defaultValue={String(values[defaultIndex].label)}
+      defaultValue={String(values[defaultIndex]?.label)}
       onChange={(e) =>
         onChange &&
         onChange(e.target.selectedIndex, e.target.value.toLowerCase())

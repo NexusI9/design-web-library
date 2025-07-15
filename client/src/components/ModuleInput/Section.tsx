@@ -1,6 +1,6 @@
 import { TModuleSectionInputs } from "./types";
 import ModuleInputNumber from "./Number";
-import ModuleInputSelect, { IInputSelect } from "./Select";
+import ModuleInputSelect from "./Select";
 import { useNavigate, useSearch } from "@tanstack/react-router";
 
 export interface IModuleInputSection {
@@ -30,12 +30,16 @@ const ModuleInputSection = ({ inputs, className }: IModuleInputSection) => {
 
         switch (input.type) {
           case "INPUT_NUMBER":
+            const attributeIndexNumber = urlValue(input.targetAttribute);
+
             Input = (
               <ModuleInputNumber
                 min={input.min}
                 max={input.max}
                 defaultValue={
-                  urlValue(input.targetAttribute) || input.defaultValue
+                  attributeIndexNumber >= 0
+                    ? attributeIndexNumber
+                    : input.defaultValue
                 }
                 onChange={(value) =>
                   onInputChange(value, input.targetAttribute)
@@ -46,14 +50,17 @@ const ModuleInputSection = ({ inputs, className }: IModuleInputSection) => {
             break;
 
           case "INPUT_SELECT":
+            const attributeIndexSelect = input.values
+              .map(({ value }) => value)
+              .indexOf(urlValue(input.targetAttribute));
+
             Input = (
               <ModuleInputSelect
                 values={input.values}
                 defaultIndex={
-                  input.values
-                    .map(({ value }) => value)
-                    .indexOf(urlValue(input.targetAttribute)) ||
-                  input.defaultIndex
+                  attributeIndexSelect >= 0
+                    ? attributeIndexSelect
+                    : input.defaultIndex
                 }
                 onChange={(_, value) =>
                   onInputChange(value, input.targetAttribute)

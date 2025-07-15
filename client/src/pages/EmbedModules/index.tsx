@@ -30,6 +30,7 @@ export interface IEmbedModule extends IPageHeader {
 type TEmbedModuleActions = IButton & IIcon;
 
 export default ({ frames, title, subtitle }: IEmbedModule) => {
+
   const searchParams = useSearch({ strict: false });
 
   const buttonsArray: (module: string) => TEmbedModuleActions[] = (
@@ -53,7 +54,7 @@ export default ({ frames, title, subtitle }: IEmbedModule) => {
 
   // update iframe params on search param changes
   const frameUrlParam = (url: string, param: Record<string, string>) => {
-   return `${url}?${new URLSearchParams(param).toString()}`;
+    return `${url}?${new URLSearchParams(param).toString()}`;
   };
 
   return (
