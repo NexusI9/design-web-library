@@ -4,6 +4,7 @@ import { clamp, touchMovement } from "./utils";
 
 export default class Dragger {
   state: "moving" | "complete" | "slow" = "complete";
+  #mouseState: "pressed" | "released" = "released";
   container: HTMLElement | undefined;
   mouseMouveTimeout: NodeJS.Timeout = setTimeout(() => false, 0);
   lastMouseMovement: number = 0;
@@ -54,12 +55,15 @@ export default class Dragger {
     if (!this.mesh) return;
 
     // update object state
-    if (this.state == "complete") {
+    if (this.state != "moving") {
       const rotation = this.mesh.rotation[this.axis];
       this.#current = rotation;
       this.#target = rotation;
       this.state = "moving";
     }
+
+    // update mouse state
+    if (this.#mouseState !== "pressed") this.#mouseState = "pressed";
 
     // update cursor style
     this.container?.setAttribute("data-cursor", "grab");
@@ -88,6 +92,11 @@ export default class Dragger {
     document.addEventListener("mouseup", () => {
       document.removeEventListener("mousemove", this.boundRotate);
       this.container?.setAttribute("data-cursor", "default");
+
+      // update mouse state shortly after actual release to prevent opening full view directly on mouse up after drag
+      setTimeout(() => {
+        if (this.#mouseState !== "released") this.#mouseState = "released";
+      }, 500);
     });
 
     //touch events for mobiles
@@ -105,8 +114,10 @@ export default class Dragger {
       this.#current += this.#velocity;
 
       // update states
-      if (Math.abs(this.#velocity) < 0.01) this.state = "slow";
-      if (Math.abs(this.#velocity) < 0.0001) this.state = "complete";
+      if (this.#mouseState == "released") {
+        if (Math.abs(this.#velocity) < 0.005) this.state = "slow";
+        if (Math.abs(this.#velocity) < 0.0001) this.state = "complete";
+      }
 
       // rotate mesh
       this.mesh.rotation[this.axis] = this.#current;

@@ -232,8 +232,9 @@ export default class extends ThreeScene {
   }
 
   onCanvasClick() {
+    
     //cancel if user is actually scrolling and not clicking
-    if (this.dragger?.getState === "moving") return;
+    if (this.dragger?.getState == "moving") return;
 
     if (this.lastHoverPicture) {
       //if found picture with same uuid and the one targeted by raycast => load picture in viewer and show
