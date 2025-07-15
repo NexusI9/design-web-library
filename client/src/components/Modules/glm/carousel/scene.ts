@@ -245,8 +245,7 @@ export default class extends ThreeScene {
 
     if (this.dragger?.getState === "complete") {
       this.pivot.rotation[this.rotationAxis] +=
-        (((this.config.curve === "outward" &&
-          this.config.direction == "right") ||
+        ((this.config.direction == "right" ||
         (this.config.curve == "inward" && this.config.direction == "left")
           ? -1
           : 1) *
