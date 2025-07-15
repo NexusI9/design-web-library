@@ -12,10 +12,10 @@ export default class Dragger {
   maxspeed: number = 10;
   inverted: boolean = false;
   axis: "x" | "y" | "z" = "x";
-  mesh: THREE.Mesh | THREE.Group | undefined;
-  velocity: number = 0;
-  target: number = 0;
-  current: number = 0;
+  mesh: THREE.Mesh | THREE.Group;
+  #velocity: number = 0;
+  #target: number = 0;
+  #current: number = 0;
 
   boundRotate = this.rotate.bind(this);
 
@@ -53,11 +53,15 @@ export default class Dragger {
   rotate(event: MouseEvent | TouchEvent) {
     if (!this.mesh) return;
 
-    if (this.state !== "moving") {
-      this.current = this.mesh.rotation[this.axis];
+    // update object state
+    if (this.state == "complete") {
+      const rotation = this.mesh.rotation[this.axis];
+      this.#current = rotation;
+      this.#target = rotation;
       this.state = "moving";
     }
 
+    // update cursor style
     this.container?.setAttribute("data-cursor", "grab");
 
     clearTimeout(this.mouseMouveTimeout);
@@ -71,7 +75,7 @@ export default class Dragger {
 
     const delta = clamp(-this.maxspeed, this.maxspeed)(movementX);
     const force = Math.sign(delta) * Math.pow(Math.abs(delta), 1.3); // nonlinear
-    this.target += force * 0.005; // tuning factor
+    this.#target += force * 0.005; // tuning factor
   }
 
   init() {
@@ -96,15 +100,16 @@ export default class Dragger {
     requestAnimationFrame(this.update.bind(this));
 
     if (this.state !== "complete") {
-      this.velocity += (this.target - this.current) * this.spring;
-      this.velocity *= this.damping;
-      this.current += this.velocity;
+      this.#velocity += (this.#target - this.#current) * this.spring;
+      this.#velocity *= this.damping;
+      this.#current += this.#velocity;
 
       // update states
-      if (Math.abs(this.velocity) < 0.01) this.state = "slow";
-      if (Math.abs(this.velocity) < 0.0001) this.state = "complete";
+      if (Math.abs(this.#velocity) < 0.01) this.state = "slow";
+      if (Math.abs(this.#velocity) < 0.0001) this.state = "complete";
 
-      if (this.mesh) this.mesh.rotation[this.axis] = this.current;
+      // rotate mesh
+      this.mesh.rotation[this.axis] = this.#current;
     }
   }
 }
