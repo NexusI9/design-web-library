@@ -1,7 +1,6 @@
 import { TModuleSectionInputs } from "./types";
 import ModuleInputNumber from "./Number";
-import ModuleInputSelect from "./Select";
-import { messageProcessor } from "@components/Modules/glm/lib/message-processor";
+import ModuleInputSelect, { IInputSelect } from "./Select";
 import { useNavigate, useSearch } from "@tanstack/react-router";
 
 export interface IModuleInputSection {
@@ -9,10 +8,7 @@ export interface IModuleInputSection {
   inputs: TModuleSectionInputs;
 }
 
-const ModuleInputSection = ({
-  inputs,
-  className,
-}: IModuleInputSection) => {
+const ModuleInputSection = ({ inputs, className }: IModuleInputSection) => {
   const searchParams = useSearch({ strict: false });
   const navigate = useNavigate({ from: location.pathname });
 
@@ -54,7 +50,10 @@ const ModuleInputSection = ({
               <ModuleInputSelect
                 values={input.values}
                 defaultIndex={
-                  urlValue(input.targetAttribute) || input.defaultIndex
+                  input.values
+                    .map(({ value }) => value)
+                    .indexOf(urlValue(input.targetAttribute)) ||
+                  input.defaultIndex
                 }
                 onChange={(_, value) =>
                   onInputChange(value, input.targetAttribute)
