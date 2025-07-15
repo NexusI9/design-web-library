@@ -19,6 +19,7 @@ export const modulesSearchSchema = z.object({
   "data-border-radius": z.string().optional(),
   "data-border-smooth": z.string().optional(),
   "data-invert-drag": z.string().optional(),
+  "data-speed": z.string().optional(),
 });
 
 const GLMRouteMap: IRouteComponent[] = [
@@ -143,6 +144,14 @@ const GLMRouteMap: IRouteComponent[] = [
               max: 8,
               defaultValue: 4,
               targetAttribute: "data-border-smooth",
+            },
+            {
+              type: "INPUT_NUMBER",
+              label: "Speed",
+              min: 1,
+              max: 10,
+              defaultValue: 1,
+              targetAttribute: "data-speed",
             },
             {
               type: "INPUT_SELECT",

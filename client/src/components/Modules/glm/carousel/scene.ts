@@ -16,6 +16,7 @@ import Dragger from "../lib/dragger";
 
 export interface ICarouselConfig {
   curve: "outward" | "inward" | "fan";
+  speed: number;
   pictureAmount: number;
   direction: "right" | "left";
   pictureWidth: number;
@@ -68,6 +69,7 @@ export default class extends ThreeScene {
     borderRadius: 0,
     borderSmooth: 8,
     cameraDistance: 0,
+    speed: 1,
   };
 
   images: Element[] | Picture[];
@@ -247,8 +249,8 @@ export default class extends ThreeScene {
       this.pivot.rotation[this.rotationAxis] +=
         ((this.config.direction == "right" ||
         (this.config.curve == "inward" && this.config.direction == "left")
-          ? -1
-          : 1) *
+          ? -this.config.speed
+          : this.config.speed) *
           this.cameraRotateSpeed) /
         60;
     }
