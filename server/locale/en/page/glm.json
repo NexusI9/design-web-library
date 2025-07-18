@@ -8,7 +8,7 @@
       "frames": [
         {
           "module": "slideshow",
-          "url": "/glm/slideshow/index.php",
+          "url": "/modules/glm/slideshow/index.php",
           "inputs": [
             {
               "type": "INPUT_NUMBER",
