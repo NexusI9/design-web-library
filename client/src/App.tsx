@@ -9,15 +9,17 @@ import {
   createRoute,
   createRouter,
   Outlet,
-  RootRoute,
   RouterProvider,
 } from "@tanstack/react-router";
-import { createElement, useContext, useEffect, useState } from "react";
-import { IRouteComponent } from "@ctypes/route";
-import { GLModuleRoute } from "./routes";
+import { useContext, useEffect, useState } from "react";
 import { Main } from "@components/Main";
 import { LangContext, validLang } from "@components/Language/Language";
-import { fetchMainRoute } from "./routes/main";
+import {
+  fetchRoute,
+  createMappedRoute,
+  TRouteComponent,
+  IFetchRouteResource,
+} from "./routes/main";
 import { Footer } from "@components/Footer";
 import { ISidepanelItem } from "@components/Sidepanel/Item";
 import { langRedirect } from "@lib/utils";
@@ -25,12 +27,18 @@ import { langRedirect } from "@lib/utils";
 /**
   Core website structure
  */
-const setRootRoute = (pages: ISidepanelItem[]) =>
+const setRootRoute = (pages: TRouteComponent<IFetchRouteResource>[]) =>
   createRootRoute({
     beforeLoad: ({ location }) => langRedirect(location.pathname),
     component: () => (
       <Main>
-        <Sidepanel items={pages} />
+        <Sidepanel
+          items={pages.map<ISidepanelItem>(({ icon, label, path }) => ({
+            icon,
+            label,
+            path,
+          }))}
+        />
         <Container>
           <>
             <Outlet />
@@ -46,27 +54,11 @@ export default () => {
   const { lang, setLang } = useContext(LangContext);
 
   useEffect(() => {
-    
     // fallback language if not valid
     if (!validLang.includes(lang)) setLang("en");
 
     // Dynamically fetch routing since page structure is defined in backend
-    fetchMainRoute(lang).then((routes) => {
-      // create children route
-      const mapChildRoute = (routeList: IRouteComponent[], parentRoute: any) =>
-        routeList.map(({ path, component, props, validateSearch }) =>
-          createRoute({
-            getParentRoute: () => parentRoute,
-            path,
-            validateSearch,
-            ...(component && {
-              component: () => createElement(component, props),
-            }),
-            // lang fallback, manually replace to the correct lang
-            beforeLoad: ({ location }) => langRedirect(location.pathname),
-          }),
-        );
-
+    fetchRoute(lang).then((routes) => {
       // Create route tree
       const rootRoute = setRootRoute(routes);
 
@@ -76,13 +68,9 @@ export default () => {
         getParentRoute: () => rootRoute,
       });
 
-      langRoute.addChildren([
-        // primary route
-        ...mapChildRoute(routes, langRoute),
-        //glm modules route
-        ...mapChildRoute(GLModuleRoute, langRoute),
-      ]);
+      createMappedRoute(routes, langRoute);
 
+      //langRoute.addChildren(primaryRoute);
       rootRoute.addChildren([langRoute]);
 
       // create router

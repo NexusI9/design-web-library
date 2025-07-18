@@ -22,8 +22,8 @@ serve-server:
 serve-client:
 	npx webpack serve --config webpack.client.config.js --mode development
 
-apache-server:
-	brew services start php && sudo apachectl start
+php-server:
+	brew services start php
 
 # Compile the GL modules to the server
 build-modules:

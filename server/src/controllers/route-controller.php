@@ -14,24 +14,52 @@ class Route_Controller
 
     function get_page_by_name($lang, $page_name){
 
-        $data = $this->load_pages($lang);  
+        // if all page name, concat all pages
+        $data = array();
+        
+        if($page_name == 'all'){
+
+            // traverse page directory
+            $files = glob(__DIR__."/../../locale/$lang/page/*.json");
+            
+            // cache each page
+            foreach($files as $file){
+                
+                $filename = pathinfo($file, PATHINFO_FILENAME);
+                $file_content = $this->load_page($lang, $filename);
+
+                // concat
+                $data = array_merge($data, $file_content);
+            }
+           
+        }else{
+            $data = $this->load_page($lang, $page_name);  
+        }
+
+
         echo json_encode($data);
         
     }
 
-    private function load_pages($lang){
+    private function load_page($lang, $name){
 
-        if(!isset($this->page_cache[$lang])){
+        // check if cache lang is set
+        if(!isset($this->page_cache[$lang]))
+            $this->page_cache[$lang] = array();
+        
+
+        // cache page content by name
+        if(!isset($this->page_cache[$lang][$name])){
             
             // load content in cache
-            $this->page_cache[$lang] = json_decode(file_get_contents(__DIR__."/../../locale/$lang/page/page.json"), true);
+            $this->page_cache[$lang][$name] = json_decode(file_get_contents(__DIR__."/../../locale/$lang/page/$name.json"), true);
 
             // replace cached icons by svg file content
             resolve_array($this->page_cache[$lang]);
         }
         
 
-        return $this->page_cache[$lang];
+        return $this->page_cache[$lang][$name];
     }
     
 }

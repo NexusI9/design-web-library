@@ -15,12 +15,11 @@ import LinkIcon from "@icons/link.svg";
 import DownloadIcon from "@icons/download.svg";
 import EditIcon from "@icons/settings.svg";
 
-interface IEmbedModuleIframe {
+export interface IEmbedModuleIframe {
   module: string;
   frame?: HTMLIFrameElement | null;
   url: string;
   inputs: TModuleSectionInputs;
-  channel: string;
 }
 
 export interface IEmbedModule extends IPageHeader {
