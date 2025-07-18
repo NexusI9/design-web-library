@@ -17,7 +17,7 @@
      data-border-radius=<?= $_GET["data-border-radius"] ?? "\"12\"" ?>
      data-border-smooth=<?= $_GET["data-border-smooth"] ?? "\"4\"" ?>
      data-invert-drag=<?= $_GET["data-invert-drag"] ?? "\"false\"" ?>
-     data-invert-drag=<?= $_GET["data-speed"] ?? "\"1\"" ?>
+     data-speed=<?= $_GET["data-speed"] ?? "\"1\"" ?>
      >
     <ul class="glm-carousel-list">
       <li><img class="glm-carousel-picture" src=

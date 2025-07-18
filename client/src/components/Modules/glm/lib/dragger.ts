@@ -11,7 +11,7 @@ export default class Dragger {
   damping: number = 0.02;
   spring: number = 0.1;
   maxspeed: number = 10;
-  inverted: boolean = false;
+  inverted: string = "true";
   axis: "x" | "y" | "z" = "x";
   mesh: THREE.Mesh | THREE.Group;
   #velocity: number = 0;
@@ -70,7 +70,7 @@ export default class Dragger {
 
     clearTimeout(this.mouseMouveTimeout);
     const movementX =
-      (this.inverted ? 1 : -1) *
+      (this.inverted == "true" ? 1 : -1) *
       ((event as MouseEvent).movementX ||
         (touchMovement(event as TouchEvent, 20) as ICustomTouch).movementX ||
         0);

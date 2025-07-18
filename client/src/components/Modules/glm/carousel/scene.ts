@@ -89,6 +89,17 @@ export default class extends ThreeScene {
     );
 
     this.clock = new THREE.Clock();
+
+    // adjust actual direction and grag based on curve type
+    if (this.config.curve == "inward") {
+      // update direction
+      this.config.direction =
+        this.config.direction == "left" ? "right" : "left";
+
+      // update invert drag
+      this.config.invertDrag = this.config.invertDrag == "true" ? "false" : "true";
+    }
+
   }
 
   init() {
@@ -144,9 +155,7 @@ export default class extends ThreeScene {
       damping: 0.7,
       spring: 0.02,
       maxspeed: 7,
-      inverted:
-        this.config.invertDrag == "true" ||
-        (this.config.curve == "inward" && this.config.invertDrag == "false"),
+      inverted: this.config.invertDrag,
       axis: this.rotationAxis,
     });
 
@@ -232,7 +241,6 @@ export default class extends ThreeScene {
   }
 
   onCanvasClick() {
-    
     //cancel if user is actually scrolling and not clicking
     if (this.dragger?.getState == "moving") return;
 
@@ -247,13 +255,10 @@ export default class extends ThreeScene {
     super.render();
 
     if (this.dragger?.getState === "complete") {
+      // define mul (-1: right, 1: left)
+      const mul = this.config.direction == "right" ? -1 : 1;
       this.pivot.rotation[this.rotationAxis] +=
-        ((this.config.direction == "right" ||
-        (this.config.curve == "inward" && this.config.direction == "left")
-          ? -this.config.speed
-          : this.config.speed) *
-          this.cameraRotateSpeed) /
-        60;
+        (mul * this.config.speed * this.cameraRotateSpeed) / 60;
     }
   }
 }
