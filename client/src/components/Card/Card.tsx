@@ -35,7 +35,7 @@ const AnchorElement = ({ href, link, children }: ICardLinkElement) => (
 );
 
 const RouterElement = ({ href, children }: ICardLinkElement) => (
-  <Link className="card round" to={`/$lang/${href}`}>
+  <Link className="card round" to={`$lang/${href}`} from="/">
     {children}
   </Link>
 );

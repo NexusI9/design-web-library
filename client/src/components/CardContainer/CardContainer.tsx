@@ -20,6 +20,7 @@ interface ITag {
 type Section = { headline: string; body: ICard[] };
 
 export default ({ resource_id, filter }: ICardContainer) => {
+  
   const [sections, setSections] = useState<Section[]>([]);
   const [tags, setTags] = useState<ITag[]>([]);
   const [activeTag, setActiveTag] = useState<number | undefined>(0);

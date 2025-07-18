@@ -60,7 +60,6 @@ export default () => {
     // Dynamically fetch routing since page structure is defined in backend
     fetchRoute(lang).then((routes) => {
 
-      console.log(routes);
       // Create route tree
       const rootRoute = setRootRoute(routes);
 
