@@ -21,7 +21,6 @@ import {
   IFetchRouteResource,
 } from "./routes/main";
 import { Footer } from "@components/Footer";
-import { ISidepanelItem } from "@components/Sidepanel/Item";
 import { langRedirect } from "@lib/utils";
 
 /**
@@ -32,13 +31,7 @@ const setRootRoute = (pages: TRouteComponent<IFetchRouteResource>[]) =>
     beforeLoad: ({ location }) => langRedirect(location.pathname),
     component: () => (
       <Main>
-        <Sidepanel
-          items={pages.map<ISidepanelItem>(({ icon, label, path }) => ({
-            icon,
-            label,
-            path,
-          }))}
-        />
+        <Sidepanel/>
         <Container>
           <>
             <Outlet />

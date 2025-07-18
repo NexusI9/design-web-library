@@ -31,7 +31,7 @@ export const Language = () => {
           <Icon size="SMALL" icon={ChevronDownIcon} />
         </Button>
       </ComboBox.Trigger>
-      <ComboBox.Content id="sidepanel_lang" className="flex f-col gap-m">
+      <ComboBox.Content id="sidepanel_lang" className="flex f-col gap-l">
         {langMap.map(({ label, lang }) => (
           <Button
             key={`switchlang${lang}`}
