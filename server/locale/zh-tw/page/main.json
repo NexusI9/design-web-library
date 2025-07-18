@@ -1,6 +1,7 @@
 [
   {
     "label": "首頁",
+    "component": "RESOURCE",
     "path": "/",
     "icon": "home",
     "props": {
@@ -14,6 +15,7 @@
   },
   {
     "label": "範本",
+    "component": "RESOURCE",
     "path": "/templates",
     "icon": "layout",
     "props": {
@@ -27,6 +29,7 @@
   },
   {
     "label": "模組",
+    "component": "RESOURCE",
     "path": "/modules",
     "icon": "grid",
     "props": {
@@ -40,6 +43,7 @@
   },
   {
     "label": "文件",
+    "component": "RESOURCE",
     "path": "/documents",
     "icon": "file-text",
     "props": {
@@ -53,6 +57,7 @@
   },
   {
     "label": "外掛",
+    "component": "RESOURCE",
     "path": "/plugins",
     "icon": "puzzle",
     "props": {

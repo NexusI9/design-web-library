@@ -29,7 +29,6 @@ export interface IEmbedModule extends IPageHeader {
 type TEmbedModuleActions = IButton & IIcon;
 
 export default ({ frames, title, subtitle }: IEmbedModule) => {
-
   const searchParams = useSearch({ strict: false });
 
   const buttonsArray: (module: string) => TEmbedModuleActions[] = (
