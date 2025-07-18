@@ -31,24 +31,31 @@ function resolve_array(&$entries){
     
     // traverse array
     foreach($entries as &$entry){
-        // traverse map array
-        foreach($resolve_map as $key => $callback){
 
-            // if input array has a key from the map
-            // edge case for DOWNLOAD link, need to check if link type if Download first before resolving
-            if(
-                ($key == "href"
-                 && isset($entry["link"])
-                 && $entry["link"] == "DOWNLOAD")
+        if (is_array($entry)) {
+            resolve_array($entry);
+        } 
+
+        if(is_array($entry) && array_values($entry) !== $entry){
+            // traverse map array
+            foreach ($resolve_map as $key => $callback) {
+                // if input array has a key from the map
+                // edge case for DOWNLOAD link, need to check if link type if Download first before resolving
+                if (
+                    ($key == "href"
+                        && isset($entry["link"])
+                        && $entry["link"] == "DOWNLOAD")
                     || ($key != "href"
-                        && isset($entry[$key])) ){
-                
-                // execute callback with emtry relative value
-                $entry[$key] = $callback($entry[$key]);
-            }
-            
+                        && isset($entry[$key]))
+                ) {
 
+                    // execute callback with emtry relative value
+                    $entry[$key] = $callback($entry[$key]);
+                }
+            }
         }
+        
+
     }
 
     unset($entry);
