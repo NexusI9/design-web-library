@@ -5,7 +5,6 @@
     "type": "PLUGIN",
     "resource_id": 3,
     "tag_id": 8,
-    "link": "EXTERNAL",
     "href": "https://www.figma.com/community/plugin/1292924330904373989/style-studio",
     "picture": "figstyle"
   },
@@ -15,7 +14,6 @@
     "type": "PLUGIN",
     "resource_id": 3,
     "tag_id": 8,
-    "link": "EXTERNAL",
     "href": "https://www.figma.com/community/plugin/1410886529149123027/site-mapper",
     "picture": "figmp"
   },
@@ -25,7 +23,6 @@
     "type": "PLUGIN",
     "resource_id": 3,
     "tag_id": 8,
-    "link": "EXTERNAL",
     "href": "https://www.figma.com/community/plugin/736000994034548392/lorem-ipsum-by-divriots",
     "picture": "figlorem"
   },
@@ -35,7 +32,6 @@
     "type": "PLUGIN",
     "resource_id": 3,
     "tag_id": 8,
-    "link": "EXTERNAL",
     "href": "https://www.figma.com/community/plugin/735098390272716381/iconify",
     "picture": "figiconify"
   },
@@ -45,7 +41,6 @@
     "type": "PLUGIN",
     "resource_id": 3,
     "tag_id": 8,
-    "link": "EXTERNAL",
     "href": "https://www.figma.com/community/plugin/889676455045507628/shadow-maker",
     "picture": "figshadow"
   },
@@ -55,7 +50,6 @@
     "type": "PLUGIN",
     "resource_id": 3,
     "tag_id": 8,
-    "link": "EXTERNAL",
     "href": "https://www.figma.com/community/plugin/937590329004798392",
     "picture": "figsnap"
   }

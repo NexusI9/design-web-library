@@ -5,8 +5,7 @@
     "type": "MODULE",
     "resource_id": 2,
     "tag_id": 13,
-    "link": "INTERNAL",
-    "href": "modules/glm/slideshow",
+    "href": "/modules/glm/slideshow",
     "picture": "glslide"
   },
   {
@@ -15,8 +14,7 @@
     "type": "MODULE",
     "resource_id": 2,
     "tag_id": 13,
-    "link": "INTERNAL",
-    "href": "modules/glm/carousel",
+    "href": "/modules/glm/carousel",
     "picture": "glcarousel"
   }
 ]

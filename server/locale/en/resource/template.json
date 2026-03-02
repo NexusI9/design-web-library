@@ -5,7 +5,6 @@
     "type": "TEMPLATE",
     "resource_id": 4,
     "tag_id": 8,
-    "link": "EXTERNAL",
     "href": "https://www.figma.com/design/Sw2qQx58Y4g9aq1fAaKoHP/Starter-Web-Project?m=auto&t=sQrGlZKUdVVDul14-6",
     "picture": "figstarter"
   },
@@ -15,7 +14,6 @@
     "type": "TEMPLATE",
     "resource_id": 4,
     "tag_id": 8,
-    "link": "EXTERNAL",
     "href": "https://www.figma.com/design/VWUwkZwlJz46AZjrodDRY8/Template---Wireframe-Pack?m=auto&t=sQrGlZKUdVVDul14-6",
     "picture": "figwire"
   },
@@ -25,7 +23,6 @@
     "type": "TEMPLATE",
     "resource_id": 4,
     "tag_id": 8,
-    "link": "EXTERNAL",
     "href": "https://www.figma.com/design/AfpDFM8h88eya7hAJLp1OA/Proposal-References?m=auto&t=sQrGlZKUdVVDul14-6",
     "picture": "figppref"
   },
@@ -35,7 +32,6 @@
     "type": "TEMPLATE",
     "resource_id": 4,
     "tag_id": 9,
-    "link": "DOWNLOAD",
     "href": "Starter_Project.xd",
     "picture": "xdstarter"
   },
@@ -45,7 +41,6 @@
     "type": "TEMPLATE",
     "resource_id": 4,
     "tag_id": 9,
-    "link": "DOWNLOAD",
     "href": "HTML_Template.xd",
     "picture": "xdhtml"
   },
@@ -55,7 +50,6 @@
     "type": "TEMPLATE",
     "resource_id": 4,
     "tag_id": 9,
-    "link": "DOWNLOAD",
     "href": "GDPR_Template.xd",
     "picture": "xdgdpr"
   },
@@ -65,7 +59,6 @@
     "type": "TEMPLATE",
     "resource_id": 4,
     "tag_id": 10,
-    "link": "DOWNLOAD",
     "href": "Design_Proposal.pptx",
     "picture": "pptpresent"
   },
@@ -75,7 +68,6 @@
     "type": "TEMPLATE",
     "resource_id": 4,
     "tag_id": 10,
-    "link": "DOWNLOAD",
     "href": "BugList_Client_Date.pptx",
     "picture": "pptbug"
   }

@@ -13,7 +13,7 @@ const path = require("path");
 
 // dev only
 const dev = (mode) =>
-  mode == "production"
+  mode == "development"
     ? {
         devtool: devtool(mode),
         devServer,
@@ -32,7 +32,7 @@ module.exports = (_, argv) => ({
 
   output: {
     filename: "[name].js",
-    path: path.resolve(__dirname, "./server/public"), // Compile into a folder called "dist"
+    path: path.resolve(__dirname, "./server/public"),
     clean: false,
     publicPath: "auto",
   },

@@ -1,5 +1,7 @@
 <?php
 
+require __DIR__ . '/env.php';
+
 /**
   TEMPORARY
   In the meantime of having a proper backend implementation the function
@@ -22,8 +24,23 @@ function resource_filename_from_id($id){
 }
 
 function base_url(){
-    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https" : "http";
-    $host = $_SERVER['HTTP_HOST'];
-    $base_url = $protocol . "://" . $host;
-    return $base_url;
+    // $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https" : "http";
+    // $host = $_SERVER['HTTP_HOST'];
+    // $base_url = $protocol . "://" . $host;
+    return $_ENV['CLIENT_URL'];
+}
+
+/*
+  - http://myresources.com -> start with HTTP -> EXTERNAL
+  - myresource.docx -> ends with .ext -> FILE
+  - myresrouce -> INTERNAL path 
+ */
+function get_url_type($url){
+    if (str_starts_with($url, 'http')) {
+        return 'EXTERNAL';
+    } elseif (preg_match('/\.[a-zA-Z0-9]+$/', $url)) {
+        return 'FILE';
+    } else {
+        return 'INTERNAL';
+    }
 }

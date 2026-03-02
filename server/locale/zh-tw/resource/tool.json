@@ -5,7 +5,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 7,
-    "link": "EXTERNAL",
     "href": "https://chatgpt.com/",
     "picture": "chatgpt"
   },
@@ -15,7 +14,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 7,
-    "link": "EXTERNAL",
     "href": "https://www.adobe.com/tw/products/firefly.html",
     "picture": "firefly"
   },
@@ -25,7 +23,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 2,
-    "link": "EXTERNAL",
     "href": "https://farbvelo.elastiq.ch/",
     "picture": "farbvelo"
   },
@@ -35,7 +32,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 2,
-    "link": "EXTERNAL",
     "href": "https://huemint.com/brand-intersection/",
     "picture": "huemint"
   },
@@ -45,7 +41,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 2,
-    "link": "EXTERNAL",
     "href": "https://icolorpalette.com/",
     "picture": "icolorpalette"
   },
@@ -55,7 +50,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 2,
-    "link": "EXTERNAL",
     "href": "https://randoma11y.com/",
     "picture": "randoma11y"
   },
@@ -65,7 +59,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 2,
-    "link": "EXTERNAL",
     "href": "https://coolors.co/",
     "picture": "coolors"
   },
@@ -75,7 +68,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 2,
-    "link": "EXTERNAL",
     "href": "https://colordesigner.io/",
     "picture": "colordesigner"
   },
@@ -85,7 +77,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 1,
-    "link": "EXTERNAL",
     "href": "https://designsystemsrepo.com/",
     "picture": "ddsrepo"
   },
@@ -95,7 +86,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 1,
-    "link": "EXTERNAL",
     "href": "https://component.gallery/",
     "picture": "compgallery"
   },
@@ -105,7 +95,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 1,
-    "link": "EXTERNAL",
     "href": "https://typescale.com/",
     "picture": "typescale"
   },
@@ -115,7 +104,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 1,
-    "link": "EXTERNAL",
     "href": "https://toolfolio.io/",
     "picture": "toolfolio"
   },
@@ -125,7 +113,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 3,
-    "link": "EXTERNAL",
     "href": "https://www.poussetafonte.com/",
     "picture": "pousse"
   },
@@ -135,7 +122,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 3,
-    "link": "EXTERNAL",
     "href": "https://fonts.google.com/",
     "picture": "googlefont"
   },
@@ -145,7 +131,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 3,
-    "link": "EXTERNAL",
     "href": "https://www.fontshare.com/",
     "picture": "fontshare"
   },
@@ -155,7 +140,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 3,
-    "link": "EXTERNAL",
     "href": "https://velvetyne.fr/",
     "picture": "velvetyne"
   },
@@ -165,7 +149,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 3,
-    "link": "EXTERNAL",
     "href": "https://usemodify.com/",
     "picture": "usemodify"
   },
@@ -175,7 +158,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 4,
-    "link": "EXTERNAL",
     "href": "https://svgl.app/",
     "picture": "svgl"
   },
@@ -185,7 +167,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 4,
-    "link": "EXTERNAL",
     "href": "https://simpleicons.org/",
     "picture": "simpleicons"
   },
@@ -195,7 +176,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 4,
-    "link": "EXTERNAL",
     "href": "https://www.untitledui.com/icons",
     "picture": "untitledicons"
   },
@@ -205,7 +185,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 4,
-    "link": "EXTERNAL",
     "href": "https://phosphoricons.com/",
     "picture": "phosphor"
   },
@@ -215,7 +194,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 4,
-    "link": "EXTERNAL",
     "href": "https://sargamicons.com/",
     "picture": "sargam"
   },
@@ -225,7 +203,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 4,
-    "link": "EXTERNAL",
     "href": "https://feathericons.com/",
     "picture": "feather"
   },
@@ -235,7 +212,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 4,
-    "link": "EXTERNAL",
     "href": "https://tabler.io/icons",
     "picture": "tabler"
   },
@@ -245,7 +221,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 4,
-    "link": "EXTERNAL",
     "href": "https://heroicons.com/",
     "picture": "hero"
   },
@@ -255,7 +230,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 4,
-    "link": "EXTERNAL",
     "href": "https://iconoir.com/",
     "picture": "iconoir"
   },
@@ -265,7 +239,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 4,
-    "link": "EXTERNAL",
     "href": "https://iconic.app/",
     "picture": "iconic"
   },
@@ -275,7 +248,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 4,
-    "link": "EXTERNAL",
     "href": "https://glyphs.fyi/",
     "picture": "glyphs"
   },
@@ -285,7 +257,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 4,
-    "link": "EXTERNAL",
     "href": "https://atlasicons.vectopus.com/",
     "picture": "atlasicons"
   },
@@ -295,7 +266,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 5,
-    "link": "EXTERNAL",
     "href": "https://www.gettyimages.hk/",
     "picture": "getty"
   },
@@ -305,7 +275,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 5,
-    "link": "EXTERNAL",
     "href": "https://unsplash.com/",
     "picture": "unsplash"
   },
@@ -315,7 +284,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 5,
-    "link": "EXTERNAL",
     "href": "https://pixabay.com/",
     "picture": "pixabay"
   },
@@ -325,7 +293,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 5,
-    "link": "EXTERNAL",
     "href": "https://www.pexels.com/",
     "picture": "pexels"
   },
@@ -335,7 +302,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 6,
-    "link": "EXTERNAL",
     "href": "http://guidetouxr.com/",
     "picture": "guideux"
   },
@@ -345,7 +311,6 @@
     "type": "TOOL",
     "resource_id": 5,
     "tag_id": 6,
-    "link": "EXTERNAL",
     "href": "https://lawsofux.com/",
     "picture": "lawsux"
   }

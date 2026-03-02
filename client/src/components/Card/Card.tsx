@@ -1,3 +1,4 @@
+import { urlType } from "@lib/utils";
 import "./Card.scss";
 import { Link } from "@tanstack/react-router";
 import { createElement, ReactNode } from "react";
@@ -7,14 +8,12 @@ export interface ICard {
   description: string;
   type: "TOOL" | "TEMPLATE" | "MODULE" | "DOCUMENT" | "PLUGIN";
   tag: number;
-  link: "EXTERNAL" | "DOWNLOAD" | "INTERNAL";
   href: string;
   picture: string;
 }
 
 interface ICardLinkElement {
   href: ICard["href"];
-  link: ICard["link"];
   children: ReactNode;
 }
 
@@ -24,11 +23,11 @@ interface ICardContent {
   description: ICard["description"];
 }
 
-const AnchorElement = ({ href, link, children }: ICardLinkElement) => (
+const AnchorElement = ({ href, children }: ICardLinkElement) => (
   <a
     className="card round"
     href={href}
-    {...(link == "EXTERNAL" && { target: "_blank" })}
+    {...(urlType(href) == "EXTERNAL" && { target: "_blank" })}
   >
     {children}
   </a>
@@ -60,16 +59,15 @@ export default ({
   description,
   type,
   tag,
-  link,
   href,
   picture,
 }: ICard) => {
-  const LinkElement = link == "INTERNAL" ? RouterElement : AnchorElement;
+  const LinkElement = urlType(href) == "INTERNAL" ? RouterElement : AnchorElement;
   const LinkContent = createElement(CardContent, {
     picture,
     title,
     description,
   });
 
-  return createElement(LinkElement, { href, link, children: LinkContent });
+  return createElement(LinkElement, { href, children: LinkContent });
 };

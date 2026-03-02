@@ -18,7 +18,7 @@ $route_controller = new Route_Controller();
   Rest API structure:
 
 
-                                                                     .-------------------------.
+                                                                     .--------------------------.
   .----------.       .---------.      .-----------.            .-----|  Controller A  |  Func ß |
   |  client  | ---> |  api.php | ---> |   Router  | - [GET] --|      |----------------|---------|
   '----------'      '---------'       '-----------'           '------|  Controller B  |  Func ∂ |

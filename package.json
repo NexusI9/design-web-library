@@ -4,9 +4,6 @@
   "description": "Your project",
   "main": "index.js",
   "scripts": {
-    "php": "php -q -S localhost:8000 -t ../server/public",
-    "dev": "npm run php & npx webpack serve",
-    "build": "webpack --mode=production",
     "build:watch": "webpack --mode=development --watch --progress"
   },
   "author": "",

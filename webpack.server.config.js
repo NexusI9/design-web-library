@@ -1,3 +1,7 @@
+/*
+  Configuration only used to compile the 3D/ GLSL modules into the server/public folder.
+ */
+
 // configs
 const devtool = require("./config/devtool.config");
 const mode = require("./config/mode.config");

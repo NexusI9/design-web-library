@@ -52,8 +52,11 @@ export default ({ frames, title, subtitle }: IEmbedModule) => {
 
   // update iframe params on search param changes
   const frameUrlParam = (url: string, param: Record<string, string>) => {
-    return `${url}?${new URLSearchParams(param).toString()}`;
+    return `${process.env.SERVER_URL}${url}?${new URLSearchParams(param).toString()}`;
   };
+
+  // DEBUG
+  console.log({ frames });
 
   return (
     <div className="flex f-col gap-3xl">

@@ -26,39 +26,30 @@ function resolve_array(&$entries){
         "icon" => 'resolve_icon',
         "banner" => 'resolve_page_banner',
         "picture" => 'resolve_resource_thumbnail',
-        "href" => 'resolve_upload'
+        "href" => 'resolve_href'
     );
     
     // traverse array
     foreach($entries as &$entry){
 
-        if (is_array($entry)) {
+        if (is_array($entry)) 
             resolve_array($entry);
-        } 
+        
 
-        if(is_array($entry) && array_values($entry) !== $entry){
+        if(is_array($entry) && array_values($entry) !== $entry){            
             // traverse map array
             foreach ($resolve_map as $key => $callback) {
-                // if input array has a key from the map
-                // edge case for DOWNLOAD link, need to check if link type if Download first before resolving
-                if (
-                    ($key == "href"
-                        && isset($entry["link"])
-                        && $entry["link"] == "DOWNLOAD")
-                    || ($key != "href"
-                        && isset($entry[$key]))
-                ) {
-
+                if(isset($entry[$key])) {
                     // execute callback with emtry relative value
                     $entry[$key] = $callback($entry[$key]);
                 }
-            }
+            }   
         }
-        
 
     }
-
+        
     unset($entry);
+
 }
 
 /**
@@ -84,6 +75,20 @@ function resolve_icon($filename){
 /**
   Returns the path directory for downloadable resources
  */
-function resolve_upload($filename){
-    return base_url()."/uploads/documents/$filename";
+function resolve_href($filename){
+
+    $type = get_url_type($filename);
+    
+    if($type == "FILE")
+        return base_url()."/uploads/documents/$filename";
+        
+    return $filename;
+}
+
+
+/**
+  Returns the path directory for GLM modules
+ */
+function resolve_module($filename){
+    return base_url()."/modules/glm/$filename/index.php";
 }

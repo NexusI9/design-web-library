@@ -5,7 +5,6 @@
     "type": "TEMPLATE",
     "resource_id": 1,
     "tag_id": 11,
-    "link": "DOWNLOAD",
     "href": "Product_Requirements_Document.xlsm",
     "picture": "prd"
   },
@@ -15,7 +14,6 @@
     "type": "TEMPLATE",
     "resource_id": 1,
     "tag_id": 11,
-    "link": "DOWNLOAD",
     "href": "yymmdd_Project_name_購圖清單.docx",
     "picture": "gettylist"
   },
@@ -25,7 +23,6 @@
     "type": "TEMPLATE",
     "resource_id": 1,
     "tag_id": 12,
-    "link": "DOWNLOAD",
     "href": "GDPR_常態樣式規則_v2.0.docx",
     "picture": "gdprguide"
   },
@@ -35,7 +32,6 @@
     "type": "TEMPLATE",
     "resource_id": 1,
     "tag_id": 12,
-    "link": "DOWNLOAD",
     "href": "Akacia_Figma_Documentation.docx",
     "picture": "figdocen"
   },
@@ -45,7 +41,6 @@
     "type": "TEMPLATE",
     "resource_id": 1,
     "tag_id": 12,
-    "link": "DOWNLOAD",
     "href": "阿卡希亞Figma文件.docx",
     "picture": "figdoczh"
   },
@@ -55,7 +50,6 @@
     "type": "TEMPLATE",
     "resource_id": 1,
     "tag_id": 6,
-    "link": "DOWNLOAD",
     "href": "Usability_Test_SUS.xlsm",
     "picture": "usatest"
   },
@@ -65,7 +59,6 @@
     "type": "TEMPLATE",
     "resource_id": 1,
     "tag_id": 6,
-    "link": "DOWNLOAD",
     "href": "Usability_Test_Report.docx",
     "picture": "usadoc"
   }

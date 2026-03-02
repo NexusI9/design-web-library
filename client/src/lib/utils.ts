@@ -41,3 +41,21 @@ export const langRedirect = (location: string) => {
     });
   }
 };
+
+export const urlType = (url:string) => {
+  if (!url) return 'INTERNAL'; // fallback for empty href
+
+  // External: starts with http or https
+  if (url.startsWith('http://') || url.startsWith('https://')) {
+    return 'EXTERNAL';
+  }
+
+  // File: has an extension like .xd, .pptx, .zip
+  // This regex looks for a dot followed by 1+ alphanumeric characters at the end
+  if (/\.[a-zA-Z0-9]+$/.test(url)) {
+    return 'FILE';
+  }
+
+  // Otherwise, assume internal route/link
+  return 'INTERNAL';
+}
