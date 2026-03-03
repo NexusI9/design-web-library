@@ -5,7 +5,7 @@ if(isset($_GET["module"])){
 
     $zip_exclude_files = ["index.php", ".DS_Store"];
     $module = $_GET["module"];
-    $dirPath= __DIR__ . "/../public/modules/glm/$module";
+    $dirPath= __DIR__ . "/../public/$module";
     
     // Create HTML from PHP Template and parameters
     $module_template = $dirPath . "/index.php";

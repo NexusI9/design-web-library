@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "Your project",
   "main": "index.js",
-  "scripts": {
-    "build:watch": "webpack --mode=development --watch --progress"
-  },
+  "scripts": {},
   "author": "",
   "license": "",
   "devDependencies": {

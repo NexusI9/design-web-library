@@ -16,7 +16,7 @@ export const Root = () => {
 
   useEffect(() => {
     // fetch main route
-    fetch(`${process.env.API_URL}/${lang}/routes/page/main`)
+    fetch(`${process.env.API_URL}/${lang}/routes/page/resource`)
       .then((r) => r.json())
       .then(setItems);
   }, [lang]);

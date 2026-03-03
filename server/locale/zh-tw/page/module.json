@@ -1,6 +1,6 @@
 [
   {
-    "path": "modules/glm/slideshow",
+    "path": "modules/elite/slideshow",
     "component": "MODULE",
     "props": {
       "title": "投影片播放",
@@ -8,7 +8,7 @@
       "frames": [
         {
           "module": "slideshow",
-          "url": "/modules/glm/slideshow/index.php",
+          "url": "/modules/elite/slideshow/index.php",
           "inputs": [
             {
               "type": "INPUT_NUMBER",
@@ -55,7 +55,7 @@
     }
   },
   {
-    "path": "modules/glm/carousel",
+    "path": "modules/elite/carousel",
     "component": "MODULE",
     "props": {
       "title": "輪播",
@@ -63,7 +63,7 @@
       "frames": [
         {
           "module": "carousel",
-          "url": "/modules/glm/carousel/index.php",
+          "url": "/modules/elite/carousel/index.php",
           "inputs": [
             {
               "type": "INPUT_SELECT",

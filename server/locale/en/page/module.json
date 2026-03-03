@@ -1,14 +1,14 @@
 [
   {
-    "path": "modules/glm/slideshow",
+    "path": "modules/elite/slideshow",
     "component": "MODULE",
     "props": {
-      "title": "Slideshow",
-      "subtitle": "Customizable slideshow with unique transitions.",
+      "title": "Slideshows",
+      "subtitle": "Customizable slideshows with unique transitions.",
       "frames": [
         {
-          "module": "slideshow",
-          "url": "/modules/glm/slideshow/index.php",
+	  "name":"Slideshow",
+          "url": "/modules/elite/slideshow/index.php",
           "inputs": [
             {
               "type": "INPUT_NUMBER",
@@ -55,15 +55,15 @@
     }
   },
   {
-    "path": "modules/glm/carousel",
+    "path": "modules/elite/carousel",
     "component": "MODULE",
     "props": {
-      "title": "Carousel",
+      "title": "Carousels",
       "subtitle": "Customizable carousels with 2D or 3D rotations.",
       "frames": [
         {
-          "module": "carousel",
-          "url": "/modules/glm/carousel/index.php",
+	  "name":"Carousel",
+          "url": "/modules/elite/carousel/index.php",
           "inputs": [
             {
               "type": "INPUT_SELECT",
@@ -137,6 +137,54 @@
               "targetAttribute": "data-invert-drag"
             }
           ]
+        }
+      ]
+    }
+  },
+  {
+    "path": "modules/core/news",
+    "component": "MODULE",
+    "props": {
+      "title": "News",
+      "subtitle": "News sections including interactive cards and filtering components.",
+      "frames": [
+        {
+	  "name":"Flash",
+          "url": "/modules/core/news/flash/index.html",
+          "inputs": []
+        },
+	{
+	  "name":"Flow",
+          "url": "/modules/core/news/flow/index.html",
+          "inputs": []
+        },       {
+	  "name":"Storyteller",
+          "url": "/modules/core/news/storyteller/index.html",
+          "inputs": []
+        }
+      ]
+    }
+  },
+    {
+    "path": "modules/core/milestones",
+    "component": "MODULE",
+    "props": {
+      "title": "Milestones",
+      "subtitle": "Customizable slideshow with unique transitions.",
+      "frames": [
+        {
+	  "name":"Pathway",
+          "url": "/modules/core/milestones/pathway/index.html",
+          "inputs": []
+        },
+	{
+	  "name":"Deck",
+          "url": "/modules/core/milestones/deck/index.html",
+          "inputs": []
+        },       {
+	  "name":"Moment",
+          "url": "/modules/core/milestones/moment/index.html",
+          "inputs": []
         }
       ]
     }

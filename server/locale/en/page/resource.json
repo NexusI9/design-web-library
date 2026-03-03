@@ -35,7 +35,7 @@
     "icon": "grid",
     "props": {
       "resource_id": 2,
-      "filter": false,
+      "filter": true,
       "header": {
         "title": "Modules",
         "subtitle": "The interactive library gathering all kinds of engaging visual effects"

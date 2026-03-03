@@ -16,7 +16,7 @@ const path = require("path");
 const outdir = (moduleName, fileName) =>
   `modules/glm/${moduleName}/dist/${fileName}`;
 const indir = (moduleName, fileName) =>
-  `./client/src/components/Modules/glm/${moduleName}/${fileName}`;
+  `./client/src/components/Modules/elite/${moduleName}/${fileName}`;
 
 module.exports = (env, argv) => ({
   mode: mode(argv.mode),

@@ -1,16 +1,71 @@
 [
-  { "id": 0, "name": "All" },
-  { "id": 1, "name": "Design System", "icon": "module" },
-  { "id": 2, "name": "Color", "icon": "paint" },
-  { "id": 3, "name": "Foundry", "icon": "type" },
-  { "id": 4, "name": "Iconography", "icon": "image" },
-  { "id": 5, "name": "Stock", "icon": "camera" },
-  { "id": 6, "name": "UX", "icon": "click" },
-  { "id": 7, "name": "AI", "icon": "ai" },
-  { "id": 8, "name": "Figma" },
-  { "id": 9, "name": "Adobe XD" },
-  { "id": 10, "name": "Powerpoint" },
-  { "id": 11, "name": "Management", "icon": "management" },
-  { "id": 12, "name": "Documentation", "icon": "glasses" },
-  { "id": 13, "name": "GL Modules" }
+	{
+		"id": 0,
+		"name": "All"
+	},
+	{
+		"id": 1,
+		"name": "Design System",
+		"icon": "module"
+	},
+	{
+		"id": 2,
+		"name": "Color",
+		"icon": "paint"
+	},
+	{
+		"id": 3,
+		"name": "Foundry",
+		"icon": "type"
+	},
+	{
+		"id": 4,
+		"name": "Iconography",
+		"icon": "image"
+	},
+	{
+		"id": 5,
+		"name": "Stock",
+		"icon": "camera"
+	},
+	{
+		"id": 6,
+		"name": "UX",
+		"icon": "click"
+	},
+	{
+		"id": 7,
+		"name": "AI",
+		"icon": "ai"
+	},
+	{
+		"id": 8,
+		"name": "Figma"
+	},
+	{
+		"id": 9,
+		"name": "Adobe XD"
+	},
+	{
+		"id": 10,
+		"name": "Powerpoint"
+	},
+	{
+		"id": 11,
+		"name": "Management",
+		"icon": "management"
+	},
+	{
+		"id": 12,
+		"name": "Documentation",
+		"icon": "glasses"
+	},
+	{
+		"id": 13,
+		"name": "Core Modules"
+	},
+	{
+		"id": 14,
+		"name": "Elite Modules"
+	}
 ]
