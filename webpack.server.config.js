@@ -14,7 +14,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 
 const outdir = (moduleName, fileName) =>
-  `modules/glm/${moduleName}/dist/${fileName}`;
+  `modules/elite/${moduleName}/dist/${fileName}`;
 const indir = (moduleName, fileName) =>
   `./client/src/components/Modules/elite/${moduleName}/${fileName}`;
 

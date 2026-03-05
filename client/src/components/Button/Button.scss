@@ -37,6 +37,12 @@
     background: transparent;
     &:hover {
       color: var(--color-brand-primary-500);
-    }
+    } 
+  }
+
+  &[data-size=SMALL]{
+       height: var(--size-height-input-small);
+       padding: 0 var(--space-extra-large);
+       font-size: 0.75rem;
   }
 }

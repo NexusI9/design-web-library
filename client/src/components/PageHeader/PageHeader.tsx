@@ -16,7 +16,7 @@ export default ({ title, subtitle, picture }: IPageHeader) => (
         <img className="bd-radius-l" src={picture} />
       </div>
     )}
-    {title && <h1 className="heading-4">{title}</h1>}
+    {title && <h1 className="heading-3">{title}</h1>}
     {subtitle && <h2 className="heading-5">{subtitle}</h2>}
   </header>
 );

@@ -1,5 +1,23 @@
 .embed-module {
-  &-iframe {
+
+    &-frames-container{
+	display:grid;
+	gap: var(--space-extra-large-6) var(--space-extra-large-4);
+
+
+	/* If container has 2 or more children → 2 columns */
+	&:has(> :nth-child(2)) {
+	    grid-template-columns: repeat(2, 1fr);
+	}
+
+	/* If only 1 child → full width (1 column) */
+	&:not(:has(> :nth-child(2))) {
+	    grid-template-columns: 1fr;
+	}
+	
+    }
+    
+    &-iframe {
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 9;
@@ -9,7 +27,20 @@
   }
 
   &-header {
-    z-index: 1;
+      z-index: 1;
+
+      &-title{
+	  display: flex;
+	  flex-direction:row;
+	  gap: var(--space-medium);
+	  align-items: center;
+	  cursor:pointer;
+	  transition: color, fill, stroke, 150ms linear;
+	  &:hover{
+	      color: var(--color-brand-primary-500);
+	  }
+	  
+      }
   }
 
   &-frame {
