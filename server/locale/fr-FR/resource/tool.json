@@ -1,0 +1,177 @@
+[
+  {
+    "title": "[fr-FR] ChatGPT",
+    "description": "[fr-FR] Useful for many productivity related task (copywriting, user persona generation etc.)",
+    "picture": "[fr-FR] chatgpt"
+  },
+  {
+    "title": "[fr-FR] Adobe Firefly",
+    "description": "[fr-FR] Text 2 Image tool, interesting for concept design brainstorms",
+    "picture": "[fr-FR] firefly"
+  },
+  {
+    "title": "[fr-FR] Farbvelo",
+    "description": "[fr-FR] Generate harmonious color swatch.",
+    "picture": "[fr-FR] farbvelo"
+  },
+  {
+    "title": "[fr-FR] Huemint",
+    "description": "[fr-FR] Create color swatch and see their direct application on various format and mediums.",
+    "picture": "[fr-FR] huemint"
+  },
+  {
+    "title": "[fr-FR] iColorPalette",
+    "description": "[fr-FR] Explore trendy swatch and generate color swatch.",
+    "picture": "[fr-FR] icolorpalette"
+  },
+  {
+    "title": "[fr-FR] Randoma11y",
+    "description": "[fr-FR] Generate random palettes based on Accessibility ratio.",
+    "picture": "[fr-FR] randoma11y"
+  },
+  {
+    "title": "[fr-FR] Coolors",
+    "description": "[fr-FR] Generate color swatch and explore harmonious palettes.",
+    "picture": "[fr-FR] coolors"
+  },
+  {
+    "title": "[fr-FR] Color Designer",
+    "description": "[fr-FR] Collection of useful tools for color generation (shades, tint).",
+    "picture": "[fr-FR] colordesigner"
+  },
+  {
+    "title": "[fr-FR] Design System Repo",
+    "description": "[fr-FR] Collections of Design Systems.",
+    "picture": "[fr-FR] ddsrepo"
+  },
+  {
+    "title": "[fr-FR] The Component Gallery",
+    "description": "[fr-FR] Collection of Components semantic and Design Systems curation.",
+    "picture": "[fr-FR] compgallery"
+  },
+  {
+    "title": "[fr-FR] Typescale",
+    "description": "[fr-FR] Generate easily font scales for design systems.",
+    "picture": "[fr-FR] typescale"
+  },
+  {
+    "title": "[fr-FR] Toolfolio",
+    "description": "[fr-FR] Useful Design Tools collection.",
+    "picture": "[fr-FR] toolfolio"
+  },
+  {
+    "title": "[fr-FR] Pousse ta fonte",
+    "description": "[fr-FR] Collection of paid and free to use Typeface Foundries.",
+    "picture": "[fr-FR] pousse"
+  },
+  {
+    "title": "[fr-FR] Google Fonts",
+    "description": "[fr-FR] Collection of free to use Typefaces.",
+    "picture": "[fr-FR] googlefont"
+  },
+  {
+    "title": "[fr-FR] Fontshare",
+    "description": "[fr-FR] Collection of free to use Typefaces.",
+    "picture": "[fr-FR] fontshare"
+  },
+  {
+    "title": "[fr-FR] Velvetyne",
+    "description": "[fr-FR] Collection of eccentric display Typefaces (most shall be free to use).",
+    "picture": "[fr-FR] velvetyne"
+  },
+  {
+    "title": "[fr-FR] Use Modify",
+    "description": "[fr-FR] Collection of eccentric display Typefaces (most shall be free to use).",
+    "picture": "[fr-FR] usemodify"
+  },
+  {
+    "title": "[fr-FR] sgvl",
+    "description": "[fr-FR] Collection of SVG logos.",
+    "picture": "[fr-FR] svgl"
+  },
+  {
+    "title": "[fr-FR] Simple icons",
+    "description": "[fr-FR] Collection of SVG logos along with the brand primary color.",
+    "picture": "[fr-FR] simpleicons"
+  },
+  {
+    "title": "[fr-FR] Untitled UI Icons",
+    "description": "[fr-FR] Icon Library.",
+    "picture": "[fr-FR] untitledicons"
+  },
+  {
+    "title": "[fr-FR] Phosphor Icons",
+    "description": "[fr-FR] Icon Library.",
+    "picture": "[fr-FR] phosphor"
+  },
+  {
+    "title": "[fr-FR] Sargam Icons",
+    "description": "[fr-FR] Icon Library with style declination (outlined, shaded, solid).",
+    "picture": "[fr-FR] sargam"
+  },
+  {
+    "title": "[fr-FR] Feather Icons",
+    "description": "[fr-FR] Icon Library.",
+    "picture": "[fr-FR] feather"
+  },
+  {
+    "title": "[fr-FR] Tabler Icons",
+    "description": "[fr-FR] Icon Library.",
+    "picture": "[fr-FR] tabler"
+  },
+  {
+    "title": "[fr-FR] Hero Icons",
+    "description": "[fr-FR] Icon Library.",
+    "picture": "[fr-FR] hero"
+  },
+  {
+    "title": "[fr-FR] Iconoir",
+    "description": "[fr-FR] Icon Library.",
+    "picture": "[fr-FR] iconoir"
+  },
+  {
+    "title": "[fr-FR] Iconic",
+    "description": "[fr-FR] Icon Library.",
+    "picture": "[fr-FR] iconic"
+  },
+  {
+    "title": "[fr-FR] Glyphs",
+    "description": "[fr-FR] Colored Icon Library.",
+    "picture": "[fr-FR] glyphs"
+  },
+  {
+    "title": "[fr-FR] Atlas Icons",
+    "description": "[fr-FR] Icon Library.",
+    "picture": "[fr-FR] atlasicons"
+  },
+  {
+    "title": "[fr-FR] Getty Images",
+    "description": "[fr-FR] Collection of professionals stock picture.",
+    "picture": "[fr-FR] getty"
+  },
+  {
+    "title": "[fr-FR] Unsplash",
+    "description": "[fr-FR] Collection of free to use pictures, mostly focused on real life photography.",
+    "picture": "[fr-FR] unsplash"
+  },
+  {
+    "title": "[fr-FR] Pixabay",
+    "description": "[fr-FR] Collection of free to use pictures.",
+    "picture": "[fr-FR] pixabay"
+  },
+  {
+    "title": "[fr-FR] Pexels",
+    "description": "[fr-FR] Collection of free to use pictures and videos.",
+    "picture": "[fr-FR] pexels"
+  },
+  {
+    "title": "[fr-FR] Guide to User Research (UXR)",
+    "description": "[fr-FR] Corpus of UX research methodologies.",
+    "picture": "[fr-FR] guideux"
+  },
+  {
+    "title": "[fr-FR] Laws of UX",
+    "description": "[fr-FR] Fundamental rules in UX.",
+    "picture": "[fr-FR] lawsux"
+  }
+]

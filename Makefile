@@ -15,3 +15,7 @@ build:
 # Compile server modules
 build-modules:
 	npx webpack --config webpack.server.config.js
+
+translate:
+	npx tsx  ./tools/translator/translator.ts
+

@@ -1,0 +1,44 @@
+[
+  {
+    "title": "[fr-FR] Project Requirements Document (PRD)",
+    "description": "[fr-FR] The document to gather project's overview including technical scopes, design resources as well as persona profiles.",
+    "href": "[fr-FR] Product_Requirements_Document.xlsm",
+    "picture": "[fr-FR] prd"
+  },
+  {
+    "title": "[fr-FR] Getty Assets List",
+    "description": "[fr-FR] The table to gather all the getty assets used in a projects before final confirmation of purchase.",
+    "href": "[fr-FR] yymmdd_Project_name_購圖清單.docx",
+    "picture": "[fr-FR] gettylist"
+  },
+  {
+    "title": "[fr-FR] GDPR Guide",
+    "description": "[fr-FR] A template including the fundamentals items for a fast and clear storybook.",
+    "href": "[fr-FR] GDPR_常態樣式規則_v2.0.docx",
+    "picture": "[fr-FR] gdprguide"
+  },
+  {
+    "title": "[fr-FR] Figma Documentation (EN)",
+    "description": "[fr-FR] The basic file for every web projects including a basic design system ready to be used.",
+    "href": "[fr-FR] Akacia_Figma_Documentation.docx",
+    "picture": "[fr-FR] figdocen"
+  },
+  {
+    "title": "[fr-FR] Figma Documentation (中文)",
+    "description": "[fr-FR] The basic file for every web projects including a basic design system ready to be used.",
+    "href": "[fr-FR] 阿卡希亞Figma文件.docx",
+    "picture": "[fr-FR] figdoczh"
+  },
+  {
+    "title": "[fr-FR] Usability Test Dashboard",
+    "description": "[fr-FR] A comprehensive document that inclue all the HTML editor available components.",
+    "href": "[fr-FR] Usability_Test_SUS.xlsm",
+    "picture": "[fr-FR] usatest"
+  },
+  {
+    "title": "[fr-FR] Usability Test Report",
+    "description": "[fr-FR] A comprehensive document that inclue all the HTML editor available components.",
+    "href": "[fr-FR] Usability_Test_Report.docx",
+    "picture": "[fr-FR] usadoc"
+  }
+]

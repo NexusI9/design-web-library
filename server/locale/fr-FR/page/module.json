@@ -1,0 +1,168 @@
+[
+  {
+    "path": "[fr-FR] modules/elite/slideshow",
+    "props": {
+      "title": "[fr-FR] Slideshows",
+      "subtitle": "[fr-FR] Customizable slideshows with unique transitions.",
+      "frames": [
+        {
+          "name": "[fr-FR] Slideshow",
+          "inputs": [
+            {
+              "label": "[fr-FR] Transition duration"
+            },
+            {
+              "label": "[fr-FR] Slide duration"
+            },
+            {
+              "label": "[fr-FR] Transition type",
+              "values": [
+                {
+                  "label": "[fr-FR] Default",
+                  "value": "[fr-FR] default"
+                },
+                {
+                  "label": "[fr-FR] Lens",
+                  "value": "[fr-FR] lens"
+                },
+                {
+                  "label": "[fr-FR] Swipe",
+                  "value": "[fr-FR] swipe"
+                },
+                {
+                  "label": "[fr-FR] Store",
+                  "value": "[fr-FR] store"
+                }
+              ]
+            },
+            {
+              "label": "[fr-FR] Navigation type",
+              "values": [
+                {
+                  "label": "[fr-FR] Default",
+                  "value": "[fr-FR] default"
+                },
+                {
+                  "label": "[fr-FR] Automatic",
+                  "value": "[fr-FR] automatic"
+                },
+                {
+                  "label": "[fr-FR] Manual",
+                  "value": "[fr-FR] manual"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "path": "[fr-FR] modules/elite/carousel",
+    "props": {
+      "title": "[fr-FR] Carousels",
+      "subtitle": "[fr-FR] Customizable carousels with 2D or 3D rotations.",
+      "frames": [
+        {
+          "name": "[fr-FR] Carousel",
+          "inputs": [
+            {
+              "label": "[fr-FR] Curve direction",
+              "values": [
+                {
+                  "label": "[fr-FR] Outward",
+                  "value": "[fr-FR] outward"
+                },
+                {
+                  "label": "[fr-FR] Inward",
+                  "value": "[fr-FR] inward"
+                },
+                {
+                  "label": "[fr-FR] Fan",
+                  "value": "[fr-FR] fan"
+                }
+              ]
+            },
+            {
+              "label": "[fr-FR] Movement direction",
+              "values": [
+                {
+                  "label": "[fr-FR] Right",
+                  "value": "[fr-FR] right"
+                },
+                {
+                  "label": "[fr-FR] Left",
+                  "value": "[fr-FR] left"
+                }
+              ]
+            },
+            {
+              "label": "[fr-FR] Picture width"
+            },
+            {
+              "label": "[fr-FR] Picture height"
+            },
+            {
+              "label": "[fr-FR] Border radius"
+            },
+            {
+              "label": "[fr-FR] Border smooth"
+            },
+            {
+              "label": "[fr-FR] Speed"
+            },
+            {
+              "label": "[fr-FR] Invert drag",
+              "values": [
+                {
+                  "label": "[fr-FR] True",
+                  "value": "[fr-FR] true"
+                },
+                {
+                  "label": "[fr-FR] False",
+                  "value": "[fr-FR] false"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "path": "[fr-FR] modules/core/news",
+    "props": {
+      "title": "[fr-FR] News",
+      "subtitle": "[fr-FR] News sections including interactive cards and filtering components.",
+      "frames": [
+        {
+          "name": "[fr-FR] Flash"
+        },
+        {
+          "name": "[fr-FR] Flow"
+        },
+        {
+          "name": "[fr-FR] Storyteller"
+        }
+      ]
+    }
+  },
+  {
+    "path": "[fr-FR] modules/core/milestones",
+    "props": {
+      "title": "[fr-FR] Milestones",
+      "subtitle": "[fr-FR] Customizable slideshow with unique transitions.",
+      "frames": [
+        {
+          "name": "[fr-FR] Pathway"
+        },
+        {
+          "name": "[fr-FR] Deck"
+        },
+        {
+          "name": "[fr-FR] Moment"
+        }
+      ]
+    }
+  }
+]

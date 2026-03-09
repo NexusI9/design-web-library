@@ -1,0 +1,47 @@
+[
+  {
+    "title": "[fr-FR] Starter Web Project",
+    "description": "[fr-FR] The basic file for every web projects including a basic design system ready to be used.",
+    "picture": "[fr-FR] figstarter"
+  },
+  {
+    "title": "[fr-FR] Wireframe",
+    "description": "[fr-FR] A useful wireframe document for all kind of website.",
+    "picture": "[fr-FR] figwire"
+  },
+  {
+    "title": "[fr-FR] Proposal references",
+    "description": "[fr-FR] A collection of various website mockups for design proposals.",
+    "picture": "[fr-FR] figppref"
+  },
+  {
+    "title": "[fr-FR] Starter Web Project",
+    "description": "[fr-FR] The basic file for every web projects including a basic design system ready to be used.",
+    "href": "[fr-FR] Starter_Project.xd",
+    "picture": "[fr-FR] xdstarter"
+  },
+  {
+    "title": "[fr-FR] HTML Editor Kit",
+    "description": "[fr-FR] A comprehensive document that inclue all the HTML editor available components.",
+    "href": "[fr-FR] HTML_Template.xd",
+    "picture": "[fr-FR] xdhtml"
+  },
+  {
+    "title": "[fr-FR] GDPR Kit",
+    "description": "[fr-FR] The GDPR module components with their different levels of functionality.",
+    "href": "[fr-FR] GDPR_Template.xd",
+    "picture": "[fr-FR] xdgdpr"
+  },
+  {
+    "title": "[fr-FR] Design Proposal",
+    "description": "[fr-FR] Your starter document for design proposals, including convenient layouts and pre animated slides.",
+    "href": "[fr-FR] Design_Proposal.pptx",
+    "picture": "[fr-FR] pptpresent"
+  },
+  {
+    "title": "[fr-FR] Bug List",
+    "description": "[fr-FR] The document for any bug listing.",
+    "href": "[fr-FR] BugList_Client_Date.pptx",
+    "picture": "[fr-FR] pptbug"
+  }
+]

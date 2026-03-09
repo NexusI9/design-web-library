@@ -2,72 +2,45 @@
   {
     "title": "網頁專案起始範本",
     "description": "適用於所有網頁專案的基本檔案，包含可直接使用的設計系統。",
-    "type": "TEMPLATE",
-    "resource_id": 4,
-    "tag_id": 8,
-    "href": "https://www.figma.com/design/Sw2qQx58Y4g9aq1fAaKoHP/Starter-Web-Project?m=auto&t=sQrGlZKUdVVDul14-6",
     "picture": "figstarter"
   },
   {
     "title": "線框稿文件",
     "description": "適用於各類網站的實用線框文件。",
-    "type": "TEMPLATE",
-    "resource_id": 4,
-    "tag_id": 8,
-    "href": "https://www.figma.com/design/VWUwkZwlJz46AZjrodDRY8/Template---Wireframe-Pack?m=auto&t=sQrGlZKUdVVDul14-6",
     "picture": "figwire"
   },
   {
     "title": "提案參考",
     "description": "各式網站模型的合集，適用於設計提案。",
-    "type": "TEMPLATE",
-    "resource_id": 4,
-    "tag_id": 8,
-    "href": "https://www.figma.com/design/AfpDFM8h88eya7hAJLp1OA/Proposal-References?m=auto&t=sQrGlZKUdVVDul14-6",
     "picture": "figppref"
   },
   {
     "title": "網頁專案起始範本",
     "description": "適用於所有網頁專案的基本檔案，包含可直接使用的設計系統。",
-    "type": "TEMPLATE",
-    "resource_id": 4,
-    "tag_id": 9,
     "href": "Starter_Project.xd",
     "picture": "xdstarter"
   },
   {
     "title": "HTML 編輯器套件",
     "description": "包含所有 HTML 編輯器可用元件的完整文件。",
-    "type": "TEMPLATE",
-    "resource_id": 4,
-    "tag_id": 9,
     "href": "HTML_Template.xd",
     "picture": "xdhtml"
   },
   {
     "title": "GDPR 套件",
     "description": "GDPR 模組組件，具備多種功能層級。",
-    "type": "TEMPLATE",
-    "resource_id": 4,
-    "tag_id": 9,
     "href": "GDPR_Template.xd",
     "picture": "xdgdpr"
   },
   {
     "title": "設計提案範本",
     "description": "設計提案專用的起始文件，內含便利版面與預設動畫投影片。",
-    "type": "TEMPLATE",
-    "resource_id": 4,
-    "tag_id": 10,
     "href": "Design_Proposal.pptx",
     "picture": "pptpresent"
   },
   {
     "title": "錯誤清單",
     "description": "用於彙整錯誤紀錄的文件。",
-    "type": "TEMPLATE",
-    "resource_id": 4,
-    "tag_id": 10,
     "href": "BugList_Client_Date.pptx",
     "picture": "pptbug"
   }

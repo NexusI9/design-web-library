@@ -1,71 +1,56 @@
 [
-	{
-		"id": 0,
-		"name": "所有"
-	},
-	{
-		"id": 1,
-		"name": "設計系統",
-		"icon": "module"
-	},
-	{
-		"id": 2,
-		"name": "顏色",
-		"icon": "paint"
-	},
-	{
-		"id": 3,
-		"name": "字體廠商",
-		"icon": "type"
-	},
-	{
-		"id": 4,
-		"name": "圖示設計",
-		"icon": "image"
-	},
-	{
-		"id": 5,
-		"name": "圖庫",
-		"icon": "camera"
-	},
-	{
-		"id": 6,
-		"name": "使用者體驗",
-		"icon": "click"
-	},
-	{
-		"id": 7,
-		"name": "人工智慧",
-		"icon": "ai"
-	},
-	{
-		"id": 8,
-		"name": "Figma"
-	},
-	{
-		"id": 9,
-		"name": "Adobe XD"
-	},
-	{
-		"id": 10,
-		"name": "簡報"
-	},
-	{
-		"id": 11,
-		"name": "管理",
-		"icon": "management"
-	},
-	{
-		"id": 12,
-		"name": "文件",
-		"icon": "glasses"
-	},
-	{
-		"id": 13,
-		"name": "高階模組"
-	},
-	{
-		"id": 14,
-		"name": "菁英模組"
-	}
+  {
+    "name": "所有"
+  },
+  {
+    "name": "設計系統",
+    "icon": "module"
+  },
+  {
+    "name": "顏色",
+    "icon": "paint"
+  },
+  {
+    "name": "字體廠商",
+    "icon": "type"
+  },
+  {
+    "name": "圖示設計",
+    "icon": "image"
+  },
+  {
+    "name": "圖庫",
+    "icon": "camera"
+  },
+  {
+    "name": "使用者體驗",
+    "icon": "click"
+  },
+  {
+    "name": "人工智慧",
+    "icon": "ai"
+  },
+  {
+    "name": "Figma"
+  },
+  {
+    "name": "Adobe XD"
+  },
+  {
+    "name": "簡報"
+  },
+  {
+    "name": "管理",
+    "icon": "management"
+  },
+  {
+    "name": "文件",
+    "icon": "glasses"
+  },
+  {
+    "name": "高階模組"
+  },
+  {
+    "name": "菁英模組"
+  }
 ]

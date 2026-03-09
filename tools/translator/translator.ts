@@ -1,0 +1,151 @@
+import fs from "fs/promises";
+import path from "path";
+import {
+	BATCH_SIZE,
+	INPUT_FOLDER,
+	LOCALES,
+	LOG_FOLDER,
+	SOURCE_LANG,
+	REGEXP_PROTECTED,
+	REGEXP_VARIABLE,
+	TRANSLATION_FILTERS
+} from "./constants";
+import { Cache } from "./cache";
+import { JSONProcessor, } from "./json-processor";
+import { APIManager } from "./api/api-manager";
+import { Logger } from "./logger";
+import { Dico, StringDico } from "./types";
+import { getJsonFiles, trimPathLocale } from "./utils";
+
+const cache = new Cache();
+const apiManager = new APIManager();
+const jsonProcessor = new JSONProcessor();
+const logger = new Logger();
+
+
+/**
+		Filter out the (flattened) keys that already exists so we don't translate them twice.
+ */
+function prepareBatch(flatSource: Dico, flatTarget: Dico, localeCache: StringDico) {
+
+	const filteredSource = jsonProcessor.filter(flatSource, TRANSLATION_FILTERS);
+
+	// Remove already translated key (already existing in the target file)
+	const missingKeys = Object.keys(filteredSource).filter((k) => {
+		const value = flatTarget[k as keyof typeof flatTarget];
+		return !value || typeof value === "string" && value.trim() === "";
+	});
+
+
+	console.log({ flatSource, filteredSource });
+
+
+	const toTranslate: Dico = {};
+
+
+	// Prepare the batching array by ensuring source text is not already cached.
+	for (const key of missingKeys) {
+
+		const value = filteredSource[key as keyof typeof filteredSource];
+
+		// continue is exists in cache
+		if (localeCache[value as keyof typeof localeCache]) {
+			flatTarget[key as keyof typeof flatTarget] = localeCache[value as keyof typeof localeCache];
+			continue;
+		}
+
+
+		const protectedText = typeof value === "string" ? jsonProcessor.protectVariables(value, [REGEXP_VARIABLE, REGEXP_PROTECTED]) : value;
+
+		// add it th the batch list
+		toTranslate[key] = protectedText;
+
+	}
+
+
+	return toTranslate;
+
+}
+
+async function translateBatch(locale: string, toTranslate: Dico, flatTarget: Dico, localeCache: StringDico) {
+
+	const keys = Object.keys(toTranslate);
+	for (let i = 0; i < keys.length; i += BATCH_SIZE) {
+
+		const batchKeys = keys.slice(i, i + BATCH_SIZE);
+
+		// get the batch of values to translate
+		const batchValues = batchKeys.map(k => toTranslate[k]) as string[];
+
+		// call API with batch of strings
+		const translated = await apiManager.call(batchValues, locale);
+
+		translated.forEach((t, index) => {
+			const key = batchKeys[index];
+			const sourceText = toTranslate[key];
+
+			const restored = jsonProcessor.restoreVariables(t, index);
+			flatTarget[key] = restored;
+
+			localeCache[sourceText] = restored;
+
+			logger.push(locale, String(sourceText), String(restored));
+		});
+	}
+
+
+}
+
+async function processLocale(file: string) {
+
+	// Get source file and flatten it
+	file = trimPathLocale(file);
+	const sourceJson = await jsonProcessor.readFileLocale(SOURCE_LANG, file);
+
+	if (!sourceJson)
+		return;
+
+	const flatSource = jsonProcessor.flatten(sourceJson);
+
+	for (const locale of LOCALES) {
+
+		// Get target file and flatten it
+		const targetPath = path.join(INPUT_FOLDER, locale, file);
+		const targetJson = await jsonProcessor.readFileLocale(locale, file);
+
+		if (!targetJson)
+			continue;
+
+		const flatTarget = jsonProcessor.flatten(targetJson);
+		const localeCache = await cache.load(locale);
+
+		const toTranslate = prepareBatch(flatSource, flatTarget, localeCache);
+
+		await translateBatch(locale, toTranslate, flatTarget, localeCache);
+
+		await cache.save(locale, cache);
+
+		const rebuilt = jsonProcessor.unflatten(flatTarget);
+
+		await fs.mkdir(path.dirname(targetPath), { recursive: true });
+		await fs.writeFile(targetPath, JSON.stringify(rebuilt, null, 2));
+	}
+}
+
+async function main() {
+	await fs.mkdir(LOG_FOLDER, { recursive: true });
+
+	const files = await getJsonFiles(path.join(INPUT_FOLDER, SOURCE_LANG));
+
+	for (const file of files) {
+		if (file.endsWith(".json")) {
+			console.log(`Processing file ${file}...`);
+			await processLocale(file);
+		}
+	}
+
+	await logger.write();
+	await logger.writeCSV();
+}
+
+main();

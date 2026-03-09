@@ -1,26 +1,21 @@
 [
   {
     "label": "首頁",
-    "component": "RESOURCE",
     "path": "/",
     "icon": "home",
     "props": {
-      "resource_id": 5,
-      "filter": true,
       "header": {
         "title": "瀏覽最新網頁設計工具",
-        "subtitle": "透過各種設計工具提升並簡化你的工作流程"
+        "subtitle": "透過各種設計工具提升並簡化你的工作流程",
+        "banner": "[zh-TW] home"
       }
     }
   },
   {
     "label": "範本",
-    "component": "RESOURCE",
     "path": "/templates",
     "icon": "layout",
     "props": {
-      "resource_id": 4,
-      "filter": true,
       "header": {
         "title": "範本",
         "subtitle": "最新文件幫助你啟動全新設計專案或下一場簡報"
@@ -29,12 +24,9 @@
   },
   {
     "label": "模組",
-    "component": "RESOURCE",
     "path": "/modules",
     "icon": "grid",
     "props": {
-      "resource_id": 2,
-      "filter": false,
       "header": {
         "title": "模組",
         "subtitle": "互動式元件庫，集合各種吸引人的視覺效果"
@@ -43,12 +35,9 @@
   },
   {
     "label": "文件",
-    "component": "RESOURCE",
     "path": "/documents",
     "icon": "file-text",
     "props": {
-      "resource_id": 1,
-      "filter": true,
       "header": {
         "title": "文件",
         "subtitle": "專案開發過程中實用的所有文件"
@@ -57,12 +46,9 @@
   },
   {
     "label": "外掛",
-    "component": "RESOURCE",
     "path": "/plugins",
     "icon": "puzzle",
     "props": {
-      "resource_id": 3,
-      "filter": false,
       "header": {
         "title": "外掛",
         "subtitle": "實用的外掛程式助你激發創意"

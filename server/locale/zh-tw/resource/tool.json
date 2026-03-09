@@ -2,316 +2,176 @@
   {
     "title": "ChatGPT",
     "description": "適用於多種生產力任務（如文案撰寫、使用者角色建立等）",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 7,
-    "href": "https://chatgpt.com/",
     "picture": "chatgpt"
   },
   {
     "title": "Adobe Firefly",
     "description": "文字轉圖像工具，適合概念設計與腦力激盪",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 7,
-    "href": "https://www.adobe.com/tw/products/firefly.html",
     "picture": "firefly"
   },
   {
     "title": "Farbvelo",
     "description": "產生和諧的色票。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 2,
-    "href": "https://farbvelo.elastiq.ch/",
     "picture": "farbvelo"
   },
   {
     "title": "Huemint",
     "description": "建立色票並直接預覽應用於各種格式與媒介的效果。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 2,
-    "href": "https://huemint.com/brand-intersection/",
     "picture": "huemint"
   },
   {
     "title": "iColorPalette",
     "description": "探索流行色票並產生配色。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 2,
-    "href": "https://icolorpalette.com/",
     "picture": "icolorpalette"
   },
   {
     "title": "Randoma11y",
     "description": "依據無障礙對比率生成隨機色票。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 2,
-    "href": "https://randoma11y.com/",
     "picture": "randoma11y"
   },
   {
     "title": "Coolors",
     "description": "生成色票並探索和諧的配色。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 2,
-    "href": "https://coolors.co/",
     "picture": "coolors"
   },
   {
     "title": "Color Designer",
     "description": "集合多項產生色彩（如色階、色調）的實用工具。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 2,
-    "href": "https://colordesigner.io/",
     "picture": "colordesigner"
   },
   {
     "title": "設計系統資料庫",
     "description": "設計系統的集合。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 1,
-    "href": "https://designsystemsrepo.com/",
     "picture": "ddsrepo"
   },
   {
     "title": "元件圖庫",
     "description": "元件語意與設計系統的策展集合。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 1,
-    "href": "https://component.gallery/",
     "picture": "compgallery"
   },
   {
     "title": "字級比例工具",
     "description": "輕鬆產生設計系統的字體比例。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 1,
-    "href": "https://typescale.com/",
     "picture": "typescale"
   },
   {
     "title": "工具集 Toolfolio",
     "description": "實用的設計工具集合。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 1,
-    "href": "https://toolfolio.io/",
     "picture": "toolfolio"
   },
   {
     "title": "Pousse ta fonte",
     "description": "付費與免費字體鑄造廠的收錄網站。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 3,
-    "href": "https://www.poussetafonte.com/",
     "picture": "pousse"
   },
   {
     "title": "Google Fonts",
     "description": "免費字體的集合。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 3,
-    "href": "https://fonts.google.com/",
     "picture": "googlefont"
   },
   {
     "title": "Fontshare",
     "description": "免費字體的集合。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 3,
-    "href": "https://www.fontshare.com/",
     "picture": "fontshare"
   },
   {
     "title": "Velvetyne",
     "description": "另類展示用字體的集合（大多免費）。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 3,
-    "href": "https://velvetyne.fr/",
     "picture": "velvetyne"
   },
   {
     "title": "Use Modify",
     "description": "另類展示用字體的集合（大多免費）。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 3,
-    "href": "https://usemodify.com/",
     "picture": "usemodify"
   },
   {
     "title": "sgvl",
     "description": "SVG 標誌圖示集合。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 4,
-    "href": "https://svgl.app/",
     "picture": "svgl"
   },
   {
     "title": "Simple icons",
     "description": "包含品牌主色的 SVG 標誌圖示集合。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 4,
-    "href": "https://simpleicons.org/",
     "picture": "simpleicons"
   },
   {
     "title": "Untitled UI Icons",
     "description": "圖示庫。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 4,
-    "href": "https://www.untitledui.com/icons",
     "picture": "untitledicons"
   },
   {
     "title": "Phosphor Icons",
     "description": "圖示庫。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 4,
-    "href": "https://phosphoricons.com/",
     "picture": "phosphor"
   },
   {
     "title": "Sargam Icons",
     "description": "具備不同風格變化（線框、陰影、實心）的圖示庫。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 4,
-    "href": "https://sargamicons.com/",
     "picture": "sargam"
   },
   {
     "title": "Feather Icons",
     "description": "圖示庫。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 4,
-    "href": "https://feathericons.com/",
     "picture": "feather"
   },
   {
     "title": "Tabler Icons",
     "description": "圖示庫。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 4,
-    "href": "https://tabler.io/icons",
     "picture": "tabler"
   },
   {
     "title": "Hero Icons",
     "description": "圖示庫。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 4,
-    "href": "https://heroicons.com/",
     "picture": "hero"
   },
   {
     "title": "Iconoir",
     "description": "圖示庫。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 4,
-    "href": "https://iconoir.com/",
     "picture": "iconoir"
   },
   {
     "title": "Iconic",
     "description": "圖示庫。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 4,
-    "href": "https://iconic.app/",
     "picture": "iconic"
   },
   {
     "title": "Glyphs",
     "description": "彩色圖示庫。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 4,
-    "href": "https://glyphs.fyi/",
     "picture": "glyphs"
   },
   {
     "title": "Atlas Icons",
     "description": "圖示庫。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 4,
-    "href": "https://atlasicons.vectopus.com/",
     "picture": "atlasicons"
   },
   {
     "title": "Getty Images",
     "description": "專業的圖庫照片集合。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 5,
-    "href": "https://www.gettyimages.hk/",
     "picture": "getty"
   },
   {
     "title": "Unsplash",
     "description": "免費使用的圖片集合，主要以寫實攝影為主。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 5,
-    "href": "https://unsplash.com/",
     "picture": "unsplash"
   },
   {
     "title": "Pixabay",
     "description": "免費使用的圖片集合。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 5,
-    "href": "https://pixabay.com/",
     "picture": "pixabay"
   },
   {
     "title": "Pexels",
     "description": "免費使用的圖片與影片集合。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 5,
-    "href": "https://www.pexels.com/",
     "picture": "pexels"
   },
   {
     "title": "用戶研究指南（UXR）",
     "description": "UX 使用者研究方法論的資料庫。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 6,
-    "href": "http://guidetouxr.com/",
     "picture": "guideux"
   },
   {
     "title": "UX 法則",
     "description": "UX 中的基本設計法則。",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 6,
-    "href": "https://lawsofux.com/",
     "picture": "lawsux"
   }
 ]
