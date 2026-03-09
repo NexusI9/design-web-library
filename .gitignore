@@ -7,3 +7,5 @@ client/design
 server/public/uploads
 server/public/index.*
 server/public/assets
+*.log
+*.csv

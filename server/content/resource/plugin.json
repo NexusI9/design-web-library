@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Style Studio",
+    "description": "style_studio.description",
+    "type": "PLUGIN",
+    "resource_id": 3,
+    "tag_id": 8,
+    "href": "https://www.figma.com/community/plugin/1292924330904373989/style-studio",
+    "picture": "figstyle"
+  },
+  {
+    "title": "Site Mapper",
+    "description": "site_mapper.description",
+    "type": "PLUGIN",
+    "resource_id": 3,
+    "tag_id": 8,
+    "href": "https://www.figma.com/community/plugin/1410886529149123027/site-mapper",
+    "picture": "figmp"
+  },
+  {
+    "title": "Lorem Ipsum",
+    "description": "lorem_ipsum.description",
+    "type": "PLUGIN",
+    "resource_id": 3,
+    "tag_id": 8,
+    "href": "https://www.figma.com/community/plugin/736000994034548392/lorem-ipsum-by-divriots",
+    "picture": "figlorem"
+  },
+  {
+    "title": "Iconify",
+    "description": "iconify.description",
+    "type": "PLUGIN",
+    "resource_id": 3,
+    "tag_id": 8,
+    "href": "https://www.figma.com/community/plugin/735098390272716381/iconify",
+    "picture": "figiconify"
+  },
+  {
+    "title": "Shadow Maker",
+    "description": "shadow_maker.description",
+    "type": "PLUGIN",
+    "resource_id": 3,
+    "tag_id": 8,
+    "href": "https://www.figma.com/community/plugin/889676455045507628/shadow-maker",
+    "picture": "figshadow"
+  },
+  {
+    "title": "Snapshot",
+    "description": "snapshot.description",
+    "type": "PLUGIN",
+    "resource_id": 3,
+    "tag_id": 8,
+    "href": "https://www.figma.com/community/plugin/937590329004798392",
+    "picture": "figsnap"
+  }
+]

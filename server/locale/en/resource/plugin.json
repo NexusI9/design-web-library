@@ -1,56 +1,20 @@
-[
-  {
-    "title": "Style Studio",
-    "description": "Style Studio offers many helpful tools to help you create your next color and font design system, or fine tune your current one.",
-    "type": "PLUGIN",
-    "resource_id": 3,
-    "tag_id": 8,
-    "href": "https://www.figma.com/community/plugin/1292924330904373989/style-studio",
-    "picture": "figstyle"
+{
+  "style_studio": {
+    "description": "Style Studio offers many helpful tools to help you create your next color and font design system, or fine tune your current one."
   },
-  {
-    "title": "Site Mapper",
-    "description": "Site Mapper helps you to quickly export your website frames into a fully functional sitemap automatically linked to your project frames.",
-    "type": "PLUGIN",
-    "resource_id": 3,
-    "tag_id": 8,
-    "href": "https://www.figma.com/community/plugin/1410886529149123027/site-mapper",
-    "picture": "figmp"
+  "site_mapper": {
+    "description": "Site Mapper helps you to quickly export your website frames into a fully functional sitemap automatically linked to your project frames."
   },
-  {
-    "title": "Lorem Ipsum",
-    "description": "Fill your designs with placeholders in a click: text, images and even data!",
-    "type": "PLUGIN",
-    "resource_id": 3,
-    "tag_id": 8,
-    "href": "https://www.figma.com/community/plugin/736000994034548392/lorem-ipsum-by-divriots",
-    "picture": "figlorem"
+  "lorem_ipsum": {
+    "description": "Fill your designs with placeholders in a click: text, images and even data!"
   },
-  {
-    "title": "Iconify",
-    "description": "Import Material Design Icons, FontAwesome, Jam Icons, EmojiOne, Twitter Emoji and many other icons (more than 150 icon sets containing over 200,000 icons) to Figma document as vector shapes.",
-    "type": "PLUGIN",
-    "resource_id": 3,
-    "tag_id": 8,
-    "href": "https://www.figma.com/community/plugin/735098390272716381/iconify",
-    "picture": "figiconify"
+  "iconify": {
+    "description": "Import Material Design Icons, FontAwesome, Jam Icons, EmojiOne, Twitter Emoji and many other icons (more than 150 icon sets containing over 200,000 icons) to Figma document as vector shapes."
   },
-  {
-    "title": "Shadow Maker",
-    "description": "Generate beautiful, smooth shadows with direction, color, and opacity controls.",
-    "type": "PLUGIN",
-    "resource_id": 3,
-    "tag_id": 8,
-    "href": "https://www.figma.com/community/plugin/889676455045507628/shadow-maker",
-    "picture": "figshadow"
+  "shadow_maker": {
+    "description": "Generate beautiful, smooth shadows with direction, color, and opacity controls."
   },
-  {
-    "title": "Snapshot",
-    "description": "Create a Snapshot from any layer, and turn it into an image — whilst rotating/flipping it and converting it to the correct perspective all at once.",
-    "type": "PLUGIN",
-    "resource_id": 3,
-    "tag_id": 8,
-    "href": "https://www.figma.com/community/plugin/937590329004798392",
-    "picture": "figsnap"
+  "snapshot": {
+    "description": "Create a Snapshot from any layer, and turn it into an image — whilst rotating/flipping it and converting it to the correct perspective all at once."
   }
-]
+}

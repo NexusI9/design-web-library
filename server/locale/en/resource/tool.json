@@ -1,323 +1,109 @@
-[
-  {
-    "title": "ChatGPT",
-    "description": "Useful for many productivity related task (copywriting, user persona generation etc.)",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 7,
-    "href": "https://chatgpt.com/",
-    "picture": "chatgpt"
-  },
-  {
-    "title": "Adobe Firefly",
-    "description": "Text 2 Image tool, interesting for concept design brainstorms",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 7,
-    "href": "https://www.adobe.com/tw/products/firefly.html",
-    "picture": "firefly"
-  },
+{
 
-  {
-    "title": "Farbvelo",
-    "description": "Generate harmonious color swatch.",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 2,
-    "href": "https://farbvelo.elastiq.ch/",
-    "picture": "farbvelo"
-  },
-  {
-    "title": "Huemint",
-    "description": "Create color swatch and see their direct application on various format and mediums.",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 2,
-    "href": "https://huemint.com/brand-intersection/",
-    "picture": "huemint"
-  },
-  {
-    "title": "iColorPalette",
-    "description": "Explore trendy swatch and generate color swatch.",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 2,
-    "href": "https://icolorpalette.com/",
-    "picture": "icolorpalette"
-  },
-  {
-    "title": "Randoma11y",
-    "description": "Generate random palettes based on Accessibility ratio.",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 2,
-    "href": "https://randoma11y.com/",
-    "picture": "randoma11y"
-  },
-  {
-    "title": "Coolors",
-    "description": "Generate color swatch and explore harmonious palettes.",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 2,
-    "href": "https://coolors.co/",
-    "picture": "coolors"
-  },
-  {
-    "title": "Color Designer",
-    "description": "Collection of useful tools for color generation (shades, tint).",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 2,
-    "href": "https://colordesigner.io/",
-    "picture": "colordesigner"
-  },
-
-  {
-    "title": "Design System Repo",
-    "description": "Collections of Design Systems.",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 1,
-    "href": "https://designsystemsrepo.com/",
-    "picture": "ddsrepo"
-  },
-  {
-    "title": "The Component Gallery",
-    "description": "Collection of Components semantic and Design Systems curation.",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 1,
-    "href": "https://component.gallery/",
-    "picture": "compgallery"
-  },
-  {
-    "title": "Typescale",
-    "description": "Generate easily font scales for design systems.",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 1,
-    "href": "https://typescale.com/",
-    "picture": "typescale"
-  },
-  {
-    "title": "Toolfolio",
-    "description": "Useful Design Tools collection.",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 1,
-    "href": "https://toolfolio.io/",
-    "picture": "toolfolio"
-  },
-
-  {
-    "title": "Pousse ta fonte",
-    "description": "Collection of paid and free to use Typeface Foundries.",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 3,
-    "href": "https://www.poussetafonte.com/",
-    "picture": "pousse"
-  },
-  {
-    "title": "Google Fonts",
-    "description": "Collection of free to use Typefaces.",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 3,
-    "href": "https://fonts.google.com/",
-    "picture": "googlefont"
-  },
-  {
-    "title": "Fontshare",
-    "description": "Collection of free to use Typefaces.",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 3,
-    "href": "https://www.fontshare.com/",
-    "picture": "fontshare"
-  },
-  {
-    "title": "Velvetyne",
-    "description": "Collection of eccentric display Typefaces (most shall be free to use).",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 3,
-    "href": "https://velvetyne.fr/",
-    "picture": "velvetyne"
-  },
-  {
-    "title": "Use Modify",
-    "description": "Collection of eccentric display Typefaces (most shall be free to use).",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 3,
-    "href": "https://usemodify.com/",
-    "picture": "usemodify"
-  },
-
-  {
-    "title": "sgvl",
-    "description": "Collection of SVG logos.",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 4,
-    "href": "https://svgl.app/",
-    "picture": "svgl"
-  },
-  {
-    "title": "Simple icons",
-    "description": "Collection of SVG logos along with the brand primary color.",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 4,
-    "href": "https://simpleicons.org/",
-    "picture": "simpleicons"
-  },
-  {
-    "title": "Untitled UI Icons",
-    "description": "Icon Library.",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 4,
-    "href": "https://www.untitledui.com/icons",
-    "picture": "untitledicons"
-  },
-  {
-    "title": "Phosphor Icons",
-    "description": "Icon Library.",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 4,
-    "href": "https://phosphoricons.com/",
-    "picture": "phosphor"
-  },
-  {
-    "title": "Sargam Icons",
-    "description": "Icon Library with style declination (outlined, shaded, solid).",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 4,
-    "href": "https://sargamicons.com/",
-    "picture": "sargam"
-  },
-  {
-    "title": "Feather Icons",
-    "description": "Icon Library.",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 4,
-    "href": "https://feathericons.com/",
-    "picture": "feather"
-  },
-  {
-    "title": "Tabler Icons",
-    "description": "Icon Library.",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 4,
-    "href": "https://tabler.io/icons",
-    "picture": "tabler"
-  },
-  {
-    "title": "Hero Icons",
-    "description": "Icon Library.",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 4,
-    "href": "https://heroicons.com/",
-    "picture": "hero"
-  },
-  {
-    "title": "Iconoir",
-    "description": "Icon Library.",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 4,
-    "href": "https://iconoir.com/",
-    "picture": "iconoir"
-  },
-  {
-    "title": "Iconic",
-    "description": "Icon Library.",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 4,
-    "href": "https://iconic.app/",
-    "picture": "iconic"
-  },
-  {
-    "title": "Glyphs",
-    "description": "Colored Icon Library.",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 4,
-    "href": "https://glyphs.fyi/",
-    "picture": "glyphs"
-  },
-  {
-    "title": "Atlas Icons",
-    "description": "Icon Library.",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 4,
-    "href": "https://atlasicons.vectopus.com/",
-    "picture": "atlasicons"
-  },
-
-  {
-    "title": "Getty Images",
-    "description": "Collection of professionals stock picture.",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 5,
-    "href": "https://www.gettyimages.hk/",
-    "picture": "getty"
-  },
-  {
-    "title": "Unsplash",
-    "description": "Collection of free to use pictures, mostly focused on real life photography.",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 5,
-    "href": "https://unsplash.com/",
-    "picture": "unsplash"
-  },
-  {
-    "title": "Pixabay",
-    "description": "Collection of free to use pictures.",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 5,
-    "href": "https://pixabay.com/",
-    "picture": "pixabay"
-  },
-  {
-    "title": "Pexels",
-    "description": "Collection of free to use pictures and videos.",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 5,
-    "href": "https://www.pexels.com/",
-    "picture": "pexels"
-  },
-
-  {
-    "title": "Guide to User Research (UXR)",
-    "description": "Corpus of UX research methodologies.",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 6,
-    "href": "http://guidetouxr.com/",
-    "picture": "guideux"
-  },
-  {
-    "title": "Laws of UX",
-    "description": "Fundamental rules in UX.",
-    "type": "TOOL",
-    "resource_id": 5,
-    "tag_id": 6,
-    "href": "https://lawsofux.com/",
-    "picture": "lawsux"
-  }
-]
+    "chatgpt": {
+      "description": "Useful for many productivity related task (copywriting, user persona generation etc.)"
+    },
+    "adobe_firefly": {
+      "description": "Text 2 Image tool, interesting for concept design brainstorms"
+    },
+    "farbvelo": {
+      "description": "Generate harmonious color swatch."
+    },
+    "huemint": {
+      "description": "Create color swatch and see their direct application on various format and mediums."
+    },
+    "icolorpalette": {
+      "description": "Explore trendy swatch and generate color swatch."
+    },
+    "randoma11y": {
+      "description": "Generate random palettes based on Accessibility ratio."
+    },
+    "coolors": {
+      "description": "Generate color swatch and explore harmonious palettes."
+    },
+    "color_designer": {
+      "description": "Collection of useful tools for color generation (shades, tint)."
+    },
+    "design_system_repo": {
+      "description": "Collections of Design Systems."
+    },
+    "the_component_gallery": {
+      "description": "Collection of Components semantic and Design Systems curation."
+    },
+    "typescale": {
+      "description": "Generate easily font scales for design systems."
+    },
+    "toolfolio": {
+      "description": "Useful Design Tools collection."
+    },
+    "pousse_ta_fonte": {
+      "description": "Collection of paid and free to use Typeface Foundries."
+    },
+    "google_fonts": {
+      "description": "Collection of free to use Typefaces."
+    },
+    "fontshare": {
+      "description": "Collection of free to use Typefaces."
+    },
+    "velvetyne": {
+      "description": "Collection of eccentric display Typefaces (most shall be free to use)."
+    },
+    "use_modify": {
+      "description": "Collection of eccentric display Typefaces (most shall be free to use)."
+    },
+    "svgl": {
+      "description": "Collection of SVG logos."
+    },
+    "simple_icons": {
+      "description": "Collection of SVG logos along with the brand primary color."
+    },
+    "untitled_ui_icons": {
+      "description": "Icon Library."
+    },
+    "phosphor_icons": {
+      "description": "Icon Library."
+    },
+    "sargam_icons": {
+      "description": "Icon Library with style declination (outlined, shaded, solid)."
+    },
+    "feather_icons": {
+      "description": "Icon Library."
+    },
+    "tabler_icons": {
+      "description": "Icon Library."
+    },
+    "hero_icons": {
+      "description": "Icon Library."
+    },
+    "iconoir": {
+      "description": "Icon Library."
+    },
+    "iconic": {
+      "description": "Icon Library."
+    },
+    "glyphs": {
+      "description": "Colored Icon Library."
+    },
+    "atlas_icons": {
+      "description": "Icon Library."
+    },
+    "getty_images": {
+      "description": "Collection of professionals stock picture."
+    },
+    "unsplash": {
+      "description": "Collection of free to use pictures, mostly focused on real life photography."
+    },
+    "pixabay": {
+      "description": "Collection of free to use pictures."
+    },
+    "pexels": {
+      "description": "Collection of free to use pictures and videos."
+    },
+    "guide_to_user_research_uxr": {
+      "description": "Corpus of UX research methodologies."
+    },
+    "laws_of_ux": {
+      "description": "Fundamental rules in UX."
+    }
+  
+}

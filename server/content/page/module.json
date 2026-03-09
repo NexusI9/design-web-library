@@ -1,0 +1,242 @@
+[
+	{
+		"path": "modules/elite/slideshow",
+		"component": "MODULE",
+		"props": {
+			"title": "slideshows.title",
+			"subtitle": "slideshows.subtitle",
+			"frames": [
+				{
+					"name": "slideshows.slideshow.name",
+					"url": "/modules/elite/slideshow/index.php",
+					"inputs": [
+						{
+							"type": "INPUT_NUMBER",
+							"label": "slideshows.slideshow.transition_duration.label",
+							"min": 500,
+							"max": 10000,
+							"defaultValue": 1500,
+							"targetAttribute": "data-transition-duration"
+						},
+						{
+							"type": "INPUT_NUMBER",
+							"label": "slideshows.slideshow.slide_duration.label",
+							"min": 500,
+							"max": 10000,
+							"defaultValue": 1500,
+							"targetAttribute": "data-slide-duration"
+						},
+						{
+							"type": "INPUT_SELECT",
+							"label": "slideshows.slideshow.transition_type.label",
+							"values": [
+								{
+									"label": "slideshows.slideshow.transition_type.default.label",
+									"value": "default"
+								},
+								{
+									"label": "slideshows.slideshow.transition_type.lens.label",
+									"value": "lens"
+								},
+								{
+									"label": "slideshows.slideshow.transition_type.swipe.label",
+									"value": "swipe"
+								},
+								{
+									"label": "slideshows.slideshow.transition_type.store.label",
+									"value": "store"
+								}
+							],
+							"defaultIndex": 0,
+							"targetAttribute": "data-transition-type"
+						},
+						{
+							"type": "INPUT_SELECT",
+							"label": "slideshows.slideshow.navigation_type.label",
+							"values": [
+								{
+									"label": "slideshows.slideshow.navigation_type.default.label",
+									"value": "default"
+								},
+								{
+									"label": "slideshows.slideshow.navigation_type.automatic.label",
+									"value": "automatic"
+								},
+								{
+									"label": "slideshows.slideshow.navigation_type.manual.label",
+									"value": "manual"
+								}
+							],
+							"defaultIndex": 0,
+							"targetAttribute": "data-mode"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"path": "modules/elite/carousel",
+		"component": "MODULE",
+		"props": {
+			"title": "carousels.title",
+			"subtitle": "carousels.subtitle",
+			"frames": [
+				{
+					"name": "carousels.carousel.name",
+					"url": "/modules/elite/carousel/index.php",
+					"inputs": [
+						{
+							"type": "INPUT_SELECT",
+							"label": "carousels.carousel.curve_direction.label",
+							"values": [
+								{
+									"label": "carousels.carousel.curve_direction.outward.label",
+									"value": "outward"
+								},
+								{
+									"label": "carousels.carousel.curve_direction.inward.label",
+									"value": "inward"
+								},
+								{
+									"label": "carousels.carousel.curve_direction.fan.label",
+									"value": "fan"
+								}
+							],
+							"defaultIndex": 0,
+							"targetAttribute": "data-curve"
+						},
+						{
+							"type": "INPUT_SELECT",
+							"label": "carousels.carousel.movement_direction.label",
+							"values": [
+								{
+									"label": "carousels.carousel.movement_direction.right.label",
+									"value": "right"
+								},
+								{
+									"label": "carousels.carousel.movement_direction.left.label",
+									"value": "left"
+								}
+							],
+							"defaultIndex": 0,
+							"targetAttribute": "data-direction"
+						},
+						{
+							"type": "INPUT_NUMBER",
+							"label": "carousels.carousel.picture_width.label",
+							"min": 100,
+							"max": 1920,
+							"defaultValue": 340,
+							"targetAttribute": "data-picture-width"
+						},
+						{
+							"type": "INPUT_NUMBER",
+							"label": "carousels.carousel.picture_height.label",
+							"min": 100,
+							"max": 1920,
+							"defaultValue": 544,
+							"targetAttribute": "data-picture-height"
+						},
+						{
+							"type": "INPUT_NUMBER",
+							"label": "carousels.carousel.border_radius.label",
+							"min": 0,
+							"max": 100,
+							"defaultValue": 12,
+							"targetAttribute": "data-border-radius"
+						},
+						{
+							"type": "INPUT_NUMBER",
+							"label": "carousels.carousel.border_smooth.label",
+							"min": 1,
+							"max": 8,
+							"defaultValue": 4,
+							"targetAttribute": "data-border-smooth"
+						},
+						{
+							"type": "INPUT_NUMBER",
+							"label": "carousels.carousel.speed.label",
+							"min": 1,
+							"max": 10,
+							"defaultValue": 1,
+							"targetAttribute": "data-speed"
+						},
+						{
+							"type": "INPUT_SELECT",
+							"label": "carousels.carousel.invert_drag.label",
+							"values": [
+								{
+									"label": "carousels.carousel.invert_drag.true.label",
+									"value": "true"
+								},
+								{
+									"label": "carousels.carousel.invert_drag.false.label",
+									"value": "false"
+								}
+							],
+							"defaultIndex": 1,
+							"targetAttribute": "data-invert-drag"
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"path": "modules/core/news",
+		"component": "MODULE",
+		"props": {
+			"title": "news.title",
+			"subtitle": "news.subtitle",
+			"frames": [
+				{
+					"name": "news.flash.name",
+					"url": "/modules/core/news/flash/index.html",
+					"mockup": "https://www.figma.com/design/y7U6y17lFxZttH9pZmYzws/Akacia-Web-Library?node-id=40004001-2975&t=eriAz2eTl6dpiweq-11",
+					"inputs": []
+				},
+				{
+					"name": "news.flow.name",
+					"url": "/modules/core/news/flow/index.html",
+					"mockup": "https://www.figma.com/design/y7U6y17lFxZttH9pZmYzws/Akacia-Web-Library?node-id=40004001-2988&t=eriAz2eTl6dpiweq-11",
+					"inputs": []
+				},
+				{
+					"name": "news.storyteller.name",
+					"url": "/modules/core/news/storyteller/index.html",
+					"mockup": "https://www.figma.com/design/y7U6y17lFxZttH9pZmYzws/Akacia-Web-Library?node-id=40004001-3003&t=eriAz2eTl6dpiweq-11",
+					"inputs": []
+				}
+			]
+		}
+	},
+	{
+		"path": "modules/core/milestones",
+		"component": "MODULE",
+		"props": {
+			"title": "milestones.title",
+			"subtitle": "milestones.subtitle",
+			"frames": [
+				{
+					"name": "milestones.pathway.name",
+					"url": "/modules/core/milestones/pathway/index.html",
+					"mockup": "",
+					"inputs": []
+				},
+				{
+					"name": "milestones.deck.name",
+					"url": "/modules/core/milestones/deck/index.html",
+					"mockup": "",
+					"inputs": []
+				},
+				{
+					"name": "milestones.moment.name",
+					"url": "/modules/core/milestones/moment/index.html",
+					"mockup": "",
+					"inputs": []
+				}
+			]
+		}
+	}
+]

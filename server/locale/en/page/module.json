@@ -1,242 +1,120 @@
-[
-	{
-		"path": "modules/elite/slideshow",
-		"component": "MODULE",
-		"props": {
-			"title": "Slideshows",
-			"subtitle": "Customizable slideshows with unique transitions.",
-			"frames": [
-				{
-					"name": "Slideshow",
-					"url": "/modules/elite/slideshow/index.php",
-					"inputs": [
-						{
-							"type": "INPUT_NUMBER",
-							"label": "Transition duration",
-							"min": 500,
-							"max": 10000,
-							"defaultValue": 1500,
-							"targetAttribute": "data-transition-duration"
-						},
-						{
-							"type": "INPUT_NUMBER",
-							"label": "Slide duration",
-							"min": 500,
-							"max": 10000,
-							"defaultValue": 1500,
-							"targetAttribute": "data-slide-duration"
-						},
-						{
-							"type": "INPUT_SELECT",
-							"label": "Transition type",
-							"values": [
-								{
-									"label": "Default",
-									"value": "default"
-								},
-								{
-									"label": "Lens",
-									"value": "lens"
-								},
-								{
-									"label": "Swipe",
-									"value": "swipe"
-								},
-								{
-									"label": "Store",
-									"value": "store"
-								}
-							],
-							"defaultIndex": 0,
-							"targetAttribute": "data-transition-type"
-						},
-						{
-							"type": "INPUT_SELECT",
-							"label": "Navigation type",
-							"values": [
-								{
-									"label": "Default",
-									"value": "default"
-								},
-								{
-									"label": "Automatic",
-									"value": "automatic"
-								},
-								{
-									"label": "Manual",
-									"value": "manual"
-								}
-							],
-							"defaultIndex": 0,
-							"targetAttribute": "data-mode"
-						}
-					]
-				}
-			]
-		}
-	},
-	{
-		"path": "modules/elite/carousel",
-		"component": "MODULE",
-		"props": {
-			"title": "Carousels",
-			"subtitle": "Customizable carousels with 2D or 3D rotations.",
-			"frames": [
-				{
-					"name": "Carousel",
-					"url": "/modules/elite/carousel/index.php",
-					"inputs": [
-						{
-							"type": "INPUT_SELECT",
-							"label": "Curve direction",
-							"values": [
-								{
-									"label": "Outward",
-									"value": "outward"
-								},
-								{
-									"label": "Inward",
-									"value": "inward"
-								},
-								{
-									"label": "Fan",
-									"value": "fan"
-								}
-							],
-							"defaultIndex": 0,
-							"targetAttribute": "data-curve"
-						},
-						{
-							"type": "INPUT_SELECT",
-							"label": "Movement direction",
-							"values": [
-								{
-									"label": "Right",
-									"value": "right"
-								},
-								{
-									"label": "Left",
-									"value": "left"
-								}
-							],
-							"defaultIndex": 0,
-							"targetAttribute": "data-direction"
-						},
-						{
-							"type": "INPUT_NUMBER",
-							"label": "Picture width",
-							"min": 100,
-							"max": 1920,
-							"defaultValue": 340,
-							"targetAttribute": "data-picture-width"
-						},
-						{
-							"type": "INPUT_NUMBER",
-							"label": "Picture height",
-							"min": 100,
-							"max": 1920,
-							"defaultValue": 544,
-							"targetAttribute": "data-picture-height"
-						},
-						{
-							"type": "INPUT_NUMBER",
-							"label": "Border radius",
-							"min": 0,
-							"max": 100,
-							"defaultValue": 12,
-							"targetAttribute": "data-border-radius"
-						},
-						{
-							"type": "INPUT_NUMBER",
-							"label": "Border smooth",
-							"min": 1,
-							"max": 8,
-							"defaultValue": 4,
-							"targetAttribute": "data-border-smooth"
-						},
-						{
-							"type": "INPUT_NUMBER",
-							"label": "Speed",
-							"min": 1,
-							"max": 10,
-							"defaultValue": 1,
-							"targetAttribute": "data-speed"
-						},
-						{
-							"type": "INPUT_SELECT",
-							"label": "Invert drag",
-							"values": [
-								{
-									"label": "True",
-									"value": "true"
-								},
-								{
-									"label": "False",
-									"value": "false"
-								}
-							],
-							"defaultIndex": 1,
-							"targetAttribute": "data-invert-drag"
-						}
-					]
-				}
-			]
-		}
-	},
-	{
-		"path": "modules/core/news",
-		"component": "MODULE",
-		"props": {
-			"title": "News",
-			"subtitle": "News sections including interactive cards and filtering components.",
-			"frames": [
-				{
-					"name": "Flash",
-					"url": "/modules/core/news/flash/index.html",
-					"mockup": "https://www.figma.com/design/y7U6y17lFxZttH9pZmYzws/Akacia-Web-Library?node-id=40004001-2975&t=eriAz2eTl6dpiweq-11",
-					"inputs": []
-				},
-				{
-					"name": "Flow",
-					"url": "/modules/core/news/flow/index.html",
-					"mockup": "https://www.figma.com/design/y7U6y17lFxZttH9pZmYzws/Akacia-Web-Library?node-id=40004001-2988&t=eriAz2eTl6dpiweq-11",
-					"inputs": []
-				},
-				{
-					"name": "Storyteller",
-					"url": "/modules/core/news/storyteller/index.html",
-					"mockup": "https://www.figma.com/design/y7U6y17lFxZttH9pZmYzws/Akacia-Web-Library?node-id=40004001-3003&t=eriAz2eTl6dpiweq-11",
-					"inputs": []
-				}
-			]
-		}
-	},
-	{
-		"path": "modules/core/milestones",
-		"component": "MODULE",
-		"props": {
-			"title": "Milestones",
-			"subtitle": "Customizable slideshow with unique transitions.",
-			"frames": [
-				{
-					"name": "Pathway",
-					"url": "/modules/core/milestones/pathway/index.html",
-					"mockup": "",
-					"inputs": []
-				},
-				{
-					"name": "Deck",
-					"url": "/modules/core/milestones/deck/index.html",
-					"mockup": "",
-					"inputs": []
-				},
-				{
-					"name": "Moment",
-					"url": "/modules/core/milestones/moment/index.html",
-					"mockup": "",
-					"inputs": []
-				}
-			]
-		}
-	}
-]
+{
+  "slideshows": {
+    "title": "Slideshows",
+    "subtitle": "Customizable slideshows with unique transitions.",
+    "slideshow": {
+      "name": "Slideshow",
+      "transition_duration": {
+        "label": "Transition duration"
+      },
+      "slide_duration": {
+        "label": "Slide duration"
+      },
+      "transition_type": {
+        "label": "Transition type",
+        "default": {
+          "label": "Default"
+        },
+        "lens": {
+          "label": "Lens"
+        },
+        "swipe": {
+          "label": "Swipe"
+        },
+        "store": {
+          "label": "Store"
+        }
+      },
+      "navigation_type": {
+        "label": "Navigation type",
+        "default": {
+          "label": "Default"
+        },
+        "automatic": {
+          "label": "Automatic"
+        },
+        "manual": {
+          "label": "Manual"
+        }
+      }
+    }
+  },
+  "carousels": {
+    "title": "Carousels",
+    "subtitle": "Customizable carousels with 2D or 3D rotations.",
+    "carousel": {
+      "name": "Carousel",
+      "curve_direction": {
+        "label": "Curve direction",
+        "outward": {
+          "label": "Outward"
+        },
+        "inward": {
+          "label": "Inward"
+        },
+        "fan": {
+          "label": "Fan"
+        }
+      },
+      "movement_direction": {
+        "label": "Movement direction",
+        "right": {
+          "label": "Right"
+        },
+        "left": {
+          "label": "Left"
+        }
+      },
+      "picture_width": {
+        "label": "Picture width"
+      },
+      "picture_height": {
+        "label": "Picture height"
+      },
+      "border_radius": {
+        "label": "Border radius"
+      },
+      "border_smooth": {
+        "label": "Border smooth"
+      },
+      "speed": {
+        "label": "Speed"
+      },
+      "invert_drag": {
+        "label": "Invert drag",
+        "true": {
+          "label": "True"
+        },
+        "false": {
+          "label": "False"
+        }
+      }
+    }
+  },
+  "news": {
+    "title": "News",
+    "subtitle": "News sections including interactive cards and filtering components.",
+    "flash": {
+      "name": "Flash"
+    },
+    "flow": {
+      "name": "Flow"
+    },
+    "storyteller": {
+      "name": "Storyteller"
+    }
+  },
+  "milestones": {
+    "title": "Milestones",
+    "subtitle": "Customizable slideshow with unique transitions.",
+    "pathway": {
+      "name": "Pathway"
+    },
+    "deck": {
+      "name": "Deck"
+    },
+    "moment": {
+      "name": "Moment"
+    }
+  }
+}

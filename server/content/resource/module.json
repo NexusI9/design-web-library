@@ -1,0 +1,38 @@
+[
+  {
+    "title": "News",
+    "description": "news.description",
+    "type": "MODULE",
+    "resource_id": 2,
+    "tag_id": 13,
+    "href": "/modules/core/news",
+    "picture": "news"
+  },
+  {
+    "title": "Milestones",
+    "description": "milestones.description",
+    "type": "MODULE",
+    "resource_id": 2,
+    "tag_id": 13,
+    "href": "/modules/core/milestones",
+    "picture": "milestones"
+  },
+  {
+    "title": "Slideshow",
+    "description": "slideshow.description",
+    "type": "MODULE",
+    "resource_id": 2,
+    "tag_id": 14,
+    "href": "/modules/elite/slideshow",
+    "picture": "glslide"
+  },
+  {
+    "title": "Carousel",
+    "description": "carousel.description",
+    "type": "MODULE",
+    "resource_id": 2,
+    "tag_id": 14,
+    "href": "/modules/elite/carousel",
+    "picture": "glcarousel"
+  }
+]

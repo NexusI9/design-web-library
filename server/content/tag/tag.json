@@ -1,0 +1,71 @@
+[
+	{
+		"id": 0,
+		"name": "all"
+	},
+	{
+		"id": 1,
+		"name": "design_system",
+		"icon": "module"
+	},
+	{
+		"id": 2,
+		"name": "color",
+		"icon": "paint"
+	},
+	{
+		"id": 3,
+		"name": "foundry",
+		"icon": "type"
+	},
+	{
+		"id": 4,
+		"name": "icons",
+		"icon": "image"
+	},
+	{
+		"id": 5,
+		"name": "stock",
+		"icon": "camera"
+	},
+	{
+		"id": 6,
+		"name": "ux",
+		"icon": "click"
+	},
+	{
+		"id": 7,
+		"name": "ai",
+		"icon": "ai"
+	},
+	{
+		"id": 8,
+		"name": "figma"
+	},
+	{
+		"id": 9,
+		"name": "adobe_xd"
+	},
+	{
+		"id": 10,
+		"name": "powerpoint"
+	},
+	{
+		"id": 11,
+		"name": "management",
+		"icon": "management"
+	},
+	{
+		"id": 12,
+		"name": "documentation",
+		"icon": "glasses"
+	},
+	{
+		"id": 13,
+		"name": "core_modules"
+	},
+	{
+		"id": 14,
+		"name": "elite_modules"
+	}
+]

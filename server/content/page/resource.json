@@ -1,0 +1,73 @@
+[
+	{
+		"label": "home.label",
+		"component": "RESOURCE",
+		"path": "/",
+		"icon": "home",
+		"props": {
+			"resource_id": 5,
+			"filter": true,
+			"header": {
+				"banner": "home",
+				"title": "home.header.title",
+				"subtitle": "home.header.subtitle"
+			}
+		}
+	},
+	{
+		"label": "templates.label",
+		"component": "RESOURCE",
+		"path": "templates",
+		"icon": "layout",
+		"props": {
+			"resource_id": 4,
+			"filter": true,
+			"header": {
+				"title": "templates.header.title",
+				"subtitle": "templates.header.subtitle"
+			}
+		}
+	},
+	{
+		"label": "modules.label",
+		"component": "RESOURCE",
+		"path": "modules",
+		"icon": "grid",
+		"props": {
+			"resource_id": 2,
+			"filter": true,
+			"header": {
+				"title": "modules.header.title",
+				"subtitle": "modules.header.subtitle"
+			}
+		}
+	},
+	{
+		"label": "documents.label",
+		"component": "RESOURCE",
+		"path": "documents",
+		"icon": "file-text",
+		"props": {
+			"resource_id": 1,
+			"filter": true,
+			"header": {
+				"title": "documents.header.title",
+				"subtitle": "documents.header.subtitle"
+			}
+		}
+	},
+	{
+		"label": "plugins.label",
+		"component": "RESOURCE",
+		"path": "plugins",
+		"icon": "puzzle",
+		"props": {
+			"resource_id": 3,
+			"filter": false,
+			"header": {
+				"title": "plugins.header.title",
+				"subtitle": "plugins.header.subtitle"
+			}
+		}
+	}
+]
