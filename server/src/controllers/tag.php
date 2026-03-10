@@ -5,7 +5,7 @@ include_once __DIR__ . "/../lib/resolver.php";
 include_once __DIR__ . "/../lib/constants.php";
 include_once __DIR__ . "/../lib/translator.php";
 
-class Tag_Controller
+class TagController
 {
 
     // cached tags content

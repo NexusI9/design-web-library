@@ -2,10 +2,10 @@ import { useContext, useEffect, useState } from "react";
 import "./CardContainer.scss";
 import { ICard } from "@components/Card/Card";
 import CardSections from "./CardSections";
-import { LangContext } from "@components/Language/Language";
 import { Toggle } from "@components/Toggle";
 import { Icon } from "@components/Icon";
 import { cFetch } from "@lib/utils";
+import { LocaleContext } from "@components/Locale/Context";
 
 interface ICardContainer {
 	resource_id: number;
@@ -25,12 +25,12 @@ export default ({ resource_id, filter }: ICardContainer) => {
 	const [sections, setSections] = useState<Section[]>([]);
 	const [tags, setTags] = useState<ITag[]>([]);
 	const [activeTag, setActiveTag] = useState<number | undefined>(0);
-	const { lang } = useContext(LangContext);
+	const { activeLocale } = useContext(LocaleContext);
 
 	useEffect(() => {
 		if (filter !== false) {
 			// fetch and set top categories filter
-			fetch(`${process.env.API_URL}/${lang}/tags/resource/${resource_id}`)
+			fetch(`${process.env.API_URL}/${activeLocale}/tags/resource/${resource_id}`)
 				.then(e => e.json())
 				.then((data: ITag[]) => {
 					// go through each object entry, each key corresspond to a tag
@@ -41,7 +41,7 @@ export default ({ resource_id, filter }: ICardContainer) => {
 		// fetch resrouces sections
 		const tag = activeTag || 0;
 
-		cFetch(`${process.env.API_URL}/${lang}/resources/${resource_id}/category/${tag}`)
+		cFetch(`${process.env.API_URL}/${activeLocale}/resources/${resource_id}/category/${tag}`)
 			.then((data) => {
 				const sections: Section[] = [];
 

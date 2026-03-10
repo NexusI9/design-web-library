@@ -1,13 +1,13 @@
 import { createRoot } from "react-dom/client";
 import App from "./App";
-import { Language } from "@components/Language";
+import { LocaleProvider } from "@components/Locale";
 
 document.addEventListener("DOMContentLoaded", function () {
-  const container = document.getElementById("app");
-  const root = container && createRoot(container);
-  root?.render(
-    <Language>
-      <App />
-    </Language>,
-  );
+	const container = document.getElementById("app");
+	const root = container && createRoot(container);
+	root?.render(
+		<LocaleProvider>
+			<App />
+		</LocaleProvider>
+	);
 });

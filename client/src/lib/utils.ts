@@ -1,5 +1,6 @@
+import { LOCALE_DEFAULT, LOCALE_VALID_LIST } from "@components/Locale/constants";
+import { TValidLang } from "@components/Locale/types";
 import { redirect } from "@tanstack/react-router";
-import { LANG_FALLBACK, TValidLang, validLang } from "@components/Language/Language";
 
 export const downloadModule = async (module: string, params: URLSearchParams) => {
 
@@ -32,7 +33,7 @@ export const locationLang = () => {
 	const segments = location.pathname.split("/").filter(Boolean);
 	const maybeLang = segments[0];
 
-	return validLang.find(
+	return LOCALE_VALID_LIST.find(
 		(lang) => lang.toLowerCase() === (maybeLang ?? "").toLowerCase()
 	) ?? null;
 };
@@ -41,12 +42,12 @@ export const langRedirect = (location: string) => {
 	const segments = location.split("/").filter(Boolean);
 	const maybeLang = segments[0];
 
-	const matchedLang = validLang.find(
+	const matchedLang = LOCALE_VALID_LIST.find(
 		(lang) => lang.toLowerCase() === (maybeLang ?? "").toLowerCase()
 	);
 
 	if (!matchedLang) {
-		const newPath = "/" + [LANG_FALLBACK, ...segments.slice(1)].join("/");
+		const newPath = "/" + [LOCALE_DEFAULT, ...segments.slice(1)].join("/");
 		throw redirect({
 			to: newPath,
 			replace: true,
