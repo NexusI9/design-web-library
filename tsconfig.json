@@ -1,25 +1,51 @@
 {
-  "compilerOptions": {
-    "target": "es2020",
-    "lib": ["DOM", "es2021"],
-    "strict": true,
-    "outDir": "dist",
-    "allowJs": true,
-    "jsx": "react-jsx",
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "typeRoots": ["./node_modules/@types"],
-    "baseUrl": "./",
-    "paths": {
-      "@components/*": ["client/src/components/*"],
-      "@icons/*": ["client/src/assets/icons/*"],
-      "@assets/*": ["client/src/assets/*"],
-      "@styles/*": ["client/src/styles/*"],
-      "@ctypes/*": ["client/src/types/*"],
-      "@lib/*": ["client/src/lib/*"],
-      "@templates/*": ["client/src/templates/*"],
-      "@pages/*": ["client/src/pages/*"]
-    }
-  },
-  "include": ["**/*.tsx", "client/src", "**/*.ts", "custom.d.ts", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!components!ComboBox!Wrapper.tsx~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!components!ComboBox!Trigger.tsx~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!components!ComboBox!Content.tsx~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!components!ComboBox!index.ts~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!components!Main!index.ts~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!components!Main!Main.tsx~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!routes!lang.ts~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!types!array.ts~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!components!Language!index.ts~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!components!Language!Language.tsx~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!components!Button!index.ts~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!components!Button!index.ts~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!components!Button!index.ts~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!components!Button!Toggle.tsx~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!components!Button!Language.tsx~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!components!Toggle!Root.tsx~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!components!Toggle!Root.tsx~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!components!Toggle!Item.tsx~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!components!Toggle!index.ts~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!components!Footer!index.ts~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!components!Footer!Footer.tsx~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!components!Sidepanel!Item.tsx~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!components!Sidepanel!Root.tsx~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!components!Sidepanel!Language.tsx~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!components!Sidepanel!Sidepanel.tsx~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!components!Sidepanel!Desktop.tsx~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!components!Sidepanel!Minified.Language.tsx~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!components!Sidepanel!Minified.tsx~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!components!Sidepanel!Minified.tsx~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!components!Sidepanel!Minified.tsx~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!components!Divider!index.ts~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!components!Divider!Divider.tsx~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!routes!main.tsx~", "../../../.emacs.d/backup/!Users!akacia!Projects!Akacia!WebLibrary!client!src!routes!main.tsx~"]
+	"compilerOptions": {
+		"target": "es2020",
+		"lib": [
+			"DOM",
+			"es2021"
+		],
+		"strict": true,
+		"outDir": "dist",
+		"allowJs": true,
+		"jsx": "react-jsx",
+		"moduleResolution": "node",
+		"allowSyntheticDefaultImports": true,
+		"typeRoots": [
+			"./node_modules/@types"
+		],
+		"baseUrl": "./",
+		"paths": {
+			"@components/*": [
+				"client/src/components/*"
+			],
+			"@icons/*": [
+				"client/src/assets/icons/*"
+			],
+			"@assets/*": [
+				"client/src/assets/*"
+			],
+			"@styles/*": [
+				"client/src/styles/*"
+			],
+			"@ctypes/*": [
+				"client/src/types/*"
+			],
+			"@lib/*": [
+				"client/src/lib/*"
+			],
+			"@templates/*": [
+				"client/src/templates/*"
+			],
+			"@pages/*": [
+				"client/src/pages/*"
+			]
+		}
+	},
+	"include": [
+		"**/*.tsx",
+		"client/src",
+		"**/*.ts",
+		"custom.d.ts"
+	]
 }

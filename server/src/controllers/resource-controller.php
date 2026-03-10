@@ -23,7 +23,7 @@ class Resource_Controller
     {
 
         // update tags language
-        $this->get_tags_lang($lang);
+        $this->load_tags_from_locale($lang);
 
         // retrieve resource data (tool, documents...)
         $data = $this->load_resource_data($lang, $resource_id);
@@ -40,7 +40,7 @@ class Resource_Controller
             if ($tag_id == 0 || $value['tag_id'] == $tag_id) {
 
                 // get tag name from its id
-                $tag_name = $this->get_tag_name($value['tag_id']);
+                $tag_name = $this->get_tag_name($value['tag_id'], $lang);
 
                 // create new entry if doesn't exists, else just push in existing entry
                 if (!isset($result[$tag_name])) {
@@ -58,9 +58,13 @@ class Resource_Controller
     /**
       Update controller tags based on the input language
      */
-    private function get_tags_lang($lang)
+    private function load_tags_from_locale($lang): void
     {
-        $this->tags = json_decode(file_get_contents(PATH_CONTENT . "/tag/tag.json"), true);
+        if (isset($this->tags[$lang]))
+            return;
+
+        $this->tags[$lang] = json_decode(file_get_contents(PATH_CONTENT . "/tag/tag.json"), true);
+        $this->translator->translate($this->tags[$lang], $lang, "/tag/tag.json");
     }
 
     /**
@@ -104,27 +108,14 @@ class Resource_Controller
     /**
       Return the tag name from its id
      */
-    private function get_tag_name($id)
+    private function get_tag_name($id, $locale)
     {
 
-        foreach ($this->tags as &$value) {
+        foreach ($this->tags[$locale] as &$value) {
             if ($value['id'] == $id)
                 return $value['name'];
         }
 
         return "";
-    }
-
-    /**
-      Return the tag id from its name
-     */
-    private function get_tag_ID($name)
-    {
-        foreach ($this->tags as &$value) {
-            if (strtolower($value['name']) == strtolower($name))
-                return $value['id'];
-        }
-
-        return 0;
     }
 }

@@ -1,5 +1,5 @@
 import { redirect } from "@tanstack/react-router";
-import { TValidLang, validLang } from "@components/Language/Language";
+import { LANG_FALLBACK, TValidLang, validLang } from "@components/Language/Language";
 
 export const downloadModule = async (module: string, params: URLSearchParams) => {
 
@@ -24,28 +24,36 @@ export const downloadModule = async (module: string, params: URLSearchParams) =>
 
 export const locationUpdateLang = (lang: TValidLang) => {
 	const segments = location.pathname.split("/").filter(Boolean);
-	const newPath = [lang, ...segments.slice(1)].join("/");
-	return newPath;
+	return "/" + [lang, ...segments.slice(1)].join("/");
+
 };
 
 export const locationLang = () => {
 	const segments = location.pathname.split("/").filter(Boolean);
-	const maybeLang = segments[0]?.toLowerCase();
-	return maybeLang;
+	const maybeLang = segments[0];
+
+	return validLang.find(
+		(lang) => lang.toLowerCase() === (maybeLang ?? "").toLowerCase()
+	) ?? null;
 };
 
 export const langRedirect = (location: string) => {
 	const segments = location.split("/").filter(Boolean);
-	const maybeLang = segments[0]?.toLowerCase();
+	const maybeLang = segments[0];
 
-	if (!validLang.includes(maybeLang as TValidLang)) {
-		const newPath = ["/en", ...segments.slice(1)].join("/");
+	const matchedLang = validLang.find(
+		(lang) => lang.toLowerCase() === (maybeLang ?? "").toLowerCase()
+	);
+
+	if (!matchedLang) {
+		const newPath = "/" + [LANG_FALLBACK, ...segments.slice(1)].join("/");
 		throw redirect({
 			to: newPath,
 			replace: true,
 		});
 	}
 };
+
 
 export const urlType = (url: string) => {
 	if (!url) return 'INTERNAL'; // fallback for empty href

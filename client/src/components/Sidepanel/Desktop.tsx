@@ -17,7 +17,7 @@ export const Desktop = ({ items }: ISidepanel) => {
         </div>
         <div className="flex f-row f-end-h gap-l">
           <Logo />
-          <p>{lang == "en" ? "Web Library" : "網站資源庫"}</p>
+          <p>{lang == "en-US" ? "Web Library" : "網站資源庫"}</p>
         </div>
       </header>
       <ul className="flex f-col gap-s padding-h-xl">

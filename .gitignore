@@ -9,3 +9,4 @@ server/public/index.*
 server/public/assets
 *.log
 *.csv
+*bak

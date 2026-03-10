@@ -31,7 +31,7 @@ export default ({ resource_id, filter }: ICardContainer) => {
 		if (filter !== false) {
 			// fetch and set top categories filter
 			fetch(`${process.env.API_URL}/${lang}/tags/resource/${resource_id}`)
-				.then((e) => { console.log(e); return e.json() })
+				.then(e => e.json())
 				.then((data: ITag[]) => {
 					// go through each object entry, each key corresspond to a tag
 					setTags(data);

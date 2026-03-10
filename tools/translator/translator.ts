@@ -163,9 +163,10 @@ async function processLocale(file: string, locale: string) {
  */
 async function main() {
 
-	const { locale, log } = getArgs();
+	let { locale, log } = getArgs();
 
-	if (!validateLocale(locale))
+	locale = validateLocale(locale);
+	if (!locale)
 		return;
 
 

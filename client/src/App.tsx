@@ -48,7 +48,7 @@ export default () => {
 
   useEffect(() => {
     // fallback language if not valid
-    if (!validLang.includes(lang)) setLang("en");
+    if (!validLang.includes(lang)) setLang("en-US");
 
     // Dynamically fetch routing since page structure is defined in backend
     fetchRoute(lang).then((routes) => {

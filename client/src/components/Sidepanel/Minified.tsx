@@ -30,7 +30,7 @@ export const Minified = ({ items }: ISidepanel) => {
       <header className="flex f-row f-between f-center padding-h-2xl padding-v-xl">
         <div className="flex f-row f-end-h gap-l">
           <Logo />
-          <p>{lang == "en" ? "Web Library" : "網站資源庫"}</p>
+          <p>{lang == "en-US" ? "Web Library" : "網站資源庫"}</p>
         </div>
 
         <div

@@ -71,6 +71,7 @@ const convertRoute = (
 export const fetchRoute = async (
   lang: TValidLang,
 ): Promise<TRouteComponent<IFetchRouteResource>[]> => {
+  
   const resp = await fetch(`${process.env.API_URL}/${lang}/routes/page/all`);
   const routes = (await resp.json()) as TFetchRoute[];
 
