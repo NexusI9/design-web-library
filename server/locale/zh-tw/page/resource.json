@@ -1,58 +1,37 @@
-[
-  {
-    "label": "首頁",
-    "path": "/",
-    "icon": "home",
-    "props": {
-      "header": {
-        "title": "瀏覽最新網頁設計工具",
-        "subtitle": "透過各種設計工具提升並簡化你的工作流程",
-        "banner": "[zh-TW] home"
-      }
+{
+  "home": {
+    "label": "[zh-TW] Home",
+    "header": {
+      "title": "[zh-TW] Browse Latest Web Design Tool",
+      "subtitle": "[zh-TW] Improve and ease your workflow with extensive design tools"
     }
   },
-  {
-    "label": "範本",
-    "path": "/templates",
-    "icon": "layout",
-    "props": {
-      "header": {
-        "title": "範本",
-        "subtitle": "最新文件幫助你啟動全新設計專案或下一場簡報"
-      }
+  "templates": {
+    "label": "[zh-TW] Templates",
+    "header": {
+      "title": "[zh-TW] Templates",
+      "subtitle": "[zh-TW] The latest documents to start your new design projects or next presentation"
     }
   },
-  {
-    "label": "模組",
-    "path": "/modules",
-    "icon": "grid",
-    "props": {
-      "header": {
-        "title": "模組",
-        "subtitle": "互動式元件庫，集合各種吸引人的視覺效果"
-      }
+  "modules": {
+    "label": "[zh-TW] Modules",
+    "header": {
+      "title": "[zh-TW] Modules",
+      "subtitle": "[zh-TW] The interactive library gathering all kinds of engaging visual effects"
     }
   },
-  {
-    "label": "文件",
-    "path": "/documents",
-    "icon": "file-text",
-    "props": {
-      "header": {
-        "title": "文件",
-        "subtitle": "專案開發過程中實用的所有文件"
-      }
+  "documents": {
+    "label": "[zh-TW] Documents",
+    "header": {
+      "title": "[zh-TW] Documents",
+      "subtitle": "[zh-TW] All the documents useful for your project development"
     }
   },
-  {
-    "label": "外掛",
-    "path": "/plugins",
-    "icon": "puzzle",
-    "props": {
-      "header": {
-        "title": "外掛",
-        "subtitle": "實用的外掛程式助你激發創意"
-      }
+  "plugins": {
+    "label": "[zh-TW] Plugins",
+    "header": {
+      "title": "[zh-TW] Plugins",
+      "subtitle": "[zh-TW] The usefull plugins to boost your creativity"
     }
   }
-]
+}

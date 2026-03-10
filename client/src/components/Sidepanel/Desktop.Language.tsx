@@ -10,12 +10,12 @@ import { useContext } from "react";
 
 const langMap: { lang: TValidLang; label: string }[] = [
   {
-    label: "En",
+    label: "EN",
     lang: "en",
   },
   {
     label: "中文",
-    lang: "zh-tw",
+    lang: "zh-TW",
   },
 ];
 

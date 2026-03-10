@@ -1,9 +1,9 @@
 import { locationLang } from "@lib/utils";
 import { createContext, ReactNode, useState } from "react";
 
-export type TValidLang = "en" | "zh-tw";
+export type TValidLang = "en" | "zh-TW";
 
-export const validLang: TValidLang[] = ["en", "zh-tw"];
+export const validLang: TValidLang[] = ["en", "zh-TW"];
 
 export interface ILangContext {
   lang: TValidLang;

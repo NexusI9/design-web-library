@@ -1,170 +1,120 @@
-[
-  {
-    "path": "modules/elite/slideshow",
-    "props": {
-      "title": "投影片播放",
-      "subtitle": "可自訂轉場效果的投影片展示功能。",
-      "frames": [
-        {
-          "module": "slideshow",
-          "inputs": [
-            {
-              "label": "Transition duration"
-            },
-            {
-              "label": "Slide duration"
-            },
-            {
-              "label": "Transition type",
-              "values": [
-                {
-                  "label": "Default",
-                  "value": "default"
-                },
-                {
-                  "label": "Lens",
-                  "value": "lens"
-                },
-                {
-                  "label": "Swipe",
-                  "value": "swipe"
-                },
-                {
-                  "label": "Store",
-                  "value": "store"
-                }
-              ]
-            },
-            {
-              "label": "Navigation type",
-              "values": [
-                {
-                  "label": "Default",
-                  "value": "default"
-                },
-                {
-                  "label": "Automatic",
-                  "value": "automatic"
-                },
-                {
-                  "label": "Manual",
-                  "value": "manual"
-                }
-              ]
-            }
-          ],
-          "name": "[zh-TW] Slideshow"
+{
+  "slideshows": {
+    "title": "[zh-TW] Slideshows",
+    "subtitle": "[zh-TW] Customizable slideshows with unique transitions.",
+    "slideshow": {
+      "name": "[zh-TW] Slideshow",
+      "transition_duration": {
+        "label": "[zh-TW] Transition duration"
+      },
+      "slide_duration": {
+        "label": "[zh-TW] Slide duration"
+      },
+      "transition_type": {
+        "label": "[zh-TW] Transition type",
+        "default": {
+          "label": "[zh-TW] Default"
+        },
+        "lens": {
+          "label": "[zh-TW] Lens"
+        },
+        "swipe": {
+          "label": "[zh-TW] Swipe"
+        },
+        "store": {
+          "label": "[zh-TW] Store"
         }
-      ]
+      },
+      "navigation_type": {
+        "label": "[zh-TW] Navigation type",
+        "default": {
+          "label": "[zh-TW] Default"
+        },
+        "automatic": {
+          "label": "[zh-TW] Automatic"
+        },
+        "manual": {
+          "label": "[zh-TW] Manual"
+        }
+      }
     }
   },
-  {
-    "path": "modules/elite/carousel",
-    "props": {
-      "title": "輪播",
-      "subtitle": "支援 2D 或 3D 旋轉效果的可自訂輪播元件。",
-      "frames": [
-        {
-          "module": "carousel",
-          "inputs": [
-            {
-              "label": "Curve direction",
-              "values": [
-                {
-                  "label": "Outward",
-                  "value": "outward"
-                },
-                {
-                  "label": "Inward",
-                  "value": "inward"
-                },
-                {
-                  "label": "Fan",
-                  "value": "fan"
-                }
-              ]
-            },
-            {
-              "label": "Movement direction",
-              "values": [
-                {
-                  "label": "Right",
-                  "value": "right"
-                },
-                {
-                  "label": "Left",
-                  "value": "left"
-                }
-              ]
-            },
-            {
-              "label": "Picture width"
-            },
-            {
-              "label": "Picture height"
-            },
-            {
-              "label": "Border radius"
-            },
-            {
-              "label": "Border smooth"
-            },
-            {
-              "label": "Speed"
-            },
-            {
-              "label": "Invert drag",
-              "values": [
-                {
-                  "label": "True",
-                  "value": "true"
-                },
-                {
-                  "label": "False",
-                  "value": "false"
-                }
-              ]
-            }
-          ],
-          "name": "[zh-TW] Carousel"
+  "carousels": {
+    "title": "[zh-TW] Carousels",
+    "subtitle": "[zh-TW] Customizable carousels with 2D or 3D rotations.",
+    "carousel": {
+      "name": "[zh-TW] Carousel",
+      "curve_direction": {
+        "label": "[zh-TW] Curve direction",
+        "outward": {
+          "label": "[zh-TW] Outward"
+        },
+        "inward": {
+          "label": "[zh-TW] Inward"
+        },
+        "fan": {
+          "label": "[zh-TW] Fan"
         }
-      ]
+      },
+      "movement_direction": {
+        "label": "[zh-TW] Movement direction",
+        "right": {
+          "label": "[zh-TW] Right"
+        },
+        "left": {
+          "label": "[zh-TW] Left"
+        }
+      },
+      "picture_width": {
+        "label": "[zh-TW] Picture width"
+      },
+      "picture_height": {
+        "label": "[zh-TW] Picture height"
+      },
+      "border_radius": {
+        "label": "[zh-TW] Border radius"
+      },
+      "border_smooth": {
+        "label": "[zh-TW] Border smooth"
+      },
+      "speed": {
+        "label": "[zh-TW] Speed"
+      },
+      "invert_drag": {
+        "label": "[zh-TW] Invert drag",
+        "true": {
+          "label": "[zh-TW] True"
+        },
+        "false": {
+          "label": "[zh-TW] False"
+        }
+      }
     }
   },
-  {
-    "path": "[zh-TW] modules/core/news",
-    "props": {
-      "title": "[zh-TW] News",
-      "subtitle": "[zh-TW] News sections including interactive cards and filtering components.",
-      "frames": [
-        {
-          "name": "[zh-TW] Flash"
-        },
-        {
-          "name": "[zh-TW] Flow"
-        },
-        {
-          "name": "[zh-TW] Storyteller"
-        }
-      ]
+  "news": {
+    "title": "[zh-TW] News",
+    "subtitle": "[zh-TW] News sections including interactive cards and filtering components.",
+    "flash": {
+      "name": "[zh-TW] Flash"
+    },
+    "flow": {
+      "name": "[zh-TW] Flow"
+    },
+    "storyteller": {
+      "name": "[zh-TW] Storyteller"
     }
   },
-  {
-    "path": "[zh-TW] modules/core/milestones",
-    "props": {
-      "title": "[zh-TW] Milestones",
-      "subtitle": "[zh-TW] Customizable slideshow with unique transitions.",
-      "frames": [
-        {
-          "name": "[zh-TW] Pathway"
-        },
-        {
-          "name": "[zh-TW] Deck"
-        },
-        {
-          "name": "[zh-TW] Moment"
-        }
-      ]
+  "milestones": {
+    "title": "[zh-TW] Milestones",
+    "subtitle": "[zh-TW] Customizable slideshow with unique transitions.",
+    "pathway": {
+      "name": "[zh-TW] Pathway"
+    },
+    "deck": {
+      "name": "[zh-TW] Deck"
+    },
+    "moment": {
+      "name": "[zh-TW] Moment"
     }
   }
-]
+}

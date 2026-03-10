@@ -15,7 +15,7 @@ const langMap: { lang: TValidLang; label: string }[] = [
   },
   {
     label: "中文",
-    lang: "zh-tw",
+    lang: "zh-TW",
   },
 ];
 

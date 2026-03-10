@@ -16,6 +16,8 @@ build:
 build-modules:
 	npx webpack --config webpack.server.config.js
 
+ARGS ?= --locale=zh-TW -log
+
 translate:
-	npx tsx  ./tools/translator/translator.ts
+	npx tsx  ./tools/translator/translator.ts $(ARGS)
 

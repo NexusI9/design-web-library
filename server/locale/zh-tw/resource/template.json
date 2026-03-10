@@ -1,47 +1,44 @@
-[
-  {
-    "title": "網頁專案起始範本",
-    "description": "適用於所有網頁專案的基本檔案，包含可直接使用的設計系統。",
-    "picture": "figstarter"
+{
+  "starter_web_project": {
+    "description": "[zh-TW] The basic file for every web projects including a basic design system ready to be used."
   },
-  {
-    "title": "線框稿文件",
-    "description": "適用於各類網站的實用線框文件。",
-    "picture": "figwire"
+  "wireframe": {
+    "description": "[zh-TW] A useful wireframe document for all kind of website."
   },
-  {
-    "title": "提案參考",
-    "description": "各式網站模型的合集，適用於設計提案。",
-    "picture": "figppref"
+  "proposal_references": {
+    "description": "[zh-TW] A collection of various website mockups for design proposals."
   },
-  {
-    "title": "網頁專案起始範本",
-    "description": "適用於所有網頁專案的基本檔案，包含可直接使用的設計系統。",
-    "href": "Starter_Project.xd",
-    "picture": "xdstarter"
+  "html_editor_kit": {
+    "description": "[zh-TW] A comprehensive document that inclue all the HTML editor available components."
   },
-  {
-    "title": "HTML 編輯器套件",
-    "description": "包含所有 HTML 編輯器可用元件的完整文件。",
-    "href": "HTML_Template.xd",
-    "picture": "xdhtml"
+  "gdpr_kit": {
+    "description": "[zh-TW] The GDPR module components with their different levels of functionality."
   },
-  {
-    "title": "GDPR 套件",
-    "description": "GDPR 模組組件，具備多種功能層級。",
-    "href": "GDPR_Template.xd",
-    "picture": "xdgdpr"
+  "design_proposal": {
+    "description": "[zh-TW] Your starter document for design proposals, including convenient layouts and pre animated slides."
   },
-  {
-    "title": "設計提案範本",
-    "description": "設計提案專用的起始文件，內含便利版面與預設動畫投影片。",
-    "href": "Design_Proposal.pptx",
-    "picture": "pptpresent"
+  "bug_list": {
+    "description": "[zh-TW] The document for any bug listing."
   },
-  {
-    "title": "錯誤清單",
-    "description": "用於彙整錯誤紀錄的文件。",
-    "href": "BugList_Client_Date.pptx",
-    "picture": "pptbug"
+  "project_requirements_document_prd": {
+    "description": "[zh-TW] The document to gather project's overview including technical scopes, design resources as well as persona profiles."
+  },
+  "getty_assets_list": {
+    "description": "[zh-TW] The table to gather all the getty assets used in a projects before final confirmation of purchase."
+  },
+  "gdpr_guide": {
+    "description": "[zh-TW] A template including the fundamentals items for a fast and clear storybook."
+  },
+  "figma_documentation_en": {
+    "description": "[zh-TW] The basic file for every web projects including a basic design system ready to be used."
+  },
+  "figma_documentation_中文": {
+    "description": "[zh-TW] The basic file for every web projects including a basic design system ready to be used."
+  },
+  "usability_test_dashboard": {
+    "description": "[zh-TW] A comprehensive document that inclue all the HTML editor available components."
+  },
+  "usability_test_report": {
+    "description": "[zh-TW] A comprehensive document that inclue all the HTML editor available components."
   }
-]
+}

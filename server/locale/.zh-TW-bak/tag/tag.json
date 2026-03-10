@@ -1,0 +1,56 @@
+[
+  {
+    "name": "所有"
+  },
+  {
+    "name": "設計系統",
+    "icon": "module"
+  },
+  {
+    "name": "顏色",
+    "icon": "paint"
+  },
+  {
+    "name": "字體廠商",
+    "icon": "type"
+  },
+  {
+    "name": "圖示設計",
+    "icon": "image"
+  },
+  {
+    "name": "圖庫",
+    "icon": "camera"
+  },
+  {
+    "name": "使用者體驗",
+    "icon": "click"
+  },
+  {
+    "name": "人工智慧",
+    "icon": "ai"
+  },
+  {
+    "name": "Figma"
+  },
+  {
+    "name": "Adobe XD"
+  },
+  {
+    "name": "簡報"
+  },
+  {
+    "name": "管理",
+    "icon": "management"
+  },
+  {
+    "name": "文件",
+    "icon": "glasses"
+  },
+  {
+    "name": "高階模組"
+  },
+  {
+    "name": "菁英模組"
+  }
+]

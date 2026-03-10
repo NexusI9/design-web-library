@@ -1,0 +1,26 @@
+[
+  {
+    "title": "投影片展示",
+    "description": "具獨特轉場效果的可自訂投影片展示模組。",
+    "href": "/modules/elite/slideshow",
+    "picture": "glslide"
+  },
+  {
+    "title": "輪播模組",
+    "description": "可自訂的 2D 或 3D 輪播模組。",
+    "href": "/modules/elite/carousel",
+    "picture": "glcarousel"
+  },
+  {
+    "title": "[zh-TW] Slideshow",
+    "description": "[zh-TW] Customizable slideshow with unique transitions.",
+    "href": "[zh-TW] /modules/elite/slideshow",
+    "picture": "[zh-TW] glslide"
+  },
+  {
+    "title": "[zh-TW] Carousel",
+    "description": "[zh-TW] Customizable carousels with 2D or 3D rotations.",
+    "href": "[zh-TW] /modules/elite/carousel",
+    "picture": "[zh-TW] glcarousel"
+  }
+]

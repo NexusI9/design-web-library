@@ -8,14 +8,15 @@ import {
 	SOURCE_LANG,
 	REGEXP_PROTECTED,
 	REGEXP_VARIABLE,
-	TRANSLATION_FILTERS
+	TRANSLATION_FILTERS,
+	DEFAULT_METHOD
 } from "./constants";
 import { Cache } from "./cache";
 import { JSONProcessor, } from "./json-processor";
 import { APIManager } from "./api/api-manager";
 import { Logger } from "./logger";
-import { Dico, StringDico } from "./types";
-import { getJsonFiles, trimPathLocale } from "./utils";
+import { Dico, Method, StringDico } from "./types";
+import { getArgs, getJsonFiles, trimPathLocale, validateLocale } from "./utils";
 
 const cache = new Cache();
 const apiManager = new APIManager();
@@ -35,10 +36,6 @@ function prepareBatch(flatSource: Dico, flatTarget: Dico, localeCache: StringDic
 		const value = flatTarget[k as keyof typeof flatTarget];
 		return !value || typeof value === "string" && value.trim() === "";
 	});
-
-
-	console.log({ flatSource, filteredSource });
-
 
 	const toTranslate: Dico = {};
 
@@ -67,7 +64,26 @@ function prepareBatch(flatSource: Dico, flatTarget: Dico, localeCache: StringDic
 
 }
 
-async function translateBatch(locale: string, toTranslate: Dico, flatTarget: Dico, localeCache: StringDico) {
+async function translateBatch(
+	{
+		locale,
+		toTranslate,
+		flatTarget,
+		localeCache,
+		dryRun = false,
+		verbose = false,
+		writeLog = false,
+	}:
+		{
+			locale: string,
+			toTranslate: Dico,
+			flatTarget: Dico,
+			localeCache: StringDico,
+			method: Method,
+			dryRun?: Boolean,
+			verbose?: Boolean,
+			writeLog?: Boolean,
+		}) {
 
 	const keys = Object.keys(toTranslate);
 	for (let i = 0; i < keys.length; i += BATCH_SIZE) {
@@ -89,14 +105,15 @@ async function translateBatch(locale: string, toTranslate: Dico, flatTarget: Dic
 
 			localeCache[sourceText] = restored;
 
-			logger.push(locale, String(sourceText), String(restored));
+			if (writeLog)
+				logger.push(locale, String(sourceText), String(restored));
 		});
 	}
 
 
 }
 
-async function processLocale(file: string) {
+async function processLocale(file: string, locale: string) {
 
 	// Get source file and flatten it
 	file = trimPathLocale(file);
@@ -107,32 +124,51 @@ async function processLocale(file: string) {
 
 	const flatSource = jsonProcessor.flatten(sourceJson);
 
-	for (const locale of LOCALES) {
+	// Get target file and flatten it
+	const targetPath = path.join(INPUT_FOLDER, locale, file);
+	const targetJson = await jsonProcessor.readFileLocale(locale, file);
 
-		// Get target file and flatten it
-		const targetPath = path.join(INPUT_FOLDER, locale, file);
-		const targetJson = await jsonProcessor.readFileLocale(locale, file);
+	if (!targetJson)
+		return;
 
-		if (!targetJson)
-			continue;
+	const flatTarget = jsonProcessor.flatten(targetJson);
+	const localeCache = await cache.load(locale);
 
-		const flatTarget = jsonProcessor.flatten(targetJson);
-		const localeCache = await cache.load(locale);
+	const toTranslate = prepareBatch(flatSource, flatTarget, localeCache);
 
-		const toTranslate = prepareBatch(flatSource, flatTarget, localeCache);
+	await translateBatch({
+		locale,
+		toTranslate,
+		flatTarget,
+		localeCache,
+		method: DEFAULT_METHOD,
+	});
 
-		await translateBatch(locale, toTranslate, flatTarget, localeCache);
+	await cache.save(locale, cache);
 
-		await cache.save(locale, cache);
+	const rebuilt = jsonProcessor.unflatten(flatTarget);
 
-		const rebuilt = jsonProcessor.unflatten(flatTarget);
+	await fs.mkdir(path.dirname(targetPath), { recursive: true });
+	await fs.writeFile(targetPath, JSON.stringify(rebuilt, null, 2));
 
-		await fs.mkdir(path.dirname(targetPath), { recursive: true });
-		await fs.writeFile(targetPath, JSON.stringify(rebuilt, null, 2));
-	}
 }
 
+
+/**
+ * --local : the lang
+ * --api
+ * -log : enable logs
+ * -verbose : enable verbose
+ * -dry : dry run (no call to APIs)
+ */
 async function main() {
+
+	const { locale, log } = getArgs();
+
+	if (!validateLocale(locale))
+		return;
+
+
 	await fs.mkdir(LOG_FOLDER, { recursive: true });
 
 	const files = await getJsonFiles(path.join(INPUT_FOLDER, SOURCE_LANG));
@@ -140,12 +176,14 @@ async function main() {
 	for (const file of files) {
 		if (file.endsWith(".json")) {
 			console.log(`Processing file ${file}...`);
-			await processLocale(file);
+			await processLocale(file, locale);
 		}
 	}
 
-	await logger.write();
-	await logger.writeCSV();
+	if (log) {
+		await logger.write();
+		await logger.writeCSV();
+	}
 }
 
 main();

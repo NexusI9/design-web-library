@@ -1,56 +1,15 @@
-[
-  {
-    "name": "所有"
-  },
-  {
-    "name": "設計系統",
-    "icon": "module"
-  },
-  {
-    "name": "顏色",
-    "icon": "paint"
-  },
-  {
-    "name": "字體廠商",
-    "icon": "type"
-  },
-  {
-    "name": "圖示設計",
-    "icon": "image"
-  },
-  {
-    "name": "圖庫",
-    "icon": "camera"
-  },
-  {
-    "name": "使用者體驗",
-    "icon": "click"
-  },
-  {
-    "name": "人工智慧",
-    "icon": "ai"
-  },
-  {
-    "name": "Figma"
-  },
-  {
-    "name": "Adobe XD"
-  },
-  {
-    "name": "簡報"
-  },
-  {
-    "name": "管理",
-    "icon": "management"
-  },
-  {
-    "name": "文件",
-    "icon": "glasses"
-  },
-  {
-    "name": "高階模組"
-  },
-  {
-    "name": "菁英模組"
-  }
-]
+{
+  "all": "[zh-TW] All",
+  "design_system": "[zh-TW] Design System",
+  "color": "[zh-TW] Color",
+  "foundry": "[zh-TW] Foundry",
+  "iconography": "[zh-TW] Iconography",
+  "stock": "[zh-TW] Stock",
+  "figma": "[zh-TW] Figma",
+  "adobe_xd": "[zh-TW] Adobe XD",
+  "powerpoint": "[zh-TW] Powerpoint",
+  "management": "[zh-TW] Management",
+  "documentation": "[zh-TW] Documentation",
+  "core_modules": "[zh-TW] Core Modules",
+  "elite_modules": "[zh-TW] Elite Modules"
+}
