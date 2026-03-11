@@ -1,0 +1,120 @@
+{
+  "slideshows": {
+    "title": "幻燈片秀",
+    "subtitle": "可自訂的幻燈片秀，帶有獨特轉場效果。",
+    "slideshow": {
+      "name": "幻燈片秀",
+      "transition_duration": {
+        "label": "轉場持續時間"
+      },
+      "slide_duration": {
+        "label": "投影片持續時間"
+      },
+      "transition_type": {
+        "label": "轉場類型",
+        "default": {
+          "label": "預設"
+        },
+        "lens": {
+          "label": "鏡頭"
+        },
+        "swipe": {
+          "label": "滑動"
+        },
+        "store": {
+          "label": "商店"
+        }
+      },
+      "navigation_type": {
+        "label": "導覽類型",
+        "default": {
+          "label": "預設"
+        },
+        "automatic": {
+          "label": "自動"
+        },
+        "manual": {
+          "label": "手動"
+        }
+      }
+    }
+  },
+  "carousels": {
+    "title": "輪播",
+    "subtitle": "可自訂的輪播，帶有 2D 或 3D 旋轉效果。",
+    "carousel": {
+      "name": "輪播",
+      "curve_direction": {
+        "label": "曲線方向",
+        "outward": {
+          "label": "向外"
+        },
+        "inward": {
+          "label": "向內"
+        },
+        "fan": {
+          "label": "扇形"
+        }
+      },
+      "movement_direction": {
+        "label": "移動方向",
+        "right": {
+          "label": "右"
+        },
+        "left": {
+          "label": "左"
+        }
+      },
+      "picture_width": {
+        "label": "圖片寬度"
+      },
+      "picture_height": {
+        "label": "圖片高度"
+      },
+      "border_radius": {
+        "label": "邊框圓角"
+      },
+      "border_smooth": {
+        "label": "邊框平滑"
+      },
+      "speed": {
+        "label": "速度"
+      },
+      "invert_drag": {
+        "label": "反轉拖曳",
+        "true": {
+          "label": "真"
+        },
+        "false": {
+          "label": "假"
+        }
+      }
+    }
+  },
+  "news": {
+    "title": "新聞",
+    "subtitle": "新聞區塊，包含互動式卡片和篩選元件。",
+    "flash": {
+      "name": "快訊"
+    },
+    "flow": {
+      "name": "流程"
+    },
+    "storyteller": {
+      "name": "說書人"
+    }
+  },
+  "milestones": {
+    "title": "里程碑",
+    "subtitle": "可自訂的投影片播放，具有獨特的轉場效果。",
+    "pathway": {
+      "name": "途徑"
+    },
+    "deck": {
+      "name": "投影片組"
+    },
+    "moment": {
+      "name": "時刻"
+    }
+  }
+}

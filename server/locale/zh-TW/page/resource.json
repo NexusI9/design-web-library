@@ -1,0 +1,37 @@
+{
+  "home": {
+    "label": "首頁",
+    "header": {
+      "title": "瀏覽最新網頁設計工具",
+      "subtitle": "透過豐富的設計工具，改善並簡化您的工作流程"
+    }
+  },
+  "templates": {
+    "label": "範本",
+    "header": {
+      "title": "範本",
+      "subtitle": "最新文件，助您開啟新設計專案或下次簡報"
+    }
+  },
+  "modules": {
+    "label": "模組",
+    "header": {
+      "title": "模組",
+      "subtitle": "收集各種引人入勝視覺效果的互動式函式庫"
+    }
+  },
+  "documents": {
+    "label": "文件",
+    "header": {
+      "title": "文件",
+      "subtitle": "對您的專案開發有用的所有文件"
+    }
+  },
+  "plugins": {
+    "label": "外掛程式",
+    "header": {
+      "title": "外掛程式",
+      "subtitle": "有用的外掛程式，激發您的創造力"
+    }
+  }
+}
